@@ -15,5 +15,15 @@
             "problemMatcher": [],
             "detail": "Task to run django server using pipenv"
           },
+          {
+            "label": "Run reactVite server",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "dev"],
+            "options": {
+              "cwd": "${workspaceFolder}/Frontend"
+            },
+            "problemMatcher": []
+          },
     ]
 }
