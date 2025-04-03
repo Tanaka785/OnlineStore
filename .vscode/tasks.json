@@ -37,5 +37,17 @@
             "problemMatcher": [],
             "detail": "Task migrate the database."
           },
+          {
+            "label": "Create SuperUser",
+            "type": "shell",
+            "options": {
+              "cwd": "${workspaceFolder}/backend/",
+              "env": {"PIPENV_VERBOSITY": "-1"}
+            },
+            "command": "pipenv",
+            "args": ["run", "python", "manage.py", "createsuperuser"],
+            "problemMatcher": [],
+            "detail": "Task to create a superuser for django admin site."
+          },
     ]
 }
