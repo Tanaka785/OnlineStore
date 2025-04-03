@@ -9,3 +9,14 @@ A modern eCommerce platform built with **Django** (backend) and **React** (front
 - Database: https://www.sqlite.org/ (for development) / https://www.postgresql.org/ (for production)
 - Other: https://www.docker.com/ (optional), https://stripe.com/docs/api (for payment processing)
 
+##  Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- https://www.python.org/
+- https://nodejs.org/
+- https://www.postgresql.org/ (optional, if using PostgreSQL in production)
+- https://pip.pypa.io/en/stable/ (for Python package management)
+- https://www.docker.com/ (optional, for Dockerized environment)
+
+
