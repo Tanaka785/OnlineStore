@@ -104,3 +104,17 @@ Before you begin, ensure you have the following installed:
 
         - Now, you can interact with the online store through the React frontend and Django backend.
 
+## Configuring Environment Variables
+
+- Create a .env file in the **backend** directory of the project and add the following:
+
+    - DEBUG=True
+    - SECRET_KEY='your-secret-key'
+    - DB_NAME='your-database-name'
+    - DB_USER='your-database-user'
+    - DB_PASSWORD='your-database-password'
+    - DB_HOST='localhost'
+    - DB_PORT='the-port-number'
+
+
+
