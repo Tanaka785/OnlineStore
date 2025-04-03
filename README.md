@@ -1,5 +1,9 @@
 # OnlineStore
 
+## Project Status 
+
+- Active (actively maintained).
+
 ## Table of Contents 
 
 - [Project Description](#project-description)
