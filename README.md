@@ -56,5 +56,17 @@ Before you begin, ensure you have the following installed:
 
             - by using tasks defined in .vscode/tasks.json. Run the task 'Create SuperUser'.
 
+3. **Frontend Setup (React)**
+
+    - Install Frontend Dependencies
+
+        - Navigate to the frontend directory:
+
+                - cd frontend
+
+        - and install dependencies, by:
+            
+                - npm install
+                
 
 
