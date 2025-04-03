@@ -129,6 +129,8 @@ Before you begin, ensure you have the following installed:
     - DB_PORT='the-port-number'
 
 
+## License 
+
 ## Screenshots 
 
 ## Contributing
