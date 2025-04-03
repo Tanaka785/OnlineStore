@@ -9,7 +9,7 @@
             "command": "pipenv",
             "args": ["run", "python", "manage.py", "runserver"],
             "options": {
-              "cwd": "${workspaceFolder}/Backend/",
+              "cwd": "${workspaceFolder}/backend/",
               "env": {"PIPENV_VERBOSITY": "-1"}
             },
             "problemMatcher": [],
@@ -21,7 +21,7 @@
             "command": "npm",
             "args": ["run", "dev"],
             "options": {
-              "cwd": "${workspaceFolder}/Frontend"
+              "cwd": "${workspaceFolder}/frontend"
             },
             "problemMatcher": []
           },
