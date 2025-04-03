@@ -25,5 +25,17 @@
             },
             "problemMatcher": []
           },
+          {
+            "label": "Migrate",
+            "type": "shell",
+            "command": "pipenv",
+            "args": ["run", "python", "manage.py", "migrate"],
+            "options": {
+              "cwd": "${workspaceFolder}/backend/",
+              "env": {"PIPENV_VERBOSITY": "-1"}
+            },
+            "problemMatcher": [],
+            "detail": "Task migrate the database."
+          },
     ]
 }
