@@ -1,5 +1,25 @@
 # OnlineStore
 
+## Project Status 
+
+- Active (actively maintained).
+
+## Table of Contents 
+
+- [Project status](#project-status)
+- [Project Description](#project-description)
+- [Technologies Used](#technologies-used)
+- [Prerequisites](#prerequisites)
+- [Setup Instructions](#setup-instructions)
+- [Configuring Environment Variables](#configuring-environment-variables)
+- [Contributing](#contributing)
+- [License](#license)
+- [Screenshots](#screenshots)
+- [Project Demo](#project-demo)
+- [Maintained by](#maintained-by)
+
+## Project Description
+
 A modern eCommerce platform built with **Django** (backend) and **React** (frontend). Features include *product listings*, *user authentication*, *shopping cart*, *order management*, and *payment integration*. Uses **RESTful APIs**, **responsive UI**, and follows best practices for scalability and performance.
 
 ## Technologies Used
@@ -117,10 +137,24 @@ Before you begin, ensure you have the following installed:
     - DB_PORT='the-port-number'
 
 
+## License 
+
+## Screenshots 
+
+## Project Demo
+
+- 
 ## Contributing
 
 If you'd like to contribute to this project, feel free to fork the repository, create a new branch, and submit a pull request.
 
+## Acknowledgements 
+
+- Hat tip to [React](https://reactjs.org/) for the amazing framework.
+- Thanks to [John Doe](https://github.com/johndoe) for the code contributions.
+
+
 ## Maintained by:
 
 - Tanaka Chanetsa (mailto: tanakachanetsa204@gmail.com)
+
