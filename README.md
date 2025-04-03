@@ -67,6 +67,40 @@ Before you begin, ensure you have the following installed:
         - and install dependencies, by:
             
                 - npm install
-                
 
+4. **Running The Project Locally**
+
+- To run the application locally, follow these steps:
+
+    - From the root directory:
+
+        - Start the Django Development Server by:
+
+                - cd backend/
+
+            - then activate the virtual environment by:
+
+                    - pipenv shell  
+
+            - then run the server by:
+
+                    - python manage.py runserver
+
+            OR Start the django development server by:
+
+                - simply using tasks defined in .vscode/tasks.json. Run the task 'Run django server'.
+            
+
+        - Start the React Development Server by:
+
+            - from the root directory also, do:
+            
+                - cd frontend/
+                - npm run dev
+
+            OR Start the react development server by:
+
+                - simply using tasks defined in .vscode/tasks.json. Run the task 'Run reactVite server'.
+
+        - Now, you can interact with the online store through the React frontend and Django backend.
 
