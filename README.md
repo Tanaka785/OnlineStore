@@ -19,4 +19,42 @@ Before you begin, ensure you have the following installed:
 - https://pip.pypa.io/en/stable/ (for Python package management)
 - https://www.docker.com/ (optional, for Dockerized environment)
 
+## Setup Instructions
+
+1. **Clone the Repository**
+
+    - git clone https://github.com/Tanaka785/onlinestore.git
+    - cd OnlineStore
+
+2. **Backend Setup (Django)**
+
+    - Install Backend Dependencies
+
+            - cd backend
+            - pip install pipenv
+            - pipenv install
+
+        - Then activate the virtual environment by:
+
+                - pipenv shell
+
+    - Database Setup
+
+        - Migrate the database, by running:
+                
+                - python manage.py migrate
+            
+            OR:
+
+                - by using tasks defined in .vscode/tasks.json. Run the task 'Migrate'.
+
+    - Create a Superuser (for Django Admin), by running:
+
+            - python manage.py createsuperuser
+
+        OR:
+
+            - by using tasks defined in .vscode/tasks.json. Run the task 'Create SuperUser'.
+
+
 
