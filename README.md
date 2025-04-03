@@ -6,12 +6,16 @@
 
 ## Table of Contents 
 
+- [Project status](#project-status)
 - [Project Description](#project-description)
 - [Technologies Used](#technologies-used)
 - [Prerequisites](#prerequisites)
 - [Setup Instructions](#setup-instructions)
 - [Configuring Environment Variables](#configuring-environment-variables)
 - [Contributing](#contributing)
+- [License](#license)
+- [Screenshots](#screenshots)
+- [Project Demo](#project-demo)
 - [Maintained by](#maintained-by)
 
 ## Project Description
