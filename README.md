@@ -1,4 +1,4 @@
-# OnlineStore
+# Tech Merchandise & Swag Store
 
 ## Project Status 
 
@@ -20,7 +20,7 @@
 
 ## Project Description
 
-A modern eCommerce platform built with **Django** (backend) and **React** (frontend). Features include *product listings*, *user authentication*, *shopping cart*, *order management*, and *payment integration*. Uses **RESTful APIs**, **responsive UI**, and follows best practices for scalability and performance.
+A stylish and developer-focused eCommerce platform specializing in tech-themed merchandise and swag. Built with Django (backend) and React (frontend), the store features a curated collection of coding-inspired T-shirts, hoodies, mugs, stickers, and more. Key features include dynamic product listings, user authentication, shopping cart, secure payment integration, and order tracking. The platform leverages RESTful APIs, ensures a responsive UI, and follows best practices for performance, scalability, and seamless user experience.
 
 ## Technologies Used
 
