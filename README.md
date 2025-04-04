@@ -54,9 +54,9 @@ Before you begin, ensure you have the following installed:
             - pip install pipenv
             - pipenv install
 
-        - Then activate the virtual environment by:
+    - Then activate the virtual environment by:
 
-                - pipenv shell
+            - pipenv shell
 
     - Database Setup
 
@@ -94,29 +94,29 @@ Before you begin, ensure you have the following installed:
 
     - From the root directory:
 
-        - Start the Django Development Server by:
+        - **Start the Django Development Server by**:
 
                 - cd backend/
 
-            - then activate the virtual environment by:
+        - then activate the virtual environment by:
 
-                    - pipenv shell  
+                - pipenv shell  
 
-            - then run the server by:
+        - then run the server by:
 
-                    - python manage.py runserver
+                - python manage.py runserver
 
-            OR Start the django development server by:
+        - OR Start the django development server by:
 
-                - simply using tasks defined in .vscode/tasks.json. Run the task 'Run django server'.
+            - simply using tasks defined in .vscode/tasks.json. Run the task 'Run django server'.
             
 
-        - Start the React Development Server by:
+        - **Start the React Development Server by**:
 
             - from the root directory also, do:
             
-                - cd frontend/
-                - npm run dev
+                    - cd frontend
+                    - npm run dev
 
             OR Start the react development server by:
 
@@ -139,14 +139,19 @@ Before you begin, ensure you have the following installed:
 
 ## License 
 
+- 
+
 ## Screenshots 
+
+- 
 
 ## Project Demo
 
 - 
+
 ## Contributing
 
-If you'd like to contribute to this project, feel free to fork the repository, create a new branch, and submit a pull request.
+- If you'd like to contribute to this project, feel free to fork the repository, create a new branch, and submit a pull request.
 
 ## Acknowledgements 
 
@@ -157,4 +162,3 @@ If you'd like to contribute to this project, feel free to fork the repository, c
 ## Maintained by:
 
 - Tanaka Chanetsa (mailto: tanakachanetsa204@gmail.com)
-
