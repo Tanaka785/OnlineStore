@@ -72,5 +72,16 @@
             "problemMatcher": [],
             "detail": "Task to open a terminal in the root directory."
           },
+          {
+            "label": "Run the Backend",
+            "type": "shell",
+            "command": "echo",
+            "detail": "Task to run the backend only",
+            "dependsOn": [
+                "Run django server",
+                "Open Backend Terminal",
+                "Open Root Terminal"
+            ],
+          },
     ]
 }
