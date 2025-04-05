@@ -61,5 +61,16 @@
             "problemMatcher": [],
             "detail": "Task to open a terminal in the backend directory."
           },
+          {
+            "label": "Open Root Terminal",
+            "type": "shell",
+            "command": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "args": ["--login", "-i", "-c", "pipenv shell; exec bash"],
+            "options": {
+              "env": {"PIPENV_VERBOSITY": "-1"}
+            },
+            "problemMatcher": [],
+            "detail": "Task to open a terminal in the root directory."
+          },
     ]
 }
