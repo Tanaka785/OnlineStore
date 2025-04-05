@@ -65,7 +65,7 @@
             "label": "Open Root Terminal",
             "type": "shell",
             "command": "C:\\Program Files\\Git\\bin\\bash.exe",
-            "args": ["--login", "-i", "-c", "pipenv shell; exec bash"],
+            "args": ["--login", "-i", "-c", "exec bash"],
             "options": {
               "env": {"PIPENV_VERBOSITY": "-1"}
             },
