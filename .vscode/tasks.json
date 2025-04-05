@@ -49,5 +49,17 @@
             "problemMatcher": [],
             "detail": "Task to create a superuser for django admin site."
           },
+          {
+            "label": "Open Backend Terminal",
+            "type": "shell",
+            "command": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "args": ["--login", "-i", "-c", "pipenv shell; exec bash"],
+            "options": {
+              "cwd": "${workspaceFolder}/backend",
+              "env": {"PIPENV_VERBOSITY": "-1"}
+            },
+            "problemMatcher": [],
+            "detail": "Task to open a terminal in the backend directory."
+          },
     ]
 }
