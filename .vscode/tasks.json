@@ -62,6 +62,17 @@
             "detail": "Task to open a terminal in the backend directory."
           },
           {
+            "label": "Open frontend Terminal",
+            "type": "shell",
+            "command": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "args": ["--login", "-i", "-c", "exec bash"],
+            "options": {
+              "cwd": "${workspaceFolder}/Frontend",
+            },
+            "problemMatcher": [],
+            "detail": "Task to open a terminal in the frontend directory."
+          },
+          {
             "label": "Open Root Terminal",
             "type": "shell",
             "command": "C:\\Program Files\\Git\\bin\\bash.exe",
@@ -81,6 +92,17 @@
                 "Run django server",
                 "Open Backend Terminal",
                 "Open Root Terminal"
+            ],
+          },
+          {
+            "label": "Run the frontend",
+            "type": "shell",
+            "command": "echo",
+            "detail": "Task to run the frontend only",
+            "dependsOn": [
+                "Open Root Terminal",
+                "Run reactVite server",
+                "Open frontend Terminal",
             ],
           },
     ]
