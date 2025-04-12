@@ -64,6 +64,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: 'transparent',
   color: 'inherit',
   boxShadow: 'none',
+  justifyContent: 'center',
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
