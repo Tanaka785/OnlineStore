@@ -41,10 +41,13 @@ const Search = styled('div')(({ theme }) => ({
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
-  width: '100%',
+  width: '100%', 
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
-    width: 'auto',
+    width: '600px', 
+  },
+  [theme.breakpoints.up('md')]: {
+    width: '800px', 
   },
 }));
 
@@ -76,8 +79,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
+    [theme.breakpoints.up('xs')]: {
+      width: '100%', 
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '30ch', 
+    },
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '40ch', 
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '50ch', 
     },
   },
 }));
@@ -246,7 +258,7 @@ export default function NavigationBar() {
             WEBVIBES
           </Typography>
 
-          <Search sx={{ display: { xs: "none", sm: "block", }}}>
+          <Search sx={{ display: { xs: "none", sm: "block" }}}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
