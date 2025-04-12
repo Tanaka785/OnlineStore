@@ -218,9 +218,14 @@ export default function NavigationBar() {
           
           <Typography
             variant="h6"
-            noWrap
             component="div"
-            sx={{ fontWeight: "bold", fontSize: 28 }}
+            sx={{
+              fontWeight: "bold",
+              fontSize: {
+                xs: "1rem", 
+                sm: "1.3rem", 
+              },
+            }}
           >
             WEBVIBES
           </Typography>
