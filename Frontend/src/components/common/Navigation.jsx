@@ -209,7 +209,7 @@ export default function NavigationBar() {
               width: 30, 
               height: 30, 
               backgroundImage: 'url(/Logo.png)', 
-              backgroundSize: '150%', 
+              backgroundSize: '200%', 
               backgroundPosition: 'center', 
               backgroundRepeat: 'no-repeat', 
               mr: 1,
