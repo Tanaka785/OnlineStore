@@ -82,6 +82,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
+    height: "40px",
     [theme.breakpoints.up('xs')]: {
       width: '100%', 
     },
@@ -89,10 +90,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       width: '30ch', 
     },
     [theme.breakpoints.up('md')]: {
-      width: '40ch', 
+      width: '60ch', 
     },
     [theme.breakpoints.up('lg')]: {
-      width: '50ch', 
+      width: '70ch', 
     },
   },
 }));
@@ -189,7 +190,7 @@ export default function NavigationBar() {
             color="inherit"
             aria-label="open drawer"
             sx={{ display: { xs: 'block', md: 'none' } }}
-            onClick={toggleDrawer(true)} // Fix: add onClick to open Drawer
+            onClick={toggleDrawer(true)} 
           >
             <MenuIcon />
           </IconButton>
@@ -270,6 +271,30 @@ export default function NavigationBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+
+          {/* <Typography
+            variant="h6"
+            component="div"
+            sx={{ display: { xs: "none", md: "flex"}}}
+          >
+            Sell your designs
+          </Typography>
+
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ display: { xs: "none", md: "flex"}}}
+          >
+            Login
+          </Typography>
+
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ display: { xs: "none", md: "flex"}}}
+          >
+            Signup
+          </Typography> */}
 
           <Box sx={{ flexGrow: 1 }} />
 
