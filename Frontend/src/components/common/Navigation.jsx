@@ -47,7 +47,6 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: 'transparent',
   color: 'inherit', 
   boxShadow: 'none', 
-  borderBottom: `1px solid ${theme.palette.divider}`, 
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
