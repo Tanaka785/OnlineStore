@@ -25,7 +25,8 @@ import {
   AccountCircle,
   Mail as MailIcon,
   Notifications as NotificationsIcon,
-  MoreVert as MoreIcon
+  MoreVert as MoreIcon,
+  ShoppingCart,
 } from '@mui/icons-material';
 
 // MUI Styling
@@ -281,16 +282,11 @@ export default function NavigationBar() {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
+            
+            <IconButton color="inherit">
+              <Badge badgeContent={3} color="error">
+                <ShoppingCart />
+              </Badge>
             </IconButton>
           </Box>
 
