@@ -59,6 +59,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 }));
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
+  marginTop: 4,
   position: 'static',
   backgroundColor: 'transparent',
   color: 'inherit',
