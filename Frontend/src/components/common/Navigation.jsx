@@ -201,15 +201,19 @@ export default function NavigationBar() {
               </List>
             </Box>
           </Drawer>
+
           <Avatar
             alt="Logo"
             src=""
             sx={{
-            backgroundImage: 'url(/Logo.png)', 
-            backgroundSize: '150%', 
-            backgroundPosition: 'center', 
-            backgroundRepeat: 'no-repeat', 
-          }}
+              width: 30, 
+              height: 30, 
+              backgroundImage: 'url(/Logo.png)', 
+              backgroundSize: '150%', 
+              backgroundPosition: 'center', 
+              backgroundRepeat: 'no-repeat', 
+              mr: 1,
+            }}
           />
           
           <Typography
