@@ -273,7 +273,7 @@ export default function NavigationBar() {
 
           <Box sx={{ flexGrow: 1 }} />
 
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Box>
             {/* wishlist */}
             <IconButton color="inherit">
               <Badge color="error">
@@ -287,19 +287,7 @@ export default function NavigationBar() {
               </Badge>
             </IconButton>
           </Box>
-
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
+          
         </Toolbar>
       </StyledAppBar>
       {renderMobileMenu}
