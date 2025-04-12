@@ -224,7 +224,7 @@ export default function NavigationBar() {
             sx={{
               fontWeight: "bold",
               fontSize: {
-                xs: "1rem", 
+                xs: "1.2rem", 
                 sm: "1.55rem", 
               },
             }}
