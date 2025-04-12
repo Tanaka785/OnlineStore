@@ -274,12 +274,13 @@ export default function NavigationBar() {
           <Box sx={{ flexGrow: 1 }} />
 
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            {/* wishlist */}
             <IconButton color="inherit">
               <Badge color="error">
                 <Favorite />
               </Badge>
             </IconButton>
-            
+            {/* cart */}
             <IconButton color="inherit">
               <Badge color="error">
                 <ShoppingCart />
