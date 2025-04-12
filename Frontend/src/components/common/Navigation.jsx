@@ -203,11 +203,13 @@ export default function NavigationBar() {
           </Drawer>
           <Avatar
             alt="Logo"
-            src="/Logo.png"
-            // sx={{
-            //   width: { xs: 100, sm: 150 },
-            //   height: { xs: 100, sm: 150 },
-            // }}
+            src=""
+            sx={{
+            backgroundImage: 'url(/Logo.png)', 
+            backgroundSize: '150%', 
+            backgroundPosition: 'center', 
+            backgroundRepeat: 'no-repeat', 
+          }}
           />
           
           <Typography
