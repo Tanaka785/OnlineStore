@@ -14,7 +14,8 @@ import {
   Drawer,
   List,
   ListItem,
-  ListItemText
+  ListItemText,
+  Avatar,
 } from '@mui/material';
 
 // MUI Icons
@@ -200,7 +201,14 @@ export default function NavigationBar() {
               </List>
             </Box>
           </Drawer>
-
+          <Avatar
+            alt="Your Alt Text"
+            src="/path-to-image.jpg"
+            // sx={{
+            //   width: { xs: 100, sm: 150 },
+            //   height: { xs: 100, sm: 150 },
+            // }}
+          />
           
           <Typography
             variant="h6"
