@@ -1,9 +1,9 @@
+import NavigationBar from "../components/common/Navigation";
+
 function Home() {
     return (
         <>
-            <h1>
-                Hello World!
-            </h1>
+            <NavigationBar/>
         </>
     )
 };
