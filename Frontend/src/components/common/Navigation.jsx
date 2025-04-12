@@ -208,13 +208,23 @@ export default function NavigationBar() {
             alt="Logo"
             src=""
             sx={{
-              width: 30, 
-              height: 30, 
               backgroundImage: 'url(/Logo.png)', 
               backgroundSize: '200%', 
               backgroundPosition: 'center', 
               backgroundRepeat: 'no-repeat', 
               mr: 1,
+              width: {
+                xs: 20,
+                sm: 30
+              },
+              height: {
+                xs: 20,
+                sm: 30,
+              },
+              marginBottom: {
+                xs: 0.5,
+                sm: 0.1,
+              }
             }}
           />
           
