@@ -220,7 +220,7 @@ export default function NavigationBar() {
             variant="h6"
             noWrap
             component="div"
-            sx={{ fontWeight: "bold" }}
+            sx={{ fontWeight: "bold", fontSize: 28 }}
           >
             WEBVIBES
           </Typography>
