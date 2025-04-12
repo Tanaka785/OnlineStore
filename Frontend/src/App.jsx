@@ -1,22 +1,24 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Home from "./pages/Home";
 
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Roboto, Arial, sans-serif', 
+  },
+});
+
 export default function App() {
   return (
-    <React.Fragment>
-      <CssBaseline />
+    <ThemeProvider theme={theme}>
+      <CssBaseline /> 
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
       </Router>
-    </React.Fragment>
+    </ThemeProvider>
   );
 }
