@@ -52,8 +52,11 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
+  border: `1px solid ${theme.palette.divider}`, // Add a visible border
+  borderRadius: theme.shape.borderRadius, // Optional: Add rounded corners
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from the theme
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
