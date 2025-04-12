@@ -223,14 +223,14 @@ export default function NavigationBar() {
               fontWeight: "bold",
               fontSize: {
                 xs: "1rem", 
-                sm: "1.3rem", 
+                sm: "1.4rem", 
               },
             }}
           >
             WEBVIBES
           </Typography>
 
-          <Search>
+          <Search sx={{ display: { xs: "none", sm: "block", }}}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
