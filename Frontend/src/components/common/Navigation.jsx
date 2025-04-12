@@ -42,6 +42,14 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   justifyContent: 'center',
 }));
 
+const StyledAppBar = styled(AppBar)(({ theme }) => ({
+  position: "static",
+  backgroundColor: 'transparent', // Transparent background
+  color: 'inherit', // Inherit text color
+  boxShadow: 'none', // Remove shadow
+  borderBottom: `1px solid ${theme.palette.divider}`, // Optional: Add a bottom border
+}));
+
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
@@ -155,7 +163,7 @@ export default function NavigationBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <StyledAppBar>
         <Toolbar>
           <IconButton
             size="large"
@@ -224,7 +232,7 @@ export default function NavigationBar() {
             </IconButton>
           </Box>
         </Toolbar>
-      </AppBar>
+      </StyledAppBar>
       {renderMobileMenu}
       {renderMenu}
     </Box>
