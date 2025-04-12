@@ -200,7 +200,6 @@ export default function NavigationBar() {
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
           >
             WEBVIBES
           </Typography>
