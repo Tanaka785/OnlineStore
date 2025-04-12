@@ -44,10 +44,10 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   position: "static",
-  backgroundColor: 'transparent', // Transparent background
-  color: 'inherit', // Inherit text color
-  boxShadow: 'none', // Remove shadow
-  borderBottom: `1px solid ${theme.palette.divider}`, // Optional: Add a bottom border
+  backgroundColor: 'transparent',
+  color: 'inherit', 
+  boxShadow: 'none', 
+  borderBottom: `1px solid ${theme.palette.divider}`, 
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
