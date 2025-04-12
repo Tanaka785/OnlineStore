@@ -1,5 +1,7 @@
 import NavigationBar from "../components/common/Navigation";
-
+import {
+    Box
+} from "@mui/material";
 function Home() {
     return (
         <Box>
