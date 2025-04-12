@@ -223,7 +223,7 @@ export default function NavigationBar() {
               },
               marginBottom: {
                 xs: 0.5,
-                sm: 0.1,
+                sm: 0,
               }
             }}
           />
@@ -237,6 +237,10 @@ export default function NavigationBar() {
                 xs: "1.2rem", 
                 sm: "1.55rem", 
               },
+              marginTop: {
+                xs: 0,
+                sm: 0.3
+              }
             }}
           >
             WEBVIBES
