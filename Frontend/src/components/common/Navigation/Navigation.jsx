@@ -48,11 +48,14 @@ const Search = styled("div")(({ theme }) => ({
   },
   marginRight: theme.spacing(2),
   marginLeft: theme.spacing(3),
-  // width: "100%",
-  // [theme.breakpoints.up("md")]: {
-  //   marginLeft: theme.spacing(3),
-  //   width: "600px",
-  // },
+  [theme.breakpoints.down("sm")]: {
+    // width: "auto",
+    display: "none",
+  },
+  [theme.breakpoints.up("md")]: {
+    display: "flex",
+    width: "auto",
+  },
   // [theme.breakpoints.up("lg")]: {
   //   marginLeft: theme.spacing(3),
   //   width: "700px",
@@ -94,8 +97,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     height: "40px",
-    // [theme.breakpoints.up("sm")]: {
-    //   width: "30ch",
+    // [theme.breakpoints.down("sm")]: {
+    //   display: "none",
+    //   // width: "30ch",
     // },
     // [theme.breakpoints.up("md")]: {
     //   width: "60ch",
@@ -291,7 +295,7 @@ export default function NavigationBar() {
             </Box>
           </Link>
 
-          <Search sx={{ display: { xs: "none", md: "block" } }}>
+          <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
