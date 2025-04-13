@@ -193,7 +193,7 @@ export default function NavigationBar() {
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ display: { xs: "block", md: "none" } }}
+            sx={{ display: { sm: "block", lg: "none" } }}
             onClick={toggleDrawer(true)}
           >
             <MenuIcon />
