@@ -278,25 +278,39 @@ export default function NavigationBar() {
 
           <Box sx={{ display: "flex" }}>
             <Typography
-              variant="h6"
+              variant="body1"
               component="div"
-              sx={{ display: { xs: "none", md: "flex" } }}
+              sx={{ display: { xs: "none", md: "flex", fontWeight: "bold" } }}
             >
               Sell your designs
             </Typography>
 
             <Typography
-              variant="h6"
+              variant="body1"
               component="div"
-              sx={{ display: { xs: "none", md: "flex", marginLeft: 20 } }}
+              sx={{
+                display: {
+                  xs: "none",
+                  md: "flex",
+                  marginLeft: 20,
+                  fontWeight: "bold",
+                },
+              }}
             >
               Login
             </Typography>
 
             <Typography
-              variant="h6"
+              variant="body1"
               component="div"
-              sx={{ display: { xs: "none", md: "flex", marginLeft: 20 } }}
+              sx={{
+                display: {
+                  xs: "none",
+                  md: "flex",
+                  marginLeft: 20,
+                  fontWeight: "bold",
+                },
+              }}
             >
               Signup
             </Typography>
