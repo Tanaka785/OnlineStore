@@ -47,6 +47,10 @@ const Search = styled("div")(({ theme }) => ({
     marginLeft: theme.spacing(3),
     width: "600px",
   },
+  [theme.breakpoints.up("lg")]: {
+    marginLeft: theme.spacing(3),
+    width: "700px",
+  },
 }));
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
@@ -83,6 +87,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
     [theme.breakpoints.up("md")]: {
       width: "60ch",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "70ch",
     },
   },
 }));
