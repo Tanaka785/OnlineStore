@@ -81,18 +81,18 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     height: "40px",
-    [theme.breakpoints.up("xs")]: {
+    [theme.breakpoints.up("lg")]: {
       width: "100%",
     },
-    [theme.breakpoints.up("sm")]: {
-      width: "30ch",
-    },
-    [theme.breakpoints.up("md")]: {
-      width: "60ch",
-    },
-    [theme.breakpoints.up("lg")]: {
-      width: "70ch",
-    },
+    // [theme.breakpoints.up("sm")]: {
+    //   width: "30ch",
+    // },
+    // [theme.breakpoints.up("md")]: {
+    //   width: "60ch",
+    // },
+    // [theme.breakpoints.up("lg")]: {
+    //   width: "70ch",
+    // },
   },
 }));
 
@@ -187,8 +187,8 @@ export default function NavigationBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <StyledAppBar>
+    <Box sx={{ flexGrow: 1, marginTop: 1.5 }}>
+      <StyledAppBar sx={{ border: '1px solid red'}}>
         <Toolbar>
           <IconButton
             size="large"
@@ -268,7 +268,7 @@ export default function NavigationBar() {
             WEBVIBES
           </Typography>
 
-          <Search sx={{ display: { xs: "none", sm: "block" } }}>
+          <Search sx={{ display: { xs: "none", sm: "block", border: '1px solid red' } }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
