@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 // MUI Core Components
 import {
@@ -16,7 +16,7 @@ import {
   ListItem,
   ListItemText,
   Avatar,
-} from '@mui/material';
+} from "@mui/material";
 
 // MUI Icons
 import {
@@ -28,71 +28,70 @@ import {
   MoreVert as MoreIcon,
   ShoppingCart,
   Favorite as FavoriteIcon,
-} from '@mui/icons-material';
+} from "@mui/icons-material";
 
 // MUI Styling
-import { styled, alpha } from '@mui/material/styles';
+import { styled, alpha } from "@mui/material/styles";
 
-
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
+const Search = styled("div")(({ theme }) => ({
+  position: "relative",
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
+  "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
-  width: '100%', 
-  [theme.breakpoints.up('sm')]: {
+  width: "100%",
+  [theme.breakpoints.up("sm")]: {
     marginLeft: theme.spacing(3),
-    width: '600px', 
+    width: "600px",
   },
-  [theme.breakpoints.up('md')]: {
-    width: '800px', 
+  [theme.breakpoints.up("md")]: {
+    width: "800px",
   },
 }));
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
+const SearchIconWrapper = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  height: "100%",
+  position: "absolute",
+  pointerEvents: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 }));
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   marginTop: 4,
-  position: 'static',
-  backgroundColor: 'transparent',
-  color: 'inherit',
-  boxShadow: 'none',
-  justifyContent: 'center',
+  position: "static",
+  backgroundColor: "transparent",
+  color: "inherit",
+  boxShadow: "none",
+  justifyContent: "center",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
+  color: "inherit",
   border: `1px solid ${theme.palette.divider}`,
   borderRadius: theme.shape.borderRadius,
-  '& .MuiInputBase-input': {
+  "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
+    transition: theme.transitions.create("width"),
+    width: "100%",
     height: "40px",
-    [theme.breakpoints.up('xs')]: {
-      width: '100%', 
+    [theme.breakpoints.up("xs")]: {
+      width: "100%",
     },
-    [theme.breakpoints.up('sm')]: {
-      width: '30ch', 
+    [theme.breakpoints.up("sm")]: {
+      width: "30ch",
     },
-    [theme.breakpoints.up('md')]: {
-      width: '60ch', 
+    [theme.breakpoints.up("md")]: {
+      width: "60ch",
     },
-    [theme.breakpoints.up('lg')]: {
-      width: '70ch', 
+    [theme.breakpoints.up("lg")]: {
+      width: "70ch",
     },
   },
 }));
@@ -103,7 +102,10 @@ export default function NavigationBar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = (open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
       return;
     }
     setIsDrawerOpen(open);
@@ -115,21 +117,22 @@ export default function NavigationBar() {
     setAnchorEl(null);
     handleMobileMenuClose();
   };
-  const handleMobileMenuOpen = (event) => setMobileMoreAnchorEl(event.currentTarget);
+  const handleMobileMenuOpen = (event) =>
+    setMobileMoreAnchorEl(event.currentTarget);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  const menuId = 'primary-search-account-menu';
-  const mobileMenuId = 'primary-search-account-menu-mobile';
+  const menuId = "primary-search-account-menu";
+  const mobileMenuId = "primary-search-account-menu-mobile";
 
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
       id={menuId}
       keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
@@ -141,10 +144,10 @@ export default function NavigationBar() {
   const renderMobileMenu = (
     <Menu
       anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
       id={mobileMenuId}
       keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
@@ -157,7 +160,11 @@ export default function NavigationBar() {
         <p>Messages</p>
       </MenuItem>
       <MenuItem>
-        <IconButton size="large" aria-label="show 17 new notifications" color="inherit">
+        <IconButton
+          size="large"
+          aria-label="show 17 new notifications"
+          color="inherit"
+        >
           <Badge badgeContent={17} color="error">
             <NotificationsIcon />
           </Badge>
@@ -188,8 +195,8 @@ export default function NavigationBar() {
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ display: { xs: 'block', md: 'none' } }}
-            onClick={toggleDrawer(true)} 
+            sx={{ display: { xs: "block", md: "none" } }}
+            onClick={toggleDrawer(true)}
           >
             <MenuIcon />
           </IconButton>
@@ -223,14 +230,14 @@ export default function NavigationBar() {
             alt="Logo"
             src=""
             sx={{
-              backgroundImage: 'url(/Logo.png)', 
-              backgroundSize: '200%', 
-              backgroundPosition: 'center', 
-              backgroundRepeat: 'no-repeat', 
+              backgroundImage: "url(/Logo.png)",
+              backgroundSize: "200%",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
               mr: 1,
               width: {
                 xs: 20,
-                sm: 30
+                sm: 30,
               },
               height: {
                 xs: 20,
@@ -239,35 +246,35 @@ export default function NavigationBar() {
               marginBottom: {
                 xs: 0.5,
                 sm: 0,
-              }
+              },
             }}
           />
-          
+
           <Typography
             variant="h6"
             component="div"
             sx={{
               fontWeight: "bold",
               fontSize: {
-                xs: "1.2rem", 
-                sm: "1.55rem", 
+                xs: "1.2rem",
+                sm: "1.55rem",
               },
               marginTop: {
                 xs: 0,
-                sm: 0.3
-              }
+                sm: 0.3,
+              },
             }}
           >
             WEBVIBES
           </Typography>
 
-          <Search sx={{ display: { xs: "none", sm: "block" }}}>
+          <Search sx={{ display: { xs: "none", sm: "block" } }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
+              inputProps={{ "aria-label": "search" }}
             />
           </Search>
 
@@ -299,19 +306,26 @@ export default function NavigationBar() {
 
           <Box>
             {/* wishlist */}
-            <IconButton size="large" aria-aria-label="Show number of user's wishlists" color="inherit">
-              <Badge badgeContent={1} color="error">
+            <IconButton
+              size="large"
+              aria-aria-label="Show number of user's wishlists"
+              color="inherit"
+            >
+              <Badge badgeContent={1} color="warning">
                 <FavoriteIcon />
               </Badge>
             </IconButton>
             {/* cart */}
-            <IconButton color="inherit">
-              <Badge color="error">
+            <IconButton
+              size="large"
+              aria-label="Show number of items in user cart"
+              color="inherit"
+            >
+              <Badge badgeContent={4} color="warning">
                 <ShoppingCart />
               </Badge>
             </IconButton>
           </Box>
-          
         </Toolbar>
       </StyledAppBar>
       {renderMobileMenu}
