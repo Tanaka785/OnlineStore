@@ -223,7 +223,7 @@ export default function NavigationBar() {
                 <ListItem>
                   <ListItemText primary={<Link>Login</Link>} />
                   <ListItemText primary="or" />
-                  <ListItemText primary={<Link>Signup</Link>} />
+                  <ListItemText primary={<Link className="link">Signup</Link>} />
                 </ListItem>
                 <ListItem button>
                   <ListItemText primary="About" />
