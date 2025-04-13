@@ -246,10 +246,6 @@ export default function NavigationBar() {
                     xs: 20,
                     sm: 30,
                   },
-                  marginBottom: {
-                    xs: 0.5,
-                    sm: 0,
-                  },
                 }}
               />
 
@@ -261,10 +257,6 @@ export default function NavigationBar() {
                   fontSize: {
                     xs: "1.2rem",
                     sm: "1.55rem",
-                  },
-                  marginTop: {
-                    xs: 0,
-                    sm: 0.3,
                   },
                 }}
               >
