@@ -78,18 +78,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     height: "40px",
-    [theme.breakpoints.up("lg")]: {
-      width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      width: "30ch",
     },
-    // [theme.breakpoints.up("sm")]: {
-    //   width: "30ch",
-    // },
-    // [theme.breakpoints.up("md")]: {
-    //   width: "60ch",
-    // },
-    // [theme.breakpoints.up("lg")]: {
-    //   width: "70ch",
-    // },
+    [theme.breakpoints.up("md")]: {
+      width: "60ch",
+    },
   },
 }));
 
@@ -265,7 +259,7 @@ export default function NavigationBar() {
             WEBVIBES
           </Typography>
 
-          <Search sx={{ display: { xs: "none", md: "block", border: '1px solid red' } }}>
+          <Search sx={{ display: { xs: "none", md: "block" } }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -275,15 +269,15 @@ export default function NavigationBar() {
             />
           </Search>
 
-          {/* <Typography
+          <Typography
             variant="h6"
             component="div"
-            sx={{ display: { xs: "none", md: "flex"}}}
+            sx={{ display: { xs: "none", md: "flex" } }}
           >
             Sell your designs
           </Typography>
 
-          <Typography
+          {/* <Typography
             variant="h6"
             component="div"
             sx={{ display: { xs: "none", md: "flex"}}}
