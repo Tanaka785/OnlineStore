@@ -269,9 +269,9 @@ export default function NavigationBar() {
             />
           </Search>
 
-          <Box sx={{ display: "flex"}}>
+          <Box sx={{ display: "flex" }}>
             <Typography
-              variant="body1"
+              variant="h6"
               component="div"
               sx={{ display: { xs: "none", md: "flex" } }}
             >
@@ -279,17 +279,17 @@ export default function NavigationBar() {
             </Typography>
 
             <Typography
-              variant="body1"
+              variant="h6"
               component="div"
-              sx={{ display: { xs: "none", md: "flex" } }}
+              sx={{ display: { xs: "none", md: "flex", marginLeft: 20 } }}
             >
               Login
             </Typography>
 
             <Typography
-              variant="body1"
+              variant="h6"
               component="div"
-              sx={{ display: { xs: "none", md: "flex" } }}
+              sx={{ display: { xs: "none", md: "flex", marginLeft: 20 } }}
             >
               Signup
             </Typography>
