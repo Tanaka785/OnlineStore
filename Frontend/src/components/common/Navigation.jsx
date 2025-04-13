@@ -252,7 +252,7 @@ export default function NavigationBar() {
             variant="h6"
             component="div"
             sx={{
-              // fontWeight: "bold",
+              fontWeight: "bold",
               fontSize: {
                 xs: "1.2rem",
                 sm: "1.55rem",
@@ -276,7 +276,16 @@ export default function NavigationBar() {
             />
           </Search>
 
-          <Box sx={{ display: "flex" }}>
+          <Box
+            sx={{
+              display: {
+                xs: "none",
+                sm: "none",
+                md: "none",
+                lg: "flex"
+              },
+            }}
+          >
             <Typography
               variant="body1"
               component="div"
