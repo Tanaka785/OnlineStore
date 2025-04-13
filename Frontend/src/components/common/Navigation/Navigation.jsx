@@ -304,7 +304,7 @@ export default function NavigationBar() {
           <Box sx={{ flexGrow: 1 }} />
 
           <Box sx={{ display: "flex"}}>
-            <Box sx={{ display: "flex", border: '1px solid red', alignItems: "center"}}>
+            <Box sx={{ display: "flex", alignItems: "center"}}>
               <Link className="link">
               <Typography
                 variant="body1"
@@ -336,7 +336,7 @@ export default function NavigationBar() {
             </Link>
             </Box>
             {/* wishlist */}
-            <Box sx={{ border: '1px solid red'}}>
+            <Box sx={{ ml: 3}}>
               <IconButton
               // size="large"
               aria-label="Show number of user's wishlists"
