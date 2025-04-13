@@ -299,21 +299,25 @@ export default function NavigationBar() {
               </Typography>
             </Link>
 
-            <Typography
-              variant="body1"
-              component="div"
-              sx={{ marginRight: 4.5, fontWeight: "bold" }}
-            >
-              Login
-            </Typography>
+            <Link>
+              <Typography
+                variant="body1"
+                component="div"
+                sx={{ marginRight: 4.5, fontWeight: "bold" }}
+              >
+                Login
+              </Typography>
+            </Link>
 
-            <Typography
-              variant="body1"
-              component="div"
-              sx={{ fontWeight: "bold" }}
-            >
-              Signup
-            </Typography>
+            <Link>
+              <Typography
+                variant="body1"
+                component="div"
+                sx={{ fontWeight: "bold" }}
+              >
+                Signup
+              </Typography>
+            </Link>
           </Box>
 
           <Box sx={{ flexGrow: 1 }} />
