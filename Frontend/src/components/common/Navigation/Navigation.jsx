@@ -78,6 +78,12 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   justifyContent: "center",
 }));
 
+const StyledListItem = styled(ListItem)(
+  ({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+  })
+)
+
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   border: `1px solid ${theme.palette.divider}`,
@@ -217,20 +223,20 @@ export default function NavigationBar() {
               onKeyDown={toggleDrawer(false)}
             >
               <List>
-                <ListItem>
+                <StyledListItem>
                   <ListItemText primary="Hi there!" />
-                </ListItem>
-                <ListItem>
+                </StyledListItem>
+                <StyledListItem>
                   <ListItemText primary={<Link>Login</Link>} />
                   <ListItemText primary="or" />
                   <ListItemText primary={<Link className="link">Signup</Link>} />
-                </ListItem>
-                <ListItem button>
+                </StyledListItem>
+                <StyledListItem button>
                   <ListItemText primary="About" />
-                </ListItem>
-                <ListItem button>
+                </StyledListItem>
+                <StyledListItem button>
                   <ListItemText primary="Contact" />
-                </ListItem>
+                </StyledListItem>
               </List>
             </Box>
           </Drawer>
