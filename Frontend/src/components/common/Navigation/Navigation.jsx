@@ -227,7 +227,13 @@ export default function NavigationBar() {
                   <ListItemText primary="Hi there!" />
                 </StyledListItem>
                 <StyledListItem sx={{ borderTop: "none" }}>
-                  <ListItemText primary={<Link>Login</Link>} />
+                  <ListItemText
+                    primary={
+                      <Link>
+                        <Typography sx={{ fontWeight: "bold"}}>Login</Typography>
+                      </Link>
+                    }
+                  />
                   <ListItemText primary="or" />
                   <ListItemText
                     primary={<Link className="link">Signup</Link>}
