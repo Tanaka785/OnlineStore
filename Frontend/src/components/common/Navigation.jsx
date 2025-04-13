@@ -246,6 +246,10 @@ export default function NavigationBar() {
                     xs: 20,
                     sm: 30,
                   },
+                  marginTop: {
+                    xs: 0.1,
+                    sm: 0.5
+                  }
                 }}
               />
 
