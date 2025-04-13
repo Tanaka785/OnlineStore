@@ -301,7 +301,7 @@ export default function NavigationBar() {
             {/* wishlist */}
             <IconButton color="inherit">
               <Badge color="error">
-                <Favorite />
+                <FavoriteIcon />
               </Badge>
             </IconButton>
             {/* cart */}
