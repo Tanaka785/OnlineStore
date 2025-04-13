@@ -28,7 +28,6 @@ import {
   MoreVert as MoreIcon,
   ShoppingCart,
   Favorite as FavoriteIcon,
-  Favorite
 } from '@mui/icons-material';
 
 // MUI Styling
