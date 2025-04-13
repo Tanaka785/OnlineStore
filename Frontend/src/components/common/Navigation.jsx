@@ -245,7 +245,7 @@ export default function NavigationBar() {
             variant="h6"
             component="div"
             sx={{
-              fontWeight: "bold",
+              // fontWeight: "bold",
               fontSize: {
                 xs: "1.2rem",
                 sm: "1.55rem",
@@ -269,29 +269,31 @@ export default function NavigationBar() {
             />
           </Search>
 
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ display: { xs: "none", md: "flex" } }}
-          >
-            Sell your designs
-          </Typography>
+          <Box sx={{ display: "flex"}}>
+            <Typography
+              variant="body1"
+              component="div"
+              sx={{ display: { xs: "none", md: "flex" } }}
+            >
+              Sell your designs
+            </Typography>
 
-          {/* <Typography
-            variant="h6"
-            component="div"
-            sx={{ display: { xs: "none", md: "flex"}}}
-          >
-            Login
-          </Typography>
+            <Typography
+              variant="body1"
+              component="div"
+              sx={{ display: { xs: "none", md: "flex" } }}
+            >
+              Login
+            </Typography>
 
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ display: { xs: "none", md: "flex"}}}
-          >
-            Signup
-          </Typography> */}
+            <Typography
+              variant="body1"
+              component="div"
+              sx={{ display: { xs: "none", md: "flex" } }}
+            >
+              Signup
+            </Typography>
+          </Box>
 
           <Box sx={{ flexGrow: 1 }} />
 
