@@ -243,11 +243,11 @@ export default function NavigationBar() {
                   mr: 1,
                   width: {
                     xs: 25,
-                    sm: 30,
+                    sm: 28,
                   },
                   height: {
                     xs: 25,
-                    sm: 30,
+                    sm: 28,
                   },
                   marginTop: {
                     xs: 0.2,
