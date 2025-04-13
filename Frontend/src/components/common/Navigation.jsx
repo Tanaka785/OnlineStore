@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// react-router-dom
+import { Link } from "react-router-dom";
+
 // MUI Core Components
 import {
   AppBar,
@@ -286,13 +289,15 @@ export default function NavigationBar() {
               },
             }}
           >
-            <Typography
-              variant="body1"
-              component="div"
-              sx={{ marginRight: 4.5, fontWeight: "bold" }}
-            >
-              Sell your designs
-            </Typography>
+            <Link>
+              <Typography
+                variant="body1"
+                component="div"
+                sx={{ marginRight: 4.5, fontWeight: "bold" }}
+              >
+                Sell your designs
+              </Typography>
+            </Link>
 
             <Typography
               variant="body1"
