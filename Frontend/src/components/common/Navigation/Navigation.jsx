@@ -305,7 +305,35 @@ export default function NavigationBar() {
 
           <Box sx={{ display: "flex"}}>
             <Box sx={{ border: '1px solid red'}}>
-              <Link>Hello</Link>
+              <Link className="link">
+              <Typography
+                variant="body1"
+                component="div"
+                sx={{ marginRight: 4.5, fontWeight: "bold" }}
+              >
+                Sell your designs
+              </Typography>
+            </Link>
+
+            <Link className="link">
+              <Typography
+                variant="body1"
+                component="div"
+                sx={{ marginRight: 4.5, fontWeight: "bold" }}
+              >
+                Login
+              </Typography>
+            </Link>
+
+            <Link className="link">
+              <Typography
+                variant="body1"
+                component="div"
+                sx={{ fontWeight: "bold" }}
+              >
+                Signup
+              </Typography>
+            </Link>
             </Box>
             {/* wishlist */}
             <Box sx={{ border: '1px solid red'}}>
