@@ -223,13 +223,15 @@ export default function NavigationBar() {
               onKeyDown={toggleDrawer(false)}
             >
               <List>
-                <StyledListItem>
+                <StyledListItem sx={{ border: "none" }}>
                   <ListItemText primary="Hi there!" />
                 </StyledListItem>
-                <StyledListItem>
+                <StyledListItem sx={{ borderTop: "none" }}>
                   <ListItemText primary={<Link>Login</Link>} />
                   <ListItemText primary="or" />
-                  <ListItemText primary={<Link className="link">Signup</Link>} />
+                  <ListItemText
+                    primary={<Link className="link">Signup</Link>}
+                  />
                 </StyledListItem>
                 <StyledListItem button>
                   <ListItemText primary="About" />
