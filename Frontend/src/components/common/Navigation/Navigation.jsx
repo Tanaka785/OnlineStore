@@ -217,8 +217,13 @@ export default function NavigationBar() {
               onKeyDown={toggleDrawer(false)}
             >
               <List>
-                <ListItem button>
-                  <ListItemText primary="Home" />
+                <ListItem>
+                  <ListItemText primary="Hi there!" />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary={<Link>Login</Link>} />
+                  <ListItemText primary="or" />
+                  <ListItemText primary={<Link>Signup</Link>} />
                 </ListItem>
                 <ListItem button>
                   <ListItemText primary="About" />
@@ -251,8 +256,8 @@ export default function NavigationBar() {
                   },
                   marginTop: {
                     xs: 0.2,
-                    sm: 0.5
-                  }
+                    sm: 0.5,
+                  },
                 }}
               />
 
