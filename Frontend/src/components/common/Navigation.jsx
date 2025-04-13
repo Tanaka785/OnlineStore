@@ -227,47 +227,49 @@ export default function NavigationBar() {
             </Box>
           </Drawer>
 
-          <Avatar
-            alt="Logo"
-            src=""
-            sx={{
-              backgroundImage: "url(/Logo.png)",
-              backgroundSize: "200%",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              mr: 1,
-              width: {
-                xs: 20,
-                sm: 30,
-              },
-              height: {
-                xs: 20,
-                sm: 30,
-              },
-              marginBottom: {
-                xs: 0.5,
-                sm: 0,
-              },
-            }}
-          />
+          <Box sx={{ display: "flex"}}>
+            <Avatar
+              alt="Logo"
+              src=""
+              sx={{
+                backgroundImage: "url(/Logo.png)",
+                backgroundSize: "200%",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                mr: 1,
+                width: {
+                  xs: 20,
+                  sm: 30,
+                },
+                height: {
+                  xs: 20,
+                  sm: 30,
+                },
+                marginBottom: {
+                  xs: 0.5,
+                  sm: 0,
+                },
+              }}
+            />
 
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              fontWeight: "bold",
-              fontSize: {
-                xs: "1.2rem",
-                sm: "1.55rem",
-              },
-              marginTop: {
-                xs: 0,
-                sm: 0.3,
-              },
-            }}
-          >
-            WEBVIBES
-          </Typography>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{
+                fontWeight: "bold",
+                fontSize: {
+                  xs: "1.2rem",
+                  sm: "1.55rem",
+                },
+                marginTop: {
+                  xs: 0,
+                  sm: 0.3,
+                },
+              }}
+            >
+              WEBVIBES
+            </Typography>
+          </Box>
 
           <Search sx={{ display: { xs: "none", md: "block" } }}>
             <SearchIconWrapper>
