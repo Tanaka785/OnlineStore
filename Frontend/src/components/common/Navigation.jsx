@@ -48,7 +48,7 @@ const Search = styled("div")(({ theme }) => ({
     width: "600px",
   },
   [theme.breakpoints.up("md")]: {
-    width: "200px",
+    width: "680px",
   },
 }));
 
