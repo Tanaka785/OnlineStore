@@ -273,6 +273,7 @@ export default function NavigationBar() {
                 variant="h6"
                 component="div"
                 sx={{
+                  fontWeight: "bold",
                   fontSize: {
                     xs: "1.2rem",
                     sm: "1.55rem",
