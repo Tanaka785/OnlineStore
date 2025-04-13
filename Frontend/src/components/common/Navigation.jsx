@@ -286,11 +286,11 @@ export default function NavigationBar() {
               },
             }}
           >
-            <Typography variant="body1" component="div">
+            <Typography variant="body1" component="div" sx={{ marginRight: 4.5 }}>
               Sell your designs
             </Typography>
 
-            <Typography variant="body1" component="div">
+            <Typography variant="body1" component="div" sx={{ marginRight: 4.5 }}>
               Login
             </Typography>
 
@@ -307,7 +307,7 @@ export default function NavigationBar() {
               // size="large"
               aria-label="Show number of user's wishlists"
               color="inherit"
-              sx={{ marginRight: { xs: 0, md: 1.5} }}
+              sx={{ marginRight: { xs: 0, md: 1.5 } }}
             >
               <Badge badgeContent={1} color="warning">
                 <FavoriteIcon />
