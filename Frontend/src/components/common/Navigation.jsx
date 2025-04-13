@@ -307,9 +307,10 @@ export default function NavigationBar() {
           <Box>
             {/* wishlist */}
             <IconButton
-              size="large"
-              aria-aria-label="Show number of user's wishlists"
+              // size="large"
+              aria-label="Show number of user's wishlists"
               color="inherit"
+              // sx={{ size: { xs: "small", md: "large" } }}
             >
               <Badge badgeContent={1} color="warning">
                 <FavoriteIcon />
