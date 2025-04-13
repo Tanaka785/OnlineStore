@@ -48,7 +48,7 @@ const Search = styled("div")(({ theme }) => ({
     width: "600px",
   },
   [theme.breakpoints.up("md")]: {
-    width: "800px",
+    width: "200px",
   },
 }));
 
@@ -188,7 +188,7 @@ export default function NavigationBar() {
 
   return (
     <Box sx={{ flexGrow: 1, marginTop: 1.5 }}>
-      <StyledAppBar sx={{ border: '1px solid red'}}>
+      <StyledAppBar>
         <Toolbar>
           <IconButton
             size="large"
@@ -268,7 +268,7 @@ export default function NavigationBar() {
             WEBVIBES
           </Typography>
 
-          <Search sx={{ display: { xs: "none", sm: "block", border: '1px solid red' } }}>
+          <Search sx={{ display: { xs: "none", md: "block", border: '1px solid red' } }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
