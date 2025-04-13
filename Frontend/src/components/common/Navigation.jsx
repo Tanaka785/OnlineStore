@@ -299,8 +299,8 @@ export default function NavigationBar() {
 
           <Box>
             {/* wishlist */}
-            <IconButton color="inherit">
-              <Badge color="error">
+            <IconButton size="large" aria-aria-label="Show number of user's wishlists" color="inherit">
+              <Badge badgeContent={1} color="error">
                 <FavoriteIcon />
               </Badge>
             </IconButton>
