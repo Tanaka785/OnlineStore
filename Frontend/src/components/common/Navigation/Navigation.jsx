@@ -234,10 +234,10 @@ export default function NavigationBar() {
                   />
                 </StyledListItem>
                 <StyledListItem button>
-                  <ListItemText primary="About" />
+                  <ListItemText primary="Explore" />
                 </StyledListItem>
                 <StyledListItem button>
-                  <ListItemText primary="Contact" />
+                  <ListItemText primary="Clothing" />
                 </StyledListItem>
               </List>
             </Box>
