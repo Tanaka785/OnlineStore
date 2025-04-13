@@ -230,7 +230,7 @@ export default function NavigationBar() {
             </Box>
           </Drawer>
 
-          <Link className="link">
+          <Link className="link" to="/">
             <Box sx={{ display: "flex" }}>
               <Avatar
                 alt="Logo"
