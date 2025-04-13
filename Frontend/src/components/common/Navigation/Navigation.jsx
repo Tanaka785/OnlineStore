@@ -242,15 +242,15 @@ export default function NavigationBar() {
                   backgroundRepeat: "no-repeat",
                   mr: 1,
                   width: {
-                    xs: 20,
+                    xs: 25,
                     sm: 30,
                   },
                   height: {
-                    xs: 20,
+                    xs: 25,
                     sm: 30,
                   },
                   marginTop: {
-                    xs: 0.1,
+                    xs: 0.2,
                     sm: 0.5
                   }
                 }}
