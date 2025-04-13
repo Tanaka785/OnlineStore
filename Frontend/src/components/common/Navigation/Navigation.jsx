@@ -304,7 +304,7 @@ export default function NavigationBar() {
           <Box sx={{ flexGrow: 1 }} />
 
           <Box sx={{ display: "flex"}}>
-            <Box sx={{ display: "flex", border: '1px solid red'}}>
+            <Box sx={{ display: "flex", border: '1px solid red', alignItems: "center"}}>
               <Link className="link">
               <Typography
                 variant="body1"
