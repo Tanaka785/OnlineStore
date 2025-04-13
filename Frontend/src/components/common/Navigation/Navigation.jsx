@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// css file
+import './Navigation.css';
+
 // react-router-dom
 import { Link } from "react-router-dom";
 
@@ -227,7 +230,7 @@ export default function NavigationBar() {
             </Box>
           </Drawer>
 
-          <Link>
+          <Link className="link">
             <Box sx={{ display: "flex" }}>
               <Avatar
                 alt="Logo"
@@ -289,7 +292,7 @@ export default function NavigationBar() {
               },
             }}
           >
-            <Link>
+            <Link className="link">
               <Typography
                 variant="body1"
                 component="div"
@@ -299,7 +302,7 @@ export default function NavigationBar() {
               </Typography>
             </Link>
 
-            <Link>
+            <Link className="link">
               <Typography
                 variant="body1"
                 component="div"
@@ -309,7 +312,7 @@ export default function NavigationBar() {
               </Typography>
             </Link>
 
-            <Link>
+            <Link className="link">
               <Typography
                 variant="body1"
                 component="div"
