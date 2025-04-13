@@ -286,15 +286,27 @@ export default function NavigationBar() {
               },
             }}
           >
-            <Typography variant="body1" component="div" sx={{ marginRight: 4.5 }}>
+            <Typography
+              variant="body1"
+              component="div"
+              sx={{ marginRight: 4.5, fontWeight: "bold" }}
+            >
               Sell your designs
             </Typography>
 
-            <Typography variant="body1" component="div" sx={{ marginRight: 4.5 }}>
+            <Typography
+              variant="body1"
+              component="div"
+              sx={{ marginRight: 4.5, fontWeight: "bold" }}
+            >
               Login
             </Typography>
 
-            <Typography variant="body1" component="div">
+            <Typography
+              variant="body1"
+              component="div"
+              sx={{ fontWeight: "bold" }}
+            >
               Signup
             </Typography>
           </Box>
