@@ -301,52 +301,15 @@ export default function NavigationBar() {
             />
           </Search>
 
-          <Box
-            sx={{
-              display: {
-                xs: "none",
-                sm: "none",
-                md: "none",
-                lg: "flex",
-              },
-            }}
-          >
-            <Link className="link">
-              <Typography
-                variant="body1"
-                component="div"
-                sx={{ marginRight: 4.5, fontWeight: "bold" }}
-              >
-                Sell your designs
-              </Typography>
-            </Link>
-
-            <Link className="link">
-              <Typography
-                variant="body1"
-                component="div"
-                sx={{ marginRight: 4.5, fontWeight: "bold" }}
-              >
-                Login
-              </Typography>
-            </Link>
-
-            <Link className="link">
-              <Typography
-                variant="body1"
-                component="div"
-                sx={{ fontWeight: "bold" }}
-              >
-                Signup
-              </Typography>
-            </Link>
-          </Box>
-
           <Box sx={{ flexGrow: 1 }} />
 
-          <Box>
+          <Box sx={{ display: "flex"}}>
+            <Box sx={{ border: '1px solid red'}}>
+              <Link>Hello</Link>
+            </Box>
             {/* wishlist */}
-            <IconButton
+            <Box sx={{ border: '1px solid red'}}>
+              <IconButton
               // size="large"
               aria-label="Show number of user's wishlists"
               color="inherit"
@@ -366,6 +329,7 @@ export default function NavigationBar() {
                 <ShoppingCart />
               </Badge>
             </IconButton>
+            </Box>
           </Box>
         </Toolbar>
       </StyledAppBar>
