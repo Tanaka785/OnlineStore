@@ -282,45 +282,19 @@ export default function NavigationBar() {
                 xs: "none",
                 sm: "none",
                 md: "none",
-                lg: "flex"
+                lg: "flex",
               },
             }}
           >
-            <Typography
-              variant="body1"
-              component="div"
-              sx={{ display: { xs: "none", md: "flex", fontWeight: "bold" } }}
-            >
+            <Typography variant="body1" component="div">
               Sell your designs
             </Typography>
 
-            <Typography
-              variant="body1"
-              component="div"
-              sx={{
-                display: {
-                  xs: "none",
-                  md: "flex",
-                  marginLeft: 20,
-                  fontWeight: "bold",
-                },
-              }}
-            >
+            <Typography variant="body1" component="div">
               Login
             </Typography>
 
-            <Typography
-              variant="body1"
-              component="div"
-              sx={{
-                display: {
-                  xs: "none",
-                  md: "flex",
-                  marginLeft: 20,
-                  fontWeight: "bold",
-                },
-              }}
-            >
+            <Typography variant="body1" component="div">
               Signup
             </Typography>
           </Box>
@@ -333,7 +307,7 @@ export default function NavigationBar() {
               // size="large"
               aria-label="Show number of user's wishlists"
               color="inherit"
-              // sx={{ size: { xs: "small", md: "large" } }}
+              sx={{ marginRight: { xs: 0, md: 1.5} }}
             >
               <Badge badgeContent={1} color="warning">
                 <FavoriteIcon />
