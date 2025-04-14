@@ -62,6 +62,7 @@ const Search = styled("div")(({ theme }) => ({
   // },
 }));
 
+// 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 2),
   height: "100%",
@@ -104,6 +105,7 @@ export default function NavigationBar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isNavLinksPresent, setIsNavItemsPresent] = useState(false);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -199,7 +201,7 @@ export default function NavigationBar() {
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ display: { sm: "block", lg: "none" } }}
+            // sx={{ display: {} }}
             onClick={toggleDrawer(true)}
           >
             <MenuIcon />
