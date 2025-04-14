@@ -95,19 +95,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     padding: theme.spacing(1, 1, 1, 0),
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
-    width: "100%",
+    // width: "100%",
     height: "40px",
-    // [theme.breakpoints.down("sm")]: {
-    //   display: "none",
-    //   // width: "30ch",
-    // },
-    // [theme.breakpoints.up("md")]: {
-    //   width: "60ch",
-    // },
-    // [theme.breakpoints.up("lg")]: {
-    //   width: "70ch",
-    // },
-  },
+  },  
 }));
 
 export default function NavigationBar() {
