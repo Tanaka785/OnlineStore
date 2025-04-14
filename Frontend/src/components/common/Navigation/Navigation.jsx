@@ -224,7 +224,9 @@ export default function NavigationBar() {
                   <ListItemText
                     primary={
                       <Link>
-                        <Typography sx={{ fontWeight: "bold"}}>Login</Typography>
+                        <Typography sx={{ fontWeight: "bold" }}>
+                          Login
+                        </Typography>
                       </Link>
                     }
                   />
@@ -297,60 +299,61 @@ export default function NavigationBar() {
 
           <Box sx={{ flexGrow: 1 }} />
 
-          <Box sx={{ display: "flex"}}>
-            <Box sx={{ display: "flex", alignItems: "center"}}>
+          <Box sx={{ display: "flex" }}>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              {/* 'Sell your designs link' */}
               <Link className="link">
-              <Typography
-                variant="body1"
-                component="div"
-                sx={{ marginRight: 4.5, fontWeight: "bold" }}
-              >
-                Sell your designs
-              </Typography>
-            </Link>
-
-            <Link className="link">
-              <Typography
-                variant="body1"
-                component="div"
-                sx={{ marginRight: 4.5, fontWeight: "bold" }}
-              >
-                Login
-              </Typography>
-            </Link>
-
-            <Link className="link">
-              <Typography
-                variant="body1"
-                component="div"
-                sx={{ fontWeight: "bold" }}
-              >
-                Signup
-              </Typography>
-            </Link>
+                <Typography
+                  variant="body1"
+                  component="div"
+                  sx={{ marginRight: 4.5, fontWeight: "bold" }}
+                >
+                  Sell your designs
+                </Typography>
+              </Link>
+              {/* Login link */}
+              <Link className="link">
+                <Typography
+                  variant="body1"
+                  component="div"
+                  sx={{ marginRight: 4.5, fontWeight: "bold" }}
+                >
+                  Login
+                </Typography>
+              </Link>
+              {/* Signup link */}
+              <Link className="link">
+                <Typography
+                  variant="body1"
+                  component="div"
+                  sx={{ fontWeight: "bold" }}
+                >
+                  Signup
+                </Typography>
+              </Link>
             </Box>
             {/* wishlist */}
-            <Box sx={{ ml: 3}}>
+            <Box sx={{ ml: 3 }}>
               <IconButton
-              // size="large"
-              aria-label="Show number of user's wishlists"
-              color="inherit"
-              sx={{ marginRight: { xs: 0, md: 1.5 } }}
-            >
-              <Badge badgeContent={1} color="warning">
-                <FavoriteIcon />
-              </Badge>
-            </IconButton>
-            {/* cart */}
-            <IconButton
-              size="large"
-              aria-label="Show number of items in user cart"
-              color="inherit"
-            >
-              <Badge badgeContent={4} color="warning">
-                <ShoppingCart />
-              </Badge>
-            </IconButton>
+                // size="large"
+                aria-label="Show number of user's wishlists"
+                color="inherit"
+                sx={{ marginRight: { xs: 0, md: 1.5 } }}
+              >
+                <Badge badgeContent={1} color="warning">
+                  <FavoriteIcon />
+                </Badge>
+              </IconButton>
+              {/* cart */}
+              <IconButton
+                size="large"
+                aria-label="Show number of items in user cart"
+                color="inherit"
+              >
+                <Badge badgeContent={4} color="warning">
+                  <ShoppingCart />
+                </Badge>
+              </IconButton>
             </Box>
           </Box>
         </Toolbar>
