@@ -62,7 +62,12 @@ const Search = styled("div")(({ theme }) => ({
   // },
 }));
 
-// 
+const NavLinksBox = styled(Box)(
+  ({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+  })
+)
 const SearchIconWrapper = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 2),
   height: "100%",
@@ -302,7 +307,7 @@ export default function NavigationBar() {
           <Box sx={{ flexGrow: 1 }} />
 
           <Box sx={{ display: "flex" }}>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            <NavLinksBox sx={{ display: "flex", alignItems: "center" }}>
               {/* 'Sell your designs link' */}
               <Link className="link">
                 <Typography
@@ -333,7 +338,7 @@ export default function NavigationBar() {
                   Signup
                 </Typography>
               </Link>
-            </Box>
+            </NavLinksBox>
             {/* wishlist */}
             <Box sx={{ ml: 3 }}>
               <IconButton
