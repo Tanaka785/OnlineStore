@@ -24,6 +24,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   boxShadow: "none",
   border: theme.palette.divider,
   color: theme.palette.text.primary,
+  marginTop: theme.spacing(1),
 }));
 
 const StyledDrawer = styled(Drawer)(({ theme }) => ({
