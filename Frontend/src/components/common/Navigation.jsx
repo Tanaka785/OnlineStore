@@ -91,7 +91,7 @@ export default function NavigationAppBar() {
               </IconButton>
               {/* Logo text */}
               <IconButton>
-                <StyledLink sx={{ ml: -1}}>
+                <StyledLink sx={{ ml: -1 }}>
                   <Typography variant="h6">WEBVIBES</Typography>
                 </StyledLink>
               </IconButton>
@@ -100,7 +100,7 @@ export default function NavigationAppBar() {
             <Box sx={{ display: "flex", flexGrow: 1 }}>
               {/* searchfield */}
               <Box sx={{ display: "flex", flexGrow: 1, mr: 2 }}>
-                <StyledTextField/>
+                <StyledTextField />
               </Box>
               {/* nav-links */}
               <Box
@@ -130,11 +130,11 @@ export default function NavigationAppBar() {
                 {/* cart & favorites icons. */}
                 <Box sx={{ display: "flex" }}>
                   {/* favorite/wishlits icon */}
-                  <IconButton>
+                  <IconButton size="large">
                     <Favorite />
                   </IconButton>
                   {/* cart icon */}
-                  <IconButton>
+                  <IconButton size="large">
                     <ShoppingCart />
                   </IconButton>
                 </Box>
