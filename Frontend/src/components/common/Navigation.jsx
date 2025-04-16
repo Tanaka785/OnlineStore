@@ -52,7 +52,7 @@ export default function NavigationAppBar() {
               display: "flex",
               alignItems: "center",
               width: "100%",
-              border: "1px solid red",
+              // border: "1px solid red",
             }}
           >
             <Box gap={0} sx={{ display: "flex", alignItems: "center" }}>
