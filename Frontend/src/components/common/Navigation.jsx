@@ -52,11 +52,6 @@ export default function NavigationAppBar() {
                 <ListItem>
                   <ListItemText primary="Hie there!" />
                 </ListItem>
-                <ListItem>
-                  <Link>
-                    <ListItemText primary="Hie there!" />
-                  </Link>
-                </ListItem>
               </List>
             </StyledDrawer>
             {/* Logo */}
