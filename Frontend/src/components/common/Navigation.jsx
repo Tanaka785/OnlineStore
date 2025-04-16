@@ -45,7 +45,15 @@ export default function NavigationAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="static">
         <Toolbar>
-          <Box gap={0} sx={{ display: "flex", alignItems: "center" }}>
+          <Box
+            gap={0}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              border: "1px solid red",
+            }}
+          >
             <Box gap={0} sx={{ display: "flex", alignItems: "center" }}>
               {/* MenuIcon */}
               <IconButton
@@ -78,7 +86,7 @@ export default function NavigationAppBar() {
               </IconButton>
             </Box>
             {/* searchfield, nav-links, cart & favorites box. */}
-            <Box sx={{ display: "flex" }}>
+            <Box sx={{ display: "flex", flexGrow: 1 }}>
               {/* searchfield */}
               <Box sx={{ display: "flex" }}>
                 <TextField />
