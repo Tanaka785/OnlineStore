@@ -46,59 +46,61 @@ export default function NavigationAppBar() {
       <StyledAppBar position="static">
         <Toolbar>
           <Box gap={0} sx={{ display: "flex", alignItems: "center" }}>
-            {/* MenuIcon */}
-            <IconButton
-              onClick={toggleDrawer}
-              sx={{ display: { sm: "flex", md: "none" } }}
-            >
-              <MenuIcon />
-            </IconButton>
-            {/* Drawer */}
-            <StyledDrawer
-              anchor="left"
-              open={state.isDrawerOpen}
-              onClose={toggleDrawer}
-            >
-              <List>
-                <ListItem>
-                  <ListItemText primary="Hie there!" />
-                </ListItem>
-              </List>
-            </StyledDrawer>
-            {/* Logo */}
-            <IconButton>
-              <Avatar>Logo</Avatar>
-            </IconButton>
-            {/* Logo text */}
-            <IconButton>
-              <Link>
-                <Typography variant="h5">WEBVIBES</Typography>
-              </Link>
-            </IconButton>
-          </Box>
-          {/* searchfield, nav-links, cart & favorites box. */}
-          <Box sx={{ display: "flex" }}>
-            {/* searchfield */}
-            <Box sx={{ display: "flex" }}>
-              <TextField />
+            <Box gap={0} sx={{ display: "flex", alignItems: "center" }}>
+              {/* MenuIcon */}
+              <IconButton
+                onClick={toggleDrawer}
+                sx={{ display: { sm: "flex", md: "none" } }}
+              >
+                <MenuIcon />
+              </IconButton>
+              {/* Drawer */}
+              <StyledDrawer
+                anchor="left"
+                open={state.isDrawerOpen}
+                onClose={toggleDrawer}
+              >
+                <List>
+                  <ListItem>
+                    <ListItemText primary="Hie there!" />
+                  </ListItem>
+                </List>
+              </StyledDrawer>
+              {/* Logo */}
+              <IconButton>
+                <Avatar>Logo</Avatar>
+              </IconButton>
+              {/* Logo text */}
+              <IconButton>
+                <Link>
+                  <Typography variant="h5">WEBVIBES</Typography>
+                </Link>
+              </IconButton>
             </Box>
-            {/* nav-links */}
+            {/* searchfield, nav-links, cart & favorites box. */}
             <Box sx={{ display: "flex" }}>
-              <IconButton>
-                <Link>
-                  <Typography variant="h5">Sell your designs</Typography>
-                </Link>
-              </IconButton>
-              <IconButton>
-                <Link>
-                  <Typography variant="h5">Login</Typography>
-                </Link>
-              </IconButton>
-              <IconButton>
-                <Link>
-                  <Typography variant="h5">Signup</Typography>
-                </Link>
-              </IconButton>
+              {/* searchfield */}
+              <Box sx={{ display: "flex" }}>
+                <TextField />
+              </Box>
+              {/* nav-links */}
+              <Box sx={{ display: "flex" }}>
+                <IconButton>
+                  <Link>
+                    <Typography variant="h5">Sell your designs</Typography>
+                  </Link>
+                </IconButton>
+                <IconButton>
+                  <Link>
+                    <Typography variant="h5">Login</Typography>
+                  </Link>
+                </IconButton>
+                <IconButton>
+                  <Link>
+                    <Typography variant="h5">Signup</Typography>
+                  </Link>
+                </IconButton>
+              </Box>
             </Box>
           </Box>
         </Toolbar>
