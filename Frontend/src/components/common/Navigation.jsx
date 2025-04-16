@@ -38,8 +38,11 @@ export default function NavigationAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="static">
         <Toolbar>
-          <IconButton sx={{ display: { sm: "flex", md: "none"}}}>
-            <MenuIcon onClick={toggleDrawer} />
+          <IconButton
+            onClick={toggleDrawer}
+            sx={{ display: { sm: "flex", md: "none" } }}
+          >
+            <MenuIcon />
           </IconButton>
           <StyledDrawer open={state.isDrawerOpen} onClose={toggleDrawer}>
             <List>
