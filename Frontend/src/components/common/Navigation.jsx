@@ -1,5 +1,5 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
+import { AppBar, Drawer } from "@mui/material";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -20,9 +20,7 @@ export default function NavigationAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="static">
-        <Toolbar>
-          
-        </Toolbar>
+        <Toolbar><MenuIcon/></Toolbar>
       </StyledAppBar>
     </Box>
   );
