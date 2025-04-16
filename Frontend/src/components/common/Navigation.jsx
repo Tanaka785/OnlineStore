@@ -66,7 +66,9 @@ export default function NavigationAppBar() {
             {/* Logo text */}
             <IconButton>
               <Link>
-                <Typography variant="h4">WEBVIBES</Typography>
+                <Typography variant="h5">
+                  WEBVIBES
+                </Typography>
               </Link>
             </IconButton>
           </Box>
