@@ -29,6 +29,7 @@ export default function NavigationAppBar() {
           <IconButton>
             <MenuIcon />
           </IconButton>
+          <Drawer/>
         </Toolbar>
       </StyledAppBar>
     </Box>
