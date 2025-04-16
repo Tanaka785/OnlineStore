@@ -41,34 +41,34 @@ export default function NavigationAppBar() {
           <Box gap={1} sx={{ display: "flex", alignItems: "center" }}>
             {/* MenuIcon */}
             <IconButton
-            onClick={toggleDrawer}
-            sx={{ display: { sm: "flex", md: "none" } }}
-          >
-            <MenuIcon />
+              onClick={toggleDrawer}
+              sx={{ display: { sm: "flex", md: "none" } }}
+            >
+              <MenuIcon />
             </IconButton>
             {/* Drawer */}
-          <StyledDrawer open={state.isDrawerOpen} onClose={toggleDrawer}>
-            <List>
-              <ListItem>
-                <ListItemText primary="Hie there!" />
-              </ListItem>
-              <ListItem>
-                <Link>
+            <StyledDrawer open={state.isDrawerOpen} onClose={toggleDrawer}>
+              <List>
+                <ListItem>
                   <ListItemText primary="Hie there!" />
-                </Link>
-              </ListItem>
-            </List>
+                </ListItem>
+                <ListItem>
+                  <Link>
+                    <ListItemText primary="Hie there!" />
+                  </Link>
+                </ListItem>
+              </List>
             </StyledDrawer>
             {/* Logo */}
             <IconButton>
-              <Avatar>
-                Logo
-              </Avatar>
+              <Avatar>Logo</Avatar>
             </IconButton>
             {/* Logo text */}
-            <Link>
-              <Typography variant="h4">WEBVIBES</Typography>
-            </Link>
+            <IconButton>
+              <Link>
+                <Typography variant="h4">WEBVIBES</Typography>
+              </Link>
+            </IconButton>
           </Box>
         </Toolbar>
       </StyledAppBar>
