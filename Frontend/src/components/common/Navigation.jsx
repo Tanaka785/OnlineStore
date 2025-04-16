@@ -25,7 +25,7 @@ export default function NavigationAppBar() {
   const toggleDrawer = () => {
     setState({
       ...state,
-      isDrawerOpen: true,
+      isDrawerOpen: (state.isDrawerOpen == true)? false : true
     });
   };
 
@@ -36,7 +36,7 @@ export default function NavigationAppBar() {
           <IconButton>
             <MenuIcon onClick={toggleDrawer} />
           </IconButton>
-          <Drawer open={state.isDrawerOpen} />
+          <Drawer open={state.isDrawerOpen} onClose={toggleDrawer}/>
         </Toolbar>
       </StyledAppBar>
     </Box>
