@@ -38,7 +38,7 @@ export default function NavigationAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="static">
         <Toolbar>
-          <Box sx={{ display: "flex"}}>
+          <Box gap={1} sx={{ display: "flex"}}>
             <IconButton
             onClick={toggleDrawer}
             sx={{ display: { sm: "flex", md: "none" } }}
