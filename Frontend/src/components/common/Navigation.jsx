@@ -38,7 +38,7 @@ export default function NavigationAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="static">
         <Toolbar>
-          <Box gap={1} sx={{ display: "flex", alignItems: "center" }}>
+          <Box gap={0} sx={{ display: "flex", alignItems: "center" }}>
             {/* MenuIcon */}
             <IconButton
               onClick={toggleDrawer}
@@ -66,9 +66,7 @@ export default function NavigationAppBar() {
             {/* Logo text */}
             <IconButton>
               <Link>
-                <Typography variant="h5">
-                  WEBVIBES
-                </Typography>
+                <Typography variant="h5">WEBVIBES</Typography>
               </Link>
             </IconButton>
           </Box>
