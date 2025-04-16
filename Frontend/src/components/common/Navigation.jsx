@@ -8,6 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { styled } from '@mui/material/styles';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
     backgroundColor: "transparent",
@@ -43,7 +44,12 @@ export default function NavigationAppBar() {
           <StyledDrawer open={state.isDrawerOpen} onClose={toggleDrawer}>
             <List>
               <ListItem>
-                <ListItemText primary="Hello World!"/>
+                <ListItemText primary="Hie there!" />
+              </ListItem>
+              <ListItem>
+                <Link>
+                  <ListItemText primary="Hie there!" />
+                </Link>
               </ListItem>
             </List>
           </StyledDrawer>
