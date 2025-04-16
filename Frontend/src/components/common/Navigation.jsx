@@ -126,9 +126,7 @@ export default function NavigationAppBar() {
                   </IconButton>
                   {/* cart icon */}
                   <IconButton>
-                    <IconButton>
                       <ShoppingCart />
-                    </IconButton>
                   </IconButton>
                 </Box>
               </Box>
