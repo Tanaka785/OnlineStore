@@ -92,7 +92,7 @@ export default function NavigationAppBar() {
                 <TextField />
               </Box>
               {/* nav-links */}
-              <Box sx={{ display: "flex" }}>
+              <Box sx={{ display: "flex", flexGrow: 1, justifyContent: "end" }}>
                 <IconButton>
                   <Link>
                     <Typography variant="h5">Sell your designs</Typography>
