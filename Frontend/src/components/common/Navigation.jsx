@@ -82,35 +82,44 @@ export default function NavigationAppBar() {
               {/* Logo text */}
               <IconButton>
                 <Link>
-                  <Typography variant="h5">WEBVIBES</Typography>
+                  <Typography variant="h6">WEBVIBES</Typography>
                 </Link>
               </IconButton>
             </Box>
             {/* searchfield, nav-links, cart & favorites box. */}
             <Box sx={{ display: "flex", flexGrow: 1 }}>
               {/* searchfield */}
-              <Box sx={{ display: "flex", flexGrow: 1, border: '1px solid red' }}>
-                <TextField sx={{ width: '100%'}}/>
+              <Box
+                sx={{ display: "flex", flexGrow: 1 }}
+              >
+                <TextField sx={{ width: "100%" }} />
               </Box>
               {/* nav-links */}
-              <Box sx={{ display: "flex", flexGrow: 1, justifyContent: "end" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexGrow: 1,
+                  justifyContent: "end",
+                  // border: "1px solid red",
+                }}
+              >
                 <IconButton>
                   <Link>
-                    <Typography variant="h5">Sell your designs</Typography>
+                    <Typography variant="h6">Sell your designs</Typography>
                   </Link>
                 </IconButton>
                 <IconButton>
                   <Link>
-                    <Typography variant="h5">Login</Typography>
+                    <Typography variant="h6">Login</Typography>
                   </Link>
                 </IconButton>
                 <IconButton>
                   <Link>
-                    <Typography variant="h5">Signup</Typography>
+                    <Typography variant="h6">Signup</Typography>
                   </Link>
                 </IconButton>
                 {/* cart & favorites icons. */}
-                <Box sx={{ display: 'flex'}}>
+                <Box sx={{ display: "flex" }}>
                   {/* favorite/wishlits icon */}
                   <IconButton>
                     <Favorite />
