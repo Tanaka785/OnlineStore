@@ -110,7 +110,7 @@ export default function NavigationAppBar() {
                   </Link>
                 </IconButton>
                 {/* cart & favorites icons. */}
-                <Box>
+                <Box sx={{ display: 'flex'}}>
                   {/* favorite/wishlits icon */}
                   <IconButton>
                     <Favorite />
