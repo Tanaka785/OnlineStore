@@ -90,7 +90,7 @@ export default function NavigationAppBar() {
               </IconButton>
               {/* Logo text */}
               <IconButton>
-                <StyledLink>
+                <StyledLink sx={{ ml: -1}}>
                   <Typography variant="h6">WEBVIBES</Typography>
                 </StyledLink>
               </IconButton>
