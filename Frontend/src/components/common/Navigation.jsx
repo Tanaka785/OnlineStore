@@ -37,7 +37,7 @@ export default function NavigationAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="static">
-        <Toolbar>
+        <Toolbar sx={{ alignItems: "center"}}>
           <Box gap={1} sx={{ display: "flex" }}>
             {/* MenuIcon */}
             <IconButton
