@@ -101,9 +101,10 @@ export default function NavigationAppBar() {
               <Box
                 sx={{
                   display: "flex",
-                  flexGrow: 1,
+                  // flexGrow: 1,
+                  alignSelf: "right",
+                  border: "1px solid red",
                   justifyContent: "end",
-                  // border: "1px solid red",
                 }}
               >
                 <IconButton>
