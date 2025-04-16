@@ -20,7 +20,11 @@ export default function NavigationAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="static">
-        <Toolbar><MenuIcon/></Toolbar>
+        <Toolbar>
+          <IconButton>
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
       </StyledAppBar>
     </Box>
   );
