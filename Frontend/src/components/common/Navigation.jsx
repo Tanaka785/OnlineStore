@@ -30,7 +30,7 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
   // padding: '14px',
 }));
 
-const StyledTextField = styled(({ theme }) => ({
+const StyledTextField = styled(TextField)(({ theme }) => ({
   width: '100%',
   border: theme.palette.divider,
 }))
@@ -94,10 +94,8 @@ export default function NavigationAppBar() {
             {/* searchfield, nav-links, cart & favorites box. */}
             <Box sx={{ display: "flex", flexGrow: 1 }}>
               {/* searchfield */}
-              <Box
-                sx={{ display: "flex", flexGrow: 1 }}
-              >
-                <TextField sx={{ width: "100%" }} />
+              <Box sx={{ display: "flex", flexGrow: 1 }}>
+                <StyledTextField/>
               </Box>
               {/* nav-links */}
               <Box
@@ -131,7 +129,7 @@ export default function NavigationAppBar() {
                   </IconButton>
                   {/* cart icon */}
                   <IconButton>
-                      <ShoppingCart />
+                    <ShoppingCart />
                   </IconButton>
                 </Box>
               </Box>
