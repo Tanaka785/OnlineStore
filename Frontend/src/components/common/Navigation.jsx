@@ -89,8 +89,8 @@ export default function NavigationAppBar() {
             {/* searchfield, nav-links, cart & favorites box. */}
             <Box sx={{ display: "flex", flexGrow: 1 }}>
               {/* searchfield */}
-              <Box sx={{ display: "flex" }}>
-                <TextField />
+              <Box sx={{ display: "flex", flexGrow: 1, border: '1px solid red' }}>
+                <TextField sx={{ width: '100%'}}/>
               </Box>
               {/* nav-links */}
               <Box sx={{ display: "flex", flexGrow: 1, justifyContent: "end" }}>
