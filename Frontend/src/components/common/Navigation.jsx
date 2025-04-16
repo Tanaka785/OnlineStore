@@ -47,7 +47,7 @@ export default function NavigationAppBar() {
               <MenuIcon />
             </IconButton>
             {/* Drawer */}
-            <StyledDrawer open={state.isDrawerOpen} onClose={toggleDrawer}>
+            <StyledDrawer anchor="left" open={state.isDrawerOpen} onClose={toggleDrawer}>
               <List>
                 <ListItem>
                   <ListItemText primary="Hie there!" />
