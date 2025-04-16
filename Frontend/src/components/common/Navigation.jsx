@@ -30,6 +30,11 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
   // padding: '14px',
 }));
 
+const StyledTextField = styled(({ theme }) => ({
+  width: '100%',
+  border: theme.palette.divider,
+}))
+
 export default function NavigationAppBar() {
   const [state, setState] = useState({
     isDrawerOpen: false,
