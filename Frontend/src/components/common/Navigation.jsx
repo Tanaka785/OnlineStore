@@ -19,17 +19,24 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
 export default function NavigationAppBar() {
 
   const [state, setState] = useState({
-    isDrawerOpen: "false",
-  })
-  
+    isDrawerOpen: false,
+  });
+
+  const toggleDrawer = () => {
+    setState({
+      ...state,
+      isDrawerOpen: true,
+    });
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="static">
         <Toolbar>
           <IconButton>
-            <MenuIcon />
+            <MenuIcon onClick={toggleDrawer} />
           </IconButton>
-          <Drawer/>
+          <Drawer open={state.isDrawerOpen} />
         </Toolbar>
       </StyledAppBar>
     </Box>
