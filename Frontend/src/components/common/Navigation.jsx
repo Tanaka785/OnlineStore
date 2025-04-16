@@ -1,5 +1,5 @@
 import * as React from "react";
-import { AppBar, Drawer } from "@mui/material";
+import { AppBar, Drawer, List, ListItem, ListItemText } from "@mui/material";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -14,6 +14,10 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
     boxShadow: "none",
     border: theme.palette.divider,
     color: theme.palette.text.primary,
+}))
+
+const StyledDrawer = styled(Drawer)(({ theme }) => ({
+  // padding: '14px',
 }))
 
 export default function NavigationAppBar() {
@@ -36,7 +40,13 @@ export default function NavigationAppBar() {
           <IconButton>
             <MenuIcon onClick={toggleDrawer} />
           </IconButton>
-          <Drawer open={state.isDrawerOpen} onClose={toggleDrawer}/>
+          <StyledDrawer open={state.isDrawerOpen} onClose={toggleDrawer}>
+            <List>
+              <ListItem>
+                <ListItemText primary="Hello World!"/>
+              </ListItem>
+            </List>
+          </StyledDrawer>
         </Toolbar>
       </StyledAppBar>
     </Box>
