@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { styled } from '@mui/material/styles';
-
+import { useState } from "react";
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
     backgroundColor: "transparent",
@@ -17,6 +17,11 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
 }))
 
 export default function NavigationAppBar() {
+
+  const [state, setState] = useState({
+    isDrawerOpen: "false",
+  })
+  
   return (
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="static">
