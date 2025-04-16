@@ -35,6 +35,10 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
   border: theme.palette.divider,
 }))
 
+const StyledLinks = styled(Link)(({ theme }) => ({
+  textDecorationLine: "none",
+}))
+
 export default function NavigationAppBar() {
   const [state, setState] = useState({
     isDrawerOpen: false,
@@ -103,7 +107,7 @@ export default function NavigationAppBar() {
                   display: "flex",
                   // flexGrow: 1,
                   alignSelf: "right",
-                  border: "1px solid red",
+                  // border: "1px solid red",
                   justifyContent: "end",
                 }}
               >
