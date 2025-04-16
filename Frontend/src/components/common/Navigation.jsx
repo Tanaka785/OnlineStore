@@ -1,5 +1,5 @@
 import * as React from "react";
-import { AppBar, Drawer, List, ListItem, ListItemText } from "@mui/material";
+import { AppBar, Drawer, List, ListItem, ListItemText, Avatar } from "@mui/material";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -38,13 +38,15 @@ export default function NavigationAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="static">
         <Toolbar>
-          <Box gap={1} sx={{ display: "flex"}}>
+          <Box gap={1} sx={{ display: "flex" }}>
+            {/* MenuIcon */}
             <IconButton
             onClick={toggleDrawer}
             sx={{ display: { sm: "flex", md: "none" } }}
           >
             <MenuIcon />
-          </IconButton>
+            </IconButton>
+            {/* Drawer */}
           <StyledDrawer open={state.isDrawerOpen} onClose={toggleDrawer}>
             <List>
               <ListItem>
@@ -56,7 +58,13 @@ export default function NavigationAppBar() {
                 </Link>
               </ListItem>
             </List>
-          </StyledDrawer>
+            </StyledDrawer>
+            {/* Logo */}
+            <IconButton>
+              <Avatar>
+                Logo
+              </Avatar>
+            </IconButton>
           </Box>
         </Toolbar>
       </StyledAppBar>
