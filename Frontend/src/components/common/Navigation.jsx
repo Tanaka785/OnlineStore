@@ -13,7 +13,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+import MenuIcon from "@mui/material/Menu";
+import { Favorite, ShoppingCart } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -108,6 +109,19 @@ export default function NavigationAppBar() {
                     <Typography variant="h5">Signup</Typography>
                   </Link>
                 </IconButton>
+                {/* cart & favorites icons. */}
+                <Box>
+                  {/* favorite/wishlits icon */}
+                  <IconButton>
+                    <Favorite />
+                  </IconButton>
+                  {/* cart icon */}
+                  <IconButton>
+                    <IconButton>
+                      <ShoppingCart />
+                    </IconButton>
+                  </IconButton>
+                </Box>
               </Box>
             </Box>
           </Box>
