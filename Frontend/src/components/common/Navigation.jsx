@@ -35,7 +35,7 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
   border: theme.palette.divider,
 }))
 
-const StyledLinks = styled(Link)(({ theme }) => ({
+const StyledLink = styled(Link)(({ theme }) => ({
   textDecorationLine: "none",
 }))
 
@@ -90,9 +90,9 @@ export default function NavigationAppBar() {
               </IconButton>
               {/* Logo text */}
               <IconButton>
-                <StyledLinks>
+                <StyledLink>
                   <Typography variant="h6">WEBVIBES</Typography>
-                </StyledLinks>
+                </StyledLink>
               </IconButton>
             </Box>
             {/* searchfield, nav-links, cart & favorites box. */}
@@ -112,19 +112,19 @@ export default function NavigationAppBar() {
                 }}
               >
                 <IconButton>
-                  <StyledLinks>
+                  <StyledLink>
                     <Typography variant="h6">Sell your designs</Typography>
-                  </StyledLinks>
+                  </StyledLink>
                 </IconButton>
                 <IconButton>
-                  <StyledLinks>
+                  <StyledLink>
                     <Typography variant="h6">Login</Typography>
-                  </StyledLinks>
+                  </StyledLink>
                 </IconButton>
                 <IconButton>
-                  <StyledLinks>
+                  <StyledLink>
                     <Typography variant="h6">Signup</Typography>
-                  </StyledLinks>
+                  </StyledLink>
                 </IconButton>
                 {/* cart & favorites icons. */}
                 <Box sx={{ display: "flex" }}>
