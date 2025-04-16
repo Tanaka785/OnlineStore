@@ -90,9 +90,9 @@ export default function NavigationAppBar() {
               </IconButton>
               {/* Logo text */}
               <IconButton>
-                <Link>
+                <StyledLinks>
                   <Typography variant="h6">WEBVIBES</Typography>
-                </Link>
+                </StyledLinks>
               </IconButton>
             </Box>
             {/* searchfield, nav-links, cart & favorites box. */}
@@ -112,19 +112,19 @@ export default function NavigationAppBar() {
                 }}
               >
                 <IconButton>
-                  <Link>
+                  <StyledLinks>
                     <Typography variant="h6">Sell your designs</Typography>
-                  </Link>
+                  </StyledLinks>
                 </IconButton>
                 <IconButton>
-                  <Link>
+                  <StyledLinks>
                     <Typography variant="h6">Login</Typography>
-                  </Link>
+                  </StyledLinks>
                 </IconButton>
                 <IconButton>
-                  <Link>
+                  <StyledLinks>
                     <Typography variant="h6">Signup</Typography>
-                  </Link>
+                  </StyledLinks>
                 </IconButton>
                 {/* cart & favorites icons. */}
                 <Box sx={{ display: "flex" }}>
