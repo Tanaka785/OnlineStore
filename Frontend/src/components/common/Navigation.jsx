@@ -41,7 +41,7 @@ const StyledLink = styled(Link)(({ theme }) => ({
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   boxSizing: "border-box",
-  paddingInline: theme.spacing(2),
+  // paddingInline: theme.spacing(2),
   "&:hover": {
     borderRadius: theme.spacing(3),
   },
