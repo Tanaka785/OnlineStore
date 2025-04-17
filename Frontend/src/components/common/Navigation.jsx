@@ -39,6 +39,14 @@ const StyledLink = styled(Link)(({ theme }) => ({
   textDecorationLine: "none",
 }))
 
+const StyledIconButton = styled(IconButton)(({ theme }) => ({
+  boxSizing: "border-box",
+  paddingInline: theme.spacing(2),
+  "&:hover": {
+    borderRadius: theme.spacing(3),
+  },
+}));
+
 export default function NavigationAppBar() {
   const theme = useTheme();
   const [state, setState] = useState({
@@ -67,12 +75,12 @@ export default function NavigationAppBar() {
           >
             <Box gap={0} sx={{ display: "flex", alignItems: "center" }}>
               {/* MenuIcon */}
-              <IconButton
+              <StyledIconButton
                 onClick={toggleDrawer}
                 sx={{ display: { sm: "flex", md: "none" } }}
               >
                 <MenuIcon />
-              </IconButton>
+              </StyledIconButton>
               {/* Drawer */}
               <StyledDrawer
                 anchor="left"
@@ -86,7 +94,7 @@ export default function NavigationAppBar() {
                 </List>
               </StyledDrawer>
               {/* Logo */}
-              <IconButton>
+              <StyledIconButton>
                 <Avatar
                   src="/Logo.png"
                   alt="Logo"
@@ -94,13 +102,13 @@ export default function NavigationAppBar() {
                 >
                   Logo
                 </Avatar>
-              </IconButton>
+              </StyledIconButton>
               {/* Logo text */}
-              <IconButton>
+              <StyledIconButton>
                 <StyledLink sx={{ ml: -1 }}>
                   <Typography variant="h6">WEBVIBES</Typography>
                 </StyledLink>
-              </IconButton>
+              </StyledIconButton>
             </Box>
             {/* searchfield, nav-links, cart & favorites box. */}
             <Box
@@ -143,32 +151,32 @@ export default function NavigationAppBar() {
                 }}
               >
                 <Box sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
-                  <IconButton>
+                  <StyledIconButton>
                     <StyledLink>
                       <Typography variant="h6">Sell your designs</Typography>
                     </StyledLink>
-                  </IconButton>
-                  <IconButton>
+                  </StyledIconButton>
+                  <StyledIconButton>
                     <StyledLink>
                       <Typography variant="h6">Login</Typography>
                     </StyledLink>
-                  </IconButton>
-                  <IconButton>
+                  </StyledIconButton>
+                  <StyledIconButton>
                     <StyledLink>
                       <Typography variant="h6">Signup</Typography>
                     </StyledLink>
-                  </IconButton>
+                  </StyledIconButton>
                 </Box>
                 {/* cart & favorites icons. */}
                 <Box sx={{ display: "flex" }}>
                   {/* favorite/wishlits icon */}
-                  <IconButton size="large">
+                  <StyledIconButton size="large">
                     <Favorite />
-                  </IconButton>
+                  </StyledIconButton>
                   {/* cart icon */}
-                  <IconButton size="large">
+                  <StyledIconButton size="large">
                     <ShoppingCart />
-                  </IconButton>
+                  </StyledIconButton>
                 </Box>
               </Box>
             </Box>
