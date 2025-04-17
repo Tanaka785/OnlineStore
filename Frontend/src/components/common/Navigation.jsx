@@ -111,27 +111,27 @@ export default function NavigationAppBar() {
               <Box
                 sx={{
                   display: "flex",
-                  // flexGrow: 1,
                   alignSelf: "right",
-                  // border: "1px solid red",
                   justifyContent: "end",
                 }}
               >
-                <IconButton>
-                  <StyledLink>
-                    <Typography variant="h6">Sell your designs</Typography>
-                  </StyledLink>
-                </IconButton>
-                <IconButton>
-                  <StyledLink>
-                    <Typography variant="h6">Login</Typography>
-                  </StyledLink>
-                </IconButton>
-                <IconButton>
-                  <StyledLink>
-                    <Typography variant="h6">Signup</Typography>
-                  </StyledLink>
-                </IconButton>
+                <Box sx={{ display: "flex" }}>
+                  <IconButton>
+                    <StyledLink>
+                      <Typography variant="h6">Sell your designs</Typography>
+                    </StyledLink>
+                  </IconButton>
+                  <IconButton>
+                    <StyledLink>
+                      <Typography variant="h6">Login</Typography>
+                    </StyledLink>
+                  </IconButton>
+                  <IconButton>
+                    <StyledLink>
+                      <Typography variant="h6">Signup</Typography>
+                    </StyledLink>
+                  </IconButton>
+                </Box>
                 {/* cart & favorites icons. */}
                 <Box sx={{ display: "flex" }}>
                   {/* favorite/wishlits icon */}
