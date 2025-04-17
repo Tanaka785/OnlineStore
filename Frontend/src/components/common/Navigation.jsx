@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Drawer,
@@ -7,16 +7,15 @@ import {
   ListItemText,
   Avatar,
   TextField,
+  Box,
+  Toolbar,
+  Typography,
+  IconButton,
 } from "@mui/material";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import { Favorite, ShoppingCart } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
-import { useState } from "react";
+import { Menu, Favorite, ShoppingCart } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: "transparent",
