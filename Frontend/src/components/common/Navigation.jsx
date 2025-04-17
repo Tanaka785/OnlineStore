@@ -11,9 +11,8 @@ import {
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
 import { Favorite, ShoppingCart } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
