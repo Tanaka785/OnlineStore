@@ -126,7 +126,7 @@ export default function NavigationAppBar() {
                     input: {
                       endAdornment: (
                         <InputAdornment position="end">
-                          <SearchIcon/>
+                          <SearchIcon sx={{ minWidth: 30, minHeight: 30 }} />
                         </InputAdornment>
                       )
                     }
