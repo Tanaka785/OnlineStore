@@ -36,6 +36,7 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecorationLine: "none",
+  letterSpacing: -0.5,
 }));
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
@@ -43,8 +44,9 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
   // paddingInline: theme.spacing(2),
   "&:hover": {
     borderRadius: theme.spacing(3),
-  },
+  }, // ← this closing brace was missing
 }));
+
 
 export default function NavigationAppBar() {
   const theme = useTheme();
@@ -107,7 +109,6 @@ export default function NavigationAppBar() {
                 <StyledLink sx={{ ml: -1 }}>
                   <Typography
                     variant="h6"
-                    letterSpacing={-0.5}
                     fontWeight={theme.typography.fontWeightBold}
                   >
                     WEBVIBES
