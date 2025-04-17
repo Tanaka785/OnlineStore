@@ -115,7 +115,7 @@ export default function NavigationAppBar() {
                   justifyContent: "end",
                 }}
               >
-                <Box sx={{ display: "flex" }}>
+                <Box sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
                   <IconButton>
                     <StyledLink>
                       <Typography variant="h6">Sell your designs</Typography>
