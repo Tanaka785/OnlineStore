@@ -102,9 +102,23 @@ export default function NavigationAppBar() {
               </IconButton>
             </Box>
             {/* searchfield, nav-links, cart & favorites box. */}
-            <Box sx={{ display: "flex", flexGrow: { xs: 0, sm: 1, md: 1}, border: '1px solid red' }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexGrow: { xs: 0, sm: 1, md: 1 },
+                // border: "1px solid red",
+                marginLeft: "auto",
+              }}
+            >
               {/* searchfield */}
-              <Box sx={{ flex: 1, minWidth: 0, mr: 2, display: { xs: "none", sm: "flex"} }}>
+              <Box
+                sx={{
+                  flex: 1,
+                  minWidth: 0,
+                  mr: 2,
+                  display: { xs: "none", sm: "flex" },
+                }}
+              >
                 <StyledTextField fullWidth />
               </Box>
               {/* nav-links */}
@@ -113,7 +127,7 @@ export default function NavigationAppBar() {
                   display: "flex",
                   alignSelf: "right",
                   justifyContent: "end",
-                  marginLeft: "auto"
+                  marginLeft: "auto",
                 }}
               >
                 <Box sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
@@ -134,7 +148,7 @@ export default function NavigationAppBar() {
                   </IconButton>
                 </Box>
                 {/* cart & favorites icons. */}
-                <Box sx={{ display: "flex", border: '1px solid blue' }}>
+                <Box sx={{ display: "flex" }}>
                   {/* favorite/wishlits icon */}
                   <IconButton size="large">
                     <Favorite />
