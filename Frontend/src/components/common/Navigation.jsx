@@ -17,7 +17,6 @@ import { styled, useTheme } from "@mui/material/styles";
 import { Menu, Favorite, ShoppingCart, Menu as MenuIcon, Search as SearchIcon } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
-
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: "transparent",
   boxShadow: "none",
@@ -31,13 +30,13 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 }));
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
-  width: '100%',
+  width: "100%",
   border: theme.palette.divider,
-}))
+}));
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecorationLine: "none",
-}))
+}));
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   boxSizing: "border-box",
@@ -106,7 +105,13 @@ export default function NavigationAppBar() {
               {/* Logo text */}
               <StyledIconButton>
                 <StyledLink sx={{ ml: -1 }}>
-                  <Typography variant="h6" letterSpacing={-0.5}>WEBVIBES</Typography>
+                  <Typography
+                    variant="h6"
+                    letterSpacing={-0.5}
+                    fontWeight={theme.typography.fontWeightBold}
+                  >
+                    WEBVIBES
+                  </Typography>
                 </StyledLink>
               </StyledIconButton>
             </Box>
@@ -136,8 +141,8 @@ export default function NavigationAppBar() {
                         <InputAdornment position="end">
                           <SearchIcon sx={{ minWidth: 30, minHeight: 30 }} />
                         </InputAdornment>
-                      )
-                    }
+                      ),
+                    },
                   }}
                 />
               </Box>
