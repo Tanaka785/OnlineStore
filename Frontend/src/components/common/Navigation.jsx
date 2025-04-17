@@ -13,7 +13,7 @@ import {
   IconButton,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { Menu, Favorite, ShoppingCart } from "@mui/icons-material";
+import { Menu, Favorite, ShoppingCart, Menu as MenuIcon } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 
