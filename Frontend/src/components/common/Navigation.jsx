@@ -11,9 +11,10 @@ import {
   Toolbar,
   Typography,
   IconButton,
+  InputAdornment,
 } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
-import { Menu, Favorite, ShoppingCart, Menu as MenuIcon } from "@mui/icons-material";
+import { Menu, Favorite, ShoppingCart, Menu as MenuIcon, Search as SearchIcon } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 
@@ -119,7 +120,18 @@ export default function NavigationAppBar() {
                   display: { xs: "none", sm: "flex" },
                 }}
               >
-                <StyledTextField fullWidth />
+                <StyledTextField
+                  fullWidth
+                  slotProps={{
+                    input: {
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <SearchIcon/>
+                        </InputAdornment>
+                      )
+                    }
+                  }}
+                />
               </Box>
               {/* nav-links */}
               <Box
