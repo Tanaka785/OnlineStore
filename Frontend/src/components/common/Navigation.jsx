@@ -86,7 +86,13 @@ export default function NavigationAppBar() {
               </StyledDrawer>
               {/* Logo */}
               <IconButton>
-                <Avatar src="/Logo.png" alt="Logo" sx={{ minWidth: 40, minHeight: 40}}>Logo</Avatar>
+                <Avatar
+                  src="/Logo.png"
+                  alt="Logo"
+                  sx={{ minWidth: 40, minHeight: 40 }}
+                >
+                  Logo
+                </Avatar>
               </IconButton>
               {/* Logo text */}
               <IconButton>
@@ -98,8 +104,8 @@ export default function NavigationAppBar() {
             {/* searchfield, nav-links, cart & favorites box. */}
             <Box sx={{ display: "flex", flexGrow: 1 }}>
               {/* searchfield */}
-              <Box sx={{ flex: 1, minWidth: 0, mr: 2}}>
-                <StyledTextField fullWidth/>
+              <Box sx={{ flex: 1, minWidth: 0, mr: 2 }}>
+                <StyledTextField fullWidth />
               </Box>
               {/* nav-links */}
               <Box
