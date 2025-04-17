@@ -12,7 +12,7 @@ import {
   Typography,
   IconButton,
 } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import { styled, useTheme } from "@mui/material/styles";
 import { Menu, Favorite, ShoppingCart, Menu as MenuIcon } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
@@ -39,6 +39,7 @@ const StyledLink = styled(Link)(({ theme }) => ({
 }))
 
 export default function NavigationAppBar() {
+  const theme = useTheme();
   const [state, setState] = useState({
     isDrawerOpen: false,
   });
@@ -85,7 +86,7 @@ export default function NavigationAppBar() {
               </StyledDrawer>
               {/* Logo */}
               <IconButton>
-                <Avatar>Logo</Avatar>
+                <Avatar src="/Logo.png" alt="Logo" sx={{ minWidth: 40, minHeight: 40}}>Logo</Avatar>
               </IconButton>
               {/* Logo text */}
               <IconButton>
