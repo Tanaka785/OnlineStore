@@ -106,7 +106,7 @@ export default function NavigationAppBar() {
               {/* Logo text */}
               <StyledIconButton>
                 <StyledLink sx={{ ml: -1 }}>
-                  <Typography variant="h6">WEBVIBES</Typography>
+                  <Typography variant="h6" letterSpacing={-0.5}>WEBVIBES</Typography>
                 </StyledLink>
               </StyledIconButton>
             </Box>
