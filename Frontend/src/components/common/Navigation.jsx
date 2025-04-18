@@ -35,9 +35,13 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({
-  textDecorationLine: "none",
+  textDecoration: "none",
   letterSpacing: -0.5,
+  "& .MuiTypography-root": {
+    fontWeight: theme.typography.fontWeightMedium,
+  },
 }));
+
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   boxSizing: "border-box",
@@ -159,17 +163,17 @@ export default function NavigationAppBar() {
                 <Box sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
                   <StyledIconButton>
                     <StyledLink>
-                      <Typography variant="h6">Sell your designs</Typography>
+                      <Typography variant="body1">Sell your designs</Typography>
                     </StyledLink>
                   </StyledIconButton>
                   <StyledIconButton>
                     <StyledLink>
-                      <Typography variant="h6">Login</Typography>
+                      <Typography variant="body1">Login</Typography>
                     </StyledLink>
                   </StyledIconButton>
                   <StyledIconButton>
                     <StyledLink>
-                      <Typography variant="h6">Signup</Typography>
+                      <Typography variant="body1">Signup</Typography>
                     </StyledLink>
                   </StyledIconButton>
                 </Box>
