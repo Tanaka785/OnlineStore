@@ -113,8 +113,7 @@ export default function NavigationAppBar() {
                 <StyledLink sx={{ ml: -1 }}>
                   <Typography
                     variant="h6"
-                    fontWeight={theme.typography.fontWeightBold}
-                    fontSize={'1.5rem'}
+                    sx={{ fontWeight: theme.typography.fontWeightBold,fontSize: '1.6rem' }}
                   >
                     WEBVIBES
                   </Typography>
