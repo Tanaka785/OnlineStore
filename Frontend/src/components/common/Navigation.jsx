@@ -39,6 +39,8 @@ const StyledTooltip = styled(({ className, ...props }) => (
     fontSize: "0.875rem",
     padding: theme.spacing(1),
     borderRadius: theme.shape.borderRadius,
+    minWidth: 20, 
+    minHeight: 20,
   },
   [`& .${tooltipClasses.arrow}`]: {
     color: theme.palette.secondary.main,
@@ -56,7 +58,7 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
-  // color: theme.typography.fontWeightMedium,
+  color: "rgb(180, 24, 74)",
   letterSpacing: -0.5,
   "& .MuiTypography-root": {
     fontWeight: theme.typography.fontWeightMedium,
