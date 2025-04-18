@@ -98,27 +98,32 @@ export default function NavigationAppBar() {
                   </ListItem>
                 </List>
               </StyledDrawer>
-              {/* Logo */}
-              <StyledIconButton>
-                <Avatar
-                  src="/Logo.png"
-                  alt="Logo"
-                  sx={{ minWidth: 40, minHeight: 40 }}
-                >
-                  Logo
-                </Avatar>
-              </StyledIconButton>
-              {/* Logo text */}
-              <StyledIconButton>
-                <StyledLink sx={{ ml: -1 }}>
-                  <Typography
-                    variant="h6"
-                    sx={{ fontWeight: theme.typography.fontWeightBold,fontSize: '1.6rem' }}
+              <Box>
+                {/* Logo */}
+                <StyledIconButton>
+                  <Avatar
+                    src="/Logo.png"
+                    alt="Logo"
+                    sx={{ minWidth: 40, minHeight: 40 }}
                   >
-                    WEBVIBES
-                  </Typography>
-                </StyledLink>
-              </StyledIconButton>
+                    Logo
+                  </Avatar>
+                </StyledIconButton>
+                {/* Logo text */}
+                <StyledIconButton>
+                  <StyledLink sx={{ ml: -1 }}>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        fontWeight: theme.typography.fontWeightBold,
+                        fontSize: "1.6rem",
+                      }}
+                    >
+                      WEBVIBES
+                    </Typography>
+                  </StyledLink>
+                </StyledIconButton>
+              </Box>
             </Box>
             {/* searchfield, nav-links, cart & favorites box. */}
             <Box
