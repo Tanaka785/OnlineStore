@@ -98,7 +98,7 @@ export default function NavigationAppBar() {
                   </ListItem>
                 </List>
               </StyledDrawer>
-              <Box>
+              <Box sx={{ display: 'flex', marginRight: theme.spacing(1.2)}}>
                 {/* Logo */}
                 <StyledIconButton>
                   <Avatar
