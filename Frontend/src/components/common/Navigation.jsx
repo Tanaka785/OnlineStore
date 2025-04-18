@@ -104,10 +104,15 @@ export default function NavigationAppBar() {
                   <Avatar
                     src="/Logo.png"
                     alt="Logo"
-                    sx={{ minWidth: 40, minHeight: 40 }}
-                  >
-                    Logo
-                  </Avatar>
+                    sx={{
+                      minWidth: 40,
+                      minHeight: 40,
+                      width: 40,
+                      height: 40,
+                      backgroundSize: "200%",
+                      backgroundPosition: "center",
+                    }}
+                  />
                 </StyledIconButton>
                 {/* Logo text */}
                 <StyledIconButton>
