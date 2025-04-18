@@ -34,7 +34,7 @@ const StyledTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
 ))(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "rgb(185, 0, 255)",
     color: theme.palette.common.white,
     fontSize: "0.875rem",
     padding: theme.spacing(1),
@@ -58,7 +58,7 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
-  color: "rgb(180, 24, 74)",
+  color: "rgba(0, 0, 0, 0.87)",
   letterSpacing: -0.5,
   "& .MuiTypography-root": {
     fontWeight: theme.typography.fontWeightMedium,
