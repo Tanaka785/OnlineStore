@@ -114,6 +114,7 @@ export default function NavigationAppBar() {
                   <Typography
                     variant="h6"
                     fontWeight={theme.typography.fontWeightBold}
+                    fontSize={'1.5rem'}
                   >
                     WEBVIBES
                   </Typography>
