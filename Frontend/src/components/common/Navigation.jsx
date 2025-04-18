@@ -39,11 +39,11 @@ const StyledTooltip = styled(({ className, ...props }) => (
     fontSize: "0.875rem",
     padding: theme.spacing(1),
     borderRadius: theme.shape.borderRadius,
-    minWidth: 20, 
+    minWidth: 20,
     minHeight: 20,
   },
   [`& .${tooltipClasses.arrow}`]: {
-    color: theme.palette.secondary.main,
+    color: "rgb(185, 0, 255)",
   },
 }));
 
