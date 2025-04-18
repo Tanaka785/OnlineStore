@@ -36,6 +36,7 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
+  // color: theme.typography.fontWeightMedium,
   letterSpacing: -0.5,
   "& .MuiTypography-root": {
     fontWeight: theme.typography.fontWeightMedium,
