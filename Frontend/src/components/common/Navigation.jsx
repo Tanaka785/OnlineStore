@@ -123,6 +123,7 @@ export default function NavigationAppBar() {
                       sx={{
                         fontWeight: theme.typography.fontWeightBold,
                         fontSize: "1.6rem",
+                        color: theme.palette.text.primary,
                       }}
                     >
                       WEBVIBES
