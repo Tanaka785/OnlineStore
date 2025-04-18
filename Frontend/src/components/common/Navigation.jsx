@@ -165,7 +165,7 @@ export default function NavigationAppBar() {
                   marginLeft: "auto",
                 }}
               >
-                <Box gap={2} sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
+                <Box gap={2} sx={{ display: { xs: "none", sm: "none", md: "flex", marginRight: theme.spacing(2) } }}>
                   <StyledIconButton>
                     <StyledLink>
                       <Typography variant="body1">Sell your designs</Typography>
