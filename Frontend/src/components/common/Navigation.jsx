@@ -1,3 +1,5 @@
+// TODO show icon name on hover, on cart and favorite.
+
 import React, { useState } from "react";
 import {
   AppBar,
