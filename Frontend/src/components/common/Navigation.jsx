@@ -10,6 +10,7 @@ import {
   Box,
   Toolbar,
   Typography,
+  Tooltip,
   IconButton,
   InputAdornment,
 } from "@mui/material";
@@ -202,13 +203,20 @@ export default function NavigationAppBar() {
                 {/* cart & favorites icons. */}
                 <Box gap={1} sx={{ display: "flex" }}>
                   {/* favorite/wishlits icon */}
-                  <StyledIconButton size="small">
-                    <Avatar src="Favorite.svg" sx={{ width: 30, height: 30 }} />
-                  </StyledIconButton>
+                  <Tooltip title="WishLists" arrow>
+                    <StyledIconButton size="small">
+                      <Avatar
+                        src="Favorite.svg"
+                        sx={{ width: 30, height: 30 }}
+                      />
+                    </StyledIconButton>
+                  </Tooltip>
                   {/* cart icon */}
-                  <StyledIconButton size="small">
-                    <Avatar src="Cart.svg" sx={{ width: 30, height: 30 }} />
-                  </StyledIconButton>
+                  <Tooltip title="Cart" arrow>
+                    <StyledIconButton size="small">
+                      <Avatar src="Cart.svg" sx={{ width: 30, height: 30 }} />
+                    </StyledIconButton>
+                  </Tooltip>
                 </Box>
               </Box>
             </Box>
