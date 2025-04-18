@@ -11,11 +11,15 @@ import {
   Toolbar,
   Typography,
   Tooltip,
+  tooltipClasses,
   IconButton,
   InputAdornment,
 } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
-import { Menu, Favorite, ShoppingCart, Menu as MenuIcon, Search as SearchIcon } from "@mui/icons-material";
+import {
+  Menu as MenuIcon,
+  Search as SearchIcon,
+} from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
@@ -24,6 +28,21 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   border: theme.palette.divider,
   color: theme.palette.text.primary,
   marginTop: theme.spacing(1),
+}));
+
+const StyledTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.common.white,
+    fontSize: "0.875rem",
+    padding: theme.spacing(1),
+    borderRadius: theme.shape.borderRadius,
+  },
+  [`& .${tooltipClasses.arrow}`]: {
+    color: theme.palette.secondary.main,
+  },
 }));
 
 const StyledDrawer = styled(Drawer)(({ theme }) => ({
@@ -44,7 +63,6 @@ const StyledLink = styled(Link)(({ theme }) => ({
   },
 }));
 
-
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   boxSizing: "border-box",
   // paddingInline: '1rem',
@@ -52,7 +70,6 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
     borderRadius: theme.spacing(3),
   }, // ← this closing brace was missing
 }));
-
 
 export default function NavigationAppBar() {
   const theme = useTheme();
@@ -203,20 +220,20 @@ export default function NavigationAppBar() {
                 {/* cart & favorites icons. */}
                 <Box gap={1} sx={{ display: "flex" }}>
                   {/* favorite/wishlits icon */}
-                  <Tooltip title="WishLists" arrow>
+                  <StyledTooltip title="WishLists" arrow>
                     <StyledIconButton size="small">
                       <Avatar
                         src="Favorite.svg"
                         sx={{ width: 30, height: 30 }}
                       />
                     </StyledIconButton>
-                  </Tooltip>
+                  </StyledTooltip>
                   {/* cart icon */}
-                  <Tooltip title="Cart" arrow>
+                  <StyledTooltip title="Cart" arrow>
                     <StyledIconButton size="small">
                       <Avatar src="Cart.svg" sx={{ width: 30, height: 30 }} />
                     </StyledIconButton>
-                  </Tooltip>
+                  </StyledTooltip>
                 </Box>
               </Box>
             </Box>
