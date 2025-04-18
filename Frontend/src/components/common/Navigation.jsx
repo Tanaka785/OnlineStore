@@ -98,7 +98,7 @@ export default function NavigationAppBar() {
                   </ListItem>
                 </List>
               </StyledDrawer>
-              <Box sx={{ display: 'flex', marginRight: theme.spacing(1.2)}}>
+              <Box sx={{ display: "flex", marginRight: theme.spacing(1.2) }}>
                 {/* Logo */}
                 <StyledIconButton>
                   <Avatar
@@ -165,7 +165,17 @@ export default function NavigationAppBar() {
                   marginLeft: "auto",
                 }}
               >
-                <Box gap={2} sx={{ display: { xs: "none", sm: "none", md: "flex", marginRight: theme.spacing(2) } }}>
+                <Box
+                  gap={2}
+                  sx={{
+                    display: {
+                      xs: "none",
+                      sm: "none",
+                      md: "flex",
+                      marginRight: theme.spacing(2),
+                    },
+                  }}
+                >
                   <StyledIconButton>
                     <StyledLink>
                       <Typography variant="body1">Sell your designs</Typography>
@@ -183,14 +193,14 @@ export default function NavigationAppBar() {
                   </StyledIconButton>
                 </Box>
                 {/* cart & favorites icons. */}
-                <Box sx={{ display: "flex" }}>
+                <Box gap={1} sx={{ display: "flex" }}>
                   {/* favorite/wishlits icon */}
-                  <StyledIconButton size="large">
-                    <Favorite />
+                  <StyledIconButton size="small">
+                    <Avatar src="Favorite.svg" sx={{ width: 30, height: 30 }} />
                   </StyledIconButton>
                   {/* cart icon */}
-                  <StyledIconButton size="large">
-                    <ShoppingCart />
+                  <StyledIconButton size="small">
+                    <Avatar src="Cart.svg" sx={{ width: 30, height: 30 }} />
                   </StyledIconButton>
                 </Box>
               </Box>
