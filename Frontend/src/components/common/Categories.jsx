@@ -1,4 +1,5 @@
 import { Box, useTheme, Typography, Tooltip, List, ListItem, ListItemText } from "@mui/material";
+import { Link } from "react-router-dom";
 export default function Categories() {
   const theme = useTheme();
   return (
@@ -8,7 +9,7 @@ export default function Categories() {
         marginInline: theme.spacing(3),
         display: "flex",
         marginTop: theme.spacing(3),
-        justifyContent: 'space-between',
+        justifyContent: "space-between",
       }}
     >
       <Tooltip
@@ -36,7 +37,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Explore</Typography>
+        <Link>
+          <Typography>Explore</Typography>
+        </Link>
       </Tooltip>
       <Tooltip
         arrow
