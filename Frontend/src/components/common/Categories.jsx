@@ -2,9 +2,16 @@ import { Box, useTheme, Typography, Tooltip, List, ListItem, ListItemText } from
 export default function Categories() {
   const theme = useTheme();
   return (
-    <Box sx={{ marginInline: theme.spacing(3), display: "flex" }}>
+    <Box
+      gap={5}
+      sx={{
+        marginInline: theme.spacing(3),
+        display: "flex",
+        marginTop: theme.spacing(3),
+      }}
+    >
       <Tooltip
-      arrow
+        arrow
         title={
           <List>
             <ListItem>
@@ -23,12 +30,27 @@ export default function Categories() {
               <ListItemText primary="Fresh Finds" />
             </ListItem>
             <ListItem>
-              <ListItemText  primary="Fan Art"/>
+              <ListItemText primary="Fan Art" />
             </ListItem>
           </List>
         }
       >
         <Typography>Explore</Typography>
+      </Tooltip>
+      <Tooltip
+        arrow
+        title={
+          <List>
+            <ListItem>
+              <ListItemText primary="All Clothing" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="..." />
+            </ListItem>
+          </List>
+        }
+      >
+        <Typography>Clothing</Typography>
       </Tooltip>
     </Box>
   );
