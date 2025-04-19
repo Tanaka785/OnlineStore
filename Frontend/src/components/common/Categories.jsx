@@ -66,7 +66,7 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Clothing</Typography>
+        <Typography>Stickers</Typography>
       </Tooltip>
       <Tooltip
         arrow
@@ -81,7 +81,7 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Clothing</Typography>
+        <Typography>Phone Cases</Typography>
       </Tooltip>
       <Tooltip
         arrow
@@ -96,7 +96,7 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Clothing</Typography>
+        <Typography>Wall Art</Typography>
       </Tooltip>
       <Tooltip
         arrow
@@ -111,7 +111,7 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Clothing</Typography>
+        <Typography>Home & Living</Typography>
       </Tooltip>
       <Tooltip
         arrow
@@ -126,7 +126,7 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Clothing</Typography>
+        <Typography>Kids & Babies</Typography>
       </Tooltip>
       <Tooltip
         arrow
@@ -141,7 +141,7 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Clothing</Typography>
+        <Typography>Accessories</Typography>
       </Tooltip>
       <Tooltip
         arrow
@@ -156,7 +156,7 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Clothing</Typography>
+        <Typography>Stationery & Office</Typography>
       </Tooltip>
       <Tooltip
         arrow
@@ -171,7 +171,7 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Clothing</Typography>
+        <Typography>Gifts</Typography>
       </Tooltip>
     </Box>
   );
