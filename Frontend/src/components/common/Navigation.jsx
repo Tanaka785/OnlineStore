@@ -168,7 +168,7 @@ export default function NavigationAppBar() {
                   flex: 1,
                   minWidth: 0,
                   mr: 2,
-                  display: { xs: "none", sm: "flex" },
+                  display: { xs: "none", sm: "none", md: "flex" },
                 }}
               >
                 <SearchField/>
