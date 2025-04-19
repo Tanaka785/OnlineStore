@@ -1,4 +1,9 @@
-// TODO make logo responsive, drawer, remove the boxshadow on logo, show a tooltip on logo hover
+/* TODO 
+
+make logo responsive,
+drawer, 
+remove the boxshadow on logo, show a tooltip on logo hover
+*/
 import React, { useState } from "react";
 import {
   AppBar,
