@@ -8,6 +8,7 @@ export default function Categories() {
         marginInline: theme.spacing(3),
         display: "flex",
         marginTop: theme.spacing(3),
+        justifyContent: 'space-between',
       }}
     >
       <Tooltip
@@ -36,6 +37,126 @@ export default function Categories() {
         }
       >
         <Typography>Explore</Typography>
+      </Tooltip>
+      <Tooltip
+        arrow
+        title={
+          <List>
+            <ListItem>
+              <ListItemText primary="All Clothing" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="..." />
+            </ListItem>
+          </List>
+        }
+      >
+        <Typography>Clothing</Typography>
+      </Tooltip>
+      <Tooltip
+        arrow
+        title={
+          <List>
+            <ListItem>
+              <ListItemText primary="All Clothing" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="..." />
+            </ListItem>
+          </List>
+        }
+      >
+        <Typography>Clothing</Typography>
+      </Tooltip>
+      <Tooltip
+        arrow
+        title={
+          <List>
+            <ListItem>
+              <ListItemText primary="All Clothing" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="..." />
+            </ListItem>
+          </List>
+        }
+      >
+        <Typography>Clothing</Typography>
+      </Tooltip>
+      <Tooltip
+        arrow
+        title={
+          <List>
+            <ListItem>
+              <ListItemText primary="All Clothing" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="..." />
+            </ListItem>
+          </List>
+        }
+      >
+        <Typography>Clothing</Typography>
+      </Tooltip>
+      <Tooltip
+        arrow
+        title={
+          <List>
+            <ListItem>
+              <ListItemText primary="All Clothing" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="..." />
+            </ListItem>
+          </List>
+        }
+      >
+        <Typography>Clothing</Typography>
+      </Tooltip>
+      <Tooltip
+        arrow
+        title={
+          <List>
+            <ListItem>
+              <ListItemText primary="All Clothing" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="..." />
+            </ListItem>
+          </List>
+        }
+      >
+        <Typography>Clothing</Typography>
+      </Tooltip>
+      <Tooltip
+        arrow
+        title={
+          <List>
+            <ListItem>
+              <ListItemText primary="All Clothing" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="..." />
+            </ListItem>
+          </List>
+        }
+      >
+        <Typography>Clothing</Typography>
+      </Tooltip>
+      <Tooltip
+        arrow
+        title={
+          <List>
+            <ListItem>
+              <ListItemText primary="All Clothing" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="..." />
+            </ListItem>
+          </List>
+        }
+      >
+        <Typography>Clothing</Typography>
       </Tooltip>
       <Tooltip
         arrow
