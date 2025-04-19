@@ -1,3 +1,4 @@
+// TODO make logo responsive, drawer, remove the boxshadow on logo, show a tooltip on logo hover
 import React, { useState } from "react";
 import {
   AppBar,
@@ -36,9 +37,6 @@ const StyledTooltip = styled(({ className, ...props }) => (
   [`& .${tooltipClasses.tooltip}`]: {
     backgroundColor: "rgb(185, 0, 255)",
     color: theme.palette.common.white,
-    fontSize: "0.875rem",
-    padding: theme.spacing(1),
-    borderRadius: theme.shape.borderRadius,
     minWidth: 20,
     minHeight: 20,
   },
@@ -70,7 +68,7 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
   // paddingInline: '1rem',
   "&:hover": {
     borderRadius: theme.spacing(3),
-  }, // ← this closing brace was missing
+  },
 }));
 
 export default function NavigationAppBar() {
@@ -96,7 +94,6 @@ export default function NavigationAppBar() {
               display: "flex",
               alignItems: "center",
               width: "100%",
-              // border: "1px solid red",
             }}
           >
             <Box gap={0} sx={{ display: "flex", alignItems: "center" }}>
@@ -119,37 +116,40 @@ export default function NavigationAppBar() {
                   </ListItem>
                 </List>
               </StyledDrawer>
-              <Box sx={{ display: "flex", marginRight: theme.spacing(1.2) }}>
+              <Box
+                gap={1}
+                sx={{
+                  display: "flex",
+                  marginRight: theme.spacing(2.5),
+                  overflow: true,
+                  alignItems: "center",
+                }}
+              >
                 {/* Logo */}
                 <StyledIconButton>
                   <Avatar
                     src="/Logo.png"
                     alt="Logo"
                     sx={{
-                      minWidth: 40,
-                      minHeight: 40,
-                      width: 40,
-                      height: 40,
-                      backgroundSize: "200%",
+                      maxWidth: 30,
+                      maxHeight: 30,
                       backgroundPosition: "center",
                     }}
                   />
                 </StyledIconButton>
                 {/* Logo text */}
-                <StyledIconButton>
-                  <StyledLink sx={{ ml: -1 }}>
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        fontWeight: theme.typography.fontWeightBold,
-                        fontSize: "1.6rem",
-                        color: theme.palette.text.primary,
-                      }}
-                    >
-                      WEBVIBES
-                    </Typography>
-                  </StyledLink>
-                </StyledIconButton>
+                <StyledLink sx={{ ml: -1 }}>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: theme.typography.fontWeightBold,
+                      fontSize: "1.6rem",
+                      color: theme.palette.text.primary,
+                    }}
+                  >
+                    WEBVIBES
+                  </Typography>
+                </StyledLink>
               </Box>
             </Box>
             {/* searchfield, nav-links, cart & favorites box. */}
@@ -226,14 +226,14 @@ export default function NavigationAppBar() {
                     <StyledIconButton size="small">
                       <Avatar
                         src="Favorite.svg"
-                        sx={{ width: 30, height: 30 }}
+                        sx={{ width: 27, height: 27 }}
                       />
                     </StyledIconButton>
                   </StyledTooltip>
                   {/* cart icon */}
                   <StyledTooltip title="Cart" arrow>
                     <StyledIconButton size="small">
-                      <Avatar src="Cart.svg" sx={{ width: 30, height: 30 }} />
+                      <Avatar src="Cart.svg" sx={{ width: 27, height: 27 }} />
                     </StyledIconButton>
                   </StyledTooltip>
                 </Box>
