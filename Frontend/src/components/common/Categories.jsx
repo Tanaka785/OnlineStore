@@ -54,7 +54,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Clothing</Typography>
+        <Link>
+          <Typography>Clothing</Typography>
+        </Link>
       </Tooltip>
       <Tooltip
         arrow
@@ -69,7 +71,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Stickers</Typography>
+        <Link>
+          <Typography>Stickers</Typography>
+        </Link>
       </Tooltip>
       <Tooltip
         arrow
@@ -84,7 +88,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Phone Cases</Typography>
+        <Link>
+          <Typography>Phone Cases</Typography>
+        </Link>
       </Tooltip>
       <Tooltip
         arrow
@@ -99,7 +105,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Wall Art</Typography>
+        <Link>
+          <Typography>Wall Art</Typography>
+        </Link>
       </Tooltip>
       <Tooltip
         arrow
@@ -114,7 +122,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Home & Living</Typography>
+        <Link>
+          <Typography>Home & Living</Typography>
+        </Link>
       </Tooltip>
       <Tooltip
         arrow
@@ -129,7 +139,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Kids & Babies</Typography>
+        <Link>
+          <Typography>Kids & Babies</Typography>
+        </Link>
       </Tooltip>
       <Tooltip
         arrow
@@ -144,7 +156,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Accessories</Typography>
+        <Link>
+          <Typography>Accessories</Typography>
+        </Link>
       </Tooltip>
       <Tooltip
         arrow
@@ -159,7 +173,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Stationery & Office</Typography>
+        <Link>
+          <Typography>Stationery & Office</Typography>
+        </Link>
       </Tooltip>
       <Tooltip
         arrow
@@ -174,7 +190,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Typography>Gifts</Typography>
+        <Link>
+          <Typography>Gifts</Typography>
+        </Link>
       </Tooltip>
     </Box>
   );
