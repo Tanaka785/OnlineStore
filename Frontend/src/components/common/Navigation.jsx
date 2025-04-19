@@ -101,7 +101,7 @@ export default function NavigationAppBar() {
               width: "100%",
             }}
           >
-            <Box gap={0} sx={{ display: "flex", alignItems: "center" }}>
+            <Box gap={0} sx={{ display: "flex", alignItems: "center", marginLeft: theme.spacing(-1) }}>
               {/* MenuIcon */}
               <StyledIconButton
                 onClick={toggleDrawer}
