@@ -4,7 +4,14 @@ import { useTheme } from "@emotion/react";
 export default function SearchField() {
     const theme = useTheme();
     return (
-      <Box sx={{ flex: 1, minWidth: 0, marginInline: theme.spacing(1) }}>
+      <Box
+        sx={{
+          flex: 1,
+          minWidth: 0,
+          marginInline: theme.spacing(1),
+          display: { xs: "flex", sm: "flex", md: "none" },
+        }}
+      >
         <TextField
           fullWidth
           slotProps={{
