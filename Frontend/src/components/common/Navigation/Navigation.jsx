@@ -58,7 +58,7 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
-  color: "rgba(0, 0, 0, 0.87)",
+  // color: "rgba(0, 0, 0, 0.87)",
   letterSpacing: -0.5,
   "& .MuiTypography-root": {
     fontWeight: theme.typography.fontWeightMedium,
