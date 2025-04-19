@@ -86,6 +86,7 @@ export default function NavigationAppBar() {
   };
 
   return (
+    <Box>
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="static">
         <Toolbar>
@@ -232,6 +233,10 @@ export default function NavigationAppBar() {
           </Box>
         </Toolbar>
       </StyledAppBar>
+    </Box>
+    <Box sx={{ display: {xs: "flex", sm: "flex", md: "none"}}}>
+      <SearchField/>
+    </Box>
     </Box>
   );
 }
