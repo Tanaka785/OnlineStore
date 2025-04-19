@@ -21,6 +21,7 @@ import {
   IconButton,
   InputAdornment,
 } from "@mui/material";
+import SearchField from "./SearchField";
 import { styled, useTheme } from "@mui/material/styles";
 import {
   Menu as MenuIcon,
@@ -52,11 +53,6 @@ const StyledTooltip = styled(({ className, ...props }) => (
 
 const StyledDrawer = styled(Drawer)(({ theme }) => ({
   // padding: '14px',
-}));
-
-const StyledTextField = styled(TextField)(({ theme }) => ({
-  width: "100%",
-  border: theme.palette.divider,
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({
@@ -175,18 +171,7 @@ export default function NavigationAppBar() {
                   display: { xs: "none", sm: "flex" },
                 }}
               >
-                <StyledTextField
-                  fullWidth
-                  slotProps={{
-                    input: {
-                      endAdornment: (
-                        <InputAdornment position="end">
-                          <SearchIcon sx={{ minWidth: 30, minHeight: 30 }} />
-                        </InputAdornment>
-                      ),
-                    },
-                  }}
-                />
+                <SearchField/>
               </Box>
               {/* nav-links */}
               <Box
