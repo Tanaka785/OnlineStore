@@ -1,6 +1,7 @@
 /* TODO 
 
-make logo responsive,
+borders.
+make logo text responsive, i mean hide some of it when screen gets small like overflow thing.
 drawer, 
 remove the boxshadow on logo, show a tooltip on logo hover
 */
@@ -122,7 +123,7 @@ export default function NavigationAppBar() {
                 gap={1}
                 sx={{
                   display: "flex",
-                  marginRight: theme.spacing(2.5),
+                  marginRight: theme.spacing(1),
                   overflow: true,
                   alignItems: "center",
                 }}
@@ -139,7 +140,7 @@ export default function NavigationAppBar() {
                     }}
                   />
                 </StyledIconButton>
-                {/* Logo text */}
+                {/* Logo text */}                   
                 <StyledLink sx={{ ml: -1 }}>
                   <Typography
                     variant="h6"
