@@ -1,4 +1,4 @@
-import { Box, useTheme, Typography, Tooltip, List, ListItem, ListItemText } from "@mui/material";
+import { Box, Typography, Tooltip, List, ListItem, ListItemText } from "@mui/material";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import { useTheme } from "@emotion/react";
@@ -17,6 +17,7 @@ export default function Categories() {
         display: "flex",
         marginTop: theme.spacing(3),
         justifyContent: "space-between",
+        display: { xs: "none", sm: "none", md: "flex"}
       }}
     >
       <Tooltip
