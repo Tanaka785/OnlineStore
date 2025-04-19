@@ -1,5 +1,12 @@
 import { Box, useTheme, Typography, Tooltip, List, ListItem, ListItemText } from "@mui/material";
 import { Link } from "react-router-dom";
+import { styled } from "@mui/material/styles";
+import { useTheme } from "@emotion/react";
+
+const StyledLink = styled(Link)(({ theme }) => ({
+  textDecoration: "none",
+}));
+
 export default function Categories() {
   const theme = useTheme();
   return (
@@ -37,9 +44,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Link>
+        <StyledLink>
           <Typography>Explore</Typography>
-        </Link>
+        </StyledLink>
       </Tooltip>
       <Tooltip
         arrow
@@ -54,9 +61,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Link>
+        <StyledLink>
           <Typography>Clothing</Typography>
-        </Link>
+        </StyledLink>
       </Tooltip>
       <Tooltip
         arrow
@@ -71,9 +78,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Link>
+        <StyledLink>
           <Typography>Stickers</Typography>
-        </Link>
+        </StyledLink>
       </Tooltip>
       <Tooltip
         arrow
@@ -88,9 +95,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Link>
+        <StyledLink>
           <Typography>Phone Cases</Typography>
-        </Link>
+        </StyledLink>
       </Tooltip>
       <Tooltip
         arrow
@@ -105,9 +112,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Link>
+        <StyledLink>
           <Typography>Wall Art</Typography>
-        </Link>
+        </StyledLink>
       </Tooltip>
       <Tooltip
         arrow
@@ -122,9 +129,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Link>
+        <StyledLink>
           <Typography>Home & Living</Typography>
-        </Link>
+        </StyledLink>
       </Tooltip>
       <Tooltip
         arrow
@@ -139,9 +146,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Link>
+        <StyledLink>
           <Typography>Kids & Babies</Typography>
-        </Link>
+        </StyledLink>
       </Tooltip>
       <Tooltip
         arrow
@@ -156,9 +163,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Link>
+        <StyledLink>
           <Typography>Accessories</Typography>
-        </Link>
+        </StyledLink>
       </Tooltip>
       <Tooltip
         arrow
@@ -173,9 +180,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Link>
+        <StyledLink>
           <Typography>Stationery & Office</Typography>
-        </Link>
+        </StyledLink>
       </Tooltip>
       <Tooltip
         arrow
@@ -190,9 +197,9 @@ export default function Categories() {
           </List>
         }
       >
-        <Link>
+        <StyledLink>
           <Typography>Gifts</Typography>
-        </Link>
+        </StyledLink>
       </Tooltip>
     </Box>
   );
