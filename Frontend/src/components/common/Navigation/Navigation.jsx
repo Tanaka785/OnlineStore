@@ -97,6 +97,7 @@ export default function NavigationAppBar() {
   const theme = useTheme();
   const [state, setState] = useState({
     isDrawerOpen: false,
+    isDefaultDrawer: true,
   });
 
   const toggleDrawer = (open) => {
@@ -168,7 +169,6 @@ export default function NavigationAppBar() {
                             marginBottom: "0.5rem",
                           }}
                         >
-                          {/* // TODO align the text with other list elements. */}
                           Hie there!
                         </Typography>
                       </Box>
