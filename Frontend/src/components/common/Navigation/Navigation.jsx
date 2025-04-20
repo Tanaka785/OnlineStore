@@ -66,8 +66,8 @@ const StyledBox = styled(Box)(({ theme }) => ({
   alignItems: "center",
   gap: "1.5rem",
   width: "100%",
-  paddingBlock: theme.spacing(1),
-  border: `1px solid ${theme.palette.divider}`,
+  padding: theme.spacing(1),
+  borderBottom: `1px solid ${theme.palette.divider}`,
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({
