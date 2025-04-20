@@ -57,6 +57,9 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
   // padding: '14px',
 }));
 
+const StyledBox = styled(Box)(({ theme }) => ({
+  gap: '1.5rem'
+}));
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
@@ -101,7 +104,7 @@ export default function NavigationAppBar() {
                 width: "100%",
               }}
             >
-              <Box
+              <StyledBox
                 gap={0}
                 sx={{
                   display: "flex",
@@ -136,7 +139,7 @@ export default function NavigationAppBar() {
                         width: "300px",
                       }}
                     >
-                      <Box>
+                      <StyledBox>
                         <Typography
                           variant="body1"
                           sx={{
@@ -146,27 +149,208 @@ export default function NavigationAppBar() {
                         >
                           Hie there!
                         </Typography>
-                      </Box>
-                      <Box>
+                      </StyledBox>
+                      <StyledBox>
                         <Typography>
                           <StyledLink>Login &nbsp;</StyledLink>
                           or&nbsp;
                           <StyledLink>Signup</StyledLink>
                         </Typography>
-                      </Box>
+                      </StyledBox>
                     </ListItem>
                     <ListItem>
-                      <Box gap={1} sx={{ display: 'flex', alignItems: 'center', width: '100%', paddingBlock: theme.spacing(1)}}>
+                      <StyledBox
+                        gap={1}
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          paddingBlock: theme.spacing(1),
+                        }}
+                      >
                         <Avatar></Avatar>
                         <StyledLink>
                           <Typography>Explore</Typography>
                         </StyledLink>
-                        <ChevronRight sx={{ marginLeft: 'auto'}}></ChevronRight>
-                      </Box>
+                        <ChevronRight
+                          sx={{ marginLeft: "auto" }}
+                        ></ChevronRight>
+                      </StyledBox>
+                    </ListItem>
+                    <ListItem>
+                      <StyledBox
+                        gap={1}
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          paddingBlock: theme.spacing(1),
+                        }}
+                      >
+                        <Avatar></Avatar>
+                        <StyledLink>
+                          <Typography>Clothing</Typography>
+                        </StyledLink>
+                        <ChevronRight
+                          sx={{ marginLeft: "auto" }}
+                        ></ChevronRight>
+                      </StyledBox>
+                    </ListItem>
+                    <ListItem>
+                      <StyledBox
+                        gap={1}
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          paddingBlock: theme.spacing(1),
+                        }}
+                      >
+                        <Avatar></Avatar>
+                        <StyledLink>
+                          <Typography>Stickers</Typography>
+                        </StyledLink>
+                        <ChevronRight
+                          sx={{ marginLeft: "auto" }}
+                        ></ChevronRight>
+                      </StyledBox>
+                    </ListItem>
+                    <ListItem>
+                      <StyledBox
+                        gap={1}
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          paddingBlock: theme.spacing(1),
+                        }}
+                      >
+                        <Avatar></Avatar>
+                        <StyledLink>
+                          <Typography>Phone Cases</Typography>
+                        </StyledLink>
+                        <ChevronRight
+                          sx={{ marginLeft: "auto" }}
+                        ></ChevronRight>
+                      </StyledBox>
+                    </ListItem>
+                    <ListItem>
+                      <StyledBox
+                        gap={1}
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          paddingBlock: theme.spacing(1),
+                        }}
+                      >
+                        <Avatar></Avatar>
+                        <StyledLink>
+                          <Typography>Wall Art</Typography>
+                        </StyledLink>
+                        <ChevronRight
+                          sx={{ marginLeft: "auto" }}
+                        ></ChevronRight>
+                      </StyledBox>
+                    </ListItem>
+                    <ListItem>
+                      <StyledBox
+                        gap={1}
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          paddingBlock: theme.spacing(1),
+                        }}
+                      >
+                        <Avatar></Avatar>
+                        <StyledLink>
+                          <Typography>Home & Living</Typography>
+                        </StyledLink>
+                        <ChevronRight
+                          sx={{ marginLeft: "auto" }}
+                        ></ChevronRight>
+                      </StyledBox>
+                    </ListItem>
+                    <ListItem>
+                      <StyledBox
+                        gap={1}
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          paddingBlock: theme.spacing(1),
+                        }}
+                      >
+                        <Avatar></Avatar>
+                        <StyledLink>
+                          <Typography>Kids & Babies</Typography>
+                        </StyledLink>
+                        <ChevronRight
+                          sx={{ marginLeft: "auto" }}
+                        ></ChevronRight>
+                      </StyledBox>
+                    </ListItem>
+                    <ListItem>
+                      <StyledBox
+                        gap={1}
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          paddingBlock: theme.spacing(1),
+                        }}
+                      >
+                        <Avatar></Avatar>
+                        <StyledLink>
+                          <Typography>Accessories</Typography>
+                        </StyledLink>
+                        <ChevronRight
+                          sx={{ marginLeft: "auto" }}
+                        ></ChevronRight>
+                      </StyledBox>
+                    </ListItem>
+                    <ListItem>
+                      <StyledBox
+                        gap={1}
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          paddingBlock: theme.spacing(1),
+                        }}
+                      >
+                        <Avatar></Avatar>
+                        <StyledLink>
+                          <Typography>Stationery & Office</Typography>
+                        </StyledLink>
+                        <ChevronRight
+                          sx={{ marginLeft: "auto" }}
+                        ></ChevronRight>
+                      </StyledBox>
+                    </ListItem>
+                    <ListItem>
+                      <StyledBox
+                        gap={1}
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          paddingBlock: theme.spacing(1),
+                        }}
+                      >
+                        <Avatar></Avatar>
+                        <StyledLink>
+                          <Typography>Gifts</Typography>
+                        </StyledLink>
+                        <ChevronRight
+                          sx={{ marginLeft: "auto" }}
+                        ></ChevronRight>
+                      </StyledBox>
                     </ListItem>
                   </List>
                 </StyledDrawer>
-                <Box
+                <StyledBox
                   gap={1}
                   sx={{
                     display: "flex",
@@ -200,9 +384,9 @@ export default function NavigationAppBar() {
                       WEBVIBES
                     </Typography>
                   </StyledLink>
-                </Box>
-              </Box>
-              {/* searchfield, nav-links, cart & favorites box. */}
+                </StyledBox>
+              </StyledBox>
+              {/* searchfield, nav-links, cart & favorites StyledBox. */}
               <Box
                 sx={{
                   display: "flex",
@@ -212,7 +396,7 @@ export default function NavigationAppBar() {
                 }}
               >
                 {/* searchfield */}
-                <Box
+                <StyledBox
                   sx={{
                     flex: 1,
                     minWidth: 0,
@@ -221,7 +405,7 @@ export default function NavigationAppBar() {
                   }}
                 >
                   <SearchField />
-                </Box>
+                </StyledBox>
                 {/* nav-links */}
                 <Box
                   sx={{
@@ -231,7 +415,7 @@ export default function NavigationAppBar() {
                     marginLeft: "auto",
                   }}
                 >
-                  <Box
+                  <StyledBox
                     gap={2}
                     sx={{
                       display: {
@@ -259,9 +443,9 @@ export default function NavigationAppBar() {
                         <Typography variant="body1">Signup</Typography>
                       </StyledLink>
                     </StyledIconButton>
-                  </Box>
+                  </StyledBox>
                   {/* cart & favorites icons. */}
-                  <Box
+                  <StyledBox
                     gap={1}
                     sx={{ display: "flex", marginRight: theme.spacing(0) }}
                   >
@@ -280,7 +464,7 @@ export default function NavigationAppBar() {
                         <Avatar src="Cart.svg" sx={{ width: 27, height: 27 }} />
                       </StyledIconButton>
                     </StyledTooltip>
-                  </Box>
+                  </StyledBox>
                 </Box>
               </Box>
             </Box>
