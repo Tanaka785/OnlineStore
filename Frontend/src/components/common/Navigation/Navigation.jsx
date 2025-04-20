@@ -89,155 +89,173 @@ export default function NavigationAppBar() {
 
   return (
     <Box>
-    <Box sx={{ flexGrow: 1 }}>
-      <StyledAppBar position="static">
-        <Toolbar>
-          <Box
-            gap={0}
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              width: "100%",
-            }}
-          >
-            <Box gap={0} sx={{ display: "flex", alignItems: "center", marginLeft: { xs: theme.spacing(-3)} }}>
-              {/* MenuIcon */}
-              <StyledIconButton
-                onClick={toggleDrawer}
-                sx={{ display: { sm: "flex", md: "none" } }}
-              >
-                <MenuIcon />
-              </StyledIconButton>
-              {/* Drawer */}
-              <StyledDrawer
-                anchor="left"
-                open={state.isDrawerOpen}
-                onClose={toggleDrawer}
-              >
-                <List>
-                  <ListItem>
-                    <ListItemText primary="Hie there!" />
-                  </ListItem>
-                </List>
-              </StyledDrawer>
-              <Box
-                gap={1}
-                sx={{
-                  display: "flex",
-                  marginRight: theme.spacing(1),
-                  overflow: true,
-                  alignItems: "center",
-                }}
-              >
-                {/* Logo */}
-                <StyledIconButton>
-                  <Avatar
-                    src="/Logo.png"
-                    alt="Logo"
-                    sx={{
-                      maxWidth: 30,
-                      maxHeight: 30,
-                      backgroundPosition: "center",
-                    }}
-                  />
-                </StyledIconButton>
-                {/* Logo text */}                   
-                <StyledLink sx={{ ml: -1 }}>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontWeight: theme.typography.fontWeightBold,
-                      fontSize: "1.6rem",
-                    }}
-                  >
-                    WEBVIBES
-                  </Typography>
-                </StyledLink>
-              </Box>
-            </Box>
-            {/* searchfield, nav-links, cart & favorites box. */}
+      <Box sx={{ flexGrow: 1 }}>
+        <StyledAppBar position="static">
+          <Toolbar>
             <Box
+              gap={0}
               sx={{
                 display: "flex",
-                flexGrow: { xs: 0, sm: 1, md: 1 },
-                // border: "1px solid red",
-                marginLeft: "auto",
+                alignItems: "center",
+                width: "100%",
               }}
             >
-              {/* searchfield */}
               <Box
-                sx={{
-                  flex: 1,
-                  minWidth: 0,
-                  mr: 2,
-                  display: { xs: "none", sm: "none", md: "flex" },
-                }}
-              >
-                <SearchField/>
-              </Box>
-              {/* nav-links */}
-              <Box
+                gap={0}
                 sx={{
                   display: "flex",
-                  alignSelf: "right",
-                  justifyContent: "end",
-                  marginLeft: "auto",
+                  alignItems: "center",
+                  marginLeft: { xs: theme.spacing(-1) },
                 }}
               >
-                <Box
-                  gap={2}
+                {/* MenuIcon */}
+                <StyledIconButton
+                  onClick={toggleDrawer}
                   sx={{
                     display: {
-                      xs: "none",
-                      sm: "none",
-                      md: "flex",
-                      marginRight: theme.spacing(2),
+                      sm: "flex",
+                      md: "none",
+                      marginLeft: { xs: theme.spacing(-3) },
                     },
                   }}
                 >
+                  <MenuIcon />
+                </StyledIconButton>
+                {/* Drawer */}
+                <StyledDrawer
+                  anchor="left"
+                  open={state.isDrawerOpen}
+                  onClose={toggleDrawer}
+                >
+                  <List>
+                    <ListItem>
+                      <ListItemText primary="Hie there!" />
+                    </ListItem>
+                  </List>
+                </StyledDrawer>
+                <Box
+                  gap={1}
+                  sx={{
+                    display: "flex",
+                    marginRight: theme.spacing(1),
+                    overflow: true,
+                    alignItems: "center",
+                  }}
+                >
+                  {/* Logo */}
                   <StyledIconButton>
-                    <StyledLink>
-                      <Typography variant="body1">Sell your designs</Typography>
-                    </StyledLink>
+                    <Avatar
+                      src="/Logo.png"
+                      alt="Logo"
+                      sx={{
+                        maxWidth: 30,
+                        maxHeight: 30,
+                        backgroundPosition: "center",
+                      }}
+                    />
                   </StyledIconButton>
-                  <StyledIconButton>
-                    <StyledLink>
-                      <Typography variant="body1">Login</Typography>
-                    </StyledLink>
-                  </StyledIconButton>
-                  <StyledIconButton>
-                    <StyledLink>
-                      <Typography variant="body1">Signup</Typography>
-                    </StyledLink>
-                  </StyledIconButton>
+                  {/* Logo text */}
+                  <StyledLink sx={{ ml: -1 }}>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        fontWeight: theme.typography.fontWeightBold,
+                        fontSize: "1.6rem",
+                      }}
+                    >
+                      WEBVIBES
+                    </Typography>
+                  </StyledLink>
                 </Box>
-                {/* cart & favorites icons. */}
-                <Box gap={1} sx={{ display: "flex", marginRight: theme.spacing(0) }}>
-                  {/* favorite/wishlits icon */}
-                  <StyledTooltip title="WishLists" arrow>
-                    <StyledIconButton size="small">
-                      <Avatar
-                        src="Favorite.svg"
-                        sx={{ width: 27, height: 27 }}
-                      />
+              </Box>
+              {/* searchfield, nav-links, cart & favorites box. */}
+              <Box
+                sx={{
+                  display: "flex",
+                  flexGrow: { xs: 0, sm: 1, md: 1 },
+                  // border: "1px solid red",
+                  marginLeft: "auto",
+                }}
+              >
+                {/* searchfield */}
+                <Box
+                  sx={{
+                    flex: 1,
+                    minWidth: 0,
+                    mr: 2,
+                    display: { xs: "none", sm: "none", md: "flex" },
+                  }}
+                >
+                  <SearchField />
+                </Box>
+                {/* nav-links */}
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignSelf: "right",
+                    justifyContent: "end",
+                    marginLeft: "auto",
+                  }}
+                >
+                  <Box
+                    gap={2}
+                    sx={{
+                      display: {
+                        xs: "none",
+                        sm: "none",
+                        md: "flex",
+                        marginRight: theme.spacing(2),
+                      },
+                    }}
+                  >
+                    <StyledIconButton>
+                      <StyledLink>
+                        <Typography variant="body1">
+                          Sell your designs
+                        </Typography>
+                      </StyledLink>
                     </StyledIconButton>
-                  </StyledTooltip>
-                  {/* cart icon */}
-                  <StyledTooltip title="Cart" arrow>
-                    <StyledIconButton size="small">
-                      <Avatar src="Cart.svg" sx={{ width: 27, height: 27 }} />
+                    <StyledIconButton>
+                      <StyledLink>
+                        <Typography variant="body1">Login</Typography>
+                      </StyledLink>
                     </StyledIconButton>
-                  </StyledTooltip>
+                    <StyledIconButton>
+                      <StyledLink>
+                        <Typography variant="body1">Signup</Typography>
+                      </StyledLink>
+                    </StyledIconButton>
+                  </Box>
+                  {/* cart & favorites icons. */}
+                  <Box
+                    gap={1}
+                    sx={{ display: "flex", marginRight: theme.spacing(0) }}
+                  >
+                    {/* favorite/wishlits icon */}
+                    <StyledTooltip title="WishLists" arrow>
+                      <StyledIconButton size="small">
+                        <Avatar
+                          src="Favorite.svg"
+                          sx={{ width: 27, height: 27 }}
+                        />
+                      </StyledIconButton>
+                    </StyledTooltip>
+                    {/* cart icon */}
+                    <StyledTooltip title="Cart" arrow>
+                      <StyledIconButton size="small">
+                        <Avatar src="Cart.svg" sx={{ width: 27, height: 27 }} />
+                      </StyledIconButton>
+                    </StyledTooltip>
+                  </Box>
                 </Box>
               </Box>
             </Box>
-          </Box>
-        </Toolbar>
-      </StyledAppBar>
-    </Box>
-    <Box sx={{ display: {xs: "flex", sm: "flex", md: "none"}}}>
-      <SearchField/>
-    </Box>
+          </Toolbar>
+        </StyledAppBar>
+      </Box>
+      <Box sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}>
+        <SearchField />
+      </Box>
     </Box>
   );
 }
