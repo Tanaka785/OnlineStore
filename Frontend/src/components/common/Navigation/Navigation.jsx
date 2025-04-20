@@ -58,7 +58,8 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 }));
 
 const StyledBox = styled(Box)(({ theme }) => ({
-  gap: '1.5rem'
+  gap: '1.5rem',
+  borderBottom: `1px solid ${theme.palette.divider}`,
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({
@@ -139,7 +140,7 @@ export default function NavigationAppBar() {
                         width: "300px",
                       }}
                     >
-                      <StyledBox>
+                      <Box>
                         <Typography
                           variant="body1"
                           sx={{
@@ -149,14 +150,14 @@ export default function NavigationAppBar() {
                         >
                           Hie there!
                         </Typography>
-                      </StyledBox>
-                      <StyledBox>
+                      </Box>
+                      <Box>
                         <Typography>
                           <StyledLink>Login &nbsp;</StyledLink>
                           or&nbsp;
                           <StyledLink>Signup</StyledLink>
                         </Typography>
-                      </StyledBox>
+                      </Box>
                     </ListItem>
                     <ListItem>
                       <StyledBox
