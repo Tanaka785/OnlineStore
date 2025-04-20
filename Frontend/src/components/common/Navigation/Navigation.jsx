@@ -212,7 +212,7 @@ export default function NavigationAppBar() {
                   </StyledIconButton>
                 </Box>
                 {/* cart & favorites icons. */}
-                <Box gap={1} sx={{ display: "flex", marginRight: theme.spacing(1) }}>
+                <Box gap={1} sx={{ display: "flex", marginRight: theme.spacing(0) }}>
                   {/* favorite/wishlits icon */}
                   <StyledTooltip title="WishLists" arrow>
                     <StyledIconButton size="small">
