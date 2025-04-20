@@ -127,8 +127,23 @@ export default function NavigationAppBar() {
                   onClose={toggleDrawer}
                 >
                   <List sx={{ paddingTop: 0 }}>
-                    <ListItem sx={{ marginTop: theme.spacing(0.5)}}>
-                      <ListItemText primary="Hie there!" />
+                    <ListItem
+                      sx={{
+                        paddingTop: theme.spacing(2),
+                        backgroundColor: "rgba(233, 233, 240, 0.6)",
+                        display: "block",
+                      }}
+                    >
+                      <Box>
+                        <Typography>Hie there!</Typography>
+                      </Box>
+                      <Box>
+                        <Typography>
+                          <StyledLink>Login &nbsp;</StyledLink>
+                          or&nbsp;
+                          <StyledLink>Signup</StyledLink>
+                        </Typography>
+                      </Box>
                     </ListItem>
                   </List>
                 </StyledDrawer>
