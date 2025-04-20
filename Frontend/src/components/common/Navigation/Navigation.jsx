@@ -160,7 +160,7 @@ export default function NavigationAppBar() {
                         width: "100%",
                       }}
                     >
-                      <Box>
+                      <Box sx={{ paddingLeft: theme.spacing(2)}}>
                         <Typography
                           variant="body1"
                           sx={{
@@ -168,10 +168,11 @@ export default function NavigationAppBar() {
                             marginBottom: "0.5rem",
                           }}
                         >
+                          {/* // TODO align the text with other list elements. */}
                           Hie there!
                         </Typography>
                       </Box>
-                      <Box>
+                      <Box sx={{ paddingLeft: theme.spacing(2)}}>
                         <Typography>
                           <StyledLink>Login &nbsp;</StyledLink>
                           or&nbsp;
@@ -185,8 +186,7 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Explore</Typography>
                         </StyledLink>
-                        <StyledChevronRight
-                        ></StyledChevronRight>
+                        <StyledChevronRight></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -195,8 +195,7 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Clothing</Typography>
                         </StyledLink>
-                        <StyledChevronRight
-                        ></StyledChevronRight>
+                        <StyledChevronRight></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -205,8 +204,7 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Stickers</Typography>
                         </StyledLink>
-                        <StyledChevronRight
-                        ></StyledChevronRight>
+                        <StyledChevronRight></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -215,8 +213,7 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Phone Cases</Typography>
                         </StyledLink>
-                        <StyledChevronRight
-                        ></StyledChevronRight>
+                        <StyledChevronRight></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -225,8 +222,7 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Wall Art</Typography>
                         </StyledLink>
-                        <StyledChevronRight
-                        ></StyledChevronRight>
+                        <StyledChevronRight></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -235,8 +231,7 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Home & Living</Typography>
                         </StyledLink>
-                        <StyledChevronRight
-                        ></StyledChevronRight>
+                        <StyledChevronRight></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -245,8 +240,7 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Kids & Babies</Typography>
                         </StyledLink>
-                        <StyledChevronRight
-                        ></StyledChevronRight>
+                        <StyledChevronRight></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -255,8 +249,7 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Accessories</Typography>
                         </StyledLink>
-                        <StyledChevronRight
-                        ></StyledChevronRight>
+                        <StyledChevronRight></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -265,8 +258,7 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Stationery & Office</Typography>
                         </StyledLink>
-                        <StyledChevronRight
-                        ></StyledChevronRight>
+                        <StyledChevronRight></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -275,11 +267,30 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Gifts</Typography>
                         </StyledLink>
-                        <StyledChevronRight
-                        ></StyledChevronRight>
+                        <StyledChevronRight></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                   </List>
+                  {/* // TODO use gap to space the link elements here. */}
+                  <Box
+                    sx={{
+                      padding: theme.spacing(3),
+                      paddingTop: theme.spacing(1),
+                    }}
+                  >
+                    <StyledLink>
+                      <Typography variant="body2">Delivery</Typography>
+                    </StyledLink>
+                    <StyledLink>
+                      <Typography variant="body2">Returns</Typography>
+                    </StyledLink>
+                    <StyledLink>
+                      <Typography variant="body2">Help Center</Typography>
+                    </StyledLink>
+                    <StyledLink>
+                      <Typography variant="body2">Sell Your Art</Typography>
+                    </StyledLink>
+                  </Box>
                 </StyledDrawer>
                 <Box
                   sx={{
