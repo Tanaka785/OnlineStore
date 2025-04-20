@@ -126,8 +126,8 @@ export default function NavigationAppBar() {
                   open={state.isDrawerOpen}
                   onClose={toggleDrawer}
                 >
-                  <List>
-                    <ListItem>
+                  <List sx={{ paddingTop: 0 }}>
+                    <ListItem sx={{ marginTop: theme.spacing(0.5)}}>
                       <ListItemText primary="Hie there!" />
                     </ListItem>
                   </List>
