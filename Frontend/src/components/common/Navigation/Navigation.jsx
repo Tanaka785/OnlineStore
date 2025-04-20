@@ -58,7 +58,11 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 }));
 
 const StyledBox = styled(Box)(({ theme }) => ({
-  gap: '1.5rem',
+  display: "flex",
+  alignItems: "center",
+  gap: "1.5rem",
+  width: "100%",
+  paddingBlock: theme.spacing(1),
   borderBottom: `1px solid ${theme.palette.divider}`,
 }));
 
@@ -137,6 +141,7 @@ export default function NavigationAppBar() {
                         paddingBlock: theme.spacing(2.5),
                         backgroundColor: "rgba(233, 233, 240, 0.6)",
                         display: "block",
+                        width: "100%",
                       }}
                     >
                       <Box>
@@ -158,16 +163,8 @@ export default function NavigationAppBar() {
                         </Typography>
                       </Box>
                     </ListItem>
-                    <ListItem>
-                      <StyledBox
-                        gap={1}
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          width: "100%",
-                          paddingBlock: theme.spacing(1),
-                        }}
-                      >
+                    <ListItem sx={{ width: "100%" }}>
+                      <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
                           <Typography>Explore</Typography>
@@ -178,15 +175,7 @@ export default function NavigationAppBar() {
                       </StyledBox>
                     </ListItem>
                     <ListItem>
-                      <StyledBox
-                        gap={1}
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          width: "100%",
-                          paddingBlock: theme.spacing(1),
-                        }}
-                      >
+                      <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
                           <Typography>Clothing</Typography>
@@ -197,15 +186,7 @@ export default function NavigationAppBar() {
                       </StyledBox>
                     </ListItem>
                     <ListItem>
-                      <StyledBox
-                        gap={1}
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          width: "100%",
-                          paddingBlock: theme.spacing(1),
-                        }}
-                      >
+                      <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
                           <Typography>Stickers</Typography>
@@ -216,15 +197,7 @@ export default function NavigationAppBar() {
                       </StyledBox>
                     </ListItem>
                     <ListItem>
-                      <StyledBox
-                        gap={1}
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          width: "100%",
-                          paddingBlock: theme.spacing(1),
-                        }}
-                      >
+                      <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
                           <Typography>Phone Cases</Typography>
@@ -235,15 +208,7 @@ export default function NavigationAppBar() {
                       </StyledBox>
                     </ListItem>
                     <ListItem>
-                      <StyledBox
-                        gap={1}
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          width: "100%",
-                          paddingBlock: theme.spacing(1),
-                        }}
-                      >
+                      <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
                           <Typography>Wall Art</Typography>
@@ -254,15 +219,7 @@ export default function NavigationAppBar() {
                       </StyledBox>
                     </ListItem>
                     <ListItem>
-                      <StyledBox
-                        gap={1}
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          width: "100%",
-                          paddingBlock: theme.spacing(1),
-                        }}
-                      >
+                      <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
                           <Typography>Home & Living</Typography>
@@ -273,15 +230,7 @@ export default function NavigationAppBar() {
                       </StyledBox>
                     </ListItem>
                     <ListItem>
-                      <StyledBox
-                        gap={1}
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          width: "100%",
-                          paddingBlock: theme.spacing(1),
-                        }}
-                      >
+                      <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
                           <Typography>Kids & Babies</Typography>
@@ -292,15 +241,7 @@ export default function NavigationAppBar() {
                       </StyledBox>
                     </ListItem>
                     <ListItem>
-                      <StyledBox
-                        gap={1}
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          width: "100%",
-                          paddingBlock: theme.spacing(1),
-                        }}
-                      >
+                      <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
                           <Typography>Accessories</Typography>
@@ -311,15 +252,7 @@ export default function NavigationAppBar() {
                       </StyledBox>
                     </ListItem>
                     <ListItem>
-                      <StyledBox
-                        gap={1}
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          width: "100%",
-                          paddingBlock: theme.spacing(1),
-                        }}
-                      >
+                      <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
                           <Typography>Stationery & Office</Typography>
@@ -330,15 +263,7 @@ export default function NavigationAppBar() {
                       </StyledBox>
                     </ListItem>
                     <ListItem>
-                      <StyledBox
-                        gap={1}
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          width: "100%",
-                          paddingBlock: theme.spacing(1),
-                        }}
-                      >
+                      <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
                           <Typography>Gifts</Typography>
@@ -351,7 +276,6 @@ export default function NavigationAppBar() {
                   </List>
                 </StyledDrawer>
                 <Box
-                  gap={1}
                   sx={{
                     display: "flex",
                     marginRight: theme.spacing(1),
@@ -445,10 +369,7 @@ export default function NavigationAppBar() {
                     </StyledIconButton>
                   </StyledBox>
                   {/* cart & favorites icons. */}
-                  <Box
-                    gap={1}
-                    sx={{ display: "flex", marginRight: theme.spacing(0) }}
-                  >
+                  <Box sx={{ display: "flex", marginRight: theme.spacing(0) }}>
                     {/* favorite/wishlits icon */}
                     <StyledTooltip title="WishLists" arrow>
                       <StyledIconButton size="small">
