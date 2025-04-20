@@ -59,6 +59,8 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
   padding: theme.spacing(1),
+  alignItems: 'center',
+  
 }));
 
 const StyledBox = styled(Box)(({ theme }) => ({
@@ -66,8 +68,9 @@ const StyledBox = styled(Box)(({ theme }) => ({
   alignItems: "center",
   gap: "1.5rem",
   width: "100%",
-  padding: theme.spacing(1),
+  padding: theme.spacing(2),
   borderBottom: `1px solid ${theme.palette.divider}`,
+  paddingBottom: theme.spacing(4),
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({
