@@ -152,6 +152,7 @@ export default function NavigationAppBar() {
                   }}
                   // TODO automatically hide drawer on md screens & above.
                 >
+                  {/* // TODO structure drawer to show the right view when user clicks chevronright element. */}
                   <List sx={{ paddingTop: 0, width: "300px" }}>
                     <ListItem
                       sx={{
@@ -161,7 +162,7 @@ export default function NavigationAppBar() {
                         width: "100%",
                       }}
                     >
-                      <Box sx={{ paddingLeft: theme.spacing(2)}}>
+                      <Box sx={{ paddingLeft: theme.spacing(2) }}>
                         <Typography
                           variant="body1"
                           sx={{
@@ -172,7 +173,7 @@ export default function NavigationAppBar() {
                           Hie there!
                         </Typography>
                       </Box>
-                      <Box sx={{ paddingLeft: theme.spacing(2)}}>
+                      <Box sx={{ paddingLeft: theme.spacing(2) }}>
                         <Typography>
                           <StyledLink>Login &nbsp;</StyledLink>
                           or&nbsp;
@@ -274,7 +275,7 @@ export default function NavigationAppBar() {
                   {/* // TODO use gap to space the link elements here. */}
                   <Box
                     sx={{
-                      padding: theme.spacing(3),
+                      padding: theme.spacing(3.5),
                       paddingTop: theme.spacing(1),
                     }}
                   >
