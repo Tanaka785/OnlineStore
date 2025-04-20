@@ -131,13 +131,12 @@ export default function NavigationAppBar() {
                   open={state.isDrawerOpen}
                   onClose={toggleDrawer}
                 >
-                  <List sx={{ paddingTop: 0 }}>
+                  <List sx={{ paddingTop: 0, width: "300px" }}>
                     <ListItem
                       sx={{
                         paddingBlock: theme.spacing(2.5),
                         backgroundColor: "rgba(233, 233, 240, 0.6)",
                         display: "block",
-                        width: "300px",
                       }}
                     >
                       <Box>
