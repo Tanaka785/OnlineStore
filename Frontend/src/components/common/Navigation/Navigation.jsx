@@ -105,7 +105,7 @@ export default function NavigationAppBar() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  marginLeft: { xs: theme.spacing(-1) },
+                  marginLeft: { xs: theme.spacing(-2) },
                 }}
               >
                 {/* MenuIcon */}
@@ -115,7 +115,6 @@ export default function NavigationAppBar() {
                     display: {
                       sm: "flex",
                       md: "none",
-                      marginLeft: { xs: theme.spacing(-3) },
                     },
                   }}
                 >
@@ -140,6 +139,7 @@ export default function NavigationAppBar() {
                     marginRight: theme.spacing(1),
                     overflow: true,
                     alignItems: "center",
+                    marginLeft: { md: theme.spacing(1) },
                   }}
                 >
                   {/* Logo */}
