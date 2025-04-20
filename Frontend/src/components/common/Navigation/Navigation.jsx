@@ -25,6 +25,7 @@ import {
 import SearchField from "./SearchField";
 import { styled, useTheme } from "@mui/material/styles";
 import {
+  ChevronRight,
   Menu as MenuIcon,
   Search as SearchIcon,
 } from "@mui/icons-material";
@@ -132,11 +133,19 @@ export default function NavigationAppBar() {
                         paddingTop: theme.spacing(2),
                         backgroundColor: "rgba(233, 233, 240, 0.6)",
                         display: "block",
-                        width: '300px',
+                        width: "300px",
                       }}
                     >
                       <Box>
-                        <Typography>Hie there!</Typography>
+                        <Typography
+                          variant="body1"
+                          sx={{
+                            fontWeight: theme.typography.fontWeightRegular,
+                            marginBottom: "0.5rem",
+                          }}
+                        >
+                          Hie there!
+                        </Typography>
                       </Box>
                       <Box>
                         <Typography>
@@ -144,6 +153,15 @@ export default function NavigationAppBar() {
                           or&nbsp;
                           <StyledLink>Signup</StyledLink>
                         </Typography>
+                      </Box>
+                    </ListItem>
+                    <ListItem>
+                      <Box gap={1} sx={{ display: 'flex', alignItems: 'center', width: '100%', paddingBlock: theme.spacing(1)}}>
+                        <Avatar></Avatar>
+                        <StyledLink>
+                          <Typography>Explore</Typography>
+                        </StyledLink>
+                        <ChevronRight sx={{ marginLeft: 'auto'}}></ChevronRight>
                       </Box>
                     </ListItem>
                   </List>
