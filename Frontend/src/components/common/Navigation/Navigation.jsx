@@ -170,7 +170,7 @@ export default function NavigationAppBar() {
                         </Typography>
                       </Box>
                     </ListItem>
-                    <StyledListItem sx={{ width: "100%",}}>
+                    <StyledListItem sx={{ width: "100%" }}>
                       <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
@@ -304,7 +304,7 @@ export default function NavigationAppBar() {
                     />
                   </StyledIconButton>
                   {/* Logo text */}
-                  <StyledLink sx={{ ml: -1 }}>
+                  <StyledLink>
                     <Typography
                       variant="h6"
                       sx={{
@@ -327,7 +327,7 @@ export default function NavigationAppBar() {
                 }}
               >
                 {/* searchfield */}
-                <StyledBox
+                <Box
                   sx={{
                     flex: 1,
                     minWidth: 0,
@@ -336,7 +336,7 @@ export default function NavigationAppBar() {
                   }}
                 >
                   <SearchField />
-                </StyledBox>
+                </Box>
                 {/* nav-links */}
                 <Box
                   sx={{
@@ -346,7 +346,7 @@ export default function NavigationAppBar() {
                     marginLeft: "auto",
                   }}
                 >
-                  <StyledBox
+                  <Box
                     gap={2}
                     sx={{
                       display: {
@@ -374,7 +374,7 @@ export default function NavigationAppBar() {
                         <Typography variant="body1">Signup</Typography>
                       </StyledLink>
                     </StyledIconButton>
-                  </StyledBox>
+                  </Box>
                   {/* cart & favorites icons. */}
                   <Box sx={{ display: "flex", marginRight: theme.spacing(0) }}>
                     {/* favorite/wishlits icon */}
