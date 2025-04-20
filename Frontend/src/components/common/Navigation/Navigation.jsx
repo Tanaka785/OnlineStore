@@ -58,7 +58,7 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
-  // color: "rgba(0, 0, 0, 0.87)",
+  color: "#19124f",
   letterSpacing: -0.5,
   "& .MuiTypography-root": {
     fontWeight: theme.typography.fontWeightMedium,
@@ -147,7 +147,6 @@ export default function NavigationAppBar() {
                     sx={{
                       fontWeight: theme.typography.fontWeightBold,
                       fontSize: "1.6rem",
-                      color: theme.palette.text.primary,
                     }}
                   >
                     WEBVIBES
