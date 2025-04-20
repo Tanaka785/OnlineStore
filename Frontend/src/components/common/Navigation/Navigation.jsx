@@ -56,12 +56,13 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
   // padding: '14px',
 }));
 
+
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
-  color: "#19124f",
-  letterSpacing: -0.5,
+  color: theme.typography.color,
+  letterSpacing: -0.1,
   "& .MuiTypography-root": {
-    fontWeight: theme.typography.fontWeightMedium,
+    // fontWeight: theme.typography.fontWeightMedium,
   },
 }));
 
