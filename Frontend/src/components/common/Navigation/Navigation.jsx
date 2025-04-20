@@ -96,10 +96,10 @@ export default function NavigationAppBar() {
     isDrawerOpen: false,
   });
 
-  const toggleDrawer = () => {
+  const toggleDrawer = (open) => {
     setState({
       ...state,
-      isDrawerOpen: state.isDrawerOpen == true ? false : true,
+      isDrawerOpen: state.isDrawerOpen? false : true,
     });
   };
 
@@ -126,7 +126,9 @@ export default function NavigationAppBar() {
               >
                 {/* MenuIcon */}
                 <StyledIconButton
-                  onClick={toggleDrawer}
+                  onClick={() => {
+                    toggleDrawer(true)
+                  }}
                   sx={{
                     display: {
                       sm: "flex",
@@ -140,7 +142,9 @@ export default function NavigationAppBar() {
                 <StyledDrawer
                   anchor="left"
                   open={state.isDrawerOpen}
-                  onClose={toggleDrawer}
+                  onClose={() => {
+                    toggleDrawer(false)
+                  }}
                 >
                   <List sx={{ paddingTop: 0, width: "300px" }}>
                     <ListItem
