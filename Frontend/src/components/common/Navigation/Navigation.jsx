@@ -132,6 +132,7 @@ export default function NavigationAppBar() {
                         paddingTop: theme.spacing(2),
                         backgroundColor: "rgba(233, 233, 240, 0.6)",
                         display: "block",
+                        width: '300px',
                       }}
                     >
                       <Box>
