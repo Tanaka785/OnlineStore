@@ -58,7 +58,7 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 }));
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
-  padding: 0,
+  padding: theme.spacing(1),
 }));
 
 const StyledBox = styled(Box)(({ theme }) => ({
