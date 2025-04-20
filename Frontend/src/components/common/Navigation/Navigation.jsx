@@ -105,7 +105,7 @@ export default function NavigationAppBar() {
                 width: "100%",
               }}
             >
-              <StyledBox
+              <Box
                 gap={0}
                 sx={{
                   display: "flex",
@@ -351,7 +351,7 @@ export default function NavigationAppBar() {
                     </ListItem>
                   </List>
                 </StyledDrawer>
-                <StyledBox
+                <Box
                   gap={1}
                   sx={{
                     display: "flex",
@@ -385,8 +385,8 @@ export default function NavigationAppBar() {
                       WEBVIBES
                     </Typography>
                   </StyledLink>
-                </StyledBox>
-              </StyledBox>
+                </Box>
+              </Box>
               {/* searchfield, nav-links, cart & favorites StyledBox. */}
               <Box
                 sx={{
@@ -446,7 +446,7 @@ export default function NavigationAppBar() {
                     </StyledIconButton>
                   </StyledBox>
                   {/* cart & favorites icons. */}
-                  <StyledBox
+                  <Box
                     gap={1}
                     sx={{ display: "flex", marginRight: theme.spacing(0) }}
                   >
@@ -465,7 +465,7 @@ export default function NavigationAppBar() {
                         <Avatar src="Cart.svg" sx={{ width: 27, height: 27 }} />
                       </StyledIconButton>
                     </StyledTooltip>
-                  </StyledBox>
+                  </Box>
                 </Box>
               </Box>
             </Box>
