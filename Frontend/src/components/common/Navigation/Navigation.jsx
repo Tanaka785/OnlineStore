@@ -186,7 +186,6 @@ export default function NavigationAppBar() {
                           <Typography>Explore</Typography>
                         </StyledLink>
                         <StyledChevronRight
-                          sx={{ marginLeft: "auto" }}
                         ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
@@ -197,7 +196,6 @@ export default function NavigationAppBar() {
                           <Typography>Clothing</Typography>
                         </StyledLink>
                         <StyledChevronRight
-                          sx={{ marginLeft: "auto" }}
                         ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
@@ -208,7 +206,6 @@ export default function NavigationAppBar() {
                           <Typography>Stickers</Typography>
                         </StyledLink>
                         <StyledChevronRight
-                          sx={{ marginLeft: "auto" }}
                         ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
@@ -219,7 +216,6 @@ export default function NavigationAppBar() {
                           <Typography>Phone Cases</Typography>
                         </StyledLink>
                         <StyledChevronRight
-                          sx={{ marginLeft: "auto" }}
                         ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
@@ -230,7 +226,6 @@ export default function NavigationAppBar() {
                           <Typography>Wall Art</Typography>
                         </StyledLink>
                         <StyledChevronRight
-                          sx={{ marginLeft: "auto" }}
                         ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
@@ -241,7 +236,6 @@ export default function NavigationAppBar() {
                           <Typography>Home & Living</Typography>
                         </StyledLink>
                         <StyledChevronRight
-                          sx={{ marginLeft: "auto" }}
                         ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
@@ -252,7 +246,6 @@ export default function NavigationAppBar() {
                           <Typography>Kids & Babies</Typography>
                         </StyledLink>
                         <StyledChevronRight
-                          sx={{ marginLeft: "auto" }}
                         ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
@@ -263,7 +256,6 @@ export default function NavigationAppBar() {
                           <Typography>Accessories</Typography>
                         </StyledLink>
                         <StyledChevronRight
-                          sx={{ marginLeft: "auto" }}
                         ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
@@ -274,7 +266,6 @@ export default function NavigationAppBar() {
                           <Typography>Stationery & Office</Typography>
                         </StyledLink>
                         <StyledChevronRight
-                          sx={{ marginLeft: "auto" }}
                         ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
@@ -285,7 +276,6 @@ export default function NavigationAppBar() {
                           <Typography>Gifts</Typography>
                         </StyledLink>
                         <StyledChevronRight
-                          sx={{ marginLeft: "auto" }}
                         ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
