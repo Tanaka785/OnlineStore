@@ -2,7 +2,6 @@
 
 borders.
 make logo text responsive, i mean hide some of it when screen gets small like overflow thing.
-drawer, 
 remove the boxshadow on logo, show a tooltip on logo hover
 */
 import React, { useState } from "react";
@@ -63,6 +62,10 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   
 }));
 
+const StyledChevronRight = styled(ChevronRight)(({ theme }) => ({
+  marginLeft: 'auto',
+}));
+
 const StyledBox = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -99,7 +102,7 @@ export default function NavigationAppBar() {
   const toggleDrawer = (open) => {
     setState({
       ...state,
-      isDrawerOpen: state.isDrawerOpen? false : true,
+      isDrawerOpen: open,
     });
   };
 
@@ -127,10 +130,11 @@ export default function NavigationAppBar() {
                 {/* MenuIcon */}
                 <StyledIconButton
                   onClick={() => {
-                    toggleDrawer(true)
+                    toggleDrawer(true);
                   }}
                   sx={{
                     display: {
+                      xs: "flex",
                       sm: "flex",
                       md: "none",
                     },
@@ -143,8 +147,9 @@ export default function NavigationAppBar() {
                   anchor="left"
                   open={state.isDrawerOpen}
                   onClose={() => {
-                    toggleDrawer(false)
+                    toggleDrawer(false);
                   }}
+                  // TODO automatically hide drawer on md screens & above.
                 >
                   <List sx={{ paddingTop: 0, width: "300px" }}>
                     <ListItem
@@ -180,9 +185,9 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Explore</Typography>
                         </StyledLink>
-                        <ChevronRight
+                        <StyledChevronRight
                           sx={{ marginLeft: "auto" }}
-                        ></ChevronRight>
+                        ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -191,9 +196,9 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Clothing</Typography>
                         </StyledLink>
-                        <ChevronRight
+                        <StyledChevronRight
                           sx={{ marginLeft: "auto" }}
-                        ></ChevronRight>
+                        ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -202,9 +207,9 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Stickers</Typography>
                         </StyledLink>
-                        <ChevronRight
+                        <StyledChevronRight
                           sx={{ marginLeft: "auto" }}
-                        ></ChevronRight>
+                        ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -213,9 +218,9 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Phone Cases</Typography>
                         </StyledLink>
-                        <ChevronRight
+                        <StyledChevronRight
                           sx={{ marginLeft: "auto" }}
-                        ></ChevronRight>
+                        ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -224,9 +229,9 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Wall Art</Typography>
                         </StyledLink>
-                        <ChevronRight
+                        <StyledChevronRight
                           sx={{ marginLeft: "auto" }}
-                        ></ChevronRight>
+                        ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -235,9 +240,9 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Home & Living</Typography>
                         </StyledLink>
-                        <ChevronRight
+                        <StyledChevronRight
                           sx={{ marginLeft: "auto" }}
-                        ></ChevronRight>
+                        ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -246,9 +251,9 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Kids & Babies</Typography>
                         </StyledLink>
-                        <ChevronRight
+                        <StyledChevronRight
                           sx={{ marginLeft: "auto" }}
-                        ></ChevronRight>
+                        ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -257,9 +262,9 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Accessories</Typography>
                         </StyledLink>
-                        <ChevronRight
+                        <StyledChevronRight
                           sx={{ marginLeft: "auto" }}
-                        ></ChevronRight>
+                        ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -268,9 +273,9 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Stationery & Office</Typography>
                         </StyledLink>
-                        <ChevronRight
+                        <StyledChevronRight
                           sx={{ marginLeft: "auto" }}
-                        ></ChevronRight>
+                        ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                     <StyledListItem>
@@ -279,9 +284,9 @@ export default function NavigationAppBar() {
                         <StyledLink>
                           <Typography>Gifts</Typography>
                         </StyledLink>
-                        <ChevronRight
+                        <StyledChevronRight
                           sx={{ marginLeft: "auto" }}
-                        ></ChevronRight>
+                        ></StyledChevronRight>
                       </StyledBox>
                     </StyledListItem>
                   </List>
