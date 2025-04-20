@@ -2,6 +2,7 @@ import { createTheme } from "@mui/material";
 
 const theme = createTheme({
   typography: {
+    color: "#19124f",
     fontFamily: "'Inter', sans-serif",
     fontWeightRegular: 400,
     fontWeightMedium: 600,
