@@ -57,13 +57,17 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
   // padding: '14px',
 }));
 
+const StyledListItem = styled(ListItem)(({ theme }) => ({
+  // padding: '14px',
+}));
+
 const StyledBox = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   gap: "1.5rem",
   width: "100%",
   paddingBlock: theme.spacing(1),
-  borderBottom: `1px solid ${theme.palette.divider}`,
+  border: `1px solid ${theme.palette.divider}`,
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({
@@ -163,7 +167,7 @@ export default function NavigationAppBar() {
                         </Typography>
                       </Box>
                     </ListItem>
-                    <ListItem sx={{ width: "100%" }}>
+                    <ListItem sx={{ width: "100%",}}>
                       <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
