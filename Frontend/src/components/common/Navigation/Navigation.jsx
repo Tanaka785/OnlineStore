@@ -178,7 +178,7 @@ export default function NavigationAppBar() {
                         ></ChevronRight>
                       </StyledBox>
                     </StyledListItem>
-                    <ListItem>
+                    <StyledListItem>
                       <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
@@ -188,8 +188,8 @@ export default function NavigationAppBar() {
                           sx={{ marginLeft: "auto" }}
                         ></ChevronRight>
                       </StyledBox>
-                    </ListItem>
-                    <ListItem>
+                    </StyledListItem>
+                    <StyledListItem>
                       <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
@@ -199,8 +199,8 @@ export default function NavigationAppBar() {
                           sx={{ marginLeft: "auto" }}
                         ></ChevronRight>
                       </StyledBox>
-                    </ListItem>
-                    <ListItem>
+                    </StyledListItem>
+                    <StyledListItem>
                       <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
@@ -210,8 +210,8 @@ export default function NavigationAppBar() {
                           sx={{ marginLeft: "auto" }}
                         ></ChevronRight>
                       </StyledBox>
-                    </ListItem>
-                    <ListItem>
+                    </StyledListItem>
+                    <StyledListItem>
                       <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
@@ -221,8 +221,8 @@ export default function NavigationAppBar() {
                           sx={{ marginLeft: "auto" }}
                         ></ChevronRight>
                       </StyledBox>
-                    </ListItem>
-                    <ListItem>
+                    </StyledListItem>
+                    <StyledListItem>
                       <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
@@ -232,8 +232,8 @@ export default function NavigationAppBar() {
                           sx={{ marginLeft: "auto" }}
                         ></ChevronRight>
                       </StyledBox>
-                    </ListItem>
-                    <ListItem>
+                    </StyledListItem>
+                    <StyledListItem>
                       <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
@@ -243,8 +243,8 @@ export default function NavigationAppBar() {
                           sx={{ marginLeft: "auto" }}
                         ></ChevronRight>
                       </StyledBox>
-                    </ListItem>
-                    <ListItem>
+                    </StyledListItem>
+                    <StyledListItem>
                       <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
@@ -254,8 +254,8 @@ export default function NavigationAppBar() {
                           sx={{ marginLeft: "auto" }}
                         ></ChevronRight>
                       </StyledBox>
-                    </ListItem>
-                    <ListItem>
+                    </StyledListItem>
+                    <StyledListItem>
                       <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
@@ -265,8 +265,8 @@ export default function NavigationAppBar() {
                           sx={{ marginLeft: "auto" }}
                         ></ChevronRight>
                       </StyledBox>
-                    </ListItem>
-                    <ListItem>
+                    </StyledListItem>
+                    <StyledListItem>
                       <StyledBox>
                         <Avatar></Avatar>
                         <StyledLink>
@@ -276,7 +276,7 @@ export default function NavigationAppBar() {
                           sx={{ marginLeft: "auto" }}
                         ></ChevronRight>
                       </StyledBox>
-                    </ListItem>
+                    </StyledListItem>
                   </List>
                 </StyledDrawer>
                 <Box
