@@ -7,7 +7,7 @@ export default function Divider() {
     <Box
       sx={{
         height: "3.6rem",
-        backgroundColor: "lightgray",
+        backgroundColor: "rgba(233, 233, 240, 0.6)",
         marginTop: theme.spacing(1.5),
       }}
     />
