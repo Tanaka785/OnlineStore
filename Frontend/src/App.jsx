@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import {
   BrowserRouter as Router,
   Routes,
