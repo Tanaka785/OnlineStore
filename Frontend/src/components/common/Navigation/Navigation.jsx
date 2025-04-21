@@ -381,7 +381,7 @@ export default function NavigationAppBar() {
                       </StyledLink>
                     </StyledIconButton>
                     <StyledIconButton>
-                      <StyledLink>
+                      <StyledLink to={`/signup`}>
                         <Typography variant="body1">Signup</Typography>
                       </StyledLink>
                     </StyledIconButton>
