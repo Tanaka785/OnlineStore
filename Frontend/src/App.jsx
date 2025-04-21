@@ -19,6 +19,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/auth/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Router>
     </React.Fragment>
