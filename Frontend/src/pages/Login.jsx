@@ -1,5 +1,5 @@
-export default function Wishlists() {
+export default function Login() {
     return (
-        <>Wishlists</>
+        <>Login</>
     )
 }
