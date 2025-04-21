@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Avatar } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
 export default function Banner() {
@@ -6,12 +6,14 @@ export default function Banner() {
     return (
       <Box
         sx={{
-          width: "100%",
-          border: "1px solid red",
-          margin: { md: theme.spacing(2) },
+          flex: 1,
+          minWidth: 0,
+          marginInline: { md: theme.spacing(3) },
+          marginBlock: { md: theme.spacing(1) },
         }}
       >
-        Hello
+        {/* // TODO research the best mui component for images. */}
+        <Avatar src="./Banner.png" alt="Banner"/>
       </Box>
     );
 }
