@@ -81,7 +81,7 @@ const StyledLink = styled(Link)(({ theme }) => ({
   color: theme.typography.color,
   letterSpacing: -0.1,
   "& .MuiTypography-root": {
-    // fontWeight: theme.typography.fontWeightMedium,
+    fontWeight: theme.typography.fontWeightMedium,
   },
 }));
 
