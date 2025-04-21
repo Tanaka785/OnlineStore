@@ -365,46 +365,58 @@ export default function NavigationAppBar() {
                         sm: "none",
                         md: "flex",
                         marginRight: theme.spacing(2),
+                        alignItems: "center",
                       },
                     }}
                   >
-                    <StyledIconButton>
-                      <StyledLink to={`/about/selling`}>
+                    <StyledLink to={`/about/selling`}>
+                      <StyledIconButton>
                         <Typography variant="body1">
                           Sell your designs
                         </Typography>
-                      </StyledLink>
-                    </StyledIconButton>
-                    <StyledIconButton>
-                      <StyledLink to={`/auth/login`}>
+                      </StyledIconButton>
+                    </StyledLink>
+                    <StyledLink to={`/auth/login`}>
+                      <StyledIconButton>
                         <Typography variant="body1">Login</Typography>
-                      </StyledLink>
-                    </StyledIconButton>
-                    <StyledIconButton>
-                      <StyledLink to={`/signup`}>
+                      </StyledIconButton>
+                    </StyledLink>
+                    <StyledLink to={`/signup`}>
+                      <StyledIconButton>
                         <Typography variant="body1">Signup</Typography>
-                      </StyledLink>
-                    </StyledIconButton>
+                      </StyledIconButton>
+                    </StyledLink>
                   </Box>
                   {/* cart & favorites icons. */}
                   <Box
                     gap={2}
-                    sx={{ display: "flex", marginRight: theme.spacing(0) }}
+                    sx={{
+                      display: "flex",
+                      marginRight: theme.spacing(0),
+                      alignItems: "center",
+                    }}
                   >
                     {/* favorite/wishlits icon */}
                     <StyledTooltip title="WishLists" arrow>
-                      <StyledIconButton size="small">
-                        <Avatar
-                          src="Favorite.svg"
-                          sx={{ width: 27, height: 27 }}
-                        />
-                      </StyledIconButton>
+                      <StyledLink>
+                        <StyledIconButton size="small">
+                          <Avatar
+                            src="Favorite.svg"
+                            sx={{ width: 27, height: 27 }}
+                          />
+                        </StyledIconButton>
+                      </StyledLink>
                     </StyledTooltip>
                     {/* cart icon */}
                     <StyledTooltip title="Cart" arrow>
-                      <StyledIconButton size="small">
-                        <Avatar src="Cart.svg" sx={{ width: 27, height: 27 }} />
-                      </StyledIconButton>
+                      <StyledLink>
+                        <StyledIconButton size="small">
+                          <Avatar
+                            src="Cart.svg"
+                            sx={{ width: 27, height: 27 }}
+                          />
+                        </StyledIconButton>
+                      </StyledLink>
                     </StyledTooltip>
                   </Box>
                 </Box>
