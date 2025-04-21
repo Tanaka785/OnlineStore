@@ -3,107 +3,118 @@
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
-          {
-            "label": "Run django server",
-            "type": "shell",
-            "command": "pipenv",
-            "args": ["run", "python", "manage.py", "runserver"],
-            "options": {
-              "cwd": "${workspaceFolder}/backend/",
-              "env": {"PIPENV_VERBOSITY": "-1"}
-            },
-            "problemMatcher": [],
-            "detail": "Task to run django server using pipenv"
-          },
-          {
-            "label": "Run reactVite server",
-            "type": "shell",
-            "command": "npm",
-            "args": ["run", "dev"],
-            "options": {
-              "cwd": "${workspaceFolder}/frontend"
-            },
-            "problemMatcher": []
-          },
-          {
-            "label": "Migrate",
-            "type": "shell",
-            "command": "pipenv",
-            "args": ["run", "python", "manage.py", "migrate"],
-            "options": {
-              "cwd": "${workspaceFolder}/backend/",
-              "env": {"PIPENV_VERBOSITY": "-1"}
-            },
-            "problemMatcher": [],
-            "detail": "Task migrate the database."
-          },
-          {
-            "label": "Create SuperUser",
-            "type": "shell",
-            "options": {
-              "cwd": "${workspaceFolder}/backend/",
-              "env": {"PIPENV_VERBOSITY": "-1"}
-            },
-            "command": "pipenv",
-            "args": ["run", "python", "manage.py", "createsuperuser"],
-            "problemMatcher": [],
-            "detail": "Task to create a superuser for django admin site."
-          },
-          {
-            "label": "Open Backend Terminal",
-            "type": "shell",
-            "command": "C:\\Program Files\\Git\\bin\\bash.exe",
-            "args": ["--login", "-i", "-c", "pipenv shell; exec bash"],
-            "options": {
-              "cwd": "${workspaceFolder}/backend",
-              "env": {"PIPENV_VERBOSITY": "-1"}
-            },
-            "problemMatcher": [],
-            "detail": "Task to open a terminal in the backend directory."
-          },
-          {
-            "label": "Open frontend Terminal",
-            "type": "shell",
-            "command": "C:\\Program Files\\Git\\bin\\bash.exe",
-            "args": ["--login", "-i", "-c", "exec bash"],
-            "options": {
-              "cwd": "${workspaceFolder}/Frontend",
-            },
-            "problemMatcher": [],
-            "detail": "Task to open a terminal in the frontend directory."
-          },
-          {
-            "label": "Open Root Terminal",
-            "type": "shell",
-            "command": "C:\\Program Files\\Git\\bin\\bash.exe",
-            "args": ["--login", "-i", "-c", "exec bash"],
-            "options": {
-              "env": {"PIPENV_VERBOSITY": "-1"}
-            },
-            "problemMatcher": [],
-            "detail": "Task to open a terminal in the root directory."
-          },
-          {
-            "label": "Run the Backend",
-            "type": "shell",
-            "command": "echo",
-            "detail": "Task to run the backend only",
-            "dependsOn": [
-                "Run django server",
-                "Open Backend Terminal",
-                "Open Root Terminal"
-            ],
-          },
-          {
-            "label": "Run the frontend",
-            "type": "shell",
-            "command": "echo",
-            "detail": "Task to run the frontend only",
-            "dependsOn": [
-                "Open Root Terminal",
-                "Run reactVite server",
-                "Open frontend Terminal",
-            ],
-          },
+      {
+        "label": "Run django server",
+        "type": "shell",
+        "command": "pipenv",
+        "args": ["run", "python", "manage.py", "runserver"],
+        "options": {
+          "cwd": "${workspaceFolder}/backend/",
+          "env": { "PIPENV_VERBOSITY": "-1" }
+        },
+        "problemMatcher": [],
+        "detail": "Task to run django server using pipenv"
+      },
+      {
+        "label": "Run reactVite server",
+        "type": "shell",
+        "command": "npm",
+        "args": ["run", "dev"],
+        "options": {
+          "cwd": "${workspaceFolder}/frontend"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Migrate",
+        "type": "shell",
+        "command": "pipenv",
+        "args": ["run", "python", "manage.py", "migrate"],
+        "options": {
+          "cwd": "${workspaceFolder}/backend/",
+          "env": { "PIPENV_VERBOSITY": "-1" }
+        },
+        "problemMatcher": [],
+        "detail": "Task migrate the database."
+      },
+      {
+        "label": "Create SuperUser",
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/backend/",
+          "env": { "PIPENV_VERBOSITY": "-1" }
+        },
+        "command": "pipenv",
+        "args": ["run", "python", "manage.py", "createsuperuser"],
+        "problemMatcher": [],
+        "detail": "Task to create a superuser for django admin site."
+      },
+      {
+        "label": "Open Backend Terminal",
+        "type": "shell",
+        "command": "C:\\Program Files\\Git\\bin\\bash.exe",
+        "args": ["--login", "-i", "-c", "pipenv shell; exec bash"],
+        "options": {
+          "cwd": "${workspaceFolder}/backend",
+          "env": { "PIPENV_VERBOSITY": "-1" }
+        },
+        "problemMatcher": [],
+        "detail": "Task to open a terminal in the backend directory."
+      },
+      {
+        "label": "Open frontend Terminal",
+        "type": "shell",
+        "command": "C:\\Program Files\\Git\\bin\\bash.exe",
+        "args": ["--login", "-i", "-c", "exec bash"],
+        "options": {
+          "cwd": "${workspaceFolder}/Frontend"
+        },
+        "problemMatcher": [],
+        "detail": "Task to open a terminal in the frontend directory."
+      },
+      {
+        "label": "Open Root Terminal",
+        "type": "shell",
+        "command": "C:\\Program Files\\Git\\bin\\bash.exe",
+        "args": ["--login", "-i", "-c", "exec bash"],
+        "options": {
+          "env": { "PIPENV_VERBOSITY": "-1" }
+        },
+        "problemMatcher": [],
+        "detail": "Task to open a terminal in the root directory."
+      },
+      {
+        "label": "Run the Backend",
+        "type": "shell",
+        "command": "echo",
+        "detail": "Task to run the backend only",
+        "dependsOn": [
+          "Run django server",
+          "Open Backend Terminal",
+          "Open Root Terminal"
+        ]
+      },
+      {
+        "label": "Run the frontend",
+        "type": "shell",
+        "command": "echo",
+        "detail": "Task to run the frontend only",
+        "dependsOn": [
+          "Open Root Terminal",
+          "Run reactVite server",
+          "Open frontend Terminal"
+        ]
+      },
+      {
+        "label": "Run the Backend",
+        "type": "shell",
+        "command": "echo",
+        "detail": "Task to run the backend only",
+        "dependsOn": [
+          "Open Root Terminal",
+          "Run django server",
+          "Open Backend Terminal"
+        ]
+      }
     ]
 }
