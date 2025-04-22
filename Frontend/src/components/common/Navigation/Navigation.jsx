@@ -322,7 +322,7 @@ export default function NavigationAppBar() {
                       sx={{
                         fontWeight: theme.typography.fontWeightBold,
                         fontSize: "1.6rem",
-                        color: 'black',
+                        color: "black",
                       }}
                     >
                       WEBVIBES
@@ -391,7 +391,6 @@ export default function NavigationAppBar() {
                   </Box>
                   {/* cart & favorites icons. */}
                   <Box
-                    gap={2}
                     sx={{
                       display: "flex",
                       marginRight: theme.spacing(0),
@@ -401,7 +400,10 @@ export default function NavigationAppBar() {
                     {/* favorite/wishlits icon */}
                     <StyledTooltip title="WishLists" arrow>
                       <StyledLink>
-                        <StyledIconButton size="small">
+                        <StyledIconButton
+                          size="small"
+                          sx={{ padding: theme.spacing(1.5) }}
+                        >
                           <Avatar
                             src="Favorite.svg"
                             sx={{ width: 27, height: 27 }}
@@ -412,7 +414,10 @@ export default function NavigationAppBar() {
                     {/* cart icon */}
                     <StyledTooltip title="Cart" arrow>
                       <StyledLink>
-                        <StyledIconButton size="small">
+                        <StyledIconButton
+                          size="small"
+                          sx={{ padding: theme.spacing(1.5) }}
+                        >
                           <Avatar
                             src="Cart.svg"
                             sx={{ width: 27, height: 27 }}
