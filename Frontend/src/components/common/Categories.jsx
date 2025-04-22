@@ -14,7 +14,7 @@ export default function Categories() {
     <Box
       gap={5}
       sx={{
-        marginInline: theme.spacing(3),
+        marginInline: theme.spacing(4),
         display: "flex",
         marginTop: theme.spacing(3),
         justifyContent: "space-between",
