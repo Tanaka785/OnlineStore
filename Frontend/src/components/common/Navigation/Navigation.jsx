@@ -391,6 +391,7 @@ export default function NavigationAppBar() {
                   </Box>
                   {/* cart & favorites icons. */}
                   <Box
+                    gap={1}
                     sx={{
                       display: "flex",
                       marginRight: theme.spacing(0),
