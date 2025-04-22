@@ -25,6 +25,7 @@ import SearchField from "./SearchField";
 import { styled, useTheme } from "@mui/material/styles";
 import {
   ChevronRight,
+  MarginOutlined,
   Menu as MenuIcon,
   Search as SearchIcon,
 } from "@mui/icons-material";
@@ -36,7 +37,12 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   border: theme.palette.divider,
   color: theme.palette.text.primary,
   marginTop: theme.spacing(1),
-  marginInline: theme.spacing(2),
+  [theme.breakpoints.down("sm")]: {
+    marginInline: theme.spacing(0),
+  },
+  [theme.breakpoints.up("md")]: {
+    marginInline: theme.spacing(2),
+  },
 }));
 
 const StyledTooltip = styled(({ className, ...props }) => (
@@ -299,6 +305,7 @@ export default function NavigationAppBar() {
                   sx={{
                     display: "flex",
                     marginRight: theme.spacing(1),
+                    marginLeft: { xs: theme.spacing(-1) },
                     overflow: true,
                     alignItems: "center",
                   }}
@@ -321,7 +328,7 @@ export default function NavigationAppBar() {
                       variant="h6"
                       sx={{
                         // fontWeight: theme.typography.fontWeightBold,
-                        fontSize: {xs: '1.5rem', sm: '1.5rem', md: '1.9rem'},
+                        fontSize: { xs: "1.5rem", sm: "1.5rem", md: "1.9rem" },
                         // color: "black",
                         marginTop: theme.spacing(0.6),
                       }}
@@ -393,10 +400,13 @@ export default function NavigationAppBar() {
                   </Box>
                   {/* cart & favorites icons. */}
                   <Box
-                    gap={1}
                     sx={{
                       display: "flex",
-                      marginRight: theme.spacing(3),
+                      marginRight: {
+                        xs: theme.spacing(-2),
+                        sm: theme.spacing(-2),
+                        md: theme.spacing(3),
+                      },
                       alignItems: "center",
                     }}
                   >
@@ -405,7 +415,7 @@ export default function NavigationAppBar() {
                       <StyledLink>
                         <StyledIconButton
                           size="small"
-                          sx={{ padding: theme.spacing(1.5) }}
+                          sx={{ padding: { xs: 0, md: theme.spacing(1.5) } }}
                         >
                           <Avatar
                             src="Favorite.svg"
