@@ -87,6 +87,7 @@ const StyledLink = styled(Link)(({ theme }) => ({
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   boxSizing: "border-box",
+  color: theme.typography.color,
   // paddingInline: '1rem',
   "&:hover": {
     borderRadius: theme.spacing(3),
@@ -357,6 +358,7 @@ export default function NavigationAppBar() {
                     marginLeft: "auto",
                   }}
                 >
+                  {/* TODO change color of nav links */}
                   <Box
                     gap={2}
                     sx={{
