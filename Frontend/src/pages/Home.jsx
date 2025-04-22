@@ -12,7 +12,7 @@ function Home() {
             <NavigationAppBar />
             <Categories />
             <Divider />
-            <Banner/>
+            {/* <Banner/> */}
         </Box>
     )
 };
