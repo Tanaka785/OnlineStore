@@ -332,7 +332,11 @@ export default function NavigationAppBar() {
                         // fontWeight: theme.typography.fontWeightBold,
                         fontSize: { xs: "1.5rem", sm: "1.5rem", md: "1.9rem" },
                         color: "rgb(51, 51, 51)",
-                        marginTop: theme.spacing(0.6),
+                        marginTop: {
+                          xs: theme.spacing(0.2),
+                          sm: theme.spacing(0.2),
+                          md: theme.spacing(0.6),
+                        },
                         letterSpacing: -1.3,
                       }}
                     >
