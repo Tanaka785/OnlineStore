@@ -394,7 +394,7 @@ export default function NavigationAppBar() {
                     gap={1}
                     sx={{
                       display: "flex",
-                      marginRight: theme.spacing(0),
+                      marginRight: { md: theme.spacing(1)},
                       alignItems: "center",
                     }}
                   >
