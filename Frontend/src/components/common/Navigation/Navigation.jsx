@@ -36,6 +36,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   border: theme.palette.divider,
   color: theme.palette.text.primary,
   marginTop: theme.spacing(1),
+  marginInline: theme.spacing(2),
 }));
 
 const StyledTooltip = styled(({ className, ...props }) => (
@@ -300,7 +301,6 @@ export default function NavigationAppBar() {
                     marginRight: theme.spacing(1),
                     overflow: true,
                     alignItems: "center",
-                    marginLeft: { md: theme.spacing(1) },
                   }}
                 >
                   {/* Logo */}
@@ -394,7 +394,7 @@ export default function NavigationAppBar() {
                     gap={1}
                     sx={{
                       display: "flex",
-                      marginRight: { md: theme.spacing(1)},
+                      marginRight: theme.spacing(3),
                       alignItems: "center",
                     }}
                   >
