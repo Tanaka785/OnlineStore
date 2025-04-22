@@ -322,6 +322,7 @@ export default function NavigationAppBar() {
                       sx={{
                         fontWeight: theme.typography.fontWeightBold,
                         fontSize: "1.6rem",
+                        color: 'black',
                       }}
                     >
                       WEBVIBES
@@ -358,7 +359,6 @@ export default function NavigationAppBar() {
                     marginLeft: "auto",
                   }}
                 >
-                  {/* TODO change color of nav links */}
                   <Box
                     gap={2}
                     sx={{
