@@ -40,7 +40,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
     marginInline: theme.spacing(0),
   },
   [theme.breakpoints.up("md")]: {
-    marginInline: theme.spacing(2),
+    marginInline: theme.spacing(2.5),
   },
 }));
 
@@ -305,7 +305,10 @@ export default function NavigationAppBar() {
                   sx={{
                     display: "flex",
                     marginRight: theme.spacing(1),
-                    marginLeft: { xs: theme.spacing(-1) },
+                    marginLeft: {
+                      xs: theme.spacing(-1),
+                      sm: theme.spacing(-1),
+                    },
                     overflow: true,
                     alignItems: "center",
                   }}
