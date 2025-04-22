@@ -3,7 +3,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Cart from "./pages/Cart";
 import Selling from "./pages/Selling";
-import Wishlists from "./pages/Login";
+import WishLists from "./pages/Wishlists";
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,7 +24,7 @@ export default function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about/selling" element={<Selling />} />
-          <Route path="/lists" element={<Wishlists />} />
+          <Route path="/lists" element={<WishLists />} />
         </Routes>
       </Router>
     </React.Fragment>
