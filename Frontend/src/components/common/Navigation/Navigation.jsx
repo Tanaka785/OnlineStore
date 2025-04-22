@@ -1,8 +1,7 @@
 /* TODO 
 
-borders.
-make logo text responsive, i mean hide some of it when screen gets small like overflow thing.
-remove the boxshadow on logo, show a tooltip on logo hover
+remove scrollX showing up on the homepage.
+
 */
 import React, { useState } from "react";
 import {
@@ -49,13 +48,13 @@ const StyledTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
 ))(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: "rgb(185, 0, 255)",
+    backgroundColor: theme.typography.color,
     color: theme.palette.common.white,
     minWidth: 20,
     minHeight: 20,
   },
   [`& .${tooltipClasses.arrow}`]: {
-    color: "rgb(185, 0, 255)",
+    color: theme.typography.color,
   },
 }));
 
@@ -301,6 +300,7 @@ export default function NavigationAppBar() {
                     </StyledLink>
                   </Box>
                 </StyledDrawer>
+                {/* remove the boxshadow on logo, show a tooltip on logo hover */}
                 <Box
                   sx={{
                     display: "flex",
@@ -323,6 +323,8 @@ export default function NavigationAppBar() {
                     />
                   </StyledIconButton>
                   {/* Logo text */}
+                  {/*TODO make logo text responsive, i mean hide some of it when screen
+                  gets small like overflow thing. */}
                   <StyledLink>
                     <Typography
                       variant="h6"
@@ -348,6 +350,7 @@ export default function NavigationAppBar() {
                   marginLeft: "auto",
                 }}
               >
+                {/* TODO style the borders */}
                 {/* searchfield */}
                 <Box
                   sx={{
