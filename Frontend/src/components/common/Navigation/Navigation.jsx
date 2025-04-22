@@ -82,7 +82,7 @@ const StyledLink = styled(Link)(({ theme }) => ({
   color: theme.typography.color,
   letterSpacing: -0.1,
   "& .MuiTypography-root": {
-    fontWeight: theme.typography.fontWeightMedium,
+    // fontWeight: theme.typography.fontWeightMedium,
   },
 }));
 
@@ -309,8 +309,8 @@ export default function NavigationAppBar() {
                       src="/Logo.png"
                       alt="Logo"
                       sx={{
-                        maxWidth: 30,
-                        maxHeight: 30,
+                        maxWidth: { xs: 30, sm: 30, md: 35 },
+                        maxHeight: { xs: 30, sm: 30, md: 35 },
                         backgroundPosition: "center",
                       }}
                     />
@@ -320,11 +320,13 @@ export default function NavigationAppBar() {
                     <Typography
                       variant="h6"
                       sx={{
-                        fontWeight: theme.typography.fontWeightBold,
-                        fontSize: "1.6rem",
-                        color: "black",
+                        // fontWeight: theme.typography.fontWeightBold,
+                        fontSize: {xs: '1.5rem', sm: '1.5rem', md: '1.9rem'},
+                        // color: "black",
+                        marginTop: theme.spacing(0.6),
                       }}
                     >
+                      {/* TODO fix the color for nav links, and for logo text */}
                       WEBVIBES
                     </Typography>
                   </StyledLink>
