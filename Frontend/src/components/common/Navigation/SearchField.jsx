@@ -9,9 +9,9 @@ export default function SearchField() {
           flex: 1,
           minWidth: 0,
           marginInline: theme.spacing(1),
-        //   display: { xs: "flex", sm: "flex", md: "none" },
         }}
       >
+        {/* TODO increase the height of the TextField. */}
         <TextField
           fullWidth
           slotProps={{
