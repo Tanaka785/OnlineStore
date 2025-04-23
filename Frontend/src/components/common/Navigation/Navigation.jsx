@@ -1,6 +1,7 @@
 /* TODO 
 
-remove scrollX showing up on the homepage.
+- refactor Drawer.
+- remove scrollX showing up on the homepage.
 
 */
 import React, { useState } from "react";
@@ -21,6 +22,7 @@ import {
   InputAdornment,
 } from "@mui/material";
 import SearchField from "./SearchField";
+import Drawer from "./Drawer";
 import { styled, useTheme } from "@mui/material/styles";
 import {
   ChevronRight,
