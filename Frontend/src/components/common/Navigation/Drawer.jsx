@@ -56,7 +56,7 @@ export default function NavDrawer() {
   return (
     <StyledDrawer
       anchor="left"
-      // open={state.isDrawerOpen}
+      open={true}
       // onClose={() => {
       //   toggleDrawer(false);
       // }}
@@ -73,113 +73,162 @@ export default function NavDrawer() {
           }}
         >
           <Box sx={{ paddingLeft: theme.spacing(2) }}>
-            <Typography
-              variant="body1"
-              sx={{
-                fontWeight: theme.typography.fontWeightRegular,
-                marginBottom: "0.5rem",
-              }}
-            >
-              Hie there!
-            </Typography>
+            <ListItemText
+              primary={
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontWeight: theme.typography.fontWeightRegular,
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Hie there!
+                </Typography>
+              }
+            ></ListItemText>
           </Box>
           <Box sx={{ paddingLeft: theme.spacing(2) }}>
-            <Typography>
-              <StyledLink>Login &nbsp;</StyledLink>
-              or&nbsp;
-              <StyledLink>Signup</StyledLink>
-            </Typography>
+            <ListItemText
+              primary={
+                <Typography>
+                  <StyledLink>Login &nbsp;</StyledLink>
+                  or&nbsp;
+                  <StyledLink>Signup</StyledLink>
+                </Typography>
+              }
+            ></ListItemText>
           </Box>
         </ListItem>
         <StyledListItem sx={{ width: "100%" }}>
-          <StyledBox>
-            <Avatar></Avatar>
-            <StyledLink>
-              <Typography>Explore</Typography>
-            </StyledLink>
-            <StyledChevronRight></StyledChevronRight>
-          </StyledBox>
+          <ListItemText
+            primary={
+              <StyledBox>
+                <Avatar></Avatar>
+                <StyledLink>
+                  <Typography>Explore</Typography>
+                </StyledLink>
+                <StyledChevronRight></StyledChevronRight>
+              </StyledBox>
+            }
+          ></ListItemText>
         </StyledListItem>
         <StyledListItem>
-          <StyledBox>
-            <Avatar></Avatar>
-            <StyledLink>
-              <Typography>Clothing</Typography>
-            </StyledLink>
-            <StyledChevronRight></StyledChevronRight>
-          </StyledBox>
+          <ListItemText
+            primary={
+              <StyledBox>
+                <Avatar></Avatar>
+                <StyledLink>
+                  <Typography>Clothing</Typography>
+                </StyledLink>
+                <StyledChevronRight></StyledChevronRight>
+              </StyledBox>
+            }
+          ></ListItemText>
         </StyledListItem>
         <StyledListItem>
-          <StyledBox>
-            <Avatar></Avatar>
-            <StyledLink>
-              <Typography>Stickers</Typography>
-            </StyledLink>
-            <StyledChevronRight></StyledChevronRight>
-          </StyledBox>
+          <ListItemText
+            primary={
+              <StyledBox>
+                <Avatar></Avatar>
+                <StyledLink>
+                  <Typography>Stickers</Typography>
+                </StyledLink>
+                <StyledChevronRight></StyledChevronRight>
+              </StyledBox>
+            }
+          ></ListItemText>
         </StyledListItem>
         <StyledListItem>
-          <StyledBox>
-            <Avatar></Avatar>
-            <StyledLink>
-              <Typography>Phone Cases</Typography>
-            </StyledLink>
-            <StyledChevronRight></StyledChevronRight>
-          </StyledBox>
+          <ListItemText
+            primary={
+              <StyledBox>
+                <Avatar></Avatar>
+                <StyledLink>
+                  <Typography>Phone Cases</Typography>
+                </StyledLink>
+                <StyledChevronRight></StyledChevronRight>
+              </StyledBox>
+            }
+          ></ListItemText>
         </StyledListItem>
         <StyledListItem>
-          <StyledBox>
-            <Avatar></Avatar>
-            <StyledLink>
-              <Typography>Wall Art</Typography>
-            </StyledLink>
-            <StyledChevronRight></StyledChevronRight>
-          </StyledBox>
+          <ListItemText
+            primary={
+              <StyledBox>
+                <Avatar></Avatar>
+                <StyledLink>
+                  <Typography>Wall Art</Typography>
+                </StyledLink>
+                <StyledChevronRight></StyledChevronRight>
+              </StyledBox>
+            }
+          ></ListItemText>
+        </StyledListItem>
+
+        <StyledListItem>
+          <ListItemText
+            primary={
+              <StyledBox>
+                <Avatar></Avatar>
+                <StyledLink>
+                  <Typography>Home & Living</Typography>
+                </StyledLink>
+                <StyledChevronRight></StyledChevronRight>
+              </StyledBox>
+            }
+          ></ListItemText>
         </StyledListItem>
         <StyledListItem>
-          <StyledBox>
-            <Avatar></Avatar>
-            <StyledLink>
-              <Typography>Home & Living</Typography>
-            </StyledLink>
-            <StyledChevronRight></StyledChevronRight>
-          </StyledBox>
+          <ListItemText
+            primary={
+              <StyledBox>
+                <Avatar></Avatar>
+                <StyledLink>
+                  <Typography>Kids & Babies</Typography>
+                </StyledLink>
+                <StyledChevronRight></StyledChevronRight>
+              </StyledBox>
+            }
+          ></ListItemText>
         </StyledListItem>
         <StyledListItem>
-          <StyledBox>
-            <Avatar></Avatar>
-            <StyledLink>
-              <Typography>Kids & Babies</Typography>
-            </StyledLink>
-            <StyledChevronRight></StyledChevronRight>
-          </StyledBox>
+          <ListItemText
+            primary={
+              <StyledBox>
+                <Avatar></Avatar>
+                <StyledLink>
+                  <Typography>Accessories</Typography>
+                </StyledLink>
+                <StyledChevronRight></StyledChevronRight>
+              </StyledBox>
+            }
+          ></ListItemText>
         </StyledListItem>
         <StyledListItem>
-          <StyledBox>
-            <Avatar></Avatar>
-            <StyledLink>
-              <Typography>Accessories</Typography>
-            </StyledLink>
-            <StyledChevronRight></StyledChevronRight>
-          </StyledBox>
+          <ListItemText
+            primary={
+              <StyledBox>
+                <Avatar></Avatar>
+                <StyledLink>
+                  <Typography>Stationery & Office</Typography>
+                </StyledLink>
+                <StyledChevronRight></StyledChevronRight>
+              </StyledBox>
+            }
+          ></ListItemText>
         </StyledListItem>
         <StyledListItem>
-          <StyledBox>
-            <Avatar></Avatar>
-            <StyledLink>
-              <Typography>Stationery & Office</Typography>
-            </StyledLink>
-            <StyledChevronRight></StyledChevronRight>
-          </StyledBox>
-        </StyledListItem>
-        <StyledListItem>
-          <StyledBox>
-            <Avatar></Avatar>
-            <StyledLink>
-              <Typography>Gifts</Typography>
-            </StyledLink>
-            <StyledChevronRight></StyledChevronRight>
-          </StyledBox>
+          <ListItemText
+            primary={
+              <StyledBox>
+                <Avatar></Avatar>
+                <StyledLink>
+                  <Typography>Gifts</Typography>
+                </StyledLink>
+                <StyledChevronRight></StyledChevronRight>
+              </StyledBox>
+            }
+          ></ListItemText>
         </StyledListItem>
       </List>
       {/* // TODO use gap to space the link elements here. */}
