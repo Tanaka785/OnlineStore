@@ -1,6 +1,6 @@
 /* TODO 
 
-- refactor Drawer.
+- work on state to control the drawer.
 - remove scrollX showing up on the homepage.
 
 */
