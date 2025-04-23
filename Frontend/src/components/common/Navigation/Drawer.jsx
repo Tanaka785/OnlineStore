@@ -91,9 +91,17 @@ export default function NavDrawer() {
             <ListItemText
               primary={
                 <Typography>
-                  <StyledLink>Login &nbsp;</StyledLink>
+                  <StyledLink
+                    sx={{ fontWeight: theme.typography.fontWeightMedium }}
+                  >
+                    Login &nbsp;
+                  </StyledLink>
                   or&nbsp;
-                  <StyledLink>Signup</StyledLink>
+                  <StyledLink
+                    sx={{ fontWeight: theme.typography.fontWeightMedium }}
+                  >
+                    Signup
+                  </StyledLink>
                 </Typography>
               }
             ></ListItemText>
