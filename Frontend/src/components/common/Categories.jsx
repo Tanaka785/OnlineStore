@@ -15,7 +15,6 @@ export default function Categories() {
       gap={5}
       sx={{
         marginInline: theme.spacing(4),
-        display: "flex",
         marginTop: theme.spacing(3),
         justifyContent: "space-between",
         display: { xs: "none", sm: "none", md: "flex"}
