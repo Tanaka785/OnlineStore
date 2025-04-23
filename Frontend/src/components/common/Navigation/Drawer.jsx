@@ -97,7 +97,7 @@ export default function NavDrawer() {
                     Login &nbsp;
                   </StyledLink>
                   or&nbsp;
-                  <StyledLink
+                  <StyledLink to={`/signup`}
                     sx={{ fontWeight: theme.typography.fontWeightMedium }}
                   >
                     Signup
