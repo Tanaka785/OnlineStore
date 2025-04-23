@@ -238,18 +238,44 @@ export default function NavDrawer() {
           paddingTop: theme.spacing(1),
         }}
       >
-        <StyledLink>
-          <Typography variant="body2">Delivery</Typography>
-        </StyledLink>
-        <StyledLink>
-          <Typography variant="body2">Returns</Typography>
-        </StyledLink>
-        <StyledLink>
-          <Typography variant="body2">Help Center</Typography>
-        </StyledLink>
-        <StyledLink>
-          <Typography variant="body2">Sell Your Art</Typography>
-        </StyledLink>
+        <List>
+          <ListItem>
+            <ListItemText
+              primary={
+                <StyledLink>
+                  <Typography variant="body2">Delivery</Typography>
+                </StyledLink>
+              }
+            ></ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary={
+                <StyledLink>
+                  <Typography variant="body2">Returns</Typography>
+                </StyledLink>
+              }
+            ></ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary={
+                <StyledLink>
+                  <Typography variant="body2">Help Center</Typography>
+                </StyledLink>
+              }
+            ></ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary={
+                <StyledLink>
+                  <Typography variant="body2">Sell Your Art</Typography>
+                </StyledLink>
+              }
+            ></ListItemText>
+          </ListItem>
+        </List>
       </Box>
     </StyledDrawer>
   );
