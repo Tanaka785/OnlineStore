@@ -2,7 +2,6 @@ import {
   Drawer,
   Typography,
   Box,
-  Link,
   Avatar,
   List,
   ListItem,
@@ -10,6 +9,7 @@ import {
 } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
 import { ChevronRight } from "@mui/icons-material";
+import {Link} from "react-router-dom";
 
 const StyledDrawer = styled(Drawer)(({ theme }) => ({
   // padding: '14px',
@@ -91,7 +91,7 @@ export default function NavDrawer() {
             <ListItemText
               primary={
                 <Typography>
-                  <StyledLink
+                  <StyledLink to={`/auth/login`}
                     sx={{ fontWeight: theme.typography.fontWeightMedium }}
                   >
                     Login &nbsp;
