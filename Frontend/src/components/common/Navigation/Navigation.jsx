@@ -18,6 +18,8 @@ import SearchField from "./SearchField";
 import { styled, useTheme } from "@mui/material/styles";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import NavDrawer from "./Drawer";
+
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: "transparent",
