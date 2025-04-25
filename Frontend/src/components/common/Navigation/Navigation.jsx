@@ -88,7 +88,11 @@ export default function NavigationAppBar() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  marginLeft: { xs: theme.spacing(-2) },
+                  marginLeft: {
+                    xs: theme.spacing(-1),
+                    sm: theme.spacing(-2),
+                    md: theme.spacing(-2),
+                  },
                 }}
               >
                 {/* Drawer */}
