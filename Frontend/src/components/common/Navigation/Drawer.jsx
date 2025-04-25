@@ -17,7 +17,7 @@ function NavDrawer() {
   };
 
   return (
-    <>
+    <Box>
       <IconButton
         size="large"
         edge="start"
@@ -37,7 +37,7 @@ function NavDrawer() {
           </ListItem>
         </List>
       </Drawer>
-    </>
+    </Box>
   );
 }
 
