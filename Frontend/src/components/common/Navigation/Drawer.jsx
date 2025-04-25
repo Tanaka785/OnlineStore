@@ -5,6 +5,8 @@ import {
   List,
   ListItem,
   ListItemText,
+  Typography,
+  Link,
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -18,7 +20,7 @@ function NavDrawer() {
   };
 
   return (
-    <Box sx={{ display: {xs: "flex", sm: "flex", md: "none"}}}>
+    <Box sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}>
       <IconButton
         size="large"
         edge="start"
@@ -30,9 +32,21 @@ function NavDrawer() {
       </IconButton>
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
         <List>
-          <ListItem button>
-            <ListItemText primary="Item 1" />
-          </ListItem>
+          <List>
+            <ListItem button>
+              <ListItemText
+                primary={
+                  <Box>
+                    <Typography variant="body2">Hi there!</Typography>
+                    <Typography variant="body2">
+                      <Link href="#">Login</Link> or&nbsp;
+                      <Link href="#">Signup</Link>
+                    </Typography>
+                  </Box>
+                }
+              />
+            </ListItem>
+          </List>
           <ListItem button>
             <ListItemText primary="Item 2" />
           </ListItem>
