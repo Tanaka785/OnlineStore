@@ -1,5 +1,6 @@
 import {
   IconButton,
+  Box,
   Drawer,
   List,
   ListItem,
@@ -17,7 +18,7 @@ function NavDrawer() {
   };
 
   return (
-    <Box>
+    <Box sx={{ display: {xs: "flex", sm: "flex", md: "none"}}}>
       <IconButton
         size="large"
         edge="start"
