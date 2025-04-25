@@ -7,9 +7,10 @@ import {
   ListItemText,
   Typography,
   Link,
+  ListItemButton,
 } from "@mui/material";
 
-import MenuIcon from "@mui/icons-material/Menu";
+import { Menu as MenuIcon, ChevronRight as ChevronRightIcon } from "@mui/icons-material";
 import { useState } from "react";
 
 function NavDrawer() {
@@ -48,7 +49,11 @@ function NavDrawer() {
             </ListItem>
           </List>
           <ListItem button>
-            <ListItemText primary="Item 2" />
+            <ListItemButton>
+              <Box component="img" src="/Logo.png" alt="Logo" />
+              <Typography>Explore</Typography>
+              <ChevronRightIcon />
+            </ListItemButton>
           </ListItem>
         </List>
       </Drawer>
