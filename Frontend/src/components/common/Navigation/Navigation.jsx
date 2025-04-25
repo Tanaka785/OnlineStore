@@ -1,6 +1,5 @@
 /* TODO 
 
-- work on state to control the drawer.
 - remove scrollX showing up on the homepage.
 
 */
@@ -16,7 +15,6 @@ import {
   IconButton,
 } from "@mui/material";
 import SearchField from "./SearchField";
-import NavDrawer from "./Drawer";
 import { styled, useTheme } from "@mui/material/styles";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import { Link } from "react-router-dom";
@@ -69,17 +67,6 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
 
 export default function NavigationAppBar() {
   const theme = useTheme();
-  const [state, setState] = useState({
-    isDrawerOpen: false,
-    isDefaultDrawer: true,
-  });
-
-  const toggleDrawer = (open) => {
-    setState({
-      ...state,
-      isDrawerOpen: open,
-    });
-  };
 
   return (
     <Box>
@@ -102,23 +89,6 @@ export default function NavigationAppBar() {
                   marginLeft: { xs: theme.spacing(-2) },
                 }}
               >
-                {/* MenuIcon */}
-                <StyledIconButton
-                  onClick={() => {
-                    toggleDrawer(true);
-                  }}
-                  sx={{
-                    display: {
-                      xs: "flex",
-                      sm: "flex",
-                      md: "none",
-                    },
-                  }}
-                >
-                  <MenuIcon />
-                </StyledIconButton>
-                {/* Drawer */}
-                <NavDrawer />
                 {/* remove the boxshadow on logo, show a tooltip on logo hover */}
                 <Box
                   sx={{
