@@ -8,6 +8,7 @@ import {
   Typography,
   Link,
   ListItemButton,
+  Avatar,
 } from "@mui/material";
 
 import { Menu as MenuIcon, ChevronRight as ChevronRightIcon } from "@mui/icons-material";
@@ -50,7 +51,11 @@ function NavDrawer() {
           </List>
           <ListItem button>
             <ListItemButton>
-              <Box component="img" src="/Logo.png" alt="Logo" />
+              <Avatar
+                alt="User"
+                src="/Logo.png"
+                sx={{ borderRadius: 2, width: 56, height: 56 }}
+              />
               <Typography>Explore</Typography>
               <ChevronRightIcon />
             </ListItemButton>
