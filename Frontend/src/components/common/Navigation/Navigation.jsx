@@ -91,6 +91,7 @@ export default function NavigationAppBar() {
                   marginLeft: { xs: theme.spacing(-2) },
                 }}
               >
+                {/* Drawer */}
                 <NavDrawer />
                 {/* remove the boxshadow on logo, show a tooltip on logo hover */}
                 <Box
