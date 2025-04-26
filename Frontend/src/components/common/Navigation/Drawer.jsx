@@ -176,8 +176,7 @@ function NavDrawer() {
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
         {/* Drawer header */}
         <List>
-          <ListItem disablePadding divider={true}>
-            <ListItemButton>
+          <ListItem divider={true} sx={{ pb: 2}}>
               <ListItemText
                 primary={
                   <Box>
@@ -189,7 +188,6 @@ function NavDrawer() {
                   </Box>
                 }
               />
-            </ListItemButton>
           </ListItem>
           {/* Categories */}
           {drawerItems.map((item) => (
