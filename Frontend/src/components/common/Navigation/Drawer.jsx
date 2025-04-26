@@ -11,9 +11,14 @@ import {
   Avatar,
   ListItemIcon,
   ListItemAvatar,
+  styled,
 } from "@mui/material";
 import { Menu as MenuIcon, ChevronRight as ChevronRightIcon } from "@mui/icons-material";
 import { useState } from "react";
+
+const CustomLink = styled(Link)(({ theme }) => ({
+  fontWeight: theme.typography.fontWeightBold,
+}))
 
 function NavDrawer() {
   const [open, setOpen] = useState(false);
@@ -182,8 +187,8 @@ function NavDrawer() {
                   <Box>
                     <Typography variant="body1">Hi there!</Typography>
                     <Typography variant="body1">
-                      <Link href="/">Login</Link> or&nbsp;
-                      <Link href="/">Signup</Link>
+                      <CustomLink href="/">Login</CustomLink> or&nbsp;
+                      <CustomLink href="/">Signup</CustomLink>
                     </Typography>
                   </Box>
                 }
