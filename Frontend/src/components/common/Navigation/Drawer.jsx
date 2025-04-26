@@ -12,6 +12,7 @@ import {
   ListItemIcon,
   ListItemAvatar,
   styled,
+  useTheme,
 } from "@mui/material";
 import { Menu as MenuIcon, ChevronRight as ChevronRightIcon } from "@mui/icons-material";
 import { useState } from "react";
@@ -22,6 +23,7 @@ const CustomLink = styled(Link)(({ theme }) => ({
 }))
 
 function NavDrawer() {
+  const theme = useTheme();
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -182,7 +184,7 @@ function NavDrawer() {
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
         {/* Drawer header */}
         <List>
-          <ListItem divider={true} sx={{ pb: 2}}>
+          <ListItem divider={true} sx={{ pb: 2, backgroundColor: theme.palette.grey[50]}}>
               <ListItemText
                 primary={
                   <Box display="flex" flexDirection={"column"} gap={0.5}>
