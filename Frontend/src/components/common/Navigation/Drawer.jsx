@@ -27,11 +27,131 @@ function NavDrawer() {
       avatar: (
         <Avatar
           src="/Logo.png"
-          alt="Explore"
+          alt="Category to explore all the products"
           sx={{ borderRadius: 2, width: 56, height: 56 }}
         />
       ),
       category: "Explore",
+    },
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Gadgets Category"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Gadgets",
+    },
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Phone Accessories Category"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Phone Accessories",
+    },
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Laptop Accessories Category"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Laptop Accessories",
+    },
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Audio Gear Category"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Audio Gear",
+    },
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Wearable Tech Category"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Wearable Tech",
+    },
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Smart Home Devices Category"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Smart Home Devices",
+    },
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Branded Apparel Category"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Branded Apparel",
+    },
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Stickers & Decals Category"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Stickers & Decals",
+    },
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Mugs & Drinkware Category"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Mugs & Drinkware",
+    },
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Desk Essentials Category"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Desk Essentials",
+    },
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Limited Edition Collectibles Category"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Limited Edition Collectibles",
+    },
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Bundles & Gift Packs Category"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Bundles & Gift Packs",
     },
   ];
 
