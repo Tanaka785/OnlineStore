@@ -1,6 +1,12 @@
 import { createTheme } from "@mui/material";
 
 const theme = createTheme({
+  palette: {
+    text: {
+      primary: "#19124f",
+    },
+  },
+  
   typography: {
     color: "#19124f",
     fontFamily: "'Inter', sans-serif",
