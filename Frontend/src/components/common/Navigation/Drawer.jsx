@@ -183,7 +183,7 @@ function NavDrawer() {
       </IconButton>
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
         {/* Drawer header */}
-        <List>
+        <List sx={{ pt: 0}}>
           <ListItem divider={true} sx={{ pb: 2, backgroundColor: theme.palette.grey[50]}}>
               <ListItemText
                 primary={
