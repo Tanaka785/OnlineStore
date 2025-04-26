@@ -13,7 +13,7 @@ const theme = createTheme({
     fontFamily: "'Inter', sans-serif",
     fontWeightRegular: 400,
     fontWeightMedium: 600,
-    fontWeightBold: 900,
+    fontWeightBold: 700,
     h1: {
       fontSize: "2.5rem",
       fontWeight: 700,
