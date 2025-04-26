@@ -185,11 +185,11 @@ function NavDrawer() {
           <ListItem divider={true} sx={{ pb: 2}}>
               <ListItemText
                 primary={
-                  <Box>
+                  <Box display="flex" flexDirection={"column"} gap={0.5}>
                     <Typography variant="body1">Hi there!</Typography>
                     <Typography variant="body1">
                       <CustomLink href="/">Log In</CustomLink> or&nbsp;
-                      <CustomLink href="/">Signup</CustomLink>
+                      <CustomLink href="/">Sign Up</CustomLink>
                     </Typography>
                   </Box>
                 }
