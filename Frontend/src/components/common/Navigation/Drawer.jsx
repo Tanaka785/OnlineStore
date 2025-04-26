@@ -167,6 +167,7 @@ function NavDrawer() {
         <MenuIcon />
       </IconButton>
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
+        {/* Drawer header */}
         <List>
           <ListItem disablePadding divider={true}>
             <ListItemButton>
@@ -183,6 +184,7 @@ function NavDrawer() {
               />
             </ListItemButton>
           </ListItem>
+          {/* Categories */}
           {drawerItems.map((item) => (
             <ListItem disablePadding key={item.category} divider={true}>
               <ListItemButton component="a" href="#" sx={{ gap: 1 }}>
@@ -192,6 +194,31 @@ function NavDrawer() {
               </ListItemButton>
             </ListItem>
           ))}
+        </List>
+        {/* Drawer footer links */}
+        <List>
+          <ListItem>
+            <ListItemText
+              primary={<Typography variant="body2">Delivery</Typography>}
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary={<Typography variant="body2">Returns</Typography>}
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary={<Typography variant="body2">Help Center</Typography>}
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary={
+                <Typography variant="body2">Sell Your Designs</Typography>
+              }
+            />
+          </ListItem>
         </List>
       </Drawer>
     </Box>
