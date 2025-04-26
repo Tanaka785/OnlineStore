@@ -11,7 +11,6 @@ import {
   Avatar,
   ListItemIcon,
 } from "@mui/material";
-
 import { Menu as MenuIcon, ChevronRight as ChevronRightIcon } from "@mui/icons-material";
 import { useState } from "react";
 
@@ -48,25 +47,27 @@ function NavDrawer() {
       </IconButton>
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
         <List>
-          <ListItem>
-            <ListItemText
-              primary={
-                <Box>
-                  <Typography variant="body2">Hi there!</Typography>
-                  <Typography variant="body2">
-                    <Link to={`/`}>Login</Link> or&nbsp;
-                    <Link to={`/`}>Signup</Link>
-                  </Typography>
-                </Box>
-              }
-            />
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemText
+                primary={
+                  <Box>
+                    <Typography variant="body2">Hi there!</Typography>
+                    <Typography variant="body2">
+                      <Link href="/">Login</Link> or&nbsp;
+                      <Link href="/">Signup</Link>
+                    </Typography>
+                  </Box>
+                }
+              />
+            </ListItemButton>
           </ListItem>
           {drawerItems.map((item) => (
-            <ListItem key={item.category} divider="true" component="a" href="#">
-              <ListItemButton>
+            <ListItem disablePadding key={item.category}>
+              <ListItemButton component="a" href="#" sx={{ gap: 1 }}>
                 <ListItemIcon>{item.avatar}</ListItemIcon>
                 <ListItemText primary={item.category} />
-                <ChevronRightIcon/>
+                <ChevronRightIcon />
               </ListItemButton>
             </ListItem>
           ))}
