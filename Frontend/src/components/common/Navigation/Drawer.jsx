@@ -18,6 +18,7 @@ import { useState } from "react";
 
 const CustomLink = styled(Link)(({ theme }) => ({
   fontWeight: theme.typography.fontWeightBold,
+  letterSpacing: 0.5,
 }))
 
 function NavDrawer() {
@@ -187,7 +188,7 @@ function NavDrawer() {
                   <Box>
                     <Typography variant="body1">Hi there!</Typography>
                     <Typography variant="body1">
-                      <CustomLink href="/">Login</CustomLink> or&nbsp;
+                      <CustomLink href="/">Log In</CustomLink> or&nbsp;
                       <CustomLink href="/">Signup</CustomLink>
                     </Typography>
                   </Box>
