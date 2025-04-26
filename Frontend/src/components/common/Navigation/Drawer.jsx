@@ -155,6 +155,13 @@ function NavDrawer() {
     },
   ];
 
+  const footerLinks = [
+    'Delivery',
+    'Returns',
+    'Help Center',
+    'Sell Your Designs'
+  ]
+
   return (
     <Box sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}>
       <IconButton
@@ -197,28 +204,13 @@ function NavDrawer() {
         </List>
         {/* Drawer footer links */}
         <List>
-          <ListItem>
-            <ListItemText
-              primary={<Typography variant="body2">Delivery</Typography>}
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText
-              primary={<Typography variant="body2">Returns</Typography>}
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText
-              primary={<Typography variant="body2">Help Center</Typography>}
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText
-              primary={
-                <Typography variant="body2">Sell Your Designs</Typography>
-              }
-            />
-          </ListItem>
+          {footerLinks.map((link) => (
+            <ListItem key={link}>
+              <ListItemText
+                primary={<Typography variant="body2">{link}</Typography>}
+              />
+            </ListItem>
+          ))}
         </List>
       </Drawer>
     </Box>
