@@ -10,6 +10,7 @@ import {
   ListItemButton,
   Avatar,
   ListItemIcon,
+  ListItemAvatar,
 } from "@mui/material";
 import { Menu as MenuIcon, ChevronRight as ChevronRightIcon } from "@mui/icons-material";
 import { useState } from "react";
@@ -65,7 +66,7 @@ function NavDrawer() {
           {drawerItems.map((item) => (
             <ListItem disablePadding key={item.category}>
               <ListItemButton component="a" href="#" sx={{ gap: 1 }}>
-                <ListItemIcon>{item.avatar}</ListItemIcon>
+                <ListItemAvatar>{item.avatar}</ListItemAvatar>
                 <ListItemText primary={item.category} />
                 <ChevronRightIcon />
               </ListItemButton>
