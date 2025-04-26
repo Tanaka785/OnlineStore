@@ -48,7 +48,7 @@ function NavDrawer() {
       </IconButton>
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
         <List>
-          <ListItem disablePadding>
+          <ListItem disablePadding divider={true}>
             <ListItemButton>
               <ListItemText
                 primary={
@@ -64,7 +64,7 @@ function NavDrawer() {
             </ListItemButton>
           </ListItem>
           {drawerItems.map((item) => (
-            <ListItem disablePadding key={item.category}>
+            <ListItem disablePadding key={item.category} divider={true}>
               <ListItemButton component="a" href="#" sx={{ gap: 1 }}>
                 <ListItemAvatar>{item.avatar}</ListItemAvatar>
                 <ListItemText primary={item.category} />
