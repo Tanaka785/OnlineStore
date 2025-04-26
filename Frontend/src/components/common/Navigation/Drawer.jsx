@@ -181,8 +181,8 @@ function NavDrawer() {
               <ListItemText
                 primary={
                   <Box>
-                    <Typography variant="body2">Hi there!</Typography>
-                    <Typography variant="body2">
+                    <Typography variant="body1">Hi there!</Typography>
+                    <Typography variant="body1">
                       <Link href="/">Login</Link> or&nbsp;
                       <Link href="/">Signup</Link>
                     </Typography>
