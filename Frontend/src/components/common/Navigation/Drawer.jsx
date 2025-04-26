@@ -17,7 +17,7 @@ import { Menu as MenuIcon, ChevronRight as ChevronRightIcon } from "@mui/icons-m
 import { useState } from "react";
 
 const CustomLink = styled(Link)(({ theme }) => ({
-  fontWeight: theme.typography.fontWeightBold,
+  fontWeight: theme.typography.fontWeightMedium,
   letterSpacing: 0.5,
 }))
 
