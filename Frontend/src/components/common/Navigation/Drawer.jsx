@@ -209,7 +209,7 @@ function NavDrawer() {
           ))}
         </List>
         {/* Drawer footer links */}
-        <List>
+        <List sx={{ pb: 8}}>
           {footerLinks.map((link) => (
             <ListItem key={link}>
               <ListItemText
