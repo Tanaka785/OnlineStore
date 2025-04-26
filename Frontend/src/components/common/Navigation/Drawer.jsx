@@ -198,7 +198,7 @@ function NavDrawer() {
           {/* Categories */}
           {drawerItems.map((item) => (
             <ListItem disablePadding key={item.category} divider={true}>
-              <ListItemButton component="a" href="#" sx={{ gap: 1, py: 2 }}>
+              <ListItemButton component="a" href="#" sx={{ gap: 3, py: 2 }}>
                 <ListItemAvatar>{item.avatar}</ListItemAvatar>
                 <ListItemText primary={item.category} />
                 <ChevronRightIcon />
