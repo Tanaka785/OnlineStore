@@ -184,7 +184,7 @@ function NavDrawer() {
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
         {/* Drawer header */}
         <List sx={{ pt: 0}}>
-          <ListItem divider={true} sx={{ pb: 2, backgroundColor: theme.palette.grey[50]}}>
+          <ListItem divider={true} sx={{ pb: 2, pt: 2, backgroundColor: theme.palette.grey[50]}}>
               <ListItemText
                 primary={
                   <Box display="flex" flexDirection={"column"} gap={0.5}>
