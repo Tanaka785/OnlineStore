@@ -9,6 +9,7 @@ import {
   Link,
   ListItemButton,
   Avatar,
+  ListItemIcon,
 } from "@mui/material";
 
 import { Menu as MenuIcon, ChevronRight as ChevronRightIcon } from "@mui/icons-material";
@@ -20,6 +21,19 @@ function NavDrawer() {
   const toggleDrawer = () => {
     setOpen(!open);
   };
+
+  const drawerItems = [
+    {
+      avatar: (
+        <Avatar
+          src="/Logo.png"
+          alt="Explore"
+          sx={{ borderRadius: 2, width: 56, height: 56 }}
+        />
+      ),
+      category: "Explore",
+    },
+  ];
 
   return (
     <Box sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}>
@@ -34,32 +48,28 @@ function NavDrawer() {
       </IconButton>
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
         <List>
-          <List>
-            <ListItem button>
-              <ListItemText
-                primary={
-                  <Box>
-                    <Typography variant="body2">Hi there!</Typography>
-                    <Typography variant="body2">
-                      <Link href="#">Login</Link> or&nbsp;
-                      <Link href="#">Signup</Link>
-                    </Typography>
-                  </Box>
-                }
-              />
-            </ListItem>
-          </List>
-          <ListItem button>
-            <ListItemButton>
-              <Avatar
-                alt="User"
-                src="/Logo.png"
-                sx={{ borderRadius: 2, width: 56, height: 56 }}
-              />
-              <Typography>Explore</Typography>
-              <ChevronRightIcon />
-            </ListItemButton>
+          <ListItem>
+            <ListItemText
+              primary={
+                <Box>
+                  <Typography variant="body2">Hi there!</Typography>
+                  <Typography variant="body2">
+                    <Link to={`/`}>Login</Link> or&nbsp;
+                    <Link to={`/`}>Signup</Link>
+                  </Typography>
+                </Box>
+              }
+            />
           </ListItem>
+          {drawerItems.map((item) => (
+            <ListItem key={item.category} divider="true" component="a" href="#">
+              <ListItemButton>
+                <ListItemIcon>{item.avatar}</ListItemIcon>
+                <ListItemText primary={item.category} />
+                <ChevronRightIcon/>
+              </ListItemButton>
+            </ListItem>
+          ))}
         </List>
       </Drawer>
     </Box>
