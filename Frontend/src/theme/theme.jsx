@@ -1,14 +1,15 @@
 import { createTheme } from "@mui/material";
 
+const textColor = "#19124f";
+
 const theme = createTheme({
   palette: {
     text: {
-      primary: "#19124f",
+      primary: textColor,
     },
   },
   
   typography: {
-    color: "#19124f",
     fontFamily: "'Inter', sans-serif",
     fontWeightRegular: 400,
     fontWeightMedium: 600,
@@ -35,7 +36,7 @@ const theme = createTheme({
     MuiLink: {
       styleOverrides: {
         root: {
-          color: "#19124f",
+          color: textColor,
           textDecoration: "none",
           "&:hover": {
             textDecoration: "underline",
