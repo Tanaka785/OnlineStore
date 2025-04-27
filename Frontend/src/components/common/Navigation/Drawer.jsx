@@ -32,133 +32,55 @@ function NavDrawer() {
 
   const drawerItems = [
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Category to explore all the products"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Explore",
     },
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Gadgets Category"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Gadgets",
     },
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Phone Accessories Category"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Phone Accessories",
     },
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Laptop Accessories Category"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Laptop Accessories",
     },
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Audio Gear Category"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Audio Gear",
     },
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Wearable Tech Category"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Wearable Tech",
     },
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Smart Home Devices Category"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Smart Home Devices",
     },
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Branded Apparel Category"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Branded Apparel",
     },
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Stickers & Decals Category"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Stickers & Decals",
     },
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Mugs & Drinkware Category"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Mugs & Drinkware",
     },
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Desk Essentials Category"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Desk Essentials",
     },
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Limited Edition Collectibles Category"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Limited Edition Collectibles",
     },
     {
-      avatar: (
-        <Avatar
-          src="/Logo.png"
-          alt="Bundles & Gift Packs Category"
-          sx={{ borderRadius: 2, width: 56, height: 56 }}
-        />
-      ),
+      avatar: "/Logo.png",
       category: "Bundles & Gift Packs",
     },
   ];
@@ -183,25 +105,34 @@ function NavDrawer() {
       </IconButton>
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
         {/* Drawer header */}
-        <List sx={{ pt: 0}}>
-          <ListItem divider={true} sx={{ pb: 2, pt: 2, backgroundColor: theme.palette.grey[50]}}>
-              <ListItemText
-                primary={
-                  <Box display="flex" flexDirection={"column"} gap={0.5}>
-                    <Typography variant="body1">Hi there!</Typography>
-                    <Typography variant="body1">
-                      <CustomLink href="/">Log In</CustomLink> or&nbsp;
-                      <CustomLink href="/">Sign Up</CustomLink>
-                    </Typography>
-                  </Box>
-                }
-              />
+        <List sx={{ pt: 0 }}>
+          <ListItem
+            divider={true}
+            sx={{ pb: 2, pt: 2, backgroundColor: theme.palette.grey[50] }}
+          >
+            <ListItemText
+              primary={
+                <Box display="flex" flexDirection={"column"} gap={0.5}>
+                  <Typography variant="body1">Hi there!</Typography>
+                  <Typography variant="body1">
+                    <CustomLink href="/">Log In</CustomLink> or&nbsp;
+                    <CustomLink href="/">Sign Up</CustomLink>
+                  </Typography>
+                </Box>
+              }
+            />
           </ListItem>
           {/* Categories */}
           {drawerItems.map((item) => (
             <ListItem disablePadding key={item.category} divider={true}>
               <ListItemButton component="a" href="#" sx={{ gap: 3, py: 2 }}>
-                <ListItemAvatar>{item.avatar}</ListItemAvatar>
+                <ListItemAvatar>
+                  <Avatar
+                    src={item.avatar}
+                    alt={`${item.category} category`}
+                    sx={{ borderRadius: 2, width: 56, height: 56 }}
+                  />
+                </ListItemAvatar>
                 <ListItemText primary={item.category} />
                 <ChevronRightIcon />
               </ListItemButton>
@@ -209,7 +140,7 @@ function NavDrawer() {
           ))}
         </List>
         {/* Drawer footer links */}
-        <List sx={{ pb: 8}}>
+        <List sx={{ pb: 8 }}>
           {footerLinks.map((link) => (
             <ListItem key={link}>
               <ListItemText
