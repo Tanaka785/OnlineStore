@@ -18,7 +18,7 @@ export default function SearchField() {
             input: {
               endAdornment: (
                 <InputAdornment position="end">
-                  <SearchIcon sx={{ minWidth: 30, minHeight: 30, color: theme.typography.color }} />
+                  <SearchIcon sx={{ minWidth: 30, minHeight: 30, color: theme.palette.text.primary }} />
                 </InputAdornment>
               ),
             },
