@@ -51,7 +51,7 @@ const StyledTooltip = styled(({ className, ...props }) => (
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
-  color: theme.typography.color,
+  color: theme.palette.text.primary,
   letterSpacing: -0.1,
   "& .MuiTypography-root": {
     // fontWeight: theme.typography.fontWeightMedium,
@@ -161,7 +161,6 @@ export default function NavigationAppBar() {
                       noWrap
                       sx={{
                         fontSize: { xs: "1.4rem", sm: "1.6rem", md: "1.9rem" },
-                        color: "text.primary",
                         letterSpacing: -1.2,
                         maxWidth: { xs: 100, sm: 160, md: "none" },
                         overflow: "hidden",
