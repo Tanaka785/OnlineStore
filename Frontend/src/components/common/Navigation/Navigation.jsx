@@ -90,6 +90,11 @@ export default function NavigationAppBar() {
     { name: "Signup", path: "/signup" },
   ];
 
+  const navIcons = [
+    { title: "WishLists", path: "/lists", iconSrc: "Favorite.svg" },
+    { title: "Cart", path: "/cart", iconSrc: "Cart.svg" },
+  ];
+  
   return (
     <Box>
       <Box sx={{ flexGrow: 1 }}>
@@ -210,13 +215,11 @@ export default function NavigationAppBar() {
                   >
                     {navLinks.map((link) => (
                       <StyledNavLink to={link.path}>
-                        <Typography variant="body1">
-                          {link.name}
-                        </Typography>
+                        <Typography variant="body1">{link.name}</Typography>
                       </StyledNavLink>
                     ))}
                   </Box>
-                  {/* cart & favorites icons. */}
+                  {/* Nav Icons. */}
                   <Box
                     sx={{
                       display: "flex",
@@ -228,34 +231,21 @@ export default function NavigationAppBar() {
                       alignItems: "center",
                     }}
                   >
-                    {/* favorite/wishlits icon */}
-                    <StyledTooltip title="WishLists" arrow>
-                      <StyledLink to={`/lists`}>
-                        <StyledIconButton
-                          size="small"
-                          sx={{ padding: { xs: 0, md: theme.spacing(1.5) } }}
-                        >
-                          <Avatar
-                            src="Favorite.svg"
-                            sx={{ width: 27, height: 27 }}
-                          />
-                        </StyledIconButton>
-                      </StyledLink>
-                    </StyledTooltip>
-                    {/* cart icon */}
-                    <StyledTooltip title="Cart" arrow>
-                      <StyledLink to={`/cart`}>
-                        <StyledIconButton
-                          size="small"
-                          sx={{ padding: theme.spacing(1.5) }}
-                        >
-                          <Avatar
-                            src="Cart.svg"
-                            sx={{ width: 27, height: 27 }}
-                          />
-                        </StyledIconButton>
-                      </StyledLink>
-                    </StyledTooltip>
+                    {navIcons.map((item) => (
+                      <StyledTooltip title={item.title} arrow key={item.path}>
+                        <StyledLink to={item.path}>
+                          <StyledIconButton
+                            size="small"
+                            sx={{ padding: { xs: 0, md: theme.spacing(1.5) } }}
+                          >
+                            <Avatar
+                              src={item.iconSrc}
+                              sx={{ width: 27, height: 27 }}
+                            />
+                          </StyledIconButton>
+                        </StyledLink>
+                      </StyledTooltip>
+                    ))}
                   </Box>
                 </Box>
               </Box>
