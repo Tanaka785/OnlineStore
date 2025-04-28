@@ -143,11 +143,14 @@ export default function NavigationAppBar() {
                       }}
                     >
                       <Avatar
-                        src="/Logo.png"
                         alt="Logo"
                         sx={{
                           width: { xs: 32, md: 36 },
                           height: { xs: 32, md: 36 },
+                          backgroundImage: `url('/Logo.png')`,
+                          backgroundSize: "400%",
+                          backgroundPosition: "center",
+                          backgroundRepeat: "no-repeat",
                         }}
                       />
                     </StyledIconButton>
