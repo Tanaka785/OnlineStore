@@ -67,8 +67,28 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
   },
 }));
 
+const StyledNavLink = styled(Link)(({ theme }) => ({
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: theme.spacing(1.5),
+  borderRadius: "50px",
+  textDecoration: "none",
+  color: theme.palette.text.primary,
+  transition: "background-color 0.3s",
+  "&:hover": {
+    backgroundColor: theme.palette.action.hover,
+  },
+}));
+
 export default function NavigationAppBar() {
   const theme = useTheme();
+
+  const navLinks = [
+    { name: "Sell your designs", path: "/about/selling" },
+    { name: "Login", path: "/auth/login" },
+    { name: "Signup", path: "/signup" },
+  ];
 
   return (
     <Box>
@@ -188,23 +208,13 @@ export default function NavigationAppBar() {
                       },
                     }}
                   >
-                    <StyledLink to={`/about/selling`}>
-                      <StyledIconButton>
+                    {navLinks.map((link) => (
+                      <StyledNavLink to={link.path}>
                         <Typography variant="body1">
-                          Sell your designs
+                          {link.name}
                         </Typography>
-                      </StyledIconButton>
-                    </StyledLink>
-                    <StyledLink to={`/auth/login`}>
-                      <StyledIconButton>
-                        <Typography variant="body1">Login</Typography>
-                      </StyledIconButton>
-                    </StyledLink>
-                    <StyledLink to={`/signup`}>
-                      <StyledIconButton>
-                        <Typography variant="body1">Signup</Typography>
-                      </StyledIconButton>
-                    </StyledLink>
+                      </StyledNavLink>
+                    ))}
                   </Box>
                   {/* cart & favorites icons. */}
                   <Box
