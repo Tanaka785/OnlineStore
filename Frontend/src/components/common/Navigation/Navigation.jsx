@@ -163,7 +163,6 @@ export default function NavigationAppBar() {
                       noWrap
                       sx={{
                         fontSize: { xs: "1.4rem", sm: "1.6rem", md: "1.9rem" },
-                        color: "text.primary",
                         letterSpacing: -1.2,
                         lineHeight: 1,
                         maxWidth: { xs: 100, sm: 160, md: "none" },
