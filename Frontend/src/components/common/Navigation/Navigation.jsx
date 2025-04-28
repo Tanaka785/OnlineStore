@@ -214,7 +214,7 @@ export default function NavigationAppBar() {
                     }}
                   >
                     {navLinks.map((link) => (
-                      <StyledNavLink to={link.path}>
+                      <StyledNavLink to={link.path} key={link.name}>
                         <Typography variant="body1">{link.name}</Typography>
                       </StyledNavLink>
                     ))}
