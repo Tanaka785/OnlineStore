@@ -1,8 +1,3 @@
-/* TODO 
-
-- remove scrollX showing up on the homepage.
-
-*/
 import React, { useState } from "react";
 import {
   AppBar,
@@ -97,7 +92,7 @@ export default function NavigationAppBar() {
   
   return (
     <Box>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1, width: "100%", overflowX: "hidden" }}>
         <StyledAppBar position="static">
           <Toolbar>
             <Box
