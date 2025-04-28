@@ -126,46 +126,49 @@ export default function NavigationAppBar() {
                 <Box
                   sx={{
                     display: "flex",
+                    alignItems: "center",
                     marginRight: theme.spacing(1),
                     marginLeft: {
                       xs: theme.spacing(-1),
                       sm: theme.spacing(-1),
                     },
-                    overflow: true,
-                    alignItems: "center",
+                    overflow: "hidden",
                   }}
                 >
-                  {/* Logo */}
-                  <StyledIconButton>
-                    <Avatar
-                      src="/Logo.png"
-                      alt="Logo"
+                  {/* Logo Icon */}
+                  <StyledLink to="/">
+                    <StyledIconButton
                       sx={{
-                        maxWidth: { xs: 30, sm: 30, md: 35 },
-                        maxHeight: { xs: 30, sm: 30, md: 35 },
-                        backgroundPosition: "center",
-                      }}
-                    />
-                  </StyledIconButton>
-                  {/* Logo text */}
-                  {/*TODO make logo text responsive, i mean hide some of it when screen
-                  gets small like overflow thing. */}
-                  <StyledLink>
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        // fontWeight: theme.typography.fontWeightBold,
-                        fontSize: { xs: "1.5rem", sm: "1.5rem", md: "1.9rem" },
-                        color: "rgb(51, 51, 51)",
-                        marginTop: {
-                          xs: theme.spacing(0.2),
-                          sm: theme.spacing(0.2),
-                          md: theme.spacing(0.6),
-                        },
-                        letterSpacing: -1.3,
+                        p: { xs: 0.5, md: 1 },
                       }}
                     >
-                      {/* TODO fix the color for nav links, and for logo text */}
+                      <Avatar
+                        src="/Logo.png"
+                        alt="Logo"
+                        sx={{
+                          width: { xs: 30, md: 35 },
+                          height: { xs: 30, md: 35 },
+                          backgroundPosition: "center",
+                        }}
+                      />
+                    </StyledIconButton>
+                  </StyledLink>
+
+                  {/* Logo Text */}
+                  <StyledLink to="/">
+                    <Typography
+                      variant="h6"
+                      noWrap
+                      sx={{
+                        fontSize: { xs: "1.4rem", sm: "1.6rem", md: "1.9rem" },
+                        color: "text.primary",
+                        letterSpacing: -1.2,
+                        maxWidth: { xs: 100, sm: 160, md: "none" },
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
                       WEBVIBES
                     </Typography>
                   </StyledLink>
