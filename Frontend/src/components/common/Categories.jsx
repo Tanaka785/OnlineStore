@@ -5,7 +5,7 @@ import { useTheme } from "@emotion/react";
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
-  color: theme.typography.color,
+  color: theme.palette.text.primary,
 }));
 
 export default function Categories() {
