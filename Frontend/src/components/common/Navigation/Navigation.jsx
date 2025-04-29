@@ -8,6 +8,7 @@ import {
   Tooltip,
   tooltipClasses,
   IconButton,
+  SvgIcon,
 } from "@mui/material";
 import SearchField from "./SearchField";
 import { styled, useTheme } from "@mui/material/styles";
@@ -238,7 +239,7 @@ export default function NavigationAppBar() {
                             size="small"
                             sx={{ padding: { xs: 0, md: theme.spacing(1.5) } }}
                           >
-                            <Avatar
+                            <SvgIcon
                               src={item.iconSrc}
                               sx={{ width: 27, height: 27 }}
                             />
