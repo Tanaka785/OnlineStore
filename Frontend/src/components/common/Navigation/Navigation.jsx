@@ -241,7 +241,7 @@ export default function NavigationAppBar() {
                           >
                             <img
                               src={item.iconSrc}
-                              style={{ width: 27, height: 27 }}
+                              style={{ width: 27, height: 27, color: "red" }}
                             />
                           </StyledIconButton>
                         </StyledLink>
