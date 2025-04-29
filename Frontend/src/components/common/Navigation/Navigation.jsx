@@ -137,15 +137,16 @@ export default function NavigationAppBar() {
                         p: { xs: 0.5, md: 1 },
                       }}
                     >
-                      <Avatar
-                        alt="Logo"
+                      <Box
+                        component="div"
                         sx={{
                           width: { xs: 32, md: 36 },
                           height: { xs: 32, md: 36 },
                           backgroundImage: `url('/Logo.png')`,
-                          backgroundSize: "400%",
+                          backgroundSize: "100%",
                           backgroundPosition: "center",
                           backgroundRepeat: "no-repeat",
+                          borderRadius: "50%",
                         }}
                       />
                     </StyledIconButton>
