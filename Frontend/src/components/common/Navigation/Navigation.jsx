@@ -86,8 +86,8 @@ export default function NavigationAppBar() {
   ];
 
   const navIcons = [
-    { title: "WishLists", path: "/lists", iconSrc: "/NavIcons/Favorite.svg" },
-    { title: "Cart", path: "/cart", iconSrc: "/NavIcons/Cart.svg" },
+    { title: "WishLists", path: "/lists", iconSrc: "/src/icons/Favorite.svg" },
+    { title: "Cart", path: "/cart", iconSrc: "/src/icons/Cart.svg" },
   ];
   
   return (
