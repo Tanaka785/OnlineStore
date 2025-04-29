@@ -143,7 +143,7 @@ export default function NavigationAppBar() {
                           width: { xs: 32, md: 36 },
                           height: { xs: 32, md: 36 },
                           backgroundImage: `url('/Logo.png')`,
-                          backgroundSize: "100%",
+                          backgroundSize: "110%",
                           backgroundPosition: "center",
                           backgroundRepeat: "no-repeat",
                           borderRadius: "50%",
