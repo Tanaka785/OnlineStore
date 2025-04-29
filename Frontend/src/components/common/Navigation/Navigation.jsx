@@ -73,6 +73,7 @@ const StyledNavLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
   color: theme.palette.text.primary,
   transition: "background-color 0.3s",
+  fontWeight: theme.typography.fontWeightMedium,
   "&:hover": {
     backgroundColor: theme.palette.action.hover,
   },
@@ -167,9 +168,10 @@ export default function NavigationAppBar() {
                         overflow: "hidden",
                         textOverflow: "ellipsis",
                         whiteSpace: "nowrap",
+                        color: theme.palette.common.black,
                       }}
                     >
-                      WEBVIBES
+                      WebVibes
                     </Typography>
                   </StyledLink>
                 </Box>
@@ -218,11 +220,11 @@ export default function NavigationAppBar() {
                   >
                     {navLinks.map((link) => (
                       <StyledNavLink to={link.path} key={link.name}>
-                        <Typography variant="body1">{link.name}</Typography>
+                        {link.name}
                       </StyledNavLink>
                     ))}
                   </Box>
-                  {/* Nav Icons. */}
+                  {/* Nav Icons Box. */}
                   <Box
                     sx={{
                       display: "flex",

@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material";
 
-const textColor = "#19124f";
+const textColor = "#2b2670";  
 
 const theme = createTheme({
   palette: {
