@@ -8,13 +8,15 @@ import {
   Tooltip,
   tooltipClasses,
   IconButton,
+  SvgIcon,
 } from "@mui/material";
 import SearchField from "./SearchField";
 import { styled, useTheme } from "@mui/material/styles";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import NavDrawer from "./Drawer";
-
+import CartIcon from "../../../icons/Cart.svg?react";
+import FavoriteIcon from "../../../icons/Favorite.svg?react";
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: "transparent",
@@ -86,10 +88,10 @@ export default function NavigationAppBar() {
   ];
 
   const navIcons = [
-    { title: "WishLists", path: "/lists", iconSrc: "/src/icons/Favorite.svg" },
-    { title: "Cart", path: "/cart", iconSrc: "/src/icons/Cart.svg" },
+    { title: "Cart", path: "/cart", Icon: FavoriteIcon },
+    { title: "Favorites", path: "/favorites", Icon: CartIcon },
   ];
-  
+
   return (
     <Box>
       <Box sx={{ flexGrow: 1, width: "100%", overflowX: "hidden" }}>
@@ -239,9 +241,13 @@ export default function NavigationAppBar() {
                             size="small"
                             sx={{ padding: { xs: 0, md: theme.spacing(1.5) } }}
                           >
-                            <img
-                              src={item.iconSrc}
-                              style={{ width: 27, height: 27, color: "red" }}
+                            <SvgIcon
+                              component={item.Icon}
+                              sx={{
+                                width: 27,
+                                height: 27,
+                                color: theme.palette.text.primary,
+                              }}
                             />
                           </StyledIconButton>
                         </StyledLink>
