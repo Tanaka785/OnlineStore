@@ -8,7 +8,6 @@ import {
   Tooltip,
   tooltipClasses,
   IconButton,
-  SvgIcon,
 } from "@mui/material";
 import SearchField from "./SearchField";
 import { styled, useTheme } from "@mui/material/styles";
@@ -87,8 +86,8 @@ export default function NavigationAppBar() {
   ];
 
   const navIcons = [
-    { title: "WishLists", path: "/lists", iconSrc: "Favorite.svg" },
-    { title: "Cart", path: "/cart", iconSrc: "Cart.svg" },
+    { title: "WishLists", path: "/lists", iconSrc: "/NavIcons/Favorite.svg" },
+    { title: "Cart", path: "/cart", iconSrc: "/NavIcons/Cart.svg" },
   ];
   
   return (
@@ -239,9 +238,9 @@ export default function NavigationAppBar() {
                             size="small"
                             sx={{ padding: { xs: 0, md: theme.spacing(1.5) } }}
                           >
-                            <SvgIcon
+                            <img
                               src={item.iconSrc}
-                              sx={{ width: 27, height: 27 }}
+                              style={{ width: 27, height: 27 }}
                             />
                           </StyledIconButton>
                         </StyledLink>
