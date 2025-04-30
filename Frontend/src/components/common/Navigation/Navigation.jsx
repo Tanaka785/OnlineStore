@@ -127,7 +127,7 @@ export default function NavigationAppBar() {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    marginRight: theme.spacing(1),
+                    marginRight: theme.spacing(0),
                     marginLeft: {
                       xs: theme.spacing(-1),
                       sm: theme.spacing(-1),
