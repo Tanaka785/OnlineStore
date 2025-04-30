@@ -9,18 +9,21 @@ import {
   Link,
   ListItemButton,
   Avatar,
-  ListItemIcon,
   ListItemAvatar,
   styled,
   useTheme,
 } from "@mui/material";
-import { Menu as MenuIcon, ChevronRight as ChevronRightIcon } from "@mui/icons-material";
+import {
+  Menu as MenuIcon,
+  ChevronRight as ChevronRightIcon,
+} from "@mui/icons-material";
 import { useState } from "react";
+import { categories } from "../categories/categories";
 
 const CustomLink = styled(Link)(({ theme }) => ({
   fontWeight: theme.typography.fontWeightMedium,
   letterSpacing: 0.5,
-}))
+}));
 
 function NavDrawer() {
   const theme = useTheme();
@@ -30,67 +33,12 @@ function NavDrawer() {
     setOpen(!open);
   };
 
-  const drawerItems = [
-    {
-      avatar: "/Logo.png",
-      category: "Explore",
-    },
-    {
-      avatar: "/Logo.png",
-      category: "Gadgets",
-    },
-    {
-      avatar: "/Logo.png",
-      category: "Phone Accessories",
-    },
-    {
-      avatar: "/Logo.png",
-      category: "Laptop Accessories",
-    },
-    {
-      avatar: "/Logo.png",
-      category: "Audio Gear",
-    },
-    {
-      avatar: "/Logo.png",
-      category: "Wearable Tech",
-    },
-    {
-      avatar: "/Logo.png",
-      category: "Smart Home Devices",
-    },
-    {
-      avatar: "/Logo.png",
-      category: "Branded Apparel",
-    },
-    {
-      avatar: "/Logo.png",
-      category: "Stickers & Decals",
-    },
-    {
-      avatar: "/Logo.png",
-      category: "Mugs & Drinkware",
-    },
-    {
-      avatar: "/Logo.png",
-      category: "Desk Essentials",
-    },
-    {
-      avatar: "/Logo.png",
-      category: "Limited Edition Collectibles",
-    },
-    {
-      avatar: "/Logo.png",
-      category: "Bundles & Gift Packs",
-    },
-  ];
-
   const footerLinks = [
-    'Delivery',
-    'Returns',
-    'Help Center',
-    'Sell Your Designs'
-  ]
+    "Delivery",
+    "Returns",
+    "Help Center",
+    "Sell Your Designs",
+  ];
 
   return (
     <Box sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}>
@@ -123,17 +71,17 @@ function NavDrawer() {
             />
           </ListItem>
           {/* Categories */}
-          {drawerItems.map((item) => (
-            <ListItem disablePadding key={item.category} divider={true}>
+          {categories.map((item) => (
+            <ListItem disablePadding key={item.name} divider={true}>
               <ListItemButton component="a" href="#" sx={{ gap: 3, py: 2 }}>
                 <ListItemAvatar>
                   <Avatar
                     src={item.avatar}
-                    alt={`${item.category} category`}
+                    alt={`${item.name} category`}
                     sx={{ borderRadius: 2, width: 56, height: 56 }}
                   />
                 </ListItemAvatar>
-                <ListItemText primary={item.category} />
+                <ListItemText primary={item.name} />
                 <ChevronRightIcon />
               </ListItemButton>
             </ListItem>
