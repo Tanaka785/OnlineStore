@@ -10,8 +10,8 @@ export default function Categories() {
     <Box
       gap={5}
       sx={{
-        marginInline: theme.spacing(1.2),
-        marginTop: {xs: 1, md: 1},
+        marginInline: theme.spacing(4),
+        marginTop: { xs: 1, md: 1 },
         justifyContent: "space-between",
         display: { xs: "none", sm: "none", md: "flex" },
       }}
@@ -22,6 +22,8 @@ export default function Categories() {
           flexWrap: "nowrap",
           gap: 2,
           overflowX: "auto",
+          justifyContent: "space-between",
+          width: "100%",
           // "&::-webkit-scrollbar": {
           //   display: "none",
           // },
