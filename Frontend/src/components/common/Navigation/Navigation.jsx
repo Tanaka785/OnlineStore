@@ -244,7 +244,7 @@ export default function NavigationAppBar() {
                         <StyledLink to={item.path}>
                           <StyledIconButton
                             size="small"
-                            sx={{ padding: { xs: 0, md: theme.spacing(1.5) } }}
+                            sx={{ padding: { xs: 1, md: 1.5 } }}
                           >
                             <SvgIcon
                               component={item.Icon}
