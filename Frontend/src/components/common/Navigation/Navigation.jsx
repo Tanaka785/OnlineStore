@@ -34,17 +34,18 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
 }));
 
 const StyledTooltip = styled(({ className, ...props }) => (
-  <Tooltip {...props} arrow classes={{ popper: className }} />
+  <Tooltip {...props} classes={{ popper: className }} />
 ))(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: theme.typography.color,
+    backgroundColor: theme.palette.text.primary,
     color: theme.palette.common.white,
     minWidth: 20,
     minHeight: 20,
+    borderRadius: "50px",
   },
-  [`& .${tooltipClasses.arrow}`]: {
-    color: theme.typography.color,
-  },
+  // [`& .${tooltipClasses.arrow}`]: {
+  //   color: theme.palette.text.primary,
+  // },
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({
@@ -239,7 +240,7 @@ export default function NavigationAppBar() {
                     }}
                   >
                     {navIcons.map((item) => (
-                      <StyledTooltip title={item.title} arrow key={item.path}>
+                      <StyledTooltip title={item.title} key={item.path}>
                         <StyledLink to={item.path}>
                           <StyledIconButton
                             size="small"
