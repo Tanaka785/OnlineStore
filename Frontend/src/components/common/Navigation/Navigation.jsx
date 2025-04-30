@@ -71,9 +71,9 @@ const StyledNavLink = styled(Link)(({ theme }) => ({
   padding: theme.spacing(1.5),
   borderRadius: "50px",
   textDecoration: "none",
-  color: theme.palette.common.black,
+  color: theme.palette.text.primary,
   transition: "background-color 0.3s",
-  fontWeight: theme.typography.fontWeightMedium,
+  // fontWeight: theme.typography.fontWeightMedium,
   "&:hover": {
     backgroundColor: theme.palette.action.hover,
   },
