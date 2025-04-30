@@ -19,11 +19,13 @@ export default function Categories() {
       <List
         sx={{
           display: "flex",
-          width: "100%",
-          // border: "1px solid red",
           flexWrap: "nowrap",
-          justifyContent: "space-between",
           gap: 2,
+          overflowX: "auto",
+          // "&::-webkit-scrollbar": {
+          //   display: "none",
+          // },
+          // scrollbarWidth: "none",
         }}
       >
         {categories.map((category) => (
@@ -32,18 +34,14 @@ export default function Categories() {
             arrow
             key={category.name}
           >
-            <Box sx={{ flexGrow: 1 }}>
-              <ListItem
-                disablePadding
-                component={"a"}
-                href="#"
-                sx={{ width: "100%" }}
-              >
+            <Box sx={{ flexShrink: 0 }}>
+              <ListItem disablePadding component={"a"} href="#">
                 <ListItemText
                   primary={category.name}
                   sx={{
                     color: theme.palette.text.primary,
                     textAlign: "center",
+                    whiteSpace: "nowrap",
                   }}
                 />
               </ListItem>
@@ -51,188 +49,6 @@ export default function Categories() {
           </Tooltip>
         ))}
       </List>
-      {/* <Tooltip
-        arrow
-        title={
-          <List>
-            <ListItem>
-              <ListItemText primary="For You" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Funny T-Shirts" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Vintage Posters" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Music Posters" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Fresh Finds" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Fan Art" />
-            </ListItem>
-          </List>
-        }
-      >
-        <StyledLink>
-          <Typography>Explore</Typography>
-        </StyledLink>
-      </Tooltip>
-      <Tooltip
-        arrow
-        title={
-          <List>
-            <ListItem>
-              <ListItemText primary="All Clothing" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="..." />
-            </ListItem>
-          </List>
-        }
-      >
-        <StyledLink>
-          <Typography>Clothing</Typography>
-        </StyledLink>
-      </Tooltip>
-      <Tooltip
-        arrow
-        title={
-          <List>
-            <ListItem>
-              <ListItemText primary="All Clothing" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="..." />
-            </ListItem>
-          </List>
-        }
-      >
-        <StyledLink>
-          <Typography>Stickers</Typography>
-        </StyledLink>
-      </Tooltip>
-      <Tooltip
-        arrow
-        title={
-          <List>
-            <ListItem>
-              <ListItemText primary="All Clothing" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="..." />
-            </ListItem>
-          </List>
-        }
-      >
-        <StyledLink>
-          <Typography>Phone Cases</Typography>
-        </StyledLink>
-      </Tooltip>
-      <Tooltip
-        arrow
-        title={
-          <List>
-            <ListItem>
-              <ListItemText primary="All Clothing" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="..." />
-            </ListItem>
-          </List>
-        }
-      >
-        <StyledLink>
-          <Typography>Wall Art</Typography>
-        </StyledLink>
-      </Tooltip>
-      <Tooltip
-        arrow
-        title={
-          <List>
-            <ListItem>
-              <ListItemText primary="All Clothing" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="..." />
-            </ListItem>
-          </List>
-        }
-      >
-        <StyledLink>
-          <Typography>Home & Living</Typography>
-        </StyledLink>
-      </Tooltip>
-      <Tooltip
-        arrow
-        title={
-          <List>
-            <ListItem>
-              <ListItemText primary="All Clothing" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="..." />
-            </ListItem>
-          </List>
-        }
-      >
-        <StyledLink>
-          <Typography>Kids & Babies</Typography>
-        </StyledLink>
-      </Tooltip>
-      <Tooltip
-        arrow
-        title={
-          <List>
-            <ListItem>
-              <ListItemText primary="All Clothing" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="..." />
-            </ListItem>
-          </List>
-        }
-      >
-        <StyledLink>
-          <Typography>Accessories</Typography>
-        </StyledLink>
-      </Tooltip>
-      <Tooltip
-        arrow
-        title={
-          <List>
-            <ListItem>
-              <ListItemText primary="All Clothing" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="..." />
-            </ListItem>
-          </List>
-        }
-      >
-        <StyledLink>
-          <Typography>Stationery & Office</Typography>
-        </StyledLink>
-      </Tooltip>
-      <Tooltip
-        arrow
-        title={
-          <List>
-            <ListItem>
-              <ListItemText primary="All Clothing" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="..." />
-            </ListItem>
-          </List>
-        }
-      >
-        <StyledLink>
-          <Typography>Gifts</Typography>
-        </StyledLink>
-      </Tooltip> */}
     </Box>
   );
 }
