@@ -17,15 +17,17 @@ export default function Categories() {
       }}
     >
       <List sx={{ display: "inline-flex" }}>
-        {categories.map((category) => (
-          <ListItem disablePadding component={"a"} href="#">
-            <ListItemText
-              primary={category.name}
-              sx={{ color: theme.palette.text.primary }}
-            />
-          </ListItem>
-        ))}
-      </List>
+  {categories.map((category) => (
+    <Tooltip title={`View all ${category.name}`} arrow key={category.name}>
+      <ListItem disablePadding component={"a"} href="#">
+        <ListItemText
+          primary={category.name}
+          sx={{ color: theme.palette.text.primary }}
+        />
+      </ListItem>
+    </Tooltip>
+  ))}
+</List>
       {/* <Tooltip
         arrow
         title={
