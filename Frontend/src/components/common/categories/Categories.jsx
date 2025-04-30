@@ -2,11 +2,7 @@ import { Box, Typography, Tooltip, List, ListItem, ListItemText } from "@mui/mat
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import { useTheme } from "@emotion/react";
-
-const StyledLink = styled(Link)(({ theme }) => ({
-  textDecoration: "none",
-  color: theme.palette.text.primary,
-}));
+import { categories } from "../categories/categories";
 
 export default function Categories() {
   const theme = useTheme();
@@ -17,10 +13,20 @@ export default function Categories() {
         marginInline: theme.spacing(4),
         marginTop: theme.spacing(3),
         justifyContent: "space-between",
-        display: { xs: "none", sm: "none", md: "flex"}
+        display: { xs: "none", sm: "none", md: "flex" },
       }}
     >
-      <Tooltip
+      <List sx={{ display: "inline-flex" }}>
+        {categories.map((category) => (
+          <ListItem disablePadding component={"a"} href="#">
+            <ListItemText
+              primary={category.name}
+              sx={{ color: theme.palette.text.primary }}
+            />
+          </ListItem>
+        ))}
+      </List>
+      {/* <Tooltip
         arrow
         title={
           <List>
@@ -201,7 +207,7 @@ export default function Categories() {
         <StyledLink>
           <Typography>Gifts</Typography>
         </StyledLink>
-      </Tooltip>
+      </Tooltip> */}
     </Box>
   );
 }
