@@ -9,7 +9,4 @@ export const categories = [
   { name: "Branded Apparel", avatar: "/logo.png" },
   { name: "Stickers & Decals", avatar: "/logo.png" },
   { name: "Mugs & Drinkware", avatar: "/logo.png" },
-  { name: "Desk Essentials", avatar: "/logo.png" },
-  { name: "Limited Edition Collectibles", avatar: "/logo.png" },
-  { name: "Bundles & Gift Packs", avatar: "/logo.png" },
 ];
