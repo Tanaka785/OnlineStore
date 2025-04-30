@@ -170,6 +170,7 @@ export default function NavigationAppBar() {
                         textOverflow: "ellipsis",
                         whiteSpace: "nowrap",
                         color: theme.palette.common.black,
+                        paddingRight: 1,
                       }}
                     >
                       WebVibes
