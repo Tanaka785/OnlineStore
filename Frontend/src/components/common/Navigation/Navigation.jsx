@@ -161,15 +161,11 @@ export default function NavigationAppBar() {
                   <StyledLink to="/">
                     <Typography
                       variant="h6"
-                      noWrap
+                      noWrap={false} // add this line
                       sx={{
                         fontSize: { xs: "1.4rem", sm: "1.6rem", md: "1.9rem" },
                         letterSpacing: -1.2,
                         lineHeight: 1,
-                        maxWidth: { xs: 100, sm: 160, md: "none" },
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        whiteSpace: "nowrap",
                         color: theme.palette.common.black,
                         paddingRight: 1,
                       }}
