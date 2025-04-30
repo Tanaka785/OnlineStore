@@ -1,0 +1,15 @@
+export const categories = [
+  "Explore",
+  "Gadgets",
+  "Phone Accessories",
+  "Laptop Accessories",
+  "Audio Gear",
+  "Wearable Tech",
+  "Smart Home Devices",
+  "Branded Apparel",
+  "Stickers & Decals",
+  "Mugs & Drinkware",
+  "Desk Essentials",
+  "Limited Edition Collectibles",
+  "Bundles & Gift Packs",
+];
