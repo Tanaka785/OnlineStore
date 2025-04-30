@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import NavDrawer from "./Drawer";
 import CartIcon from "../../../icons/Cart.svg?react";
 import FavoriteIcon from "../../../icons/Favorite.svg?react";
+import { categories } from "../categories/categories";
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: "transparent",
