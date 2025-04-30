@@ -10,25 +10,44 @@ export default function Categories() {
     <Box
       gap={5}
       sx={{
-        marginInline: theme.spacing(4),
+        marginInline: theme.spacing(3),
         marginTop: theme.spacing(3),
         justifyContent: "space-between",
         display: { xs: "none", sm: "none", md: "flex" },
       }}
     >
-      <List sx={{ display: "inline-flex" }}>
+      <List
+        sx={{
+          display: "flex",
+          width: "100%",
+          // border: "1px solid red",
+          flexWrap: "nowrap",
+          justifyContent: "space-between",
+          gap: 2,
+        }}
+      >
         {categories.map((category) => (
           <Tooltip
             title={`View all ${category.name}`}
             arrow
             key={category.name}
           >
-            <ListItem disablePadding component={"a"} href="#">
-              <ListItemText
-                primary={category.name}
-                sx={{ color: theme.palette.text.primary }}
-              />
-            </ListItem>
+            <Box sx={{ flexGrow: 1 }}>
+              <ListItem
+                disablePadding
+                component={"a"}
+                href="#"
+                sx={{ width: "100%" }}
+              >
+                <ListItemText
+                  primary={category.name}
+                  sx={{
+                    color: theme.palette.text.primary,
+                    textAlign: "center",
+                  }}
+                />
+              </ListItem>
+            </Box>
           </Tooltip>
         ))}
       </List>
