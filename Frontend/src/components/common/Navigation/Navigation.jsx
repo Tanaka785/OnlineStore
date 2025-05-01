@@ -161,7 +161,7 @@ export default function NavigationAppBar() {
                   <StyledLink to="/">
                     <Typography
                       variant="h6"
-                      noWrap={false} // add this line
+                      noWrap={false}
                       sx={{
                         fontSize: { xs: "1.4rem", sm: "1.6rem", md: "1.9rem" },
                         letterSpacing: -1.2,
