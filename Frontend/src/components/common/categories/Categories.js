@@ -2,7 +2,7 @@ export const categories = [
   {
     name: "Explore",
     avatar: "/Logo.png",
-    categories: [
+    tooltipCategories: [
       "For You",
       "Funny T-Shirts",
       "Vintage Posters",
@@ -11,11 +11,11 @@ export const categories = [
       "Fan Art",
     ],
   },
-  { name: "Gadgets", avatar: "/Logo.png", categories: [] },
-  { name: "Phone Accessories", avatar: "/Logo.png", categories: [] },
-  { name: "Laptop Accessories", avatar: "/Logo.png", categories: [] },
-  { name: "Audio Gear", avatar: "/Logo.png", categories: [] },
-  { name: "Wearable Tech", avatar: "/Logo.png", categories: [] },
-  { name: "Smart Home Devices", avatar: "/Logo.png", categories: [] },
-  { name: "Branded Apparel", avatar: "/Logo.png", categories: [] },
+  { name: "Gadgets", avatar: "/Logo.png", tooltipCategories: [] },
+  { name: "Phone Accessories", avatar: "/Logo.png", tooltipCategories: [] },
+  { name: "Laptop Accessories", avatar: "/Logo.png", tooltipCategories: [] },
+  { name: "Audio Gear", avatar: "/Logo.png", tooltipCategories: [] },
+  { name: "Wearable Tech", avatar: "/Logo.png", tooltipCategories: [] },
+  { name: "Smart Home Devices", avatar: "/Logo.png", tooltipCategories: [] },
+  { name: "Branded Apparel", avatar: "/Logo.png", tooltipCategories: [] },
 ];
