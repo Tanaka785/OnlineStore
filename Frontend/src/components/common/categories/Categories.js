@@ -11,7 +11,7 @@ export const categories = [
       "Fan Art",
     ],
   },
-  { name: "Gadgets", avatar: "/Logo.png", categories: [] },
+  { name: "Gadgets", avatar: "/Logo.png", categories: [`All`] },
   { name: "Phone Accessories", avatar: "/Logo.png", categories: [] },
   { name: "Laptop Accessories", avatar: "/Logo.png", categories: [] },
   { name: "Audio Gear", avatar: "/Logo.png", categories: [] },
