@@ -35,7 +35,7 @@ export default function Categories() {
                   <ListItemText primary={`All ${category.name}`} />
                 </ListItem>
                 {category.categories.map((category) => (
-                  <ListItem>
+                  <ListItem key={category}>
                     <ListItemText primary={category} />
                   </ListItem>
                 ))}
