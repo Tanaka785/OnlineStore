@@ -8,7 +8,7 @@ export default function Divider() {
       sx={{
         height: "3.6rem",
         backgroundColor: "rgba(233, 233, 240, 0.6)",
-        marginTop: theme.spacing(1.5),
+        marginTop: theme.spacing(0.2),
       }}
     />
   );
