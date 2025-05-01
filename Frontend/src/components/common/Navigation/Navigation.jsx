@@ -184,7 +184,6 @@ export default function NavigationAppBar() {
                   marginLeft: "auto",
                 }}
               >
-                {/* TODO style the borders */}
                 {/* searchfield */}
                 <Box
                   sx={{
