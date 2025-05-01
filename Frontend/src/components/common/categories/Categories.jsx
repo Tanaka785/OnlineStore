@@ -24,15 +24,20 @@ export default function Categories() {
           overflowX: "auto",
           justifyContent: "space-between",
           width: "100%",
-          // "&::-webkit-scrollbar": {
-          //   display: "none",
-          // },
-          // scrollbarWidth: "none",
         }}
       >
+        {/* TODO the tooltip should show closer to the icon. */}
         {categories.map((category) => (
           <Tooltip
-            title={`View all ${category.name}`}
+            title={
+              <List>
+                {category.categories.map((category) => (
+                  <ListItem>
+                    <ListItemText primary={category}/>
+                  </ListItem>
+                ))}
+              </List>
+            }
             arrow
             key={category.name}
           >
