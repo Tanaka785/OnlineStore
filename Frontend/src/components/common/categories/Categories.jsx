@@ -31,9 +31,13 @@ export default function Categories() {
           <Tooltip
             title={
               <List>
-                <ListItem>
-                  <ListItemText primary={`All ${category.name}`} />
-                </ListItem>
+                {category.name == "Explore" ? (
+                  ""
+                ) : (
+                  <ListItem>
+                    <ListItemText primary={`All ${category.name}`} />
+                  </ListItem>
+                )}
                 {category.categories.map((category) => (
                   <ListItem key={category}>
                     <ListItemText primary={category} />
