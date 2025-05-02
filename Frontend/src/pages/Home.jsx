@@ -1,9 +1,8 @@
 import NavigationAppBar from "../components/common/Navigation/Navigation";
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from "../components/common/Divider";
-import Banner from "../components/common/Banner";
-import Categories from "../components/common/categories/Categories.jsx";
+import CssBaseline from "@mui/material/CssBaseline";
+import Categories from "../components/shared/categories/Categories.jsx";
+import Divider from "../components/shared/Divider.jsx";
 function Home() {
     return (
         <Box>
