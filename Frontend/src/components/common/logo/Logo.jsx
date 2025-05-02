@@ -1,6 +1,8 @@
 import { Box, Link, IconButton, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
+const route = "/";
+
 export default function Logo() {
   const theme = useTheme();
 
@@ -18,7 +20,7 @@ export default function Logo() {
       }}
     >
       {/* Logo Icon */}
-      <Link to="/">
+      <Link href={route}>
         <IconButton
           sx={{
             p: { xs: 0.5, md: 1 },
@@ -40,7 +42,7 @@ export default function Logo() {
       </Link>
 
       {/* Logo Text */}
-      <Link to="/">
+      <Link href={route}>
         <Typography
           variant="h6"
           noWrap={false}
