@@ -1,9 +1,18 @@
 import { AppBar, Link, Box } from "@mui/material";
+import { useTheme } from "@emotion/react";
 
 export default function SignupNavbar() {
+  const theme = useTheme();
+
   return (
-    <AppBar>
-      <Box sx={{ marginLeft: "auto", marginRight: "2%",}}>
+    <AppBar
+      sx={{
+        backgroundColor: theme.palette.grey[50],
+        color: theme.palette.text.primary,
+        boxShadow: "none",
+      }}
+    >
+      <Box sx={{ marginLeft: "auto", marginRight: "1%" }}>
         <Link>Sell Your Designs</Link>
         <Link>Login</Link>
       </Box>
