@@ -10,7 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import { useTheme } from "@emotion/react";
-import { categories } from "../categories/categories";
+import { categories } from "./categories";
 
 const StyledListItemButton = styled(ListItemButton)(({ theme }) => ({
   // ...
