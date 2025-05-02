@@ -11,7 +11,10 @@ export default function SignupNavbar() {
         color: theme.palette.text.primary,
       }}
     >
-      <Box sx={{ marginLeft: "auto", marginRight: "1%" }}>
+      <Box
+        gap={2}
+        sx={{ display: "flex", marginLeft: "auto", marginRight: "1%" }}
+      >
         <Link>Sell Your Designs</Link>
         <Link>Login</Link>
       </Box>
