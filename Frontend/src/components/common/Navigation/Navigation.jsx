@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import NavDrawer from "./Drawer";
 import CartIcon from "../../../icons/Cart.svg?react";
 import FavoriteIcon from "../../../icons/Favorite.svg?react";
+import Logo from "../logo/Logo";
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: "transparent",
@@ -120,6 +121,7 @@ export default function NavigationAppBar() {
               >
                 {/* Drawer */}
                 <NavDrawer />
+                <Logo />
               </Box>
               {/* searchfield, nav-links, cart & favorites StyledBox. */}
               <Box
