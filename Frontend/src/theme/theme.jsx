@@ -51,6 +51,9 @@ const theme = createTheme({
           backgroundColor: tooltipBackgroundColor,
           color: textColor,
         },
+        arrow: {
+          color: tooltipBackgroundColor,
+        }
       },
     },
   },

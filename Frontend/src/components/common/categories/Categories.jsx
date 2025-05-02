@@ -28,7 +28,6 @@ export default function Categories() {
       >
         {/* TODO the tooltip should show closer to the icon. */}
         {categories.map((category) => (
-          // TODO research proper tooltip categories.
           <Tooltip
             title={
               <List>
