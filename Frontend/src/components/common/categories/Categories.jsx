@@ -34,7 +34,6 @@ export default function Categories() {
                 {category.name == "Explore" ? (
                   ""
                 ) : (
-                  // TODO Convert the tooltip categories into clickable links.
                   <ListItem>
                     <ListItemText primary={`All ${category.name}`} />
                   </ListItem>
@@ -48,8 +47,6 @@ export default function Categories() {
             }
             arrow
             key={category.name}
-            // TODO change the background color to white for the tooltip.
-            // TODO adjust the tooltip position.
           >
             <Box sx={{ flexShrink: 0 }}>
               <ListItem disablePadding component={"a"} href="#">
