@@ -1,5 +1,9 @@
-import { AppBar, Link, Box } from "@mui/material";
+import { AppBar, Link, Box, styled } from "@mui/material";
 import { useTheme } from "@emotion/react";
+
+const StyledNavLink = styled(Link)(({ theme }) => ({
+//   color: theme.palette.text.primary,
+}));
 
 export default function SignupNavbar() {
   const theme = useTheme();
@@ -15,8 +19,8 @@ export default function SignupNavbar() {
         gap={2}
         sx={{ display: "flex", marginLeft: "auto", marginRight: "1%" }}
       >
-        <Link>Sell Your Designs</Link>
-        <Link>Login</Link>
+        <StyledNavLink>Sell Your Designs</StyledNavLink>
+        <StyledNavLink>Login</StyledNavLink>
       </Box>
     </AppBar>
   );
