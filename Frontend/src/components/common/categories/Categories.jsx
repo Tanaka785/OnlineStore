@@ -38,7 +38,6 @@ export default function Categories() {
           width: "100%",
         }}
       >
-        {/* TODO the tooltip should show closer to the icon. */}
         {categories.map((category) => (
           <Tooltip
             title={

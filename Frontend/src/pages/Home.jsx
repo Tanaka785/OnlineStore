@@ -17,5 +17,3 @@ function Home() {
 };
 
 export default Home;
-
-// TODO structure your project properly

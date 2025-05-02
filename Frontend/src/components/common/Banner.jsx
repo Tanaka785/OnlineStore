@@ -12,7 +12,6 @@ export default function Banner() {
           marginBlock: { md: theme.spacing(1) },
         }}
       >
-        {/* // TODO research the best mui component for images. */}
         <Avatar src="./Banner.png" alt="Banner"/>
       </Box>
     );

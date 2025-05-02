@@ -11,7 +11,6 @@ export default function SearchField() {
           marginInline: theme.spacing(1),
         }}
       >
-        {/* TODO increase the height of the TextField. */}
         <TextField
           fullWidth
           slotProps={{
