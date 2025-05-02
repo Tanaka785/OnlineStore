@@ -19,9 +19,9 @@ export default function SignupNavbar() {
         gap={2}
         sx={{ display: "flex", marginLeft: "auto", marginRight: "1%" }}
       >
-        <StyledNavLink>Sell Your Designs</StyledNavLink>
-        <StyledNavLink>Login</StyledNavLink>
+        <StyledNavLink href="#">Sell Your Designs</StyledNavLink>
+        <StyledNavLink href="#">Login</StyledNavLink>
       </Box>
     </AppBar>
-  );
+  );s
 }
