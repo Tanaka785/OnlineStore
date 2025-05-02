@@ -1,6 +1,7 @@
 import { createTheme } from "@mui/material";
 
 const textColor = "#19124f";
+const tooltipBackgroundColor = "#ffffff";
 
 const theme = createTheme({
   palette: {
@@ -8,7 +9,7 @@ const theme = createTheme({
       primary: textColor,
     },
   },
-  
+
   typography: {
     fontFamily: "'Inter', sans-serif",
     fontWeightRegular: 400,
@@ -40,7 +41,15 @@ const theme = createTheme({
           textDecoration: "none",
           "&:hover": {
             textDecoration: "underline",
-          }
+          },
+        },
+      },
+    },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          backgroundColor: tooltipBackgroundColor,
+          color: textColor,
         },
       },
     },
