@@ -28,12 +28,14 @@ export default function Categories() {
       >
         {/* TODO the tooltip should show closer to the icon. */}
         {categories.map((category) => (
+          // TODO research proper tooltip categories.
           <Tooltip
             title={
               <List>
                 {category.name == "Explore" ? (
                   ""
                 ) : (
+                  // TODO Convert the tooltip categories into clickable links.
                   <ListItem>
                     <ListItemText primary={`All ${category.name}`} />
                   </ListItem>
@@ -47,6 +49,8 @@ export default function Categories() {
             }
             arrow
             key={category.name}
+            // TODO change the background color to white for the tooltip.
+            // TODO adjust the tooltip position.
           >
             <Box sx={{ flexShrink: 0 }}>
               <ListItem disablePadding component={"a"} href="#">
