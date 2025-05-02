@@ -35,6 +35,11 @@ const theme = createTheme({
 
   // TODO set consistent height for all appbar of the app.
   components: {
+    MuiAppBar: {
+      styleOverrides: {
+        // TODO remove boxshadow.
+      },
+    },
     MuiLink: {
       styleOverrides: {
         root: {
@@ -54,7 +59,7 @@ const theme = createTheme({
         },
         arrow: {
           color: tooltipBackgroundColor,
-        }
+        },
       },
     },
   },

@@ -9,7 +9,6 @@ export default function SignupNavbar() {
       sx={{
         backgroundColor: theme.palette.grey[50],
         color: theme.palette.text.primary,
-        boxShadow: "none",
       }}
     >
       <Box sx={{ marginLeft: "auto", marginRight: "1%" }}>
