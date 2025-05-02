@@ -1,8 +1,20 @@
-import { Box, Typography, Tooltip, List, ListItem, ListItemText } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Tooltip,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemButton,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import { useTheme } from "@emotion/react";
 import { categories } from "../categories/categories";
+
+const StyledListItemButton = styled(ListItemButton)(({ theme }) => ({
+  // ...
+}));
 
 export default function Categories() {
   const theme = useTheme();
@@ -34,14 +46,14 @@ export default function Categories() {
                 {category.name == "Explore" ? (
                   ""
                 ) : (
-                  <ListItem>
+                  <StyledListItemButton>
                     <ListItemText primary={`All ${category.name}`} />
-                  </ListItem>
+                  </StyledListItemButton>
                 )}
                 {category.tooltipCategories.map((category) => (
-                  <ListItem key={category}>
+                  <StyledListItemButton key={category}>
                     <ListItemText primary={category} />
-                  </ListItem>
+                  </StyledListItemButton>
                 ))}
               </List>
             }
