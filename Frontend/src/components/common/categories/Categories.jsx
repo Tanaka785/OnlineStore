@@ -46,12 +46,12 @@ export default function Categories() {
                 {category.name == "Explore" ? (
                   ""
                 ) : (
-                  <StyledListItemButton>
+                  <StyledListItemButton component={"a"} href="#">
                     <ListItemText primary={`All ${category.name}`} />
                   </StyledListItemButton>
                 )}
                 {category.tooltipCategories.map((category) => (
-                  <StyledListItemButton key={category}>
+                  <StyledListItemButton key={category} component={"a"} href="#">
                     <ListItemText primary={category} />
                   </StyledListItemButton>
                 ))}
