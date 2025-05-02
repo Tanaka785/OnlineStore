@@ -12,12 +12,10 @@ import {
 } from "@mui/material";
 import SearchField from "./SearchField";
 import { styled, useTheme } from "@mui/material/styles";
-import { Menu as MenuIcon } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import NavDrawer from "./Drawer";
 import CartIcon from "../../../icons/Cart.svg?react";
 import FavoriteIcon from "../../../icons/Favorite.svg?react";
-import { categories } from "../categories/categories";
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: "transparent",

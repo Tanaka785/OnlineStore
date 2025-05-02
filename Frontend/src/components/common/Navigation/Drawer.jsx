@@ -18,7 +18,7 @@ import {
   ChevronRight as ChevronRightIcon,
 } from "@mui/icons-material";
 import { useState } from "react";
-import { categories } from "../categories/categories";
+import { categories } from "../../shared/categories/categories";
 
 const CustomLink = styled(Link)(({ theme }) => ({
   fontWeight: theme.typography.fontWeightMedium,
