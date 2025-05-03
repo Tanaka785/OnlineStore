@@ -31,7 +31,19 @@ export default function Header() {
           borderRadius: 3,
         }}
       />
-      <Tooltip arrow title="Cart">
+      <Tooltip
+        arrow
+        title="Cart"
+        slotProps={{
+          tooltip: {
+            sx: {
+              backgroundColor: theme.palette.text.primary,
+              color: theme.palette.background.paper,
+              borderRadius: 50,
+            },
+          },
+        }}
+      >
         <IconButton component={"a"} href="/cart">
           <SvgIcon
             component={CartIcon}
