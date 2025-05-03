@@ -24,10 +24,8 @@ export default function Signup() {
           marginTop: 12,
         }}
       >
-        <Typography variant="h1" sx={{ fontSize: "1.5rem" }}>
-          Join Webvibes
-        </Typography>
-        <Typography>Hello</Typography>
+        <Typography variant="h6">Join Webvibes</Typography>
+        <Typography variant="body1">Hello</Typography>
       </StyledBox>
     </Box>
   );
