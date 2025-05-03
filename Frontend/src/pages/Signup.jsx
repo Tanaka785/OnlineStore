@@ -25,7 +25,10 @@ export default function Signup() {
         }}
       >
         <Typography variant="h5">Join Webvibes</Typography>
-        <Typography variant="body1">Hello</Typography>
+        <Typography variant="body1">
+          Sign up as a customer for 25% off your first order. Your coupon will
+          be emailed after sign up.
+        </Typography>
       </StyledBox>
     </Box>
   );
