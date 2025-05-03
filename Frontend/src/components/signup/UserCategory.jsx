@@ -5,7 +5,6 @@ import MarketplaceIcon from "../../icons/Marketplace.svg?react";
 import { CheckCircle } from "@mui/icons-material";
 import { useState } from "react";
 
-const bor
 const SelectableBox = styled(Box)(({ theme }) => ({
   position: "relative",
   border: `2px solid ${alpha(theme.palette.divider, 0.2)}`,
