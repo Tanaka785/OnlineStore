@@ -35,7 +35,7 @@ export default function Header() {
         <SvgIcon
           component={CartIcon}
           inheritViewBox
-          sx={{ width: 40, height: 40 }}
+          sx={{ width: 40, height: 40, color: theme.palette.text.primary }}
         />
       </IconButton>
     </Box>
