@@ -13,11 +13,19 @@ export default function SignupNavbar() {
       sx={{
         backgroundColor: theme.palette.grey[50],
         color: theme.palette.text.primary,
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
       }}
     >
       <Box
         gap={2}
-        sx={{ display: "flex", marginLeft: "auto", marginRight: "1%" }}
+        sx={{
+          display: "flex",
+          marginLeft: "auto",
+          marginRight: "1%",
+          height: "100%",
+        }}
       >
         <StyledNavLink href="about/selling">Sell Your Designs</StyledNavLink>
         <StyledNavLink href="auth/login">Login</StyledNavLink>
