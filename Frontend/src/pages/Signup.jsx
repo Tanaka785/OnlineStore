@@ -21,7 +21,7 @@ export default function Signup() {
       <StyledBox
         sx={{
           placeItems: "center",
-          marginTop: 10,
+          marginTop: 12,
         }}
       >
         Hello
