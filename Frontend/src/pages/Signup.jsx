@@ -5,8 +5,10 @@ import Header from "../components/signup/Header";
 export default function Signup() {
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
-      <SignupNavbar />
-      <Header />
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <SignupNavbar />
+        <Header />
+      </Box>
     </Box>
   );
 }
