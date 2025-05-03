@@ -1,5 +1,9 @@
 import { Box } from "@mui/material";
 
 export default function UserCategory() {
-  return <Box>Artist || Customer</Box>;
+  return (
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
+      Artist || Customer
+    </Box>
+  );
 }
