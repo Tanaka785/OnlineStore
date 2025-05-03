@@ -1,4 +1,4 @@
-import { Box, IconButton, SvgIcon, TextField } from "@mui/material";
+import { Box, IconButton, SvgIcon, TextField, Tooltip } from "@mui/material";
 import Logo from "../common/logo/Logo";
 import { ShoppingBag } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
@@ -31,13 +31,15 @@ export default function Header() {
           borderRadius: 3,
         }}
       />
-      <IconButton component={"a"} href="/cart">
-        <SvgIcon
-          component={CartIcon}
-          inheritViewBox
-          sx={{ width: 40, height: 40, color: theme.palette.text.primary }}
-        />
-      </IconButton>
+      <Tooltip arrow title="Cart">
+        <IconButton component={"a"} href="/cart">
+          <SvgIcon
+            component={CartIcon}
+            inheritViewBox
+            sx={{ width: 40, height: 40, color: theme.palette.text.primary }}
+          />
+        </IconButton>
+      </Tooltip>
     </Box>
   );
 }
