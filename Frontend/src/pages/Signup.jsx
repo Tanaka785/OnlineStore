@@ -9,6 +9,7 @@ export default function Signup() {
         <SignupNavbar />
         <Header />
       </Box>
+      <Box>Hello</Box>
     </Box>
   );
 }
