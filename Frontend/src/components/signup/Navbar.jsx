@@ -1,4 +1,4 @@
-import { AppBar, Link, Box, styled } from "@mui/material";
+import { AppBar, Link, Box, styled, Toolbar } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
 const StyledNavLink = styled(Link)(({ theme }) => ({
@@ -19,7 +19,7 @@ export default function SignupNavbar() {
         alignItems: "center",
       }}
     >
-      <Box
+      <Toolbar
         gap={2}
         sx={{
           display: "flex",
@@ -30,7 +30,7 @@ export default function SignupNavbar() {
       >
         <StyledNavLink href="about/selling">Sell Your Designs</StyledNavLink>
         <StyledNavLink href="auth/login">Login</StyledNavLink>
-      </Box>
+      </Toolbar>
     </AppBar>
   );
   s;
