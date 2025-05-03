@@ -44,7 +44,11 @@ export default function UserCategory() {
     >
       {userCategories.map((category) => (
         <SelectableBox>
-          <SvgIcon component={category.icon} inheritViewBox />
+          <SvgIcon
+            component={category.icon}
+            inheritViewBox
+            sx={{ width: 50, height: 50 }}
+          />
           <Typography variant="body1">{`${category.type} Signup`}</Typography>
           <Typography variant="body1" sx={{ color: theme.palette.grey[800] }}>
             {category.description}
