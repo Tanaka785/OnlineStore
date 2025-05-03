@@ -20,7 +20,13 @@ export default function Header() {
       }}
     >
       <Logo />
-      <TextField placeholder={text} sx={{ width: "650px" }} />
+      <TextField
+        placeholder={text}
+        sx={{
+          width: "650px",
+          "& .MuiOutlinedInput-root": { "& fieldset": { border: "none" } },
+        }}
+      />
       <ShoppingBag />
     </Box>
   );
