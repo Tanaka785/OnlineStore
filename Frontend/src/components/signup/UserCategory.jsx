@@ -7,6 +7,8 @@ const SelectableBox = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   width: "50%",
   height: "100%",
+  paddingLeft: theme.spacing(2),
+  paddingTop: theme.spacing(2),
 }));
 
 export default function UserCategory() {
