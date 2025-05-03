@@ -23,6 +23,9 @@ export default function Signup() {
       <StyledBox>
         <Promo />
       </StyledBox>
+      <StyledBox>
+        <UserCategory />
+      </StyledBox>
     </Box>
   );
 }
