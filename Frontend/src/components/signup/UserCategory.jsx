@@ -1,5 +1,6 @@
-import { Box, Typography, alpha, styled } from "@mui/material";
+import { Box, SvgIcon, Typography, alpha, styled } from "@mui/material";
 import { useTheme } from "@emotion/react";
+import ArtistIcon from "../../icons/Artist.svg?react";
 
 const SelectableBox = styled(Box)(({ theme }) => ({
   border: `1px solid ${alpha(theme.palette.divider, 0.2)}`,
@@ -42,7 +43,7 @@ export default function UserCategory() {
     >
       {userCategories.map((category) => (
         <SelectableBox>
-          <Typography variant="body1">{category.icon}</Typography>
+          <SvgIcon component={ArtistIcon} inheritViewBox />
           <Typography variant="body1">{`${category.type} Signup`}</Typography>
           <Typography variant="body1" sx={{ color: theme.palette.grey[800] }}>
             {category.description}
