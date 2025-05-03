@@ -9,7 +9,7 @@ const SelectableBox = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   width: "50%",
   height: "100%",
-  paddingLeft: theme.spacing(2),
+  paddingInline: theme.spacing(2),
   paddingTop: theme.spacing(2),
   gap: 5,
 }));
