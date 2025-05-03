@@ -13,6 +13,7 @@ export default function Header() {
         justifyContent: "center",
         alignItems: "center",
         borderBottom: ` 1px solid ${alpha(theme.palette.divider, 0.05)}`,
+        paddingBlock: 2,
       }}
     >
       <Logo />
