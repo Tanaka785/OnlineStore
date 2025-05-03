@@ -2,7 +2,7 @@ import { AppBar, Link, Box, styled } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
 const StyledNavLink = styled(Link)(({ theme }) => ({
-//   color: theme.palette.text.primary,
+  //   color: theme.palette.text.primary,
 }));
 
 export default function SignupNavbar() {
@@ -10,6 +10,7 @@ export default function SignupNavbar() {
 
   return (
     <AppBar
+      position="static"
       sx={{
         backgroundColor: theme.palette.grey[50],
         color: theme.palette.text.primary,
@@ -31,5 +32,6 @@ export default function SignupNavbar() {
         <StyledNavLink href="auth/login">Login</StyledNavLink>
       </Box>
     </AppBar>
-  );s
+  );
+  s;
 }
