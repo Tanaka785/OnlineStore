@@ -17,12 +17,12 @@ export default function UserCategory() {
 
   const userCategories = [
     {
-      icon: "Icon",
+      icon: "<icon/>",
       type: "Artist",
       description: "Set up shop and start selling your designs",
     },
     {
-      icon: "Icon",
+      icon: "<icon/>",
       type: "Customer",
       description: "Browse the marketplace and find your thing.",
     },
@@ -44,7 +44,9 @@ export default function UserCategory() {
         <SelectableBox>
           <Typography variant="body1">{category.icon}</Typography>
           <Typography variant="body1">{`${category.type} Signup`}</Typography>
-          <Typography variant="body1">{category.description}</Typography>
+          <Typography variant="body1" sx={{ color: theme.palette.grey[800] }}>
+            {category.description}
+          </Typography>
         </SelectableBox>
       ))}
     </Box>
