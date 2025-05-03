@@ -3,6 +3,8 @@ import SignupNavbar from "../components/signup/Navbar";
 import Header from "../components/signup/Header";
 import { useTheme } from "@emotion/react";
 import Promo from "../components/signup/Promo";
+import UserCategory from "../components/signup/UserCategory";
+
 const StyledBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
