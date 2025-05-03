@@ -1,24 +1,31 @@
-import { Box } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import SignupNavbar from "../components/signup/Navbar";
 import Header from "../components/signup/Header";
+import { useTheme } from "@emotion/react";
+
+const StyledBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+}));
 
 export default function Signup() {
+  const theme = useTheme();
+
   return (
-    <Box sx={{ display: "flex", flexDirection: "column" }}>
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
+    <StyledBox>
+      <StyledBox>
         <SignupNavbar />
         <Header />
-      </Box>
-      <Box
+      </StyledBox>
+      <StyledBox
         sx={{
-          display: "flex",
-          flexDirection: "column",
           placeItems: "center",
           marginTop: 10,
         }}
       >
         Hello
-      </Box>
-    </Box>
+      </StyledBox>
+    </StyledBox>
   );
 }
