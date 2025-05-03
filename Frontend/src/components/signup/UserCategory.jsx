@@ -52,14 +52,16 @@ export default function UserCategory() {
       {userCategories.map((category) => (
         <SelectableBox key={category.type}>
           <CheckCircle
-            color="primary"
+            color={theme.palette.common.white}
             sx={{
               position: "absolute",
               top: -10,
               left: 4,
               fontSize: 20,
-              backgroundColor: "white",
+              backgroundColor: (theme) => theme.palette.common.white,
               borderRadius: "50%",
+              width: 25,
+              height: 25,
             }}
           />
           <SvgIcon
