@@ -14,6 +14,7 @@ export default function Signup() {
           display: "flex",
           flexDirection: "column",
           placeItems: "center",
+          marginTop: 10,
         }}
       >
         Hello
