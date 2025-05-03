@@ -52,7 +52,7 @@ export default function UserCategory() {
       {userCategories.map((category) => (
         <SelectableBox key={category.type}>
           <CheckCircle
-            color={theme.palette.common.white}
+            // color={theme.palette.common.white}
             sx={{
               position: "absolute",
               top: -10,
