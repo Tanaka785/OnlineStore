@@ -2,8 +2,10 @@ import { Box, SvgIcon, Typography, alpha, styled } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import ArtistIcon from "../../icons/Artist.svg?react";
 import MarketplaceIcon from "../../icons/Marketplace.svg?react";
+import { CheckCircle } from "@mui/icons-material";
 
 const SelectableBox = styled(Box)(({ theme }) => ({
+  position: "relative",
   border: `1px solid ${alpha(theme.palette.divider, 0.2)}`,
   display: "flex",
   flexDirection: "column",
@@ -48,7 +50,18 @@ export default function UserCategory() {
       }}
     >
       {userCategories.map((category) => (
-        <SelectableBox>
+        <SelectableBox key={category.type}>
+          <CheckCircle
+            color="primary"
+            sx={{
+              position: "absolute",
+              top: -10,
+              left: 4,
+              fontSize: 20,
+              backgroundColor: "white",
+              borderRadius: "50%",
+            }}
+          />
           <SvgIcon
             component={category.icon}
             inheritViewBox
