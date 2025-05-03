@@ -3,6 +3,7 @@ import Logo from "../common/logo/Logo";
 import { ShoppingBag } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
 import { alpha } from "@mui/material";
+import CartIcon from "../../icons/NavCart.svg?react";
 
 const text = "Search for products or designs";
 
@@ -30,7 +31,7 @@ export default function Header() {
           borderRadius: 3,
         }}
       />
-      <ShoppingBag />
+      <CartIcon />
     </Box>
   );
 }
