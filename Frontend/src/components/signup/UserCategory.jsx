@@ -6,8 +6,20 @@ const SelectableBox = styled(Box)(({ theme }) => ({
 }));
 
 export default function UserCategory() {
+  const theme = useTheme();
+
   return (
-    <Box sx={{ display: "flex", marginTop: 3 }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        marginTop: 3,
+        border: "1px solid red",
+        width: "36%",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <SelectableBox>Hello</SelectableBox>
       <SelectableBox>Hello</SelectableBox>
     </Box>
