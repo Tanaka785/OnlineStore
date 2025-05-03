@@ -13,7 +13,7 @@ export default function Signup() {
   const theme = useTheme();
 
   return (
-    <StyledBox>
+    <Box>
       <StyledBox>
         <SignupNavbar />
         <Header />
@@ -29,6 +29,6 @@ export default function Signup() {
         </Typography>
         <Typography>Hello</Typography>
       </StyledBox>
-    </StyledBox>
+    </Box>
   );
 }
