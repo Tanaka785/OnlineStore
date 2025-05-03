@@ -27,6 +27,7 @@ export default function Header() {
           width: "650px",
           "& .MuiOutlinedInput-root": { "& fieldset": { border: "none" } },
           backgroundColor: theme.palette.grey[50],
+          borderRadius: 3,
         }}
       />
       <ShoppingBag />
