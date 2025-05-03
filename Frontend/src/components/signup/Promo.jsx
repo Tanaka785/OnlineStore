@@ -22,7 +22,11 @@ export default function Promo() {
       </Typography>
       <Typography
         variant="body1"
-        sx={{ width: "70%", color: theme.palette.grey[800] }}
+        sx={{
+          width: "70%",
+          color: theme.palette.grey[800],
+          textAlign: "center",
+        }}
       >
         Sign up as a customer for 25% off your first order. Your coupon will be
         emailed after sign up.
