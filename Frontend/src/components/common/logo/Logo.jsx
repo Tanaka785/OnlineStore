@@ -52,6 +52,7 @@ export default function Logo() {
             lineHeight: 1,
             color: theme.palette.common.black,
             paddingRight: 1,
+            fontWeight: theme.typography.fontWeightBold,
           }}
         >
           WebVibes
