@@ -10,7 +10,6 @@ export default function Header() {
     <Box
       sx={{
         display: "flex",
-        marginTop: 10,
         justifyContent: "center",
         alignItems: "center",
         borderBottom: ` 1px solid ${alpha(theme.palette.divider, 0.05)}`,
