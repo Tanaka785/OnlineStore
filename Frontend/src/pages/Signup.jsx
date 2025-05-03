@@ -19,7 +19,7 @@ export default function Signup() {
         <Header />
       </StyledBox>
       <StyledBox
-        gap={3}
+        gap={2}
         sx={{
           placeItems: "center",
           marginTop: 12,
