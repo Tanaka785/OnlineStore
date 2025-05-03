@@ -33,11 +33,18 @@ const theme = createTheme({
     },
   },
 
-  // TODO set consistent height for all appbar of the app.
   components: {
     MuiAppBar: {
       styleOverrides: {
-        // TODO remove boxshadow.
+        root: ({ theme }) => ({
+          boxShadow: "none",
+          [theme.breakpoints.up("xs")]: {
+            minHeight: "56px",
+          },
+          [theme.breakpoints.up("sm")]: {
+            minHeight: "64px",
+          },
+        }),
       },
     },
     MuiLink: {
