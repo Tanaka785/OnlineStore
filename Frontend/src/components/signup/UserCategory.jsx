@@ -43,7 +43,7 @@ export default function UserCategory() {
       {userCategories.map((category) => (
         <SelectableBox>
           <Typography variant="body1">{category.icon}</Typography>
-          <Typography variant="body1">{category.type}</Typography>
+          <Typography variant="body1">{`${category.type} Signup`}</Typography>
           <Typography variant="body1">{category.description}</Typography>
         </SelectableBox>
       ))}
