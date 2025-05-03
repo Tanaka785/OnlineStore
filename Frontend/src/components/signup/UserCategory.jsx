@@ -21,7 +21,6 @@ export default function UserCategory() {
         display: "flex",
         flexDirection: "row",
         marginTop: 3,
-        border: "1px solid red",
         width: "36%",
         height: "150px",
         justifyContent: "center",
@@ -30,9 +29,10 @@ export default function UserCategory() {
     >
       <SelectableBox>
         <Typography>Icon</Typography>
-        <Typography>Icon</Typography>
+        <Typography>Artist Signup</Typography>
+        <Typography>Set up shop and start selling your designs</Typography>
       </SelectableBox>
-      <SelectableBox>Hello</SelectableBox>
+      <SelectableBox>Customer Signup</SelectableBox>
     </Box>
   );
 }
