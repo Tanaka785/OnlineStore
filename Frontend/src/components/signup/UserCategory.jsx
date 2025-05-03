@@ -10,7 +10,7 @@ const SelectableBox = styled(Box)(({ theme }) => ({
   height: "100%",
   paddingLeft: theme.spacing(2),
   paddingTop: theme.spacing(2),
-  gap: 3,
+  gap: 5,
 }));
 
 export default function UserCategory() {
