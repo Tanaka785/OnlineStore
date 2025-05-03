@@ -3,6 +3,7 @@ import { useTheme } from "@emotion/react";
 
 const SelectableBox = styled(Box)(({ theme }) => ({
   border: `1px solid ${alpha(theme.palette.divider, 0.2)}`,
+  width: "50%",
 }));
 
 export default function UserCategory() {
