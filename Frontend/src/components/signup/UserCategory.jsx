@@ -3,6 +3,7 @@ import { useTheme } from "@emotion/react";
 import ArtistIcon from "../../icons/Artist.svg?react";
 import MarketplaceIcon from "../../icons/Marketplace.svg?react";
 import { CheckCircle } from "@mui/icons-material";
+import { useState } from "react";
 
 const SelectableBox = styled(Box)(({ theme }) => ({
   position: "relative",
@@ -51,20 +52,26 @@ export default function UserCategory() {
       }}
     >
       {userCategories.map((category) => (
-        <SelectableBox key={category.type}>
-          <CheckCircle
-            // color={theme.palette.common.white}
-            sx={{
-              position: "absolute",
-              top: -10,
-              left: 4,
-              fontSize: 20,
-              backgroundColor: (theme) => theme.palette.common.white,
-              borderRadius: "50%",
-              width: 25,
-              height: 25,
-            }}
-          />
+        <SelectableBox
+          key={category.type}
+          onClick={() => setSelected(category.type)}
+        >
+          {selected === category.type && (
+            <CheckCircle
+              // color={theme.palette.common.white}
+              sx={{
+                position: "absolute",
+                top: -10,
+                left: 4,
+                fontSize: 20,
+                backgroundColor: (theme) => theme.palette.common.white,
+                borderRadius: "50%",
+                width: 25,
+                height: 25,
+              }}
+            />
+          )}
+
           <SvgIcon
             component={category.icon}
             inheritViewBox
