@@ -3,6 +3,9 @@ import Logo from "../common/logo/Logo";
 import { ShoppingBag } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
 import { alpha } from "@mui/material";
+
+const text = "Search for products or designs";
+
 export default function Header() {
   const theme = useTheme();
 
@@ -17,7 +20,7 @@ export default function Header() {
       }}
     >
       <Logo />
-      <TextField />
+      <TextField placeholder={text} sx={{ width: "650px" }} />
       <ShoppingBag />
     </Box>
   );
