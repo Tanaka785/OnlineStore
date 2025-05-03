@@ -4,7 +4,7 @@ import Header from "../components/signup/Header";
 
 export default function Signup() {
   return (
-    <Box>
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
       <SignupNavbar />
       <Header />
     </Box>
