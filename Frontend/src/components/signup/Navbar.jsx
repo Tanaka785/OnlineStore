@@ -20,12 +20,12 @@ export default function SignupNavbar() {
       }}
     >
       <Toolbar
-        gap={2}
         sx={{
           display: "flex",
           marginLeft: "auto",
           marginRight: "1%",
           height: "100%",
+          gap: 2,
         }}
       >
         <StyledNavLink href="about/selling">Sell Your Designs</StyledNavLink>
