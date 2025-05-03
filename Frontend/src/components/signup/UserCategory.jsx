@@ -40,12 +40,13 @@ export default function UserCategory() {
         alignItems: "center",
       }}
     >
-      <SelectableBox>
-        <Typography>Icon</Typography>
-        <Typography>Artist Signup</Typography>
-        <Typography>Set up shop and start selling your designs</Typography>
-      </SelectableBox>
-      <SelectableBox>Customer Signup</SelectableBox>
+      {userCategories.map((category) => (
+        <SelectableBox>
+          <Typography variant="body1">{category.icon}</Typography>
+          <Typography variant="body1">{category.type}</Typography>
+          <Typography variant="body1">{category.description}</Typography>
+        </SelectableBox>
+      ))}
     </Box>
   );
 }
