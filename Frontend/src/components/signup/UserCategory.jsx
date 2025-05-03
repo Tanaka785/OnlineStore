@@ -47,7 +47,7 @@ export default function UserCategory() {
           <SvgIcon
             component={category.icon}
             inheritViewBox
-            sx={{ width: 50, height: 50 }}
+            sx={{ width: 40, height: 40 }}
           />
           <Typography variant="body1">{`${category.type} Signup`}</Typography>
           <Typography variant="body1" sx={{ color: theme.palette.grey[800] }}>
