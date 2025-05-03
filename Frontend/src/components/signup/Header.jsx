@@ -5,7 +5,7 @@ import { useTheme } from "@emotion/react";
 import { alpha } from "@mui/material";
 export default function Header() {
   const theme = useTheme();
-  
+
   return (
     <Box
       sx={{
@@ -13,7 +13,7 @@ export default function Header() {
         marginTop: 16,
         justifyContent: "center",
         alignItems: "center",
-        border: ` 1px solid ${alpha(theme.palette.divider, 0.05)}`,
+        borderBottom: ` 1px solid ${alpha(theme.palette.divider, 0.05)}`,
       }}
     >
       <Logo />
