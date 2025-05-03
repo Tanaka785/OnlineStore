@@ -190,6 +190,7 @@ export default function NavigationAppBar() {
                             sx={{ padding: { xs: 1, md: 1.5 } }}
                           >
                             <SvgIcon
+                              inheritViewBox
                               component={item.Icon}
                               sx={{
                                 width: 27,
