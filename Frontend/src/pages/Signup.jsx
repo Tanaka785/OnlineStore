@@ -1,4 +1,4 @@
-import { Box, styled } from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 import SignupNavbar from "../components/signup/Navbar";
 import Header from "../components/signup/Header";
 import { useTheme } from "@emotion/react";
@@ -24,7 +24,10 @@ export default function Signup() {
           marginTop: 12,
         }}
       >
-        Hello
+        <Typography variant="h1" sx={{ fontSize: "1.5rem" }}>
+          Join Webvibes
+        </Typography>
+        <Typography>Hello</Typography>
       </StyledBox>
     </StyledBox>
   );
