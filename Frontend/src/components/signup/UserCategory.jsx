@@ -12,6 +12,10 @@ const SelectableBox = styled(Box)(({ theme }) => ({
   paddingInline: theme.spacing(2),
   paddingTop: theme.spacing(2),
   gap: 5,
+  cursor: "pointer",
+  "&:hover": {
+    border: `2px solid ${theme.palette.text.primary}`,
+  },
 }));
 
 export default function UserCategory() {
