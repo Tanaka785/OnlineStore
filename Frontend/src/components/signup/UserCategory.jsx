@@ -50,7 +50,7 @@ export default function UserCategory() {
             sx={{ width: 40, height: 40 }}
           />
           <Typography variant="body1">{`${category.type} Signup`}</Typography>
-          <Typography variant="body1" sx={{ color: theme.palette.grey[800] }}>
+          <Typography variant="body2" sx={{ color: theme.palette.grey[800] }}>
             {category.description}
           </Typography>
         </SelectableBox>
