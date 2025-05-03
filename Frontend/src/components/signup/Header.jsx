@@ -11,6 +11,7 @@ export default function Header() {
 
   return (
     <Box
+      gap={2}
       sx={{
         display: "flex",
         justifyContent: "center",
