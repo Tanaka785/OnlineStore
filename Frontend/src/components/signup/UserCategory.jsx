@@ -15,6 +15,7 @@ const SelectableBox = styled(Box)(({ theme }) => ({
   paddingInline: theme.spacing(2),
   paddingTop: theme.spacing(2),
   gap: 5,
+  margin: -1,
   transition: "border 0.3s ease",
   borderRadius: 2,
   cursor: "pointer",
