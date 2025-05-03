@@ -9,7 +9,15 @@ export default function Signup() {
         <SignupNavbar />
         <Header />
       </Box>
-      <Box>Hello</Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          placeItems: "center",
+        }}
+      >
+        Hello
+      </Box>
     </Box>
   );
 }
