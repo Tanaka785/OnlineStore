@@ -5,9 +5,10 @@ import MarketplaceIcon from "../../icons/Marketplace.svg?react";
 import { CheckCircle } from "@mui/icons-material";
 import { useState } from "react";
 
+const bor
 const SelectableBox = styled(Box)(({ theme }) => ({
   position: "relative",
-  border: `1px solid ${alpha(theme.palette.divider, 0.2)}`,
+  border: `2px solid ${alpha(theme.palette.divider, 0.2)}`,
   display: "flex",
   flexDirection: "column",
   width: "50%",
@@ -15,6 +16,7 @@ const SelectableBox = styled(Box)(({ theme }) => ({
   paddingInline: theme.spacing(2),
   paddingTop: theme.spacing(2),
   gap: 5,
+  transition: "border 0.3s ease",
   borderRadius: 2,
   cursor: "pointer",
   "&:hover": {
@@ -58,7 +60,6 @@ export default function UserCategory() {
         >
           {selected === category.type && (
             <CheckCircle
-              // color={theme.palette.common.white}
               sx={{
                 position: "absolute",
                 top: -10,
