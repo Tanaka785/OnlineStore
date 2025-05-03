@@ -2,7 +2,7 @@ import { AppBar, Link, Box, styled, Toolbar } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
 const StyledNavLink = styled(Link)(({ theme }) => ({
-  //   color: theme.palette.text.primary,
+  letterSpacing: -0.5,
 }));
 
 export default function SignupNavbar() {
