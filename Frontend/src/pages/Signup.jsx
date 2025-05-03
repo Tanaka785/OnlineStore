@@ -2,7 +2,7 @@ import { Box, Typography, styled } from "@mui/material";
 import SignupNavbar from "../components/signup/Navbar";
 import Header from "../components/signup/Header";
 import { useTheme } from "@emotion/react";
-
+import Promo from "../components/signup/Promo";
 const StyledBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
@@ -18,21 +18,8 @@ export default function Signup() {
         <SignupNavbar />
         <Header />
       </StyledBox>
-      <StyledBox
-        gap={2}
-        sx={{
-          placeItems: "center",
-          marginTop: 12,
-        }}
-      >
-        <Typography variant="h5">Join Webvibes</Typography>
-        <Typography
-          variant="body1"
-          sx={{ width: "35%", color: theme.palette.grey[800] }}
-        >
-          Sign up as a customer for 25% off your first order. Your coupon will
-          be emailed after sign up.
-        </Typography>
+      <StyledBox>
+        <Promo />
       </StyledBox>
     </Box>
   );

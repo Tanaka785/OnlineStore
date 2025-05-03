@@ -1,6 +1,9 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { useTheme } from "@emotion/react";
 
 export default function Promo() {
+  const theme = useTheme();
+
   return (
     <Box
       gap={2}
