@@ -31,12 +31,12 @@ export default function UserCategory() {
   const userCategories = [
     {
       icon: ArtistIcon,
-      type: "Artist",
+      name: "Artist",
       description: "Set up shop and start selling your designs",
     },
     {
       icon: MarketplaceIcon,
-      type: "Customer",
+      name: "Customer",
       description: "Browse the marketplace and find your thing.",
     },
   ];
@@ -55,10 +55,10 @@ export default function UserCategory() {
     >
       {userCategories.map((category) => (
         <SelectableBox
-          key={category.type}
-          onClick={() => setSelected(category.type)}
+          key={category.name}
+          onClick={() => setSelected(category.name)}
         >
-          {selected === category.type && (
+          {selected === category.name && (
             <CheckCircle
               sx={{
                 position: "absolute",
@@ -78,7 +78,7 @@ export default function UserCategory() {
             inheritViewBox
             sx={{ width: 40, height: 40 }}
           />
-          <Typography variant="body1">{`${category.type} Signup`}</Typography>
+          <Typography variant="body1">{`${category.name} Signup`}</Typography>
           <Typography variant="body2" sx={{ color: theme.palette.grey[800] }}>
             {category.description}
           </Typography>
