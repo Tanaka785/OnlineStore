@@ -45,7 +45,6 @@ export default function UserCategory() {
     <Box
       sx={{
         display: "flex",
-        flexDirection: "row",
         marginTop: 3,
         width: "36%",
         height: "100%",
