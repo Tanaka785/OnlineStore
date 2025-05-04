@@ -48,7 +48,7 @@ export default function UserCategory() {
         flexDirection: "row",
         marginTop: 3,
         width: "36%",
-        height: "150px",
+        height: "100%",
         justifyContent: "center",
         alignItems: "center",
       }}
