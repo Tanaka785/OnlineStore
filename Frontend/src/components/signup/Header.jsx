@@ -33,7 +33,6 @@ export default function Header() {
         }}
       />
       <Tooltip
-        arrow
         title="Cart"
         slotProps={{
           tooltip: {
