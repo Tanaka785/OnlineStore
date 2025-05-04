@@ -23,13 +23,14 @@ export default function Header() {
       }}
     >
       <Logo />
+      {/* TODO add | and searchicon. */}
       <TextField
         placeholder={text}
         sx={{
           width: "650px",
           "& .MuiOutlinedInput-root": { "& fieldset": { border: "none" } },
           backgroundColor: theme.palette.grey[50],
-          borderRadius: 3,
+          borderRadius: 2,
         }}
       />
       <Tooltip
