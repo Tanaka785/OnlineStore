@@ -17,8 +17,9 @@ export default function Header() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        borderBottom: ` 1px solid ${alpha(theme.palette.divider, 0.05)}`,
+        borderBottom: `1px solid ${alpha(theme.palette.divider, 0.05)}`,
         paddingBlock: 2,
+        width: "100%",
       }}
     >
       <Logo />
