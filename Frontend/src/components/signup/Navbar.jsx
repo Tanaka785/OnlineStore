@@ -14,14 +14,13 @@ export default function SignupNavbar() {
       sx={{
         backgroundColor: theme.palette.grey[50],
         color: theme.palette.text.primary,
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
       }}
     >
       <Toolbar
         sx={{
           display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
           marginLeft: "auto",
           marginRight: "1%",
           height: "100%",
