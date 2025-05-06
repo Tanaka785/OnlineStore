@@ -48,11 +48,12 @@ export default function Header() {
                 sx={{ mx: 1, height: 28, color: theme.palette.text.primary }}
               />
               <IconButton edge="end">
-                {/* TODO override the muisearhicon in theme. */}
+                {/* TODO match the color of the searchicon & divider*/}
                 <SearchIcon
                   sx={{
                     minWidth: 35,
                     minHeight: 35,
+                    color: theme.palette.grey[400],
                   }}
                 />
               </IconButton>
