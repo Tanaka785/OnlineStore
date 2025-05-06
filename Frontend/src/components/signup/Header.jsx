@@ -39,21 +39,19 @@ export default function Header() {
           backgroundColor: theme.palette.grey[50],
           borderRadius: 2,
         }}
-        slotProps={{
-          input: {
-            endAdornment: (
-              <InputAdornment position="end">
-                <Divider
-                  orientation="vertical"
-                  flexItem
-                  sx={{ mx: 1, height: 28 }}
-                />
-                <IconButton edge="end">
-                  <SearchIcon />
-                </IconButton>
-              </InputAdornment>
-            ),
-          },
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <Divider
+                orientation="vertical"
+                flexItem
+                sx={{ mx: 1, height: 28 }}
+              />
+              <IconButton edge="end">
+                <SearchIcon />
+              </IconButton>
+            </InputAdornment>
+          ),
         }}
       />
       <Tooltip
