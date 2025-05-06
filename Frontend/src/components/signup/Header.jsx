@@ -45,10 +45,16 @@ export default function Header() {
               <Divider
                 orientation="vertical"
                 flexItem
-                sx={{ mx: 1, height: 28 }}
+                sx={{ mx: 1, height: 28, color: theme.palette.text.primary }}
               />
               <IconButton edge="end">
-                <SearchIcon />
+                {/* TODO override the muisearhicon in theme. */}
+                <SearchIcon
+                  sx={{
+                    minWidth: 30,
+                    minHeight: 30,
+                  }}
+                />
               </IconButton>
             </InputAdornment>
           ),
