@@ -51,8 +51,8 @@ export default function Header() {
                 {/* TODO override the muisearhicon in theme. */}
                 <SearchIcon
                   sx={{
-                    minWidth: 30,
-                    minHeight: 30,
+                    minWidth: 35,
+                    minHeight: 35,
                   }}
                 />
               </IconButton>
