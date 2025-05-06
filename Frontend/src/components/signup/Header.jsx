@@ -1,6 +1,14 @@
-import { Box, IconButton, SvgIcon, TextField, Tooltip } from "@mui/material";
+import {
+  Box,
+  Divider,
+  IconButton,
+  InputAdornment,
+  SvgIcon,
+  TextField,
+  Tooltip,
+} from "@mui/material";
 import Logo from "../common/logo/Logo";
-import { ShoppingBag } from "@mui/icons-material";
+import { Search as SearchIcon, ShoppingBag } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
 import { alpha } from "@mui/material";
 import CartIcon from "../../icons/NavCart.svg?react";
@@ -23,7 +31,6 @@ export default function Header() {
       }}
     >
       <Logo />
-      {/* TODO add | and searchicon. */}
       <TextField
         placeholder={text}
         sx={{
@@ -31,6 +38,22 @@ export default function Header() {
           "& .MuiOutlinedInput-root": { "& fieldset": { border: "none" } },
           backgroundColor: theme.palette.grey[50],
           borderRadius: 2,
+        }}
+        slotProps={{
+          input: {
+            endAdornment: (
+              <InputAdornment position="end">
+                <Divider
+                  orientation="vertical"
+                  flexItem
+                  sx={{ mx: 1, height: 28 }}
+                />
+                <IconButton edge="end">
+                  <SearchIcon />
+                </IconButton>
+              </InputAdornment>
+            ),
+          },
         }}
       />
       <Tooltip
