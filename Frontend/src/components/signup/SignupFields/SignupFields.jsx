@@ -4,9 +4,9 @@ import StandardTextField from "./StandardTextField";
 export default function SignupFields() {
   return (
     <Box display={"grid"}>
-      <StandardTextField />
-      <StandardTextField />
-      <StandardTextField />
+      <StandardTextField placeholder="Email" />
+      <StandardTextField placeholder="Email" />
+      <StandardTextField placeholder="Password" />
     </Box>
   );
 }
