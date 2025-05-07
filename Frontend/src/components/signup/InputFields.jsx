@@ -2,7 +2,7 @@ import { Box, TextField } from "@mui/material";
 
 export default function InputFields() {
   return (
-    <Box>
+    <Box display={"grid"}>
       <TextField />
       <TextField />
       <TextField />
