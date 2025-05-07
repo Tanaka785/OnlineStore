@@ -3,7 +3,7 @@ import StandardTextField from "./StandardTextField";
 
 export default function SignupFields() {
   return (
-    <Box>
+    <Box display={"grid"}>
       <StandardTextField />
       <StandardTextField />
       <StandardTextField />
