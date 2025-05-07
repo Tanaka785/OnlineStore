@@ -10,14 +10,17 @@ const StyledBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  width: "100%",
+  [theme.breakpoints.up("md")]: {
+    width: "50%",
+  },
+  border: "1px solid green",
 }));
 
 export default function Signup() {
   const theme = useTheme();
 
   return (
-    <Box>
+    <Box sx={{ display: "grid", placeItems: "center" }}>
       <StyledBox>
         <SignupNavbar />
         <Header />
