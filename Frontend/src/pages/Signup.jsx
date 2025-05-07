@@ -13,7 +13,6 @@ const StyledBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     width: "50%",
   },
-  border: "1px solid green",
 }));
 
 export default function Signup() {
