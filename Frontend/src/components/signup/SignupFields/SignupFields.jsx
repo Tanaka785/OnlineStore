@@ -8,7 +8,7 @@ export default function SignupFields() {
   return (
     <Box display={"grid"} gap={2} sx={{ width: "70%", marginBlock: { md: 4 } }}>
       <StandardTextField label="Email" />
-      <StandardTextField label="Email" />
+      <StandardTextField label="Username" />
       <StandardTextField label="Password" />
     </Box>
   );
