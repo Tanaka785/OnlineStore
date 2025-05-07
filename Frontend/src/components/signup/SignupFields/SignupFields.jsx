@@ -1,5 +1,10 @@
-import { TextField } from "@mui/material";
+import { Box } from "@mui/material";
+import StandardTextField from "./StandardTextField";
 
 export default function SignupFields() {
-  return <>Input Fields</>;
+  return (
+    <Box>
+      <StandardTextField />
+    </Box>
+  );
 }
