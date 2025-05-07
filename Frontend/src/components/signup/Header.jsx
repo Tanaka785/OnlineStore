@@ -45,7 +45,7 @@ export default function Header() {
               <Divider
                 orientation="vertical"
                 flexItem
-                sx={{ mx: 1, height: 28, color: theme.palette.text.primary }}
+                sx={{ mx: 1, height: 28, color: theme.palette.grey[400] }}
               />
               <IconButton edge="end">
                 {/* TODO match the color of the searchicon & divider*/}
@@ -53,7 +53,7 @@ export default function Header() {
                   sx={{
                     minWidth: 35,
                     minHeight: 35,
-                    color: theme.palette.grey[400],
+                    color: theme.palette.grey[500],
                   }}
                 />
               </IconButton>
