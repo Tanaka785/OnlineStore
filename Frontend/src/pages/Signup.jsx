@@ -4,7 +4,7 @@ import Header from "../components/signup/Header";
 import { useTheme } from "@emotion/react";
 import Promo from "../components/signup/Promo";
 import UserCategory from "../components/signup/UserCategory";
-import InputFields from "../components/signup/InputFields";
+import SignupFields from "../components/signup/SignupFields/SignupFields";
 
 const StyledBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -29,7 +29,7 @@ export default function Signup() {
         <UserCategory />
       </StyledBox>
       <StyledBox>
-        <InputFields />
+        <SignupFields />
       </StyledBox>
     </Box>
   );
