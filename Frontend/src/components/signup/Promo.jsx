@@ -14,6 +14,7 @@ export default function Promo() {
         marginTop: 10,
         border: "1px solid blue",
         height: "100%",
+        width: "100%",
       }}
     >
       <Typography
