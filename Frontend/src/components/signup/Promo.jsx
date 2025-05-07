@@ -12,6 +12,8 @@ export default function Promo() {
         flexDirection: "column",
         placeItems: "center",
         marginTop: 10,
+        border: "1px solid blue",
+        height: "100%",
       }}
     >
       <Typography
