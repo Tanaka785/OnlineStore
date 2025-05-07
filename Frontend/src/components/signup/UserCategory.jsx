@@ -46,8 +46,8 @@ export default function UserCategory() {
       sx={{
         display: "flex",
         marginTop: 3,
-        width: "100%",
-        height: "100%",
+        width: "70%",
+        height: { xs: "100%", md: "180px" },
         justifyContent: "center",
         alignItems: "center",
       }}
