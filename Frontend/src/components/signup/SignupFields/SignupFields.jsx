@@ -5,6 +5,8 @@ export default function SignupFields() {
   return (
     <Box>
       <StandardTextField />
+      <StandardTextField />
+      <StandardTextField />
     </Box>
   );
 }
