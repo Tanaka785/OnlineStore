@@ -1,5 +1,6 @@
 import { TextField } from "@mui/material";
 import { useTheme } from "@emotion/react";
+import { componentGreyColor } from "../../../pages/Signup";
 
 export default function StandardTextField(props) {
   const theme = useTheme();
@@ -9,7 +10,7 @@ export default function StandardTextField(props) {
       variant="standard"
       sx={{
         "& .MuiInput-underline:before": {
-          borderBottomColor: "#d3d3d3",
+          borderBottomColor: componentGreyColor,
         },
         "& .MuiInput-underline:hover:before": {
           borderBottomColor: theme.palette.secondary.main,
