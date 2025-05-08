@@ -15,18 +15,21 @@ const CenterAlignedBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-const StyledBox = styled(Box)({});
+const FullWidthStyledBox = styled(Box)({
+  display: "flex",
+  width: "100%",
+});
 export default function Signup() {
   const theme = useTheme();
 
   return (
     <Box sx={{ width: "100%", height: "100%", display: "grid" }}>
-      <Box sx={{ width: "100%", display: "flex" }}>
+      <FullWidthStyledBox>
         <SignupNavbar />
-      </Box>
-      <Box sx={{ width: "100%", display: "flex" }}>
+      </FullWidthStyledBox>
+      <FullWidthStyledBox>
         <Header />
-      </Box>
+      </FullWidthStyledBox>
       <Box sx={{ display: "grid", placeItems: "center" }}>
         <CenterAlignedBox>
           <Promo />
