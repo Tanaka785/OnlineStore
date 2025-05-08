@@ -19,6 +19,8 @@ const FullWidthStyledBox = styled(Box)({
   display: "flex",
   width: "100%",
 });
+const userCategories = ["Artist", "Customer"];
+
 export default function Signup() {
   const theme = useTheme();
 
