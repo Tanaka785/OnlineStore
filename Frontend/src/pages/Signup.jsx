@@ -6,7 +6,7 @@ import Promo from "../components/signup/Promo";
 import UserCategory from "../components/signup/UserCategory";
 import SignupFields from "../components/signup/SignupFields/SignupFields";
 
-const StyledBox = styled(Box)(({ theme }) => ({
+const CenterAlignedBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -15,6 +15,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
   },
 }));
 
+const StyledBox = styled(Box)({});
 export default function Signup() {
   const theme = useTheme();
 
@@ -27,15 +28,15 @@ export default function Signup() {
         <Header />
       </Box>
       <Box sx={{ display: "grid", placeItems: "center" }}>
-        <StyledBox>
+        <CenterAlignedBox>
           <Promo />
-        </StyledBox>
-        <StyledBox>
+        </CenterAlignedBox>
+        <CenterAlignedBox>
           <UserCategory />
-        </StyledBox>
-        <StyledBox>
+        </CenterAlignedBox>
+        <CenterAlignedBox>
           <SignupFields />
-        </StyledBox>
+        </CenterAlignedBox>
       </Box>
     </Box>
   );
