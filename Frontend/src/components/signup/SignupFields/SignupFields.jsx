@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import StandardTextField from "./StandardTextField";
 import { useTheme } from "@emotion/react";
 
-export default function SignupFields() {
+export default function SignupFields({ selected, setSelected }) {
   const theme = useTheme();
 
   return (
