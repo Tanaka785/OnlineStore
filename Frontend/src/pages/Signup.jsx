@@ -5,6 +5,7 @@ import { useTheme } from "@emotion/react";
 import Promo from "../components/signup/Promo";
 import UserCategory from "../components/signup/UserCategory";
 import SignupFields from "../components/signup/SignupFields/SignupFields";
+import { useState } from "react";
 
 const CenterAlignedBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -22,6 +23,7 @@ const FullWidthStyledBox = styled(Box)({
 const userCategories = ["Artist", "Customer"];
 
 export default function Signup() {
+  const [selected, setSelected] = useState(userCategories[0]);
   const theme = useTheme();
 
   return (
