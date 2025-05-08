@@ -24,21 +24,21 @@ const SelectableBox = styled(Box)(({ theme }) => ({
   },
 }));
 
+const userCategories = [
+  {
+    icon: ArtistIcon,
+    name: "Artist",
+    description: "Set up shop and start selling your designs",
+  },
+  {
+    icon: MarketplaceIcon,
+    name: "Customer",
+    description: "Browse the marketplace and find your thing.",
+  },
+];
+
 export default function UserCategory({ selected, setSelected }) {
   const theme = useTheme();
-
-  const userCategories = [
-    {
-      icon: ArtistIcon,
-      name: "Artist",
-      description: "Set up shop and start selling your designs",
-    },
-    {
-      icon: MarketplaceIcon,
-      name: "Customer",
-      description: "Browse the marketplace and find your thing.",
-    },
-  ];
 
   return (
     <Box
