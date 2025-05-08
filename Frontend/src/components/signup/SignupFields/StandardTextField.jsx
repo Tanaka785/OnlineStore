@@ -4,6 +4,7 @@ import { componentGreyColor } from "../../../pages/Signup";
 
 const textFieldBorderBottomColor = (theme) => theme.palette.text.primary;
 const textFieldBorderBottomWidth = 0.02;
+
 export default function StandardTextField(props) {
   const theme = useTheme();
   console.log(theme);
