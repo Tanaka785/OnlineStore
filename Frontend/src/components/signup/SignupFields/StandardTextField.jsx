@@ -13,10 +13,11 @@ export default function StandardTextField(props) {
           borderBottomColor: componentGreyColor,
         },
         "& .MuiInput-underline:hover:before": {
-          borderBottomColor: theme.palette.text.primary,
+          borderBottomWidth: 2,
+          borderBottomColor: componentGreyColor,
         },
         "& .MuiInput-underline:after": {
-          borderBottomColor: theme.palette.success.main,
+          borderBottomColor: theme.palette.text.primary,
         },
         paddingBlock: 2,
       }}
