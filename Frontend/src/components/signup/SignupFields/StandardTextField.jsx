@@ -10,9 +10,6 @@ export default function StandardTextField(props) {
       sx={{
         color: theme.palette.grey[5],
         paddingBlock: 2,
-        // "& .MuiOutlinedInput-root": {
-        //   "& fieldset": { backgroundColor: "red" },
-        // },
       }}
       {...props}
     />
