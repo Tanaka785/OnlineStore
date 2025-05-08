@@ -19,20 +19,24 @@ export default function Signup() {
   const theme = useTheme();
 
   return (
-    <Box sx={{ display: "grid", placeItems: "center" }}>
-      <StyledBox>
+    <Box sx={{ width: "100%", height: "100%", display: "grid" }}>
+      <Box sx={{ width: "100%", display: "flex" }}>
         <SignupNavbar />
+      </Box>
+      <Box sx={{ width: "100%", display: "flex" }}>
         <Header />
-      </StyledBox>
-      <StyledBox>
-        <Promo />
-      </StyledBox>
-      <StyledBox>
-        <UserCategory />
-      </StyledBox>
-      <StyledBox>
-        <SignupFields />
-      </StyledBox>
+      </Box>
+      <Box sx={{ display: "grid", placeItems: "center" }}>
+        <StyledBox>
+          <Promo />
+        </StyledBox>
+        <StyledBox>
+          <UserCategory />
+        </StyledBox>
+        <StyledBox>
+          <SignupFields />
+        </StyledBox>
+      </Box>
     </Box>
   );
 }
