@@ -39,10 +39,10 @@ export default function Signup() {
           <Promo />
         </CenterAlignedBox>
         <CenterAlignedBox>
-          <UserCategory />
+          <UserCategory selected={selected} setSelected={setSelected} />
         </CenterAlignedBox>
         <CenterAlignedBox>
-          <SignupFields />
+          <SignupFields selected={selected} setSelected={setSelected} />
         </CenterAlignedBox>
       </Box>
     </Box>
