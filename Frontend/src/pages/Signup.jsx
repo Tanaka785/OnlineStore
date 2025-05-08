@@ -22,7 +22,7 @@ const FullWidthStyledBox = styled(Box)({
 });
 const userCategories = ["Artist", "Customer"];
 
-export const componentColor = "#d3d3d3";
+export const componentGreyColor = "#d3d3d3";
 
 export default function Signup() {
   const [selected, setSelected] = useState(userCategories[0]);
