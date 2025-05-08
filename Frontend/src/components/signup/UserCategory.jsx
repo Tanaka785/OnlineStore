@@ -24,9 +24,8 @@ const SelectableBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-export default function UserCategory() {
+export default function UserCategory({ selected, setSelected }) {
   const theme = useTheme();
-  const [selected, setSelected] = useState("Customer");
 
   const userCategories = [
     {

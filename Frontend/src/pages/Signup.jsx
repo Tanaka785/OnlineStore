@@ -38,6 +38,7 @@ export default function Signup() {
         <CenterAlignedBox>
           <Promo />
         </CenterAlignedBox>
+        {/* TODO get rid of the redudancy on passing selected & setSelected. */}
         <CenterAlignedBox>
           <UserCategory selected={selected} setSelected={setSelected} />
         </CenterAlignedBox>
