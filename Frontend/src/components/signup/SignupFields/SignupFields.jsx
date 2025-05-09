@@ -15,6 +15,10 @@ export default function SignupFields({ selected, setSelected }) {
       <StandardTextField label="Email" />
       <StandardTextField label={labels[selected]} />
       <StandardTextField label="Password" />
+      <Box sx={{ display: "flex", width: "100%" }}>
+        <Typography>Hey</Typography>
+        <Typography>Hey</Typography>
+      </Box>
     </Box>
   );
 }
