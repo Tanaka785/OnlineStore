@@ -8,7 +8,7 @@ import { componentGreyColor } from "../../pages/Signup";
 
 const SelectableBox = styled(Box)(({ theme }) => ({
   position: "relative",
-  border: `2px solid ${alpha(theme.palette.divider, 0.2)}`,
+  border: `2px solid ${componentGreyColor}`,
   display: "flex",
   flexDirection: "column",
   width: "50%",
