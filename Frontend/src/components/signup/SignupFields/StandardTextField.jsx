@@ -19,7 +19,7 @@ export default function StandardTextField(props) {
           color: textFieldBorderBottomColor(theme),
         },
         "& .MuiInput-underline:before": {
-          borderBottomColor: componentGreyColor,
+          borderBottomColor: "#d3d3d3",
         },
         "& .MuiInput-underline:hover:before": {
           borderBottomColor: textFieldBorderBottomColor(theme),
