@@ -12,6 +12,12 @@ export default function StandardTextField(props) {
     <TextField
       variant="standard"
       sx={{
+        "& .MuiInputLabel-root": {
+          color: "#999999",
+        },
+        "& .MuiInputLabel-root.Mui-focused": {
+          color: textFieldBorderBottomColor(theme),
+        },
         "& .MuiInput-underline:before": {
           borderBottomColor: componentGreyColor,
         },
@@ -27,5 +33,6 @@ export default function StandardTextField(props) {
       }}
       {...props}
     />
+    // TODO change the color of the label text. Default color & when focused.
   );
 }
