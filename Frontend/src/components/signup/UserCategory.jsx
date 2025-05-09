@@ -4,6 +4,7 @@ import ArtistIcon from "../../icons/Artist.svg?react";
 import MarketplaceIcon from "../../icons/Marketplace.svg?react";
 import { CheckCircle } from "@mui/icons-material";
 import { useState } from "react";
+import { componentGreyColor } from "../../pages/Signup";
 
 const SelectableBox = styled(Box)(({ theme }) => ({
   position: "relative",
@@ -77,7 +78,7 @@ export default function UserCategory({ selected, setSelected }) {
             sx={{ width: 40, height: 40 }}
           />
           <Typography variant="body1">{`${category.name} Signup`}</Typography>
-          <Typography variant="body2" sx={{ color: theme.palette.grey[800] }}>
+          <Typography variant="body2" sx={{ color: componentGreyColor }}>
             {category.description}
           </Typography>
         </SelectableBox>

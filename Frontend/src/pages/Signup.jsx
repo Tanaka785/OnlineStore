@@ -21,8 +21,8 @@ const FullWidthStyledBox = styled(Box)({
   width: "100%",
 });
 const userCategories = ["Artist", "Customer"];
-
-export const componentGreyColor = "#d3d3d3";
+// #d3d3d3"
+export const componentGreyColor = "#666666";
 
 export default function Signup() {
   const [selected, setSelected] = useState(userCategories[0]);

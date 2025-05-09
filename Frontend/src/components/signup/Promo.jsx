@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
+import { componentGreyColor } from "../../pages/Signup";
 
 export default function Promo() {
   const theme = useTheme();
@@ -26,7 +27,7 @@ export default function Promo() {
         variant="body1"
         sx={{
           width: "70%",
-          color: theme.palette.grey[800],
+          color: componentGreyColor,
           textAlign: "center",
         }}
       >
