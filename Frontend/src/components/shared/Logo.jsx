@@ -4,6 +4,8 @@ import IconButton from "@mui/material/IconButton";
 export default function Logo() {
   return (
     <Box
+      component={"a"}
+      href="/"
       sx={{
         display: "flex",
         justifyContent: "center",
