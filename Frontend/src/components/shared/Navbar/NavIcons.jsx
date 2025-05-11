@@ -1,4 +1,4 @@
-import { Avatar, Box, IconButton, Link, Typography } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import { ShoppingCart, Favorite } from "@mui/icons-material";
 
 const navIcons = [
@@ -18,8 +18,13 @@ export default function NavIcons() {
   return (
     <Box sx={{ marginInline: 2, display: "flex", gap: 2 }}>
       {navIcons.map((icon) => (
-        <IconButton component={"a"} href={icon.url}>
-          <Avatar src={icon.icon} />
+        <IconButton
+          key={icon.label}
+          component="a"
+          href={icon.url}
+          aria-label={icon.label}
+        >
+          <icon.icon />
         </IconButton>
       ))}
     </Box>
