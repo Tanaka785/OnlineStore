@@ -1,14 +1,15 @@
 import { Avatar, Box, IconButton, Link, Typography } from "@mui/material";
 import { ShoppingCart, Favorite } from "@mui/icons-material";
+
 const navIcons = [
   {
     label: "WishLists",
-    icon: "/webvibes.png",
+    icon: Favorite,
     url: "/lists",
   },
   {
     label: "Cart",
-    icon: "/webvibes.png",
+    icon: ShoppingCart,
     url: "/cart",
   },
 ];
