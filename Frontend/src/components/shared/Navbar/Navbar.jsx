@@ -12,7 +12,7 @@ export default function Navbar() {
       }}
     >
       <AppBar>
-        <Toolbar sx={{ alignItems: "center" }}>
+        <Toolbar sx={{ alignItems: "center", color: "primary.main" }}>
           <Logo />
           <SearchField />
           <NavLinks />

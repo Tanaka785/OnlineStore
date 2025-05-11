@@ -1,3 +1,9 @@
+import { Box, Link } from "@mui/material";
+
 export default function NavLinks() {
-  return <h2>Hav Links</h2>;
+  return (
+    <Box>
+      <Link href="#">Hello</Link>
+    </Box>
+  );
 }
