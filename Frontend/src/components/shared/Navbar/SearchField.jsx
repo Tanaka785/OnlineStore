@@ -25,7 +25,7 @@ export default function SearchField() {
           width: "100%",
           "& .MuiOutlinedInput-root": {
             "& fieldset": {
-              borderColor: "primary.main",
+              // borderColor: "primary.main",
             },
           },
         }}
