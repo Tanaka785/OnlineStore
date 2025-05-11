@@ -3,7 +3,7 @@ import { CssBaseline, Box, Typography } from "@mui/material";
 
 function App() {
   return (
-    <Box>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <Homepage />
     </Box>
