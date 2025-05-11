@@ -4,6 +4,7 @@ import { CssBaseline, Box, Typography } from "@mui/material";
 function App() {
   return (
     <Box>
+      <CssBaseline />
       <Homepage />
     </Box>
   );
