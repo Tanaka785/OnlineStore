@@ -15,14 +15,14 @@
             "problemMatcher": []
         },
         {
-            "label": "Open Terminal in Root",
+            "label": "Open Terminal in Frontend",
             "type": "shell",
             "command": "bash",
             "args": [
                 "--login"
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${workspaceFolder}/frontend"
             },
             "presentation": {
                 "echo": true,
@@ -30,7 +30,7 @@
                 "focus": true,
                 "panel": "new"
             },
-            "problemMatcher": []
+            "problemMatcher": [],
         }
     ]
 }
