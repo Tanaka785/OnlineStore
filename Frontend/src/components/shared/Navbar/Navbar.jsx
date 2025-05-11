@@ -2,6 +2,7 @@ import { AppBar, Box, Toolbar } from "@mui/material";
 import SearchField from "./SearchField";
 import Logo from "./Logo";
 import NavLinks from "./NavLinks";
+import NavIcons from "./NavIcons";
 
 export default function Navbar() {
   return (
@@ -16,6 +17,7 @@ export default function Navbar() {
           <Logo />
           <SearchField />
           <NavLinks />
+          <NavIcons />
         </Toolbar>
       </AppBar>
     </Box>
