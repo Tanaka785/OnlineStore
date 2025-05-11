@@ -1,4 +1,4 @@
-import { Box, InputAdornment, TextField } from "@mui/material";
+import { Box, IconButton, InputAdornment, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 export default function SearchField() {
   return (
@@ -14,7 +14,9 @@ export default function SearchField() {
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
-              <SearchIcon color="primary" />
+              <IconButton>
+                <SearchIcon color="primary" />
+              </IconButton>
             </InputAdornment>
           ),
         }}
