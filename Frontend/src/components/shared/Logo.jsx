@@ -4,10 +4,11 @@ export default function Logo() {
   return (
     <IconButton>
       <Avatar
+        src="/webvibes.png"
         style={{
-          backgroundImage: "url('/webvibes.png')",
-          backgroundSize: "200%",
+          backgroundSize: "100%",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       />
     </IconButton>
