@@ -1,32 +1,36 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Run Frontend Server (Vite)",
-      "type": "shell",
-      "command": "npm",
-      "args": ["run", "dev"],
-      "options": {
-        "cwd": "${workspaceFolder}/Frontend"
-      },
-      "problemMatcher": []
-    },
-    {
-  "label": "Open Terminal in Root",
-  "type": "shell",
-  "command": "bash",
-  "args": ["--login"],
-  "options": {
-    "cwd": "${workspaceFolder}"
-  },
-  "presentation": {
-    "echo": true,
-    "reveal": "always",
-    "focus": true,
-    "panel": "new"
-  },
-  "problemMatcher": []
-}
-
-  ]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Frontend Server (Vite)",
+            "type": "shell",
+            "command": "npm",
+            "args": [
+                "run",
+                "dev"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/Frontend"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Open Terminal in Root",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "--login"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "problemMatcher": []
+        }
+    ]
 }
