@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 
 export default function SearchField() {
   return (
@@ -10,7 +10,7 @@ export default function SearchField() {
         flexGrow: 1,
       }}
     >
-      Hie
+      <TextField />
     </Box>
   );
 }
