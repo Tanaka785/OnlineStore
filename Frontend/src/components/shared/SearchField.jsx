@@ -10,7 +10,17 @@ export default function SearchField() {
         flexGrow: 1,
       }}
     >
-      <TextField />
+      <TextField
+        variant="outlined"
+        sx={{
+          width: "100%",
+          "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+              borderColor: "primary.main",
+            },
+          },
+        }}
+      />
     </Box>
   );
 }
