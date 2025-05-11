@@ -1,4 +1,4 @@
-import { Box, Link } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 
 const navLinks = [
   {
@@ -19,7 +19,9 @@ export default function NavLinks() {
   return (
     <Box sx={{ marginInline: 2, display: "flex", gap: 2 }}>
       {navLinks.map((link) => (
-        <Link href={link.url}>{link.label}</Link>
+        <Link href={link.url}>
+          {<Typography variant="body1">{link.label}</Typography>}
+        </Link>
       ))}
     </Box>
   );
