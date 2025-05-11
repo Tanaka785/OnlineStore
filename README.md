@@ -153,11 +153,7 @@ Before you begin, ensure you have the following installed:
 
 - If you'd like to contribute to this project, feel free to fork the repository, create a new branch, and submit a pull request.
 
-## Acknowledgements 
-
-- Hat tip to [React](https://reactjs.org/) for the amazing framework.
-- Thanks to [John Doe](https://github.com/johndoe) for the code contributions.
-
+## Acknowledgements
 
 ## Maintained by:
 
