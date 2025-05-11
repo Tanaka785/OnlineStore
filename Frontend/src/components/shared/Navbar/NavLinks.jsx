@@ -18,7 +18,9 @@ const navLinks = [
 export default function NavLinks() {
   return (
     <Box>
-      <Link href="#">Hello</Link>
+      {navLinks.map((link) => (
+        <Link href={link.url}>{link.label}</Link>
+      ))}
     </Box>
   );
 }
