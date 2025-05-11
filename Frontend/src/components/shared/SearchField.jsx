@@ -1,5 +1,5 @@
-import { Box, TextField } from "@mui/material";
-
+import { Box, InputAdornment, TextField } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 export default function SearchField() {
   return (
     <Box
@@ -11,6 +11,13 @@ export default function SearchField() {
       }}
     >
       <TextField
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <SearchIcon color="primary" />
+            </InputAdornment>
+          ),
+        }}
         variant="outlined"
         sx={{
           width: "100%",
