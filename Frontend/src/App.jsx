@@ -1,13 +1,8 @@
 import Homepage from "./pages/Home";
-import { CssBaseline, Box } from "@mui/material";
+import { CssBaseline, Box, Typography } from "@mui/material";
 
 function App() {
-  return (
-    <Box>
-      <CssBaseline />
-      <Homepage />
-    </Box>
-  );
+  return <Box>Hie</Box>;
 }
 
 export default App;
