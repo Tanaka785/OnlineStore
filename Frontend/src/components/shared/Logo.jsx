@@ -11,6 +11,7 @@ export default function Logo() {
         justifyContent: "center",
         alignItems: "center",
         padding: 1,
+        textDecoration: "none",
       }}
     >
       <IconButton sx={{ padding: 0 }}>
