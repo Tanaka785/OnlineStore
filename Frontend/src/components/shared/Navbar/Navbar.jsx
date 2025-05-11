@@ -1,6 +1,6 @@
 import { AppBar, Box, Toolbar } from "@mui/material";
-import Logo from "./Logo";
 import SearchField from "./SearchField";
+import Logo from "./Logo";
 
 export default function Navbar() {
   return (
