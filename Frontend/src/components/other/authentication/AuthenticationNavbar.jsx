@@ -10,7 +10,7 @@ export default function AuthenticationNavbar() {
       sx={{
         display: "flex",
         width: "100%",
-        marginBlock: 2,
+        marginBlock: 1,
       }}
     >
       <AppBar

@@ -14,7 +14,6 @@ export default function AuthenticationHeader() {
       sx={{
         display: "flex",
         width: "100%",
-        marginBlock: 2,
       }}
     >
       <AppBar position="static" sx={{ width: "100%", color: "primary.main" }}>
