@@ -7,7 +7,7 @@ export default function AuthenticationNavbar() {
       sx={{
         display: "flex",
         width: "100%",
-        border: "1px solid blue",
+        marginBlock: 2,
       }}
     >
       <Box
