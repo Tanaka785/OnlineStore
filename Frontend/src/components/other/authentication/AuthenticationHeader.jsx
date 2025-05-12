@@ -1,14 +1,10 @@
 import { AppBar, Box, Toolbar } from "@mui/material";
-import { Link } from "@mui/material";
-import { useTheme } from "@emotion/react";
 import Logo from "../../shared/Navbar/Logo";
-import SearchField from "../../shared/Navbar/SearchField";
-import { ShoppingCart } from "@mui/icons-material";
+import Cart from "../Cart.jsx";
+
 import OutlinedTextField from "../OutlinedTextField";
 
 export default function AuthenticationHeader() {
-  const theme = useTheme();
-
   return (
     <Box
       sx={{
@@ -22,7 +18,7 @@ export default function AuthenticationHeader() {
           <Box sx={{ width: "700px" }}>
             <OutlinedTextField />
           </Box>
-          <ShoppingCart sx={{ marginLeft: 2 }} />
+          <Cart />
         </Toolbar>
       </AppBar>
     </Box>
