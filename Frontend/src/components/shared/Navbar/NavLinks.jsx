@@ -1,17 +1,18 @@
 import { Box, Link, Typography } from "@mui/material";
+import { SELLING, SIGNUP, LOGIN } from "../../../constants/routes";
 
 const navLinks = [
   {
     label: "Sell Your Designs",
-    url: "/about/selling",
+    url: `${SELLING}`,
   },
   {
     label: "Signup",
-    url: "/signup",
+    url: `${SIGNUP}`,
   },
   {
     label: "Login",
-    url: "/auth/login",
+    url: `${LOGIN}`,
   },
 ];
 
