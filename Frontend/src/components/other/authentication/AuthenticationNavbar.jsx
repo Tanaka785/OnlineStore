@@ -1,5 +1,5 @@
 import { AppBar, Box, Toolbar } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
 export default function AuthenticationNavbar() {
