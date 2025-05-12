@@ -14,19 +14,8 @@ export default function AuthenticationHeader() {
       }}
     >
       <AppBar position="static" sx={{ width: "100%", color: "primary.main" }}>
-        <Toolbar>
-          <Box
-            sx={{
-              display: "flex",
-              gap: 2,
-              height: "100%",
-              marginLeft: "auto",
-              marginRight: 4,
-            }}
-          >
-            <Link>Sell Your Designs</Link>
-            <Link>Login</Link>
-          </Box>
+        <Toolbar sx={{ justifyContent: "center", alignItems: "center" }}>
+          Hie
         </Toolbar>
       </AppBar>
     </Box>
