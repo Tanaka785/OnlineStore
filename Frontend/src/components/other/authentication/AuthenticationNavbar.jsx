@@ -14,6 +14,7 @@ export default function AuthenticationNavbar() {
       }}
     >
       <AppBar
+        position="static"
         sx={{
           width: "100%",
           backgroundColor: theme.palette.grey[50],
