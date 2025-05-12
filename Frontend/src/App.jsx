@@ -10,6 +10,7 @@ import {
 import Homepage from "../src/pages/Home.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SignupPage from "./pages/Signup.jsx";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Routes>
           <Route path={HOME} element={<Homepage />} />
           <Route path={SELLING} element={<Homepage />} />
-          <Route path={SIGNUP} element={<Homepage />} />
+          <Route path={SIGNUP} element={<SignupPage />} />
           <Route path={LOGIN} element={<Homepage />} />
           <Route path={CART} element={<Homepage />} />
           <Route path={WISHLISTS} element={<Homepage />} />
