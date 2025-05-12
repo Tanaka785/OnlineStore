@@ -1,7 +1,10 @@
-import { Box } from "@mui/material";
+import { AppBar, Box, Toolbar } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useTheme } from "@emotion/react";
 
 export default function AuthenticationNavbar() {
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
@@ -10,18 +13,22 @@ export default function AuthenticationNavbar() {
         marginBlock: 2,
       }}
     >
-      <Box
-        sx={{
-          display: "flex",
-          gap: 2,
-          height: "100%",
-          marginLeft: "auto",
-          marginRight: 4,
-        }}
-      >
-        <Link>Sell Your Designs</Link>
-        <Link>Login</Link>
-      </Box>
+      <AppBar sx={{ width: "100%", backgroundColor: theme.palette.grey[50] }}>
+        <Toolbar>
+          <Box
+            sx={{
+              display: "flex",
+              gap: 2,
+              height: "100%",
+              marginLeft: "auto",
+              marginRight: 4,
+            }}
+          >
+            <Link>Sell Your Designs</Link>
+            <Link>Login</Link>
+          </Box>
+        </Toolbar>
+      </AppBar>
     </Box>
   );
 }
