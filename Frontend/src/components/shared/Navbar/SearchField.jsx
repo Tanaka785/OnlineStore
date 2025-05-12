@@ -1,5 +1,6 @@
 import { Box, IconButton, InputAdornment, TextField } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
+
+import OutlinedTextField from "../../other/OutlinedTextField";
 export default function SearchField() {
   return (
     <Box
@@ -10,26 +11,7 @@ export default function SearchField() {
         flexGrow: 1,
       }}
     >
-      <TextField
-        InputProps={{
-          endAdornment: (
-            <InputAdornment position="end">
-              <IconButton>
-                <SearchIcon color="primary" />
-              </IconButton>
-            </InputAdornment>
-          ),
-        }}
-        variant="outlined"
-        sx={{
-          width: "100%",
-          "& .MuiOutlinedInput-root": {
-            "& fieldset": {
-              // borderColor: "primary.main",
-            },
-          },
-        }}
-      />
+      <OutlinedTextField />
     </Box>
   );
 }
