@@ -1,12 +1,13 @@
 import { Avatar, Box, Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import logo from "../../../assets/logo/logo.png";
+import { HOME } from "../../../constants/routes";
 
 export default function Logo() {
   return (
     <Box
       component={"a"}
-      href="/"
+      href={HOME}
       sx={{
         display: "flex",
         justifyContent: "center",
