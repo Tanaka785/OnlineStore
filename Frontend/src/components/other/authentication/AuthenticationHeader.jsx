@@ -18,7 +18,9 @@ export default function AuthenticationHeader() {
           <Box sx={{ width: "700px" }}>
             <OutlinedTextField />
           </Box>
-          <Cart />
+          <Box sx={{ marginLeft: 2 }}>
+            <Cart />
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
