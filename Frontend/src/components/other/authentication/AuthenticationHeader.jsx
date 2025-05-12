@@ -18,14 +18,12 @@ export default function AuthenticationHeader() {
       }}
     >
       <AppBar position="static" sx={{ width: "100%", color: "primary.main" }}>
-        <Toolbar
-          sx={{ justifyContent: "center", alignItems: "center", gap: 3 }}
-        >
+        <Toolbar sx={{ justifyContent: "center", alignItems: "center" }}>
           <Logo />
           <Box>
             <OutlinedTextField />
           </Box>
-          <ShoppingCart />
+          <ShoppingCart sx={{ marginLeft: 2 }} />
         </Toolbar>
       </AppBar>
     </Box>
