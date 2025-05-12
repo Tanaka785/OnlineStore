@@ -18,7 +18,9 @@ export default function AuthenticationHeader() {
       }}
     >
       <AppBar position="static" sx={{ width: "100%", color: "primary.main" }}>
-        <Toolbar sx={{ justifyContent: "center", alignItems: "center" }}>
+        <Toolbar
+          sx={{ justifyContent: "center", alignItems: "center", gap: 3 }}
+        >
           <Logo />
           <Box>
             <OutlinedTextField />
