@@ -13,7 +13,7 @@ export default function AuthenticationHeader() {
         marginBlock: 2,
       }}
     >
-      <AppBar sx={{ width: "100%" }}>
+      <AppBar sx={{ width: "100%", color: "primary.main" }}>
         <Toolbar>
           <Box
             sx={{

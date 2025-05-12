@@ -13,7 +13,13 @@ export default function AuthenticationNavbar() {
         marginBlock: 2,
       }}
     >
-      <AppBar sx={{ width: "100%", backgroundColor: theme.palette.grey[50] }}>
+      <AppBar
+        sx={{
+          width: "100%",
+          backgroundColor: theme.palette.grey[50],
+          color: "primary.main",
+        }}
+      >
         <Toolbar>
           <Box
             sx={{
