@@ -20,7 +20,7 @@ export default function AuthenticationHeader() {
       <AppBar position="static" sx={{ width: "100%", color: "primary.main" }}>
         <Toolbar sx={{ justifyContent: "center", alignItems: "center" }}>
           <Logo />
-          <Box>
+          <Box sx={{ width: "700px" }}>
             <OutlinedTextField />
           </Box>
           <ShoppingCart sx={{ marginLeft: 2 }} />
