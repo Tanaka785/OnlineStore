@@ -29,6 +29,8 @@ export default function AuthenticationNavbar() {
               height: "100%",
               marginLeft: "auto",
               marginRight: 4,
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <Link>Sell Your Designs</Link>
