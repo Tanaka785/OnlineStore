@@ -1,16 +1,17 @@
 import { Box, IconButton, Tooltip } from "@mui/material";
 import { ShoppingCart, Favorite } from "@mui/icons-material";
+import { CART, WISHLISTS } from "../../../constants/routes";
 
 const navIcons = [
   {
     label: "WishLists",
     icon: Favorite,
-    url: "/lists",
+    url: `${WISHLISTS}`,
   },
   {
     label: "Cart",
     icon: ShoppingCart,
-    url: "/cart",
+    url: `${CART}`,
   },
 ];
 
