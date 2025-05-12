@@ -1,5 +1,6 @@
 import { Avatar, Box, Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
+import logo from "../../../assets/logo/logo.png";
 
 export default function Logo() {
   return (
@@ -15,7 +16,7 @@ export default function Logo() {
       }}
     >
       <IconButton sx={{ padding: 0 }}>
-        <Avatar src="/webvibes.png" />
+        <Avatar src={Logo} />
       </IconButton>
       <Typography variant="h6" color="primary" sx={{ marginLeft: 1 }}>
         WebVibes
