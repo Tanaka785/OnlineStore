@@ -1,6 +1,9 @@
 import { AppBar, Box, Toolbar } from "@mui/material";
 import { Link } from "@mui/material";
 import { useTheme } from "@emotion/react";
+import Logo from "../../shared/Navbar/Logo";
+import SearchField from "../../shared/Navbar/SearchField";
+import { ShoppingCart } from "@mui/icons-material";
 
 export default function AuthenticationHeader() {
   const theme = useTheme();
@@ -15,7 +18,9 @@ export default function AuthenticationHeader() {
     >
       <AppBar position="static" sx={{ width: "100%", color: "primary.main" }}>
         <Toolbar sx={{ justifyContent: "center", alignItems: "center" }}>
-          Hie
+          <Logo />
+          <SearchField />
+          <ShoppingCart />
         </Toolbar>
       </AppBar>
     </Box>
