@@ -1,6 +1,7 @@
 import { AppBar, Box, Toolbar } from "@mui/material";
 import { Link } from "@mui/material";
 import { useTheme } from "@emotion/react";
+import { LOGIN, SELLING } from "../../../constants/routes";
 
 export default function AuthenticationNavbar() {
   const theme = useTheme();
@@ -33,8 +34,8 @@ export default function AuthenticationNavbar() {
               alignItems: "center",
             }}
           >
-            <Link>Sell Your Designs</Link>
-            <Link>Login</Link>
+            <Link href={`${SELLING}`}>Sell Your Designs</Link>
+            <Link href={`${LOGIN}`}>Login</Link>
           </Box>
         </Toolbar>
       </AppBar>
