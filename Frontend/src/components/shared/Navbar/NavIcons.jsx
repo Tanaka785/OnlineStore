@@ -19,7 +19,7 @@ export default function NavIcons() {
   return (
     <Box sx={{ marginInline: 2, display: "flex", gap: 2 }}>
       {navIcons.map((icon) => (
-        <Tooltip arrow title={icon.label}>
+        <Tooltip key={icon.label} arrow title={icon.label}>
           <IconButton
             key={icon.label}
             component="a"
