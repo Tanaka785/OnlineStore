@@ -1,4 +1,11 @@
-import { Box, Checkbox, FormControl, FormControlLabel } from "@mui/material";
+import {
+  Box,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  Link,
+  Typography,
+} from "@mui/material";
 import StandardTextField from "./StandardTextField";
 import CenteredBox from "../CenteredBox";
 import SubmitButton from "./SubmitButton";
@@ -15,6 +22,9 @@ export default function AuthenticationFields() {
           label="Email me special offers and artist news."
         />
         <SubmitButton text="Sign Up" />
+        <Typography>
+          Already have an account? <Link>Login</Link>
+        </Typography>
       </FormControl>
     </CenteredBox>
   );
