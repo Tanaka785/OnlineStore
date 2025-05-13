@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Public } from "@mui/icons-material";
@@ -40,21 +40,26 @@ export default function AuthFooter() {
           }}
         >
           <StyledTypography variant="body2">
-            Mature Content: <b>Hidden</b>
+            Mature Content:{" "}
+            <Link href="/">
+              <b>Hidden</b>
+            </Link>
           </StyledTypography>
-          <StyledTypography
-            component={"div"}
-            variant="body2"
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: 0.5,
-            }}
-          >
-            <Public />
-            Zimbabwe - USD$ - English
-          </StyledTypography>
+          <Link href="/">
+            <StyledTypography
+              component={"div"}
+              variant="body2"
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: 0.5,
+              }}
+            >
+              <Public />
+              Zimbabwe - USD$ - English
+            </StyledTypography>
+          </Link>
         </Box>
       </Box>
     </Box>
