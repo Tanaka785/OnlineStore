@@ -8,7 +8,7 @@ export default function CenteredBox({ children, sx }) {
           display: "grid",
           placeItems: "center",
           width: "35%",
-          border: "1px solid blue",
+          // border: "1px solid blue",
         },
         ...(Array.isArray(sx) ? sx : [sx]),
       ]}
