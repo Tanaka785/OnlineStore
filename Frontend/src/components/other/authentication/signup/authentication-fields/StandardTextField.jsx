@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
 
-export default function StandardTextField() {
-  return <TextField variant="standard" fullWidth />;
+export default function StandardTextField(props) {
+  return <TextField variant="standard" fullWidth {...props} />;
 }
