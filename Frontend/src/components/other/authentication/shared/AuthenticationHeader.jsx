@@ -26,7 +26,7 @@ export default function AuthenticationHeader() {
         <Toolbar sx={{ justifyContent: "center", alignItems: "center" }}>
           <Logo />
           <Box sx={{ width: "700px" }}>
-            <OutlinedTextField />
+            <OutlinedTextField placeholder="Search for products or designs" />
           </Box>
           <Box sx={{ marginLeft: 2 }}>
             <Cart />
