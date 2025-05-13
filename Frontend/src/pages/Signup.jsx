@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import AuthenticationNavbar from "../components/other/authentication/shared/AuthenticationNavbar";
 import AuthenticationHeader from "../components/other/authentication/shared/AuthenticationHeader";
 import Promo from "../components/other/authentication/signup/Promo";
+import UserCategory from "../components/other/authentication/signup/UserCategory";
 
 export default function SignupPage() {
   return (
@@ -19,6 +20,7 @@ export default function SignupPage() {
       >
         <AuthenticationHeader />
         <Promo />
+        <UserCategory />
       </Box>
     </Box>
   );
