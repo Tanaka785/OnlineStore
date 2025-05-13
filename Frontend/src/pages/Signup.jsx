@@ -6,8 +6,18 @@ import AuthenticationHeader from "../components/other/authentication/shared/Auth
 export default function SignupPage() {
   return (
     <Box sx={{ display: "grid", width: "100%" }}>
-      <AuthenticationNavbar />
-      <AuthenticationHeader />
+      <Box sx={{ width: "100%" }}>
+        <AuthenticationNavbar />
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          display: "grid",
+          placeItems: "center",
+        }}
+      >
+        <AuthenticationHeader />
+      </Box>
     </Box>
   );
 }
