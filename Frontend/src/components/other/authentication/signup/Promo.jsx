@@ -3,12 +3,7 @@ import CenteredBox from "./CenteredBox";
 
 export default function Promo(params) {
   return (
-    <CenteredBox
-      sx={{
-        marginTop: 10,
-        border: "1px solid red",
-      }}
-    >
+    <CenteredBox sx={{ marginTop: 8 }}>
       <Typography component={"div"} variant="h5">
         Join WebVibes
       </Typography>
