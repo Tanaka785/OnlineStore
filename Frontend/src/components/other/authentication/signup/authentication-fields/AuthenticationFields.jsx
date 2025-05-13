@@ -10,7 +10,7 @@ export default function AuthenticationFields() {
         <StandardTextField label="Username" />
         <StandardTextField label="Password" />
         <FormControlLabel
-          control={<Checkbox />}
+          control={<Checkbox color="secondary" />}
           label="Email me special offers and artist news."
         />
       </FormControl>
