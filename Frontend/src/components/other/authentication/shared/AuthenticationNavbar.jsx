@@ -17,7 +17,7 @@ export default function AuthenticationNavbar() {
         position="static"
         sx={{
           width: "100%",
-          backgroundColor: theme.palette.grey[50],
+          backgroundColor: theme.palette.grey[100],
           color: "primary.main",
         }}
       >

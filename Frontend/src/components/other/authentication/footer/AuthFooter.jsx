@@ -1,18 +1,32 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { useTheme } from "@emotion/react";
 
 export default function AuthFooter() {
+  const theme = useTheme();
   return (
     <Box
       sx={{
         display: "grid",
         bottom: 0,
+        marginTop: 12,
         width: "100%",
-        border: "1px solid blue",
         minHeight: 200,
         placeItems: "center",
       }}
     >
-      I am the footer.
+      <Box
+        sx={{
+          display: "flex",
+          width: "100%",
+          backgroundColor: theme.palette.grey[100],
+          justifyContent: "center",
+          alignItems: "center",
+          height: 50,
+        }}
+      >
+        <Typography>One</Typography>
+        <Typography>Two</Typography>
+      </Box>
     </Box>
   );
 }
