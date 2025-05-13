@@ -9,6 +9,7 @@ import {
 import StandardTextField from "./StandardTextField";
 import CenteredBox from "../CenteredBox";
 import SubmitButton from "./SubmitButton";
+import { LOGIN } from "../../../../../constants/routes";
 
 export default function AuthenticationFields() {
   return (
@@ -22,8 +23,14 @@ export default function AuthenticationFields() {
           label="Email me special offers and artist news."
         />
         <SubmitButton text="Sign Up" />
-        <Typography>
-          Already have an account? <Link>Login</Link>
+        <Typography
+          component={"div"}
+          sx={{ width: "100%", textAlign: "center" }}
+        >
+          Already have an account?{" "}
+          <Link href={LOGIN}>
+            <b>Login</b>
+          </Link>
         </Typography>
       </FormControl>
     </CenteredBox>
