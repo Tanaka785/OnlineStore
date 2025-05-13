@@ -5,11 +5,8 @@ export default function Promo(params) {
   return (
     <CenteredBox
       sx={{
-        display: "grid",
         marginTop: 10,
         border: "1px solid red",
-        placeItems: "center",
-        width: "35%",
       }}
     >
       <Typography component={"div"} variant="h5">
