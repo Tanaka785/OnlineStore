@@ -4,6 +4,7 @@ import AuthenticationNavbar from "../components/other/authentication/shared/Auth
 import AuthenticationHeader from "../components/other/authentication/shared/AuthenticationHeader";
 import Promo from "../components/other/authentication/signup/Promo";
 import UserCategory from "../components/other/authentication/signup/UserCategory";
+import AuthenticationFields from "../components/other/authentication/signup/authentication-fields/AuthenticationFields";
 
 export default function SignupPage() {
   return (
@@ -21,6 +22,7 @@ export default function SignupPage() {
         <AuthenticationHeader />
         <Promo />
         <UserCategory />
+        <AuthenticationFields />
       </Box>
     </Box>
   );
