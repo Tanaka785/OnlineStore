@@ -16,6 +16,7 @@ const HalfBoxFormControlLabel = styled(FormControlLabel)(({ theme }) => ({
   placeItems: "center",
   border: `1px solid ${theme.palette.divider}`,
   height: "150px",
+  borderRadius: 5,
 }));
 
 export default function UserCategory() {
