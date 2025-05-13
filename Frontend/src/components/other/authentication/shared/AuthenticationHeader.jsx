@@ -12,7 +12,6 @@ export default function AuthenticationHeader() {
       sx={{
         display: "flex",
         width: "100%",
-        marginTop: 1,
       }}
     >
       <AppBar
@@ -21,6 +20,7 @@ export default function AuthenticationHeader() {
           width: "100%",
           color: "primary.main",
           borderBottom: `1px solid ${theme.palette.divider}`,
+          paddingBlock: 1,
         }}
       >
         <Toolbar sx={{ justifyContent: "center", alignItems: "center" }}>
