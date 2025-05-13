@@ -1,4 +1,11 @@
-import { Box, Link, Typography } from "@mui/material";
+import {
+  Box,
+  Link,
+  List,
+  ListItem,
+  ListItemButton,
+  Typography,
+} from "@mui/material";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Public } from "@mui/icons-material";
@@ -7,19 +14,32 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.main,
 }));
 
+const footerLinks = [
+  "About Us",
+  "Social Responsibility",
+  "Blog",
+  "Delivery",
+  "Investor Store",
+  "Jobs",
+  "Contact Us",
+  "Help",
+];
+
 export default function AuthFooter() {
   const theme = useTheme();
   return (
     <Box
+      //  containing box for the whole footer
       sx={{
         display: "grid",
         bottom: 0,
-        marginTop: 12,
+        marginTop: 8,
         width: "100%",
         minHeight: 200,
         placeItems: "center",
       }}
     >
+      {/* grey background box */}
       <Box
         sx={{
           display: "flex",
@@ -28,9 +48,9 @@ export default function AuthFooter() {
           justifyContent: "center",
           alignItems: "center",
           height: 50,
-          marginLeft: "auto",
         }}
       >
+        {/* box for the typography elements inside the grey background box */}
         <Box
           sx={{
             display: "flex",
@@ -61,6 +81,36 @@ export default function AuthFooter() {
             </StyledTypography>
           </Link>
         </Box>
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          height: "100%",
+          bottom: 0,
+          backgroundColor: "black",
+          display: "grid",
+          placeItems: "center",
+        }}
+      >
+        <List
+          sx={{
+            // border: "1px solid red",
+            height: "100%",
+            // width: "100%",
+            color: theme.palette.background.paper,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {footerLinks.map((link) => (
+            <ListItemButton key={link} disablePadding>
+              <ListItem sx={{ fontSize: theme.typography.body2 }}>
+                {link}
+              </ListItem>
+            </ListItemButton>
+          ))}
+        </List>
       </Box>
     </Box>
   );
