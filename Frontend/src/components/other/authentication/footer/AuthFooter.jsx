@@ -1,5 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
+import styled from "@emotion/styled";
+import { Public } from "@mui/icons-material";
+
+const StyledTypography = styled(Typography)(({ theme }) => ({
+  color: theme.palette.primary.main,
+}));
 
 export default function AuthFooter() {
   const theme = useTheme();
@@ -22,10 +28,34 @@ export default function AuthFooter() {
           justifyContent: "center",
           alignItems: "center",
           height: 50,
+          marginLeft: "auto",
         }}
       >
-        <Typography>One</Typography>
-        <Typography>Two</Typography>
+        <Box
+          sx={{
+            display: "flex",
+            marginLeft: "auto",
+            marginRight: 20,
+            gap: 2,
+          }}
+        >
+          <StyledTypography variant="body2">
+            Mature Content: <b>Hidden</b>
+          </StyledTypography>
+          <StyledTypography
+            component={"div"}
+            variant="body2"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 0.5,
+            }}
+          >
+            <Public />
+            Zimbabwe - USD$ - English
+          </StyledTypography>
+        </Box>
       </Box>
     </Box>
   );
