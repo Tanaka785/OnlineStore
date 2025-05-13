@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import AuthenticationNavbar from "../components/other/authentication/shared/AuthenticationNavbar";
 import AuthenticationHeader from "../components/other/authentication/shared/AuthenticationHeader";
+import Promo from "../components/other/authentication/signup/Promo";
 
 export default function SignupPage() {
   return (
@@ -17,6 +18,7 @@ export default function SignupPage() {
         }}
       >
         <AuthenticationHeader />
+        <Promo />
       </Box>
     </Box>
   );
