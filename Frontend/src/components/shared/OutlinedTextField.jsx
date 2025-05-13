@@ -1,7 +1,7 @@
 import { IconButton, InputAdornment, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-export default function OutlinedTextField() {
+export default function OutlinedTextField(props) {
   return (
     <TextField
       InputProps={{
@@ -22,6 +22,7 @@ export default function OutlinedTextField() {
           },
         },
       }}
+      {...props}
     />
   );
 }
