@@ -5,9 +5,9 @@ import CenteredBox from "../CenteredBox";
 export default function AuthenticationFields() {
   return (
     <CenteredBox sx={{ gap: 4, marginBlock: 4 }}>
+      <StandardTextField label="Email" />
       <StandardTextField label="Username" />
-      <StandardTextField />
-      <StandardTextField />
+      <StandardTextField label="Password" />
     </CenteredBox>
   );
 }
