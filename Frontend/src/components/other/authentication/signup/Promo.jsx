@@ -1,8 +1,9 @@
 import { Box, Typography } from "@mui/material";
+import CenteredBox from "./CenteredBox";
 
 export default function Promo(params) {
   return (
-    <Box
+    <CenteredBox
       sx={{
         display: "grid",
         marginTop: 10,
@@ -18,6 +19,6 @@ export default function Promo(params) {
         Sign up as a customer for 25% off your first order. Your coupon will be
         emailed after sign up.
       </Typography>
-    </Box>
+    </CenteredBox>
   );
 }

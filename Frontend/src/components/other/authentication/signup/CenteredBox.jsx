@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-export default function CentereBox() {
+export default function CenteredBox() {
   return (
     <Box
       sx={{
