@@ -1,6 +1,7 @@
 import { Box, Checkbox, FormControl, FormControlLabel } from "@mui/material";
 import StandardTextField from "./StandardTextField";
 import CenteredBox from "../CenteredBox";
+import SubmitButton from "./SubmitButton";
 
 export default function AuthenticationFields() {
   return (
@@ -13,6 +14,7 @@ export default function AuthenticationFields() {
           control={<Checkbox color="secondary" />}
           label="Email me special offers and artist news."
         />
+        <SubmitButton text="Sign Up" />
       </FormControl>
     </CenteredBox>
   );
