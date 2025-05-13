@@ -1,8 +1,8 @@
 import { AppBar, Box, Toolbar } from "@mui/material";
 import Logo from "../../shared/Navbar/Logo";
-import Cart from "../Cart.jsx";
+import Cart from "../../shared/Cart.jsx";
 
-import OutlinedTextField from "../OutlinedTextField";
+import OutlinedTextField from "../../shared/OutlinedTextField.jsx";
 
 export default function AuthenticationHeader() {
   return (

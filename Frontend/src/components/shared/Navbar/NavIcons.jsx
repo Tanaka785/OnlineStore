@@ -1,7 +1,7 @@
 import { Box, IconButton, Tooltip } from "@mui/material";
 import { CART, WISHLISTS } from "../../../constants/routes";
-import Cart from "../../other/Cart";
-import WishLists from "../../other/WishLists";
+import Cart from "../Cart";
+import WishLists from "../WishLists";
 
 const navIcons = [
   {

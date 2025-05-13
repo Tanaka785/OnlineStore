@@ -1,6 +1,6 @@
 import { Box, IconButton, InputAdornment, TextField } from "@mui/material";
 
-import OutlinedTextField from "../../other/OutlinedTextField";
+import OutlinedTextField from "../OutlinedTextField";
 export default function SearchField() {
   return (
     <Box
