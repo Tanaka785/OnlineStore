@@ -1,7 +1,7 @@
 import { AppBar, Box, Toolbar } from "@mui/material";
 import { Link } from "@mui/material";
 import { useTheme } from "@emotion/react";
-import { LOGIN, SELLING } from "../../../constants/routes";
+import { LOGIN, SELLING } from "../../../../constants/routes";
 
 export default function AuthenticationNavbar() {
   const theme = useTheme();
