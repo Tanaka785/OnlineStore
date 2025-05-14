@@ -2,6 +2,7 @@ import { Box, Link, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Public } from "@mui/icons-material";
+import CenteredBox from "../signup/CenteredBox";
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.main,
@@ -66,8 +67,38 @@ export default function AuthFooter() {
         </Link>
       </Box>
 
-      <Box sx={{ backgroundColor: "black", width: "100%", height: 200 }}>
-        Hie
+      <Box
+        sx={{
+          backgroundColor: "black",
+          width: "100%",
+          height: 200,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            flexWrap: "wrap",
+            gap: 8,
+            justifyContent: "center",
+            // border: "1px solid red",
+            marginTop: 3,
+          }}
+        >
+          {bigLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.url}
+              underline="none"
+              color="white"
+              sx={{ fontSize: theme.typography.body2.fontSize }}
+            >
+              {link.label.toUpperCase()}
+            </Link>
+          ))}
+        </Box>
       </Box>
     </Box>
   );
