@@ -7,62 +7,67 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.main,
 }));
 
+const bigLinks = [
+  { label: "About Us", url: "/" },
+  { label: "Social Responsibility", url: "/" },
+  { label: "Blog", url: "/" },
+  { label: "Delivery", url: "/" },
+  { label: "Investor Store", url: "/" },
+  { label: "Jobs", url: "/" },
+  { label: "Contact Us", url: "/" },
+  { label: "Help", url: "/" },
+];
+
 export default function AuthFooter() {
   const theme = useTheme();
   return (
     <Box
-      //  containing box for the whole footer
       sx={{
-        display: "grid",
-        bottom: 0,
-        marginTop: 4,
+        display: "flex",
+        flexDirection: "column",
         width: "100%",
-        minHeight: 200,
-        placeItems: "center",
+        marginTop: 4,
       }}
     >
-      {/* grey background box */}
+      {/* Grey Box */}
       <Box
         sx={{
           display: "flex",
           width: "100%",
-          backgroundColor: theme.palette.grey[100],
-          justifyContent: "center",
-          alignItems: "center",
           height: 50,
+          backgroundColor: theme.palette.grey[100],
+          justifyContent: "flex-end",
+          alignItems: "center",
+          paddingX: 8,
         }}
       >
-        {/* box for the typography elements inside the grey background box */}
-        <Box
-          sx={{
-            display: "flex",
-            marginLeft: "auto",
-            marginRight: 20,
-            gap: 2,
-          }}
-        >
-          <StyledTypography variant="body2">
-            Mature Content:{" "}
-            <Link href="/">
-              <b>Hidden</b>
-            </Link>
-          </StyledTypography>
+        <StyledTypography variant="body2" sx={{ m: 0 }}>
+          Mature Content:{" "}
           <Link href="/">
-            <StyledTypography
-              component={"div"}
-              variant="body2"
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: 0.5,
-              }}
-            >
-              <Public />
-              Zimbabwe - USD$ - English
-            </StyledTypography>
+            <b>Hidden</b>
           </Link>
-        </Box>
+        </StyledTypography>
+
+        <Link href="/" underline="none">
+          <StyledTypography
+            component="div"
+            variant="body2"
+            sx={{
+              m: 0,
+              ml: 2,
+              display: "flex",
+              alignItems: "center",
+              gap: 0.5,
+            }}
+          >
+            <Public />
+            Zimbabwe - USD$ - English
+          </StyledTypography>
+        </Link>
+      </Box>
+
+      <Box sx={{ backgroundColor: "black", width: "100%", height: 200 }}>
+        Hie
       </Box>
     </Box>
   );
