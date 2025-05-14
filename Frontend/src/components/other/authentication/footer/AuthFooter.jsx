@@ -1,7 +1,13 @@
 import { Box, Link, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
-import { Public } from "@mui/icons-material";
+import {
+  Public,
+  Instagram,
+  Facebook,
+  Twitter,
+  Pinterest,
+} from "@mui/icons-material"; // Importing icons
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.main,
@@ -25,6 +31,15 @@ const smallLinks = [
   { label: "Copyright", url: "/" },
   { label: "Affiliates", url: "/" },
   { label: "Guidelines", url: "/" },
+];
+
+const socialMediaLinks = [
+  { icon: <Instagram />, url: "https://instagram.com" },
+  { icon: <Facebook />, url: "https://facebook.com" },
+  { icon: <Twitter />, url: "https://twitter.com" },
+  { icon: <Pinterest />, url: "https://pinterest.com" },
+  // Assuming the "T" icon app is Telegram for example
+  { icon: <Public />, url: "https://telegram.org" }, // Replace with the actual icon if it's something else
 ];
 
 export default function AuthFooter() {
@@ -138,6 +153,28 @@ export default function AuthFooter() {
                 </Typography>
               )}
             </Box>
+          ))}
+        </Box>
+
+        {/* Social Media Icons */}
+        <Box
+          sx={{
+            display: "flex",
+            gap: 4,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {socialMediaLinks.map((social, index) => (
+            <Link
+              key={index}
+              href={social.url}
+              underline="none"
+              target="_blank"
+              sx={{ color: "white", fontSize: "1.5rem" }}
+            >
+              {social.icon}
+            </Link>
           ))}
         </Box>
       </Box>
