@@ -2,7 +2,6 @@ import { Box, Link, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Public } from "@mui/icons-material";
-import CenteredBox from "../signup/CenteredBox";
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.main,
@@ -30,6 +29,7 @@ const smallLinks = [
 
 export default function AuthFooter() {
   const theme = useTheme();
+
   return (
     <Box
       sx={{
@@ -76,24 +76,25 @@ export default function AuthFooter() {
         </Link>
       </Box>
 
+      {/* Shared Black Box for both sets of links */}
       <Box
         sx={{
           backgroundColor: "black",
           width: "100%",
-          height: 200,
+          paddingY: 4,
           display: "flex",
-          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 4,
         }}
       >
+        {/* Big Links */}
         <Box
           sx={{
             display: "flex",
-            width: "100%",
             flexWrap: "wrap",
             gap: 8,
             justifyContent: "center",
-            // border: "1px solid red",
-            marginTop: 3,
           }}
         >
           {bigLinks.map((link) => (
@@ -106,6 +107,37 @@ export default function AuthFooter() {
             >
               {link.label.toUpperCase()}
             </Link>
+          ))}
+        </Box>
+
+        {/* Small Links */}
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
+          {smallLinks.map((link, index) => (
+            <Box
+              key={link.label}
+              sx={{ display: "flex", alignItems: "center" }}
+            >
+              <Link
+                href={link.url}
+                underline="none"
+                color="white"
+                sx={{ fontSize: "0.75rem" }}
+              >
+                {link.label}
+              </Link>
+              {/* Add / after the link except for the last one */}
+              {index < smallLinks.length - 1 && (
+                <Typography color="white" sx={{ mx: 1 }}>
+                  /
+                </Typography>
+              )}
+            </Box>
           ))}
         </Box>
       </Box>
