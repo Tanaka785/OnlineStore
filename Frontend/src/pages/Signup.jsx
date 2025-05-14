@@ -9,6 +9,8 @@ import AuthFooter from "../components/other/authentication/footer/AuthFooter";
 import TermsAndAgreements from "../components/other/authentication/signup/TermsAndAgreement";
 
 export default function SignupPage() {
+  const [selectedCategory, setSelectedCategory] = React.useState("Customer");
+
   return (
     <Box sx={{ display: "grid", width: "100%" }}>
       <Box sx={{ width: "100%" }}>
