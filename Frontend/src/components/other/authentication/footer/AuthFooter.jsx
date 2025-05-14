@@ -103,7 +103,7 @@ export default function AuthFooter() {
               href={link.url}
               underline="none"
               color="white"
-              sx={{ fontSize: theme.typography.body2.fontSize }}
+              sx={{ fontSize: "0.75rem" }}
             >
               {link.label.toUpperCase()}
             </Link>
