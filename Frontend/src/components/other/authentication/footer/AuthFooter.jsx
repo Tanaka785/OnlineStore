@@ -25,6 +25,15 @@ const footerLinks = [
   "Help",
 ];
 
+const copyrightLinks = [
+  "WebVibes. All Rights Reserved",
+  "User Agreement",
+  "Privacy Policy",
+  "Copyright",
+  "Affiliates",
+  "Guidelines",
+];
+
 export default function AuthFooter() {
   const theme = useTheme();
   return (
@@ -82,35 +91,53 @@ export default function AuthFooter() {
           </Link>
         </Box>
       </Box>
-      <Box
-        sx={{
-          width: "100%",
-          height: "100%",
-          bottom: 0,
-          backgroundColor: "black",
-          display: "grid",
-          placeItems: "center",
-        }}
-      >
-        <List
+      {/* Footer Links box */}
+      <Box sx={{ backgroundColor: "black", width: "100%" }}>
+        <Box
           sx={{
-            // border: "1px solid red",
+            width: "100%",
             height: "100%",
-            // width: "100%",
-            color: theme.palette.background.paper,
+            bottom: 0,
+
+            display: "grid",
+            placeItems: "center",
+          }}
+        >
+          <List
+            sx={{
+              // border: "1px solid red",
+              height: "100%",
+              // width: "100%",
+              color: theme.palette.background.paper,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {footerLinks.map((link) => (
+              <ListItemButton key={link} disablePadding>
+                <ListItem sx={{ fontSize: theme.typography.body2 }}>
+                  {link}
+                </ListItem>
+              </ListItemButton>
+            ))}
+          </List>
+        </Box>
+        <Box
+          sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          {footerLinks.map((link) => (
-            <ListItemButton key={link} disablePadding>
-              <ListItem sx={{ fontSize: theme.typography.body2 }}>
-                {link}
-              </ListItem>
-            </ListItemButton>
+          {copyrightLinks.map((link) => (
+            <List sx={{ color: theme.palette.background.paper }}>
+              <ListItemButton disablePadding>
+                <ListItem sx={{ fontSize: "0.6rem" }}>{link}</ListItem>
+              </ListItemButton>
+            </List>
           ))}
-        </List>
+        </Box>
       </Box>
     </Box>
   );
