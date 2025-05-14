@@ -19,7 +19,10 @@ const HalfBoxFormControlLabel = styled(FormControlLabel)(({ theme }) => ({
   // borderRadius: 5,
 }));
 
-export default function UserCategory() {
+export default function UserCategory({
+  selectedCategory,
+  setSelectedCategory,
+}) {
   const theme = useTheme();
   return (
     <CenteredBox sx={{ display: "flex", marginTop: 4 }}>
