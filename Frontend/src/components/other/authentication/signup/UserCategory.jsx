@@ -36,22 +36,26 @@ export default function UserCategory({
           Choose Your Category
         </FormLabel>
         <RadioGroup
+          value={selectedCategory}
+          onChange={(e) => {
+            setSelectedCategory(e.target.value);
+            console.log("Selected category:", e.target.value);
+          }}
           sx={{
             display: "flex",
             flexDirection: "row",
             marginLeft: 1.5,
-            // TODO find out why the formcontrolLabels are overlapping the form
             width: "100%",
           }}
         >
           <HalfBoxFormControlLabel
-            value="option1"
+            value="Artist"
             control={<Radio />}
             label="Artist Signup"
           />
           <HalfBoxFormControlLabel
             component="div"
-            value="option2"
+            value="Customer"
             control={<Radio />}
             label="Customer Signup"
           />

@@ -7,9 +7,10 @@ import UserCategory from "../components/other/authentication/signup/UserCategory
 import AuthenticationFields from "../components/other/authentication/signup/authentication-fields/AuthenticationFields";
 import AuthFooter from "../components/other/authentication/footer/AuthFooter";
 import TermsAndAgreements from "../components/other/authentication/signup/TermsAndAgreement";
+import { useState } from "react";
 
 export default function SignupPage() {
-  const [selectedCategory, setSelectedCategory] = React.useState("Customer");
+  const [selectedCategory, setSelectedCategory] = useState("Customer");
 
   return (
     <Box sx={{ display: "grid", width: "100%" }}>
@@ -25,7 +26,10 @@ export default function SignupPage() {
       >
         <AuthenticationHeader authLink="Login" />
         <Promo />
-        <UserCategory />
+        <UserCategory
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
         <AuthenticationFields />
         <TermsAndAgreements />
         <AuthFooter />
