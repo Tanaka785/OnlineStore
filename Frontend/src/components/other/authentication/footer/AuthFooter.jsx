@@ -19,6 +19,15 @@ const bigLinks = [
   { label: "Help", url: "/" },
 ];
 
+const smallLinks = [
+  { label: "Redbubble. All Rights Reserved", url: "/" },
+  { label: "User Agreement", url: "/" },
+  { label: "Privacy Policy", url: "/" },
+  { label: "Copyright", url: "/" },
+  { label: "Affiliates", url: "/" },
+  { label: "Guidelines", url: "/" },
+];
+
 export default function AuthFooter() {
   const theme = useTheme();
   return (
