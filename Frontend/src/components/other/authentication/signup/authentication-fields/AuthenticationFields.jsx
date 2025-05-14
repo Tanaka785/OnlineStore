@@ -19,7 +19,9 @@ export default function AuthenticationFields({
     <CenteredBox sx={{ marginBlock: 4 }}>
       <FormControl sx={{ width: "100%", gap: 3 }}>
         <StandardTextField label="Email" />
-        <StandardTextField label="Username" />
+        <StandardTextField
+          label={selectedCategory === "Customer" ? "Username" : "Shop name"}
+        />
         <StandardTextField label="Password" />
         <FormControlLabel
           control={<Checkbox color="secondary" />}

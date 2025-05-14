@@ -30,7 +30,10 @@ export default function SignupPage() {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-        <AuthenticationFields />
+        <AuthenticationFields
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
         <TermsAndAgreements />
         <AuthFooter />
       </Box>
