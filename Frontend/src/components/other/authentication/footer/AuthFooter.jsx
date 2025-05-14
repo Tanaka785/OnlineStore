@@ -1,11 +1,4 @@
-import {
-  Box,
-  Link,
-  List,
-  ListItem,
-  ListItemButton,
-  Typography,
-} from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Public } from "@mui/icons-material";
@@ -13,26 +6,6 @@ import { Public } from "@mui/icons-material";
 const StyledTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.main,
 }));
-
-const footerLinks = [
-  "About Us",
-  "Social Responsibility",
-  "Blog",
-  "Delivery",
-  "Investor Store",
-  "Jobs",
-  "Contact Us",
-  "Help",
-];
-
-const copyrightLinks = [
-  "WebVibes. All Rights Reserved",
-  "User Agreement",
-  "Privacy Policy",
-  "Copyright",
-  "Affiliates",
-  "Guidelines",
-];
 
 export default function AuthFooter() {
   const theme = useTheme();
@@ -42,7 +15,7 @@ export default function AuthFooter() {
       sx={{
         display: "grid",
         bottom: 0,
-        marginTop: 8,
+        marginTop: 4,
         width: "100%",
         minHeight: 200,
         placeItems: "center",
