@@ -11,7 +11,10 @@ import CenteredBox from "../CenteredBox";
 import SubmitButton from "./SubmitButton";
 import { LOGIN } from "../../../../../constants/routes";
 
-export default function AuthenticationFields() {
+export default function AuthenticationFields({
+  selectedCategory,
+  setSelectedCategory,
+}) {
   return (
     <CenteredBox sx={{ marginBlock: 4 }}>
       <FormControl sx={{ width: "100%", gap: 3 }}>
