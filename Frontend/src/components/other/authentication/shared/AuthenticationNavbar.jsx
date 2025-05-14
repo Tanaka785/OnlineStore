@@ -3,7 +3,7 @@ import { Link } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import { LOGIN, SELLING } from "../../../../constants/routes";
 
-export default function AuthenticationNavbar() {
+export default function AuthenticationNavbar({ authLink }) {
   const theme = useTheme();
 
   return (
@@ -34,7 +34,7 @@ export default function AuthenticationNavbar() {
             }}
           >
             <Link href={`${SELLING}`}>Sell Your Designs</Link>
-            <Link href={`${LOGIN}`}>Login</Link>
+            <Link href={`${LOGIN}`}>{authLink}</Link>{" "}
           </Box>
         </Toolbar>
       </AppBar>

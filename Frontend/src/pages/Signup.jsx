@@ -12,7 +12,7 @@ export default function SignupPage() {
   return (
     <Box sx={{ display: "grid", width: "100%" }}>
       <Box sx={{ width: "100%" }}>
-        <AuthenticationNavbar />
+        <AuthenticationNavbar authLink="Login" />
       </Box>
       <Box
         sx={{
@@ -21,7 +21,7 @@ export default function SignupPage() {
           placeItems: "center",
         }}
       >
-        <AuthenticationHeader />
+        <AuthenticationHeader authLink="Login" />
         <Promo />
         <UserCategory />
         <AuthenticationFields />
