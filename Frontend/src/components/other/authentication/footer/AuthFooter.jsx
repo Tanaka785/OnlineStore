@@ -91,54 +91,6 @@ export default function AuthFooter() {
           </Link>
         </Box>
       </Box>
-      {/* Footer Links box */}
-      <Box sx={{ backgroundColor: "black", width: "100%" }}>
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            bottom: 0,
-
-            display: "grid",
-            placeItems: "center",
-          }}
-        >
-          <List
-            sx={{
-              // border: "1px solid red",
-              height: "100%",
-              // width: "100%",
-              color: theme.palette.background.paper,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            {footerLinks.map((link) => (
-              <ListItemButton key={link} disablePadding>
-                <ListItem sx={{ fontSize: theme.typography.body2 }}>
-                  {link}
-                </ListItem>
-              </ListItemButton>
-            ))}
-          </List>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          {copyrightLinks.map((link) => (
-            <List sx={{ color: theme.palette.background.paper }}>
-              <ListItemButton disablePadding>
-                <ListItem sx={{ fontSize: "0.6rem" }}>{link}</ListItem>
-              </ListItemButton>
-            </List>
-          ))}
-        </Box>
-      </Box>
     </Box>
   );
 }
