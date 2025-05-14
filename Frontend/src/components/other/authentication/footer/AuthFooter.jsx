@@ -19,7 +19,7 @@ const bigLinks = [
 ];
 
 const smallLinks = [
-  { label: "Redbubble. All Rights Reserved", url: "/" },
+  { label: "© Redbubble. All Rights Reserved", url: "/" },
   { label: "User Agreement", url: "/" },
   { label: "Privacy Policy", url: "/" },
   { label: "Copyright", url: "/" },
