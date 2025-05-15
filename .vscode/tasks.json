@@ -70,14 +70,34 @@
       "problemMatcher": []
     },
     {
+      "label": "Make Migrations",
+      "type": "shell",
+      "command": "bash",
+      "args": ["--login", "-c", "pipenv run python manage.py makemigrations"],
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Migrate Database",
+      "type": "shell",
+      "command": "bash",
+      "args": ["--login", "-c", "pipenv run python manage.py migrate"],
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Start Backend Development Environment",
       "dependsOn": [
         "Run Backend Server(Django)",
         "Open Terminal in Backend",
         "Open Terminal in Root Directory"
       ],
-      "dependsOrder": "parallel"
+      "dependsOrder": "parallel",
+      "problemMatcher": []
     }
-
   ]
 }
