@@ -62,13 +62,12 @@
     {
       "label": "Run Backend Server(Django)",
       "type": "shell",
-      "command": "python",
-      "args": ["manage.py", "runserver"],
+      "command": "bash",
+      "args": ["--login", "-c", "python manage.py runserver"],
       "options": {
-        "cwd": "${workspaceFolder}/backend"
+        "cwd": "${workspaceFolder}/Backend"
       },
       "problemMatcher": []
     }
-
   ]
 }
