@@ -59,5 +59,16 @@
       },
       "problemMatcher": []
     },
+    {
+      "label": "Run Backend Server(Django)",
+      "type": "shell",
+      "command": "python",
+      "args": ["manage.py", "runserver"],
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    }
+
   ]
 }
