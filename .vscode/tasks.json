@@ -47,7 +47,7 @@
       "label": "Open Terminal in Backend",
       "type": "shell",
       "command": "bash",
-      "args": ["--login"],
+      "args": ["--login", "-c", "pipenv shell"],
       "options": {
         "cwd": "${workspaceFolder}/backend"
       },
