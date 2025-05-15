@@ -63,9 +63,9 @@
       "label": "Run Backend Server(Django)",
       "type": "shell",
       "command": "bash",
-      "args": ["--login", "-c", "python manage.py runserver"],
+      "args": ["--login", "-c", "pipenv run python manage.py runserver"],
       "options": {
-        "cwd": "${workspaceFolder}/Backend"
+        "cwd": "${workspaceFolder}/backend"
       },
       "problemMatcher": []
     }
