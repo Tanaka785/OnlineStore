@@ -10,7 +10,7 @@ import StandardTextField from "./StandardTextField";
 import CenteredBox from "../CenteredBox";
 import SubmitButton from "./SubmitButton";
 import { LOGIN } from "../../../../../constants/routes";
-
+import { useForm } from "react-hook-form";
 export default function AuthenticationFields({ selectedCategory, state, setState }) {
   console.log(state);
 
