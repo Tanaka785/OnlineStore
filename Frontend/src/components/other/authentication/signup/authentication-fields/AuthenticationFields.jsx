@@ -13,14 +13,21 @@ import { LOGIN } from "../../../../../constants/routes";
 import { useForm } from "react-hook-form";
 export default function AuthenticationFields({ selectedCategory, state, setState }) {
   console.log(state);
+  const { register } = useForm();
 
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+  
   return (
     <CenteredBox sx={{ marginBlock: 4 }}>
       <FormControl sx={{ width: "100%", gap: 3 }}>
+        <StandardTextField {...register("email")} label="Email" />
         <StandardTextField
+          {...register("usernameOrShopName")}
           label={selectedCategory === "Customer" ? "Username" : "Shop name"}
         />
-        <StandardTextField label="Password" />
+        <StandardTextField {...register("password")} label="Password" />
         <FormControlLabel
           control={<Checkbox color="secondary" />}
           label="Email me special offers and artist news."
