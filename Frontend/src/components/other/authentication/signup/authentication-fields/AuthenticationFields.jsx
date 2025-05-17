@@ -27,6 +27,7 @@ export default function AuthenticationFields({ selectedCategory, state, setState
   });
 
   const onSubmit = async (data) => {
+    // TODO use setError of react-hook-form when you integrate the backend.
     try {
       await new Promise((resolve) => setTimeout(resolve, 2000));
       console.log(data);
