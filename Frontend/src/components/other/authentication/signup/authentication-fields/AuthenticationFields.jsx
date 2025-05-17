@@ -17,7 +17,14 @@ export default function AuthenticationFields({ selectedCategory, state, setState
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      email: "",
+      usernameOrShopName: "",
+      password: "",
+      specialOffers: false, // for the checkbox
+    },
+  });
 
   const onSubmit = async (data) => {
     try {
@@ -98,7 +105,13 @@ export default function AuthenticationFields({ selectedCategory, state, setState
           />
         </FormControl>
         <FormControlLabel
-          control={<Checkbox color="secondary" disabled={isSubmitting} />}
+          control={
+            <Checkbox
+              {...register("specialOffers")}
+              color="secondary"
+              disabled={isSubmitting}
+            />
+          }
           label="Email me special offers and artist news."
         />
         <SubmitButton
