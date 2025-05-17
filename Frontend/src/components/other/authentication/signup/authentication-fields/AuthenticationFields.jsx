@@ -12,22 +12,31 @@ import SubmitButton from "./SubmitButton";
 import { LOGIN } from "../../../../../constants/routes";
 import { useForm } from "react-hook-form";
 export default function AuthenticationFields({ selectedCategory, state, setState }) {
-  console.log(state);
-  const { register } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
   };
-  
+
   return (
     <CenteredBox sx={{ marginBlock: 4 }}>
-      <FormControl sx={{ width: "100%", gap: 3 }}>
-        <StandardTextField {...register("email")} label="Email" />
-        <StandardTextField
-          {...register("usernameOrShopName")}
-          label={selectedCategory === "Customer" ? "Username" : "Shop name"}
-        />
-        <StandardTextField {...register("password")} label="Password" />
+      <Box
+        component="form"
+        onSubmit={handleSubmit(onSubmit)}
+        sx={{ width: "100%", display: "flex", flexDirection: "column", gap: 3 }}
+      >
+        <FormControl sx={{ width: "100%" }}>
+          <StandardTextField {...register("email")} label="Email" />
+        </FormControl>
+        <FormControl sx={{ width: "100%" }}>
+          <StandardTextField
+            {...register("usernameOrShopName")}
+            label={selectedCategory === "Customer" ? "Username" : "Shop name"}
+          />
+        </FormControl>
+        <FormControl sx={{ width: "100%" }}>
+          <StandardTextField {...register("password")} label="Password" />
+        </FormControl>
         <FormControlLabel
           control={<Checkbox color="secondary" />}
           label="Email me special offers and artist news."
@@ -42,7 +51,7 @@ export default function AuthenticationFields({ selectedCategory, state, setState
             <b>Login</b>
           </Link>
         </Typography>
-      </FormControl>
+      </Box>
     </CenteredBox>
   );
 }
