@@ -26,16 +26,19 @@ export default function AuthenticationFields({ selectedCategory, state, setState
         sx={{ width: "100%", display: "flex", flexDirection: "column", gap: 3 }}
       >
         <FormControl sx={{ width: "100%" }}>
-          <StandardTextField {...register("email")} label="Email" />
+          <StandardTextField {...register("email", { required: true })} label="Email" />
         </FormControl>
         <FormControl sx={{ width: "100%" }}>
           <StandardTextField
-            {...register("usernameOrShopName")}
+            {...register("usernameOrShopName", { required: true })}
             label={selectedCategory === "Customer" ? "Username" : "Shop name"}
           />
         </FormControl>
         <FormControl sx={{ width: "100%" }}>
-          <StandardTextField {...register("password")} label="Password" />
+          <StandardTextField
+            {...register("password", { required: true })}
+            label="Password"
+          />
         </FormControl>
         <FormControlLabel
           control={<Checkbox color="secondary" />}
