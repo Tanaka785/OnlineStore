@@ -12,7 +12,11 @@ const StyledButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-export default function SubmitButton({ text }) {
+export default function SubmitButton({ text, ...props }) {
   const theme = useTheme();
-  return <StyledButton>{text}</StyledButton>;
+  return (
+    <StyledButton type="submit" {...props}>
+      {text}
+    </StyledButton>
+  );
 }
