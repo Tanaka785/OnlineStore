@@ -98,6 +98,16 @@
       ],
       "dependsOrder": "parallel",
       "problemMatcher": []
+    },
+    {
+      "label": "Start Frontend Development Environment",
+      "dependsOn": [
+        "Run Frontend Server (Vite)",
+        "Open Terminal in Frontend",
+        "Open Terminal in Root Directory"
+      ],
+      "dependsOrder": "parallel",
+      "problemMatcher": []
     }
   ]
 }
