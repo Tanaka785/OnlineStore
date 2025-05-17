@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import { Link } from "react-router-dom";
 import AuthenticationNavbar from "../components/other/authentication/shared/AuthenticationNavbar";
 import AuthenticationHeader from "../components/other/authentication/shared/AuthenticationHeader";
 import Promo from "../components/other/authentication/signup/Promo";
@@ -11,6 +10,12 @@ import { useState } from "react";
 
 export default function SignupPage() {
   const [selectedCategory, setSelectedCategory] = useState("Customer");
+  // TODO add selectedCategory into the state below.
+  const [state, setState] = useState({
+    email: "",
+    "usernameOrShopName": "",
+    "Password": "",
+  })
 
   return (
     <Box sx={{ display: "grid", width: "100%" }}>
