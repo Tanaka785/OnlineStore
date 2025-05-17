@@ -14,27 +14,13 @@ import { LOGIN } from "../../../../../constants/routes";
 export default function AuthenticationFields({ selectedCategory, state, setState }) {
   console.log(state);
 
-  const handleEmailChange = () => {
-    console.log("I Email");
-  }
-
-  const handleUsernameOrShopNameChange = () => {
-    console.log("I UsernameOrShopName");
-  };
-
-  const handlePasswordChange = () => {
-    console.log("I Password");
-  };
-
   return (
     <CenteredBox sx={{ marginBlock: 4 }}>
       <FormControl sx={{ width: "100%", gap: 3 }}>
-        <StandardTextField label="Email" onChange={handleEmailChange} />
         <StandardTextField
           label={selectedCategory === "Customer" ? "Username" : "Shop name"}
-          onChange={handleUsernameOrShopNameChange}
         />
-        <StandardTextField label="Password" onChange={handlePasswordChange} />
+        <StandardTextField label="Password" />
         <FormControlLabel
           control={<Checkbox color="secondary" />}
           label="Email me special offers and artist news."
