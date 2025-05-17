@@ -13,11 +13,7 @@ import { LOGIN } from "../../../../../constants/routes";
 import { useForm } from "react-hook-form";
 
 export default function AuthenticationFields({ selectedCategory, state, setState }) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -33,67 +29,39 @@ export default function AuthenticationFields({ selectedCategory, state, setState
         <FormControl sx={{ width: "100%" }}>
           <StandardTextField
             {...register("email", {
-              required: "Email is required",
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "Please enter a valid email address",
-              },
+              required: true,
+              pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
             })}
             label="Email"
-            error={!!errors.email}
-            helperText={errors.email?.message}
+            type="email"
           />
         </FormControl>
         <FormControl sx={{ width: "100%" }}>
           <StandardTextField
             {...register("usernameOrShopName", {
-              required:
-                selectedCategory === "Customer"
-                  ? "Username is required"
-                  : "Shop name is required",
-              minLength: {
-                value: 3,
-                message: "Must be at least 3 characters long",
-              },
-              maxLength: {
-                value: 20,
-                message: "Must not exceed 20 characters",
-              },
-              pattern: {
-                value: /^[A-Za-z0-9_-]*$/,
-                message:
-                  "Only letters, numbers, underscores and hyphens are allowed",
-              },
+              required: true,
+              minLength: 3,
+              maxLength: 20,
+              pattern: /^[A-Za-z0-9_-]*$/
             })}
+            type="text"
             label={selectedCategory === "Customer" ? "Username" : "Shop name"}
-            error={!!errors.usernameOrShopName}
-            helperText={errors.usernameOrShopName?.message}
           />
         </FormControl>
         <FormControl sx={{ width: "100%" }}>
           <StandardTextField
             {...register("password", {
-              required: "Password is required",
-              minLength: {
-                value: 8,
-                message: "Password must be at least 8 characters long",
-              },
-              pattern: {
-                value:
-                  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-                message:
-                  "Password must contain at least one letter, one number and one special character",
-              },
+              required: true,
+              minLength: 8,
+              pattern: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
             })}
             label="Password"
             type="password"
-            error={!!errors.password}
-            helperText={errors.password?.message}
           />
         </FormControl>
         <FormControlLabel
           control={
-            <Checkbox {...register("specialOffers")} color="secondary" />
+            <Checkbox color="secondary" />
           }
           label="Email me special offers and artist news."
         />
