@@ -16,11 +16,16 @@ export default function AuthenticationFields({ selectedCategory, state, setState
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      console.log(data);
+    } catch (error) {
+      console.error("Submission error:", error);
+    }
   };
 
   return (
@@ -43,6 +48,7 @@ export default function AuthenticationFields({ selectedCategory, state, setState
               (errors.email?.type === "required" && "Email is required") ||
               (errors.email?.type === "pattern" && "Please enter a valid email")
             }
+            disabled={isSubmitting}
           />
         </FormControl>
         <FormControl sx={{ width: "100%" }}>
@@ -66,6 +72,7 @@ export default function AuthenticationFields({ selectedCategory, state, setState
               (errors.usernameOrShopName?.type === "pattern" &&
                 "Only letters, numbers, underscores and hyphens allowed")
             }
+            disabled={isSubmitting}
           />
         </FormControl>
         <FormControl sx={{ width: "100%" }}>
@@ -87,13 +94,17 @@ export default function AuthenticationFields({ selectedCategory, state, setState
               (errors.password?.type === "pattern" &&
                 "Password must contain at least one letter, one number and one special character")
             }
+            disabled={isSubmitting}
           />
         </FormControl>
         <FormControlLabel
-          control={<Checkbox color="secondary" />}
+          control={<Checkbox color="secondary" disabled={isSubmitting} />}
           label="Email me special offers and artist news."
         />
-        <SubmitButton text="Sign Up" />
+        <SubmitButton
+          text={isSubmitting ? "Signing Up..." : "Sign Up"}
+          disabled={isSubmitting}
+        />
         <Typography
           component={"div"}
           sx={{ width: "100%", textAlign: "center" }}

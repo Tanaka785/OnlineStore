@@ -10,12 +10,16 @@ const StyledButton = styled(Button)(({ theme }) => ({
   "&: hover": {
     backgroundColor: "pink",
   },
+  "&:disabled": {
+    backgroundColor: theme.palette.action.disabledBackground,
+    color: theme.palette.action.disabled,
+  },
 }));
 
-export default function SubmitButton({ text, ...props }) {
+export default function SubmitButton({ text, disabled }) {
   const theme = useTheme();
   return (
-    <StyledButton type="submit" {...props}>
+    <StyledButton type="submit" disabled={disabled}>
       {text}
     </StyledButton>
   );
