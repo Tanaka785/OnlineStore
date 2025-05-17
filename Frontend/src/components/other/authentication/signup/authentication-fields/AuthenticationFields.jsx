@@ -12,6 +12,7 @@ import SubmitButton from "./SubmitButton";
 import { LOGIN } from "../../../../../constants/routes";
 
 export default function AuthenticationFields({ selectedCategory, state, setState }) {
+  console.log(state.email, state.usernameOrShopName, state.Password);
   return (
     <CenteredBox sx={{ marginBlock: 4 }}>
       <FormControl sx={{ width: "100%", gap: 3 }}>

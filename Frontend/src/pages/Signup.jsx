@@ -14,7 +14,7 @@ export default function SignupPage() {
   const [state, setState] = useState({
     email: "",
     "usernameOrShopName": "",
-    "Password": "",
+    "password": "",
   })
 
   return (
