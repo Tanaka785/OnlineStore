@@ -77,10 +77,12 @@ export default function AuthenticationFields({
   const onSubmit = async (data) => {
     try {
       const payload = {
-        ...data,
-        category: selectedCategory,
+        email: data.email,
+        username: data.usernameOrShopName,
+        password: data.password,
+        customer_type: selectedCategory.toLowerCase(), 
       };
-
+      console.log(payload);
       const response = await fetch(`${BASE_URL}/auth/register/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
