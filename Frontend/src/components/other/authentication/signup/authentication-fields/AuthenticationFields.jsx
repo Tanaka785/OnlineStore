@@ -34,14 +34,12 @@ const signupSchema = z.object({
       /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])/,
       "Password must contain at least one letter, one number and one special character"
     ),
-  specialOffers: z.boolean().default(false),
 });
 
 const defaultValues = {
   email: "",
   usernameOrShopName: "",
   password: "",
-  specialOffers: false,
 };
 
 const formFields = [
@@ -118,11 +116,9 @@ export default function AuthenticationFields({
             />
           </FormControl>
         ))}
-        {/* TODO ask Ai why i didn't add this checkbox to the formfields since it is part of the form */}
         <FormControlLabel
           control={
             <Checkbox
-              {...register("specialOffers")}
               color="secondary"
               disabled={isSubmitting}
             />
