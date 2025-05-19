@@ -13,7 +13,7 @@ import { LOGIN } from "../../../../../constants/routes";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
+import { BASE_URL } from "../../../../../constants/config";
 const signupSchema = z.object({
   email: z
     .string()
@@ -82,10 +82,10 @@ export default function AuthenticationFields({
     try {
       const payload = {
         ...data,
-        category: selectedCategory, 
+        category: selectedCategory,
       };
-      
-      await fetch("/api/auth/register/", {
+
+      await fetch(`${BASE_URL}/api/auth/register/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
