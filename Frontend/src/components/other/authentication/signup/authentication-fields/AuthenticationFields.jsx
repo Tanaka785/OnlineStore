@@ -110,7 +110,7 @@ export default function AuthenticationFields({
             />
           </FormControl>
         ))}
-
+        {/* TODO ask Ai why i didn't add this checkbox to the formfields since it is part of the form */}
         <FormControlLabel
           control={
             <Checkbox
