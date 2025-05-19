@@ -14,6 +14,8 @@ class User(AbstractUser):
     gender = models.CharField(
         max_length=10,
         choices=[("M", "Male"), ("F", "Female")],
+        blank=True,
+        null=True,
     )
     customer_type = models.CharField(
         max_length=10, choices=CUSTOMER_TYPE_CHOICES, default="customer"
