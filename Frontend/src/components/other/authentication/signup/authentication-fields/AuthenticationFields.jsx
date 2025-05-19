@@ -85,7 +85,7 @@ export default function AuthenticationFields({
         category: selectedCategory,
       };
 
-      await fetch(`${BASE_URL}/api/auth/register/`, {
+      await fetch(`${BASE_URL}/auth/register/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
