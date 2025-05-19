@@ -80,8 +80,16 @@ export default function AuthenticationFields({
 
   const onSubmit = async (data) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      console.log(data);
+      const payload = {
+        ...data,
+        category: selectedCategory, 
+      };
+      
+      await fetch("/api/auth/register/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
     } catch (error) {
       console.error("Submission error:", error);
     }
