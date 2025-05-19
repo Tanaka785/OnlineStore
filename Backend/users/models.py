@@ -18,7 +18,7 @@ class User(AbstractUser):
         null=True,
     )
     customer_type = models.CharField(
-        max_length=10, choices=CUSTOMER_TYPE_CHOICES, default="customer"
+        max_length=10, choices=CUSTOMER_TYPE_CHOICES, null=False, blank=False
     )
 
     def __str__(self):
