@@ -85,11 +85,13 @@ export default function AuthenticationFields({
         category: selectedCategory,
       };
 
-      await fetch(`${BASE_URL}/auth/register/`, {
+      const response = await fetch(`${BASE_URL}/auth/register/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
+      const responseData = await response.json();
+      console.log('Registration response:', responseData);
     } catch (error) {
       console.error("Submission error:", error);
     }
