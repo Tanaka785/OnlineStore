@@ -66,8 +66,6 @@ const formFields = [
 
 export default function AuthenticationFields({
   selectedCategory,
-  state,
-  setState,
 }) {
   const {
     register,
