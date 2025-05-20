@@ -51,8 +51,8 @@ class UserAdmin(BaseUserAdmin):
                 "fields": (
                     "username",
                     "email",
-                    "phone_number",
                     "address",
+                    "phone_number",
                     "date_of_birth",
                     "gender",
                     "customer_type",
