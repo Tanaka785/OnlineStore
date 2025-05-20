@@ -9,13 +9,7 @@ import TermsAndAgreements from "../components/other/authentication/signup/TermsA
 import { useState } from "react";
 
 export default function SignupPage() {
-  const [selectedCategory, setSelectedCategory] = useState("Customer");
-  // TODO add selectedCategory into the state below.
-  const [state, setState] = useState({
-    email: "",
-    "usernameOrShopName": "",
-    "password": "",
-  })
+  const [selectedCategory, setSelectedCategory] = useState("Customer")
 
   return (
     <Box sx={{ display: "grid", width: "100%" }}>
@@ -38,8 +32,6 @@ export default function SignupPage() {
         <AuthenticationFields
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
-          state={state}
-          setState={setState}
         />
         <TermsAndAgreements />
         <AuthFooter />
