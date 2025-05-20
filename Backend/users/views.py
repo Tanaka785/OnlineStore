@@ -26,7 +26,6 @@ class SignupView(generics.CreateAPIView):
             return Response(
                 {
                     "message": "Validation failed.",
-                    "status": "error",
                     "errors": serializer.errors,
                 },
                 status=status.HTTP_400_BAD_REQUEST,
