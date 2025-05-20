@@ -62,9 +62,7 @@ const formFields = [
   },
 ];
 
-export default function AuthenticationFields({
-  selectedCategory,
-}) {
+export default function AuthenticationFields({ selectedCategory }) {
   const {
     register,
     handleSubmit,
@@ -80,16 +78,19 @@ export default function AuthenticationFields({
         email: data.email,
         username: data.usernameOrShopName,
         password: data.password,
-        customer_type: selectedCategory.toLowerCase(), 
+        customer_type: selectedCategory.toLowerCase(),
       };
-      console.log(payload);
       const response = await fetch(`${BASE_URL}/auth/register/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
       const responseData = await response.json();
-      console.log('Registration response:', responseData);
+      console.log("Registration response:", {
+        status: response.status,
+        headers: Object.fromEntries(response.headers.entries()),
+        data: responseData,
+      });
     } catch (error) {
       console.error("Submission error:", error);
     }
@@ -119,12 +120,7 @@ export default function AuthenticationFields({
           </FormControl>
         ))}
         <FormControlLabel
-          control={
-            <Checkbox
-              color="secondary"
-              disabled={isSubmitting}
-            />
-          }
+          control={<Checkbox color="secondary" disabled={isSubmitting} />}
           label="Email me special offers and artist news."
         />
 
