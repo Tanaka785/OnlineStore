@@ -17,7 +17,7 @@ class SignupSerializer(serializers.ModelSerializer):
         ],
     )
     email = serializers.EmailField(required=True)
-    username = serializers.CharField(
+    userNameOrShopname = serializers.CharField(
         required=True,
         min_length=3,
         max_length=20,
@@ -32,23 +32,23 @@ class SignupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ("username", "password", "email", "customer_type")
+        fields = ("userNameOrShopname", "password", "email", "customer_type")
 
     def validate_email(self, value):
         if User.objects.filter(email=value).exists():
             raise serializers.ValidationError("A user with this email already exists.")
         return value
 
-    def validate_username(self, value):
-        if User.objects.filter(username=value).exists():
+    def validate_userNameOrShopname(self, value):
+        if User.objects.filter(userNameOrShopname=value).exists():
             raise serializers.ValidationError(
-                "A user with this username already exists."
+                "A user with this username or shop name already exists."
             )
         return value
 
     def create(self, validated_data):
         user = User.objects.create_user(
-            username=validated_data["username"],
+            userNameOrShopname=validated_data["userNameOrShopname"],
             email=validated_data["email"],
             password=validated_data["password"],
             customer_type=validated_data["customer_type"],
