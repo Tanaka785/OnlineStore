@@ -78,7 +78,7 @@ export default function AuthenticationFields({
     try {
       const payload = {
         email: data.email,
-        username: data.usernameOrShopName,
+        username: "",
         password: data.password,
         customer_type: selectedCategory.toLowerCase(), 
       };
