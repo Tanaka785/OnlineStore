@@ -4,8 +4,9 @@ import AuthCenteredBox from "../components/other/authentication/shared/AuthCente
 import AuthenticationHeader from "../components/other/authentication/shared/AuthenticationHeader";
 import AuthHeading from "../components/other/authentication/signup/Promo";
 import { SIGNUP } from "../constants/routes";
-import { Link, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import CenteredBox from "../components/other/authentication/signup/CenteredBox";
+import StandardTextField from "../components/other/authentication/signup/authentication-fields/StandardTextField";
 
 export default function LoginPage() {
   return (
@@ -26,8 +27,18 @@ export default function LoginPage() {
           }
         />
         <CenteredBox sx={{ marginBlock: 8 }}>
-          <Typography>
-            <b>Authentication Fields.</b>
+          <StandardTextField label="Email or Username" />
+          <StandardTextField label="Password" />
+          <Typography
+            component="div"
+            sx={{
+              display: "flex",
+              width: "100%",
+              border: "1px solid blue",
+              justifyContent: "flex-end",
+            }}
+          >
+            Lost Password?
           </Typography>
         </CenteredBox>
       </AuthCenteredBox>
