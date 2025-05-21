@@ -8,6 +8,7 @@ import AuthFooter from "../components/other/authentication/footer/AuthFooter";
 import TermsAndAgreements from "../components/other/authentication/signup/TermsAndAgreement";
 import { useState } from "react";
 import AuthBox from "../components/other/authentication/shared/AuthBox";
+import AuthCenteredBox from "../components/other/authentication/shared/AuthCenteredBox";
 
 export default function SignupPage() {
   const [selectedCategory, setSelectedCategory] = useState("Customer")
@@ -15,13 +16,8 @@ export default function SignupPage() {
   return (
     <AuthBox>
       <AuthenticationNavbar authLink="Login" />
-      <Box
-        sx={{
-          width: "100%",
-          display: "grid",
-          placeItems: "center",
-        }}
-      >
+
+      <AuthCenteredBox>
         <AuthenticationHeader authLink="Login" />
         <Promo />
         <UserCategory
@@ -33,7 +29,8 @@ export default function SignupPage() {
           setSelectedCategory={setSelectedCategory}
         />
         <TermsAndAgreements />
-      </Box>
+      </AuthCenteredBox>
+
       <AuthFooter />
     </AuthBox>
   );
