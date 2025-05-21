@@ -1,10 +1,17 @@
 import { AppBar, Box, Toolbar } from "@mui/material";
 import { Link } from "@mui/material";
 import { useTheme } from "@emotion/react";
-import { LOGIN, SELLING } from "../../../../constants/routes";
+import { LOGIN, SIGNUP, SELLING } from "../../../../constants/routes";
 
 export default function AuthenticationNavbar({ authLink }) {
   const theme = useTheme();
+  
+  let authHref = LOGIN;
+  if (authLink === "Signup") {
+    authHref = SIGNUP;
+  } else if (authLink === "Login") {
+    authHref = LOGIN;
+  }
 
   return (
     <Box
@@ -34,7 +41,7 @@ export default function AuthenticationNavbar({ authLink }) {
             }}
           >
             <Link href={`${SELLING}`}>Sell Your Designs</Link>
-            <Link href={`${LOGIN}`}>{authLink}</Link>{" "}
+            <Link href={authHref}>{authLink}</Link>{" "}
           </Box>
         </Toolbar>
       </AppBar>
