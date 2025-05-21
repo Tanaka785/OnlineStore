@@ -16,10 +16,10 @@ const StyledButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-export default function SubmitButton({ text, disabled }) {
+export default function SubmitButton({ text, disabled, sx }) {
   const theme = useTheme();
   return (
-    <StyledButton type="submit" disabled={disabled}>
+    <StyledButton type="submit" disabled={disabled} sx={sx}>
       {text}
     </StyledButton>
   );

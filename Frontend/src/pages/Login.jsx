@@ -63,7 +63,7 @@ export default function LoginPage() {
             >
               By clicking Log In, you agree to our User Agreement
             </Typography>
-            <SubmitButton text="Log In" disabled={false} />
+            <SubmitButton text="Log In" disabled={false} sx={{ marginTop: 2 }} />
           </FormControl>
         </CenteredBox>
       </AuthCenteredBox>
