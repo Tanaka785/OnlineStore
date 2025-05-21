@@ -4,7 +4,8 @@ import AuthCenteredBox from "../components/other/authentication/shared/AuthCente
 import AuthenticationHeader from "../components/other/authentication/shared/AuthenticationHeader";
 import AuthHeading from "../components/other/authentication/signup/Promo";
 import { SIGNUP } from "../constants/routes";
-import { Link } from "@mui/material";
+import { Link, Typography } from "@mui/material";
+import CenteredBox from "../components/other/authentication/signup/CenteredBox";
 
 export default function LoginPage() {
   return (
@@ -17,10 +18,18 @@ export default function LoginPage() {
           primaryText="Login"
           secondaryText={
             <>
-              Need an account? <Link href={SIGNUP}><b>Sign Up</b></Link>
+              Need an account?{" "}
+              <Link href={SIGNUP}>
+                <b>Sign Up</b>
+              </Link>
             </>
           }
         />
+        <CenteredBox sx={{ marginBlock: 8 }}>
+          <Typography>
+            <b>Authentication Fields.</b>
+          </Typography>
+        </CenteredBox>
       </AuthCenteredBox>
     </AuthBox>
   );
