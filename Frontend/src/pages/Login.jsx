@@ -9,6 +9,7 @@ import CenteredBox from "../components/other/authentication/signup/CenteredBox";
 import StandardTextField from "../components/other/authentication/signup/authentication-fields/StandardTextField";
 import { styled, useTheme } from "@mui/material/styles";
 import SubmitButton from "../components/other/authentication/signup/authentication-fields/SubmitButton";
+import AuthFooter from "../components/other/authentication/footer/AuthFooter";
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
   display: "flex",
@@ -80,6 +81,7 @@ export default function LoginPage() {
             and Terms of Service apply.
           </StyledTypography>
         </CenteredBox>
+        <AuthFooter />
       </AuthCenteredBox>
     </AuthBox>
   );
