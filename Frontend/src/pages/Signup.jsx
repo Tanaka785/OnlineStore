@@ -14,9 +14,7 @@ export default function SignupPage() {
 
   return (
     <AuthBox>
-      <Box sx={{ width: "100%" }}>
-        <AuthenticationNavbar authLink="Login" />
-      </Box>
+      <AuthenticationNavbar authLink="Login" />
       <Box
         sx={{
           width: "100%",
