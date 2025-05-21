@@ -7,12 +7,13 @@ import AuthenticationFields from "../components/other/authentication/signup/auth
 import AuthFooter from "../components/other/authentication/footer/AuthFooter";
 import TermsAndAgreements from "../components/other/authentication/signup/TermsAndAgreement";
 import { useState } from "react";
+import AuthBox from "../components/other/authentication/shared/AuthBox";
 
 export default function SignupPage() {
   const [selectedCategory, setSelectedCategory] = useState("Customer")
 
   return (
-    <Box sx={{ display: "grid", width: "100vh", height: "100vh" }}>
+    <AuthBox>
       <Box sx={{ width: "100%" }}>
         <AuthenticationNavbar authLink="Login" />
       </Box>
@@ -36,6 +37,6 @@ export default function SignupPage() {
         <TermsAndAgreements />
         <AuthFooter />
       </Box>
-    </Box>
+    </AuthBox>
   );
 }

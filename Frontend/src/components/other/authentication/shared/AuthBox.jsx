@@ -5,9 +5,9 @@ export default function AuthBox({ children, ...props }) {
     <Box
       sx={{
         display: "grid",
-        width: "100vh",
-        height: "100vh",
-        ...props.sx, 
+        width: "100%",
+        height: "100%",
+        ...props.sx,
       }}
       {...props}
     >

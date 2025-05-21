@@ -17,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <CssBaseline />
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex", width: "100%", height: "100%" }}>
         <Routes>
           <Route path={HOME} element={<Homepage />} />
           <Route path={SELLING} element={<Homepage />} />
