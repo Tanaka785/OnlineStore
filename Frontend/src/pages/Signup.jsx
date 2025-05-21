@@ -33,8 +33,8 @@ export default function SignupPage() {
           setSelectedCategory={setSelectedCategory}
         />
         <TermsAndAgreements />
-        <AuthFooter />
       </Box>
+      <AuthFooter />
     </AuthBox>
   );
 }
