@@ -63,8 +63,22 @@ export default function LoginPage() {
             >
               By clicking Log In, you agree to our User Agreement
             </Typography>
-            <SubmitButton text="Log In" disabled={false} sx={{ marginTop: 2 }} />
+            <SubmitButton
+              text="Log In"
+              disabled={false}
+              sx={{ marginTop: 2 }}
+            />
           </FormControl>
+          <StyledTypography 
+            component="div" variant="body2"
+            sx={{
+              textAlign: "center",
+              marginTop: 4,
+            }}
+          >
+            This site is protected by reCAPTCHA and the Google Privacy Policy
+            and Terms of Service apply.
+          </StyledTypography>
         </CenteredBox>
       </AuthCenteredBox>
     </AuthBox>
