@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import AuthenticationNavbar from "../components/other/authentication/shared/AuthenticationNavbar";
 import AuthenticationHeader from "../components/other/authentication/shared/AuthenticationHeader";
 import Promo from "../components/other/authentication/signup/Promo";
@@ -18,7 +17,7 @@ export default function SignupPage() {
       <AuthenticationNavbar authLink="Login" />
 
       <AuthCenteredBox>
-        <AuthenticationHeader authLink="Login" />
+        <AuthenticationHeader />
         <Promo />
         <UserCategory
           selectedCategory={selectedCategory}
