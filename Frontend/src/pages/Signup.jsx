@@ -12,7 +12,7 @@ export default function SignupPage() {
   const [selectedCategory, setSelectedCategory] = useState("Customer")
 
   return (
-    <Box sx={{ display: "grid", width: "100%" }}>
+    <Box sx={{ display: "grid", width: "100vh", height: "100vh" }}>
       <Box sx={{ width: "100%" }}>
         <AuthenticationNavbar authLink="Login" />
       </Box>
