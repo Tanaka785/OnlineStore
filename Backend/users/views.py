@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import SignupSerializer
+from .serializers import SignupSerializer, UserSerializer
 from .models import User
 
 class UserListView(generics.ListAPIView):
