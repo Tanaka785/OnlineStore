@@ -39,8 +39,17 @@ const loginSchema = z.object({
     ),
 });
 
-const onSubmit = (data) => {
-  console.log(data);
+const onSubmit = async (data) => {
+  try {
+    const payload = {
+      username: data.emailOrUsername,
+      password: data.password
+    }
+    console.log(payload);
+    
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export default function LoginPage() {
