@@ -2,6 +2,17 @@ from rest_framework import serializers
 from .models import User
 
 
+class UserSerializer(serializers.ModelSerializer):
+    extra_kwargs = {
+        "password": {
+            "write_only": True,
+        }
+    }
+
+    class Meta:
+        model = User
+        fields = ("username", "email", "customer_type")
+        
 class SignupSerializer(serializers.ModelSerializer):
     customer_type = serializers.ChoiceField(
         choices=User.CUSTOMER_TYPE_CHOICES,
