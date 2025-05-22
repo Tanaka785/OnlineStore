@@ -11,18 +11,46 @@ import { styled, useTheme } from "@mui/material/styles";
 import SubmitButton from "../components/other/authentication/signup/authentication-fields/SubmitButton";
 import AuthFooter from "../components/other/authentication/footer/AuthFooter";
 import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
   display: "flex",
   width: "100%",
 }));
 
+const isEmail = (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+const isUsername = (val) => /^[A-Za-z0-9_-]{3,20}$/.test(val);
+
+const loginSchema = z.object({
+  emailOrUsername: z
+    .string()
+    .min(1, "Email or Username is required")
+    .max(50, "Email or Username must be less than 30 characters")
+    .refine((val) => isEmail(val) || isUsername(val), {
+      message: "Must be a valid email or username",
+    }),
+  password: z
+    .string()
+    .min(8, "Password must be at least 8 characters")
+    .regex(
+      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])/,
+      "Password must contain at least one letter, one number and one special character"
+    ),
+});
+
 const onSubmit = (data) => {
   console.log(data);
 };
 
 export default function LoginPage() {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm({
+    resolver: zodResolver(loginSchema),
+  });
 
   return (
     <AuthBox>
@@ -42,45 +70,60 @@ export default function LoginPage() {
           }
         />
         <CenteredBox sx={{ marginBlock: 8 }}>
-          <Box component="form" onSubmit={handleSubmit(onSubmit)}>
-            <FormControl
-              sx={{
-                width: "100%",
-                display: "flex",
-                flexDirection: "column",
-                gap: 1,
-              }}
-            >
-              <StandardTextField
-                {...register("emailOrUsername")}
-                label="Email or Username"
-              />
-              <StandardTextField {...register("password")} label="Password" />
-              <StyledTypography
-                component="div"
+          <Box
+            component="form"
+            onSubmit={handleSubmit(onSubmit)}
+            sx={{ width: "100%" }}
+          >
+            <fieldset disabled={isSubmitting} style={{ border: "none", width: "100%" }}>
+              <FormControl
                 sx={{
-                  justifyContent: "flex-end",
-                  marginTop: 4,
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 1,
                 }}
               >
-                <Link href="#">Lost Password?</Link>
-              </StyledTypography>
-              <Typography
-                component="div"
-                variant="body2"
-                sx={{
-                  textAlign: "center",
-                  marginTop: 4,
-                }}
-              >
-                By clicking Log In, you agree to our User Agreement
-              </Typography>
-              <SubmitButton
-                text="Log In"
-                disabled={false}
-                sx={{ marginTop: 2 }}
-              />
-            </FormControl>
+                <StandardTextField
+                  {...register("emailOrUsername")}
+                  label="Email or Username"
+                  type="text"
+                  error={!!errors.emailOrUsername}
+                  helperText={errors.emailOrUsername?.message}
+                />
+                <StandardTextField
+                  {...register("password")}
+                  label="Password"
+                  type="password"
+                  error={!!errors.password}
+                  helperText={errors.password?.message}
+                />
+                <StyledTypography
+                  component="div"
+                  sx={{
+                    justifyContent: "flex-end",
+                    marginTop: 4,
+                  }}
+                >
+                  <Link href="#">Lost Password?</Link>
+                </StyledTypography>
+                <Typography
+                  component="div"
+                  variant="body2"
+                  sx={{
+                    textAlign: "center",
+                    marginTop: 4,
+                  }}
+                >
+                  By clicking Log In, you agree to our User Agreement
+                </Typography>
+                <SubmitButton
+                  text={isSubmitting ? "Logging In..." : "Log In"}
+                  disabled={false}
+                  sx={{ marginTop: 2 }}
+                />
+              </FormControl>
+            </fieldset>
           </Box>
           <StyledTypography
             component="div"
