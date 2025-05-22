@@ -5,6 +5,9 @@ from rest_framework import status
 from .serializers import SignupSerializer
 from .models import User
 
+class UserListView(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer  
 class SignupView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = SignupSerializer
