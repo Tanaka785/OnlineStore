@@ -124,22 +124,17 @@ export default function AuthenticationFields({ selectedCategory }) {
           control={<Checkbox color="secondary" disabled={isSubmitting} />}
           label="Email me special offers and artist news."
         />
-
         <SubmitButton
           text={isSubmitting ? "Signing Up..." : "Sign Up"}
           disabled={isSubmitting}
         />
-
-        <Typography
-          component={"div"}
-          sx={{ width: "100%", textAlign: "center" }}
-        >
-          Already have an account?{" "}
-          <Link href={LOGIN}>
-            <b>Login</b>
-          </Link>
-        </Typography>
       </Box>
+      <Typography component={"div"} sx={{ width: "100%", textAlign: "center", marginTop: 4 }}>
+        Already have an account?{" "}
+        <Link href={LOGIN}>
+          <b>Login</b>
+        </Link>
+      </Typography>
     </CenteredBox>
   );
 }
