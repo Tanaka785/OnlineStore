@@ -10,13 +10,20 @@ import StandardTextField from "../components/other/authentication/signup/authent
 import { styled, useTheme } from "@mui/material/styles";
 import SubmitButton from "../components/other/authentication/signup/authentication-fields/SubmitButton";
 import AuthFooter from "../components/other/authentication/footer/AuthFooter";
+import { useForm } from "react-hook-form";
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
   display: "flex",
   width: "100%",
 }));
 
+const onSubmit = (data) => {
+  console.log(data);
+};
+
 export default function LoginPage() {
+  const { register, handleSubmit } = useForm();
+
   return (
     <AuthBox>
       <AuthenticationNavbar authLink="Signup" />
@@ -35,43 +42,49 @@ export default function LoginPage() {
           }
         />
         <CenteredBox sx={{ marginBlock: 8 }}>
-          <FormControl
-            sx={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              gap: 1,
-            }}
-          >
-            <StandardTextField label="Email or Username" />
-            <StandardTextField label="Password" />
-            <StyledTypography
-              component="div"
+          <Box component="form" onSubmit={handleSubmit(onSubmit)}>
+            <FormControl
               sx={{
-                justifyContent: "flex-end",
-                marginTop: 4,
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                gap: 1,
               }}
             >
-              <Link href="#">Lost Password?</Link>
-            </StyledTypography>
-            <Typography
-              component="div"
-              variant="body2"
-              sx={{
-                textAlign: "center",
-                marginTop: 4,
-              }}
-            >
-              By clicking Log In, you agree to our User Agreement
-            </Typography>
-            <SubmitButton
-              text="Log In"
-              disabled={false}
-              sx={{ marginTop: 2 }}
-            />
-          </FormControl>
-          <StyledTypography 
-            component="div" variant="body2"
+              <StandardTextField
+                {...register("emailOrUsername")}
+                label="Email or Username"
+              />
+              <StandardTextField {...register("password")} label="Password" />
+              <StyledTypography
+                component="div"
+                sx={{
+                  justifyContent: "flex-end",
+                  marginTop: 4,
+                }}
+              >
+                <Link href="#">Lost Password?</Link>
+              </StyledTypography>
+              <Typography
+                component="div"
+                variant="body2"
+                sx={{
+                  textAlign: "center",
+                  marginTop: 4,
+                }}
+              >
+                By clicking Log In, you agree to our User Agreement
+              </Typography>
+              <SubmitButton
+                text="Log In"
+                disabled={false}
+                sx={{ marginTop: 2 }}
+              />
+            </FormControl>
+          </Box>
+          <StyledTypography
+            component="div"
+            variant="body2"
             sx={{
               textAlign: "center",
               marginTop: 4,
