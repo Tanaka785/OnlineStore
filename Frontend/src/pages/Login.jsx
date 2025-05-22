@@ -43,10 +43,13 @@ const onSubmit = async (data) => {
   try {
     const payload = {
       username: data.emailOrUsername,
-      password: data.password
-    }
-    console.log(payload);
+      password: data.password,
+    };
     
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    console.log(payload);
+
   } catch (error) {
     console.log(error);
   }
