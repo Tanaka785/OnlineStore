@@ -14,23 +14,23 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
 }));
 
 const bigLinks = [
-  { label: "About Us", url: "/" },
-  { label: "Social Responsibility", url: "/" },
-  { label: "Blog", url: "/" },
-  { label: "Delivery", url: "/" },
-  { label: "Investor Store", url: "/" },
-  { label: "Jobs", url: "/" },
-  { label: "Contact Us", url: "/" },
-  { label: "Help", url: "/" },
+  { label: "About Us", url: "#" },
+  { label: "Social Responsibility", url: "#" },
+  { label: "Blog", url: "#" },
+  { label: "Delivery", url: "#" },
+  { label: "Investor Store", url: "#" },
+  { label: "Jobs", url: "#" },
+  { label: "Contact Us", url: "#" },
+  { label: "Help", url: "#" },
 ];
 
 const smallLinks = [
-  { label: "© Webvibes. All Rights Reserved", url: "/" },
-  { label: "User Agreement", url: "/" },
-  { label: "Privacy Policy", url: "/" },
-  { label: "Copyright", url: "/" },
-  { label: "Affiliates", url: "/" },
-  { label: "Guidelines", url: "/" },
+  { label: "© Webvibes. All Rights Reserved", url: "#" },
+  { label: "User Agreement", url: "#" },
+  { label: "Privacy Policy", url: "#" },
+  { label: "Copyright", url: "#" },
+  { label: "Affiliates", url: "#" },
+  { label: "Guidelines", url: "#" },
 ];
 
 const socialMediaLinks = [
@@ -68,12 +68,12 @@ export default function AuthFooter() {
       >
         <StyledTypography variant="body2" sx={{ m: 0 }}>
           Mature Content:{" "}
-          <Link href="/">
+          <Link href="#">
             <b>Hidden</b>
           </Link>
         </StyledTypography>
 
-        <Link href="/" underline="none">
+        <Link href="#" underline="none">
           <StyledTypography
             component="div"
             variant="body2"

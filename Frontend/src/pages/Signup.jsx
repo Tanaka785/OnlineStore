@@ -29,7 +29,7 @@ export default function SignupPage() {
         <AuthenticationFields
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
-        />e
+        />
         <TermsAndAgreements />
       </AuthCenteredBox>
 

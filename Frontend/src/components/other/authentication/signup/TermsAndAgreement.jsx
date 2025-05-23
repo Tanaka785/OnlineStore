@@ -10,11 +10,11 @@ export default function TermsAndAgreements(params) {
         sx={{ width: "100%", textAlign: "center" }}
       >
         By clicking <i>Sign Up</i>, you agree to our{" "}
-        <Link href="/">
+        <Link href="#">
           <b>User Agreement</b>
         </Link>{" "}
         and
-        <Link href="/">
+        <Link href="#">
           <b>&nbsp;Privacy Policy.</b>
         </Link>
       </Typography>
@@ -24,11 +24,11 @@ export default function TermsAndAgreements(params) {
         sx={{ width: "100%", textAlign: "center" }}
       >
         This site is protected by reCAPTCHA and the Google{" "}
-        <Link href="/">
+        <Link href="#">
           <b>Privacy Policy</b>{" "}
         </Link>
         and{" "}
-        <Link href="/">
+        <Link href="#">
           <b>Terms of Service </b>
         </Link>
         apply.
