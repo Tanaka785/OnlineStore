@@ -39,21 +39,7 @@ const loginSchema = z.object({
     ),
 });
 
-const onSubmit = async (data) => {
-  try {
-    const payload = {
-      username: data.emailOrUsername,
-      password: data.password,
-    };
-    
-    await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    console.log(payload);
-
-  } catch (error) {
-    console.log(error);
-  }
-};
 
 export default function LoginPage() {
   const {
@@ -63,6 +49,21 @@ export default function LoginPage() {
   } = useForm({
     resolver: zodResolver(loginSchema),
   });
+
+  const onSubmit = async (data) => {
+    try {
+      const payload = {
+        username: data.emailOrUsername,
+        password: data.password,
+      };
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      console.log(payload);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <AuthBox>
@@ -87,7 +88,10 @@ export default function LoginPage() {
             onSubmit={handleSubmit(onSubmit)}
             sx={{ width: "100%" }}
           >
-            <fieldset disabled={isSubmitting} style={{ border: "none", width: "100%" }}>
+            <fieldset
+              disabled={isSubmitting}
+              style={{ border: "none", width: "100%" }}
+            >
               <FormControl
                 sx={{
                   width: "100%",
