@@ -14,6 +14,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { BASE_URL } from "../../../../../constants/config";
+import { useNavigate } from "react-router-dom";
 
 const signupSchema = z.object({
   email: z
@@ -73,6 +74,8 @@ export default function AuthenticationFields({ selectedCategory }) {
     resolver: zodResolver(signupSchema),
   });
 
+  const navigate = useNavigate();
+
   const onSubmit = async (data) => {
     try {
       const payload = {
@@ -92,6 +95,7 @@ export default function AuthenticationFields({ selectedCategory }) {
         headers: Object.fromEntries(response.headers.entries()),
         data: responseData,
       });
+      navigate("/");
     } catch (error) {
       console.error("Submission error:", error);
     }
