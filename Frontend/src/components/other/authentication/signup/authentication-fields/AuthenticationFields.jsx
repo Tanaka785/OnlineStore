@@ -84,6 +84,7 @@ export default function AuthenticationFields({ selectedCategory }) {
         password: data.password,
         customer_type: selectedCategory.toLowerCase(),
       };
+      console.log("Payload being sent:", payload);
       const response = await fetch(`${BASE_URL}/auth/register/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -97,6 +98,8 @@ export default function AuthenticationFields({ selectedCategory }) {
       });
       if (response.status === 201) {
         navigate(`${HOME}`);
+      } else {
+        console.error("Registration failed:", responseData);
       }
     } catch (error) {
       console.error("Submission error:", error);
