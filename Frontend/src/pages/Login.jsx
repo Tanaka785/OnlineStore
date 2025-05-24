@@ -41,8 +41,6 @@ const loginSchema = z.object({
     ),
 });
 
-
-
 export default function LoginPage() {
   const navigate = useNavigate();
   const {
@@ -66,7 +64,14 @@ export default function LoginPage() {
         body: JSON.stringify(payload),
       });
 
-      const responseData = await response.json();
+      let responseData = null;
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        responseData = await response.json();
+      } else {
+        responseData = await response.text(); 
+      }
+
       if (response.status === 200) {
         navigate("/");
       } else {
