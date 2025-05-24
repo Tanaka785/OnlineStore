@@ -73,6 +73,7 @@ export default function LoginPage() {
       }
 
       if (response.status === 200) {
+        console.log("Login successful");
         navigate("/");
       } else {
         console.error("Login failed:", responseData);
