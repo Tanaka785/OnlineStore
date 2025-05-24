@@ -95,7 +95,9 @@ export default function AuthenticationFields({ selectedCategory }) {
         headers: Object.fromEntries(response.headers.entries()),
         data: responseData,
       });
-      navigate(`${HOME}`);
+      if (response.status === 201) {
+        navigate(`${HOME}`);
+      }
     } catch (error) {
       console.error("Submission error:", error);
     }
