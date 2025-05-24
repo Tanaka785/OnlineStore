@@ -58,9 +58,13 @@ export default function LoginPage() {
         password: data.password,
       };
 
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch(`${BASE_URL}/auth/login/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-      console.log(payload);
+      const responseData = await response.json();
       if (response.status === 200) {
         navigate("/");
       } else {
