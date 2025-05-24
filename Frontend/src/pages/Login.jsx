@@ -16,6 +16,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../constants/urls";
 import React, { useState } from "react";
+import { Alert } from "@mui/material";
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
   display: "flex",
@@ -135,9 +136,9 @@ export default function LoginPage() {
                 }}
               >
                 {apiError && (
-                  <Typography color="error" sx={{ mb: 2, textAlign: "center" }}>
+                  <Alert severity="error" sx={{ mb: 2, textAlign: "center" }}>
                     {apiError}
-                  </Typography>
+                  </Alert>
                 )}
                 <StandardTextField
                   {...register("emailOrUsername")}

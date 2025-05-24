@@ -5,6 +5,7 @@ import {
   FormControlLabel,
   Link,
   Typography,
+  Alert,
 } from "@mui/material";
 import StandardTextField from "./StandardTextField";
 import CenteredBox from "../CenteredBox";
@@ -165,9 +166,9 @@ export default function AuthenticationFields({ selectedCategory }) {
         sx={{ width: "100%", display: "flex", flexDirection: "column", gap: 3 }}
       >
         {apiError && (
-          <Typography color="error" sx={{ mb: 2, textAlign: "center" }}>
+          <Alert severity="error" sx={{ mb: 2, textAlign: "center" }}>
             {apiError}
-          </Typography>
+          </Alert>
         )}
         {formFields.map((field) => (
           <FormControl key={field.name} sx={{ width: "100%" }}>
