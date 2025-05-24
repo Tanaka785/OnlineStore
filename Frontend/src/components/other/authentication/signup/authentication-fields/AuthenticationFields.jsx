@@ -9,7 +9,7 @@ import {
 import StandardTextField from "./StandardTextField";
 import CenteredBox from "../CenteredBox";
 import SubmitButton from "./SubmitButton";
-import { LOGIN } from "../../../../../constants/routes";
+import { HOME, LOGIN } from "../../../../../constants/routes";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -95,7 +95,7 @@ export default function AuthenticationFields({ selectedCategory }) {
         headers: Object.fromEntries(response.headers.entries()),
         data: responseData,
       });
-      navigate("/");
+      navigate(`${HOME}`);
     } catch (error) {
       console.error("Submission error:", error);
     }
