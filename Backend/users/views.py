@@ -2,8 +2,9 @@ from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import SignupSerializer, UserSerializer
+from .serializers import SignupSerializer, UserSerializer, MyTokenObtainPairSerializer
 from .models import User
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 class UserListView(generics.ListAPIView):
     queryset = User.objects.all()
@@ -40,3 +41,7 @@ class SignupView(generics.CreateAPIView):
             status=status.HTTP_201_CREATED,
             headers=headers,
         )
+
+
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer
