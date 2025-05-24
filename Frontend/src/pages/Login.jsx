@@ -14,6 +14,8 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../constants/routes";
+
 const StyledTypography = styled(Typography)(({ theme }) => ({
   display: "flex",
   width: "100%",
