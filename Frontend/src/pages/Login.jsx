@@ -61,7 +61,11 @@ export default function LoginPage() {
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       console.log(payload);
-      navigate(`${HOME}`);
+      if (response.status === 200) {
+        navigate("/");
+      } else {
+        console.error("Login failed:", responseData);
+      }
     } catch (error) {
       console.log(error);
     }
