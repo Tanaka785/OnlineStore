@@ -15,6 +15,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../constants/urls";
+import React, { useState } from "react";
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
   display: "flex",
@@ -43,6 +44,8 @@ const loginSchema = z.object({
 
 export default function LoginPage() {
   const navigate = useNavigate();
+  const [apiError, setApiError] = useState("");
+
   const {
     register,
     handleSubmit,
@@ -52,6 +55,7 @@ export default function LoginPage() {
   });
 
   const onSubmit = async (data) => {
+    setApiError("");
     try {
       const payload = {
         username: data.emailOrUsername,
@@ -69,17 +73,29 @@ export default function LoginPage() {
       if (contentType && contentType.includes("application/json")) {
         responseData = await response.json();
       } else {
-        responseData = await response.text(); 
+        responseData = await response.text();
       }
 
       if (response.status === 200) {
         console.log("Login successful");
         navigate("/");
       } else {
-        console.error("Login failed:", responseData);
+        let errorMsg = "Login failed. Please try again.";
+        if (typeof responseData === "string" && responseData.trim() !== "") {
+          errorMsg = responseData;
+        } else if (
+          responseData &&
+          (responseData.detail || responseData.message)
+        ) {
+          errorMsg = responseData.detail || responseData.message;
+        } else if (responseData && typeof responseData === "object") {
+          const firstError = Object.values(responseData)[0];
+          errorMsg = Array.isArray(firstError) ? firstError[0] : firstError;
+        }
+        setApiError(errorMsg);
       }
     } catch (error) {
-      console.log(error);
+      setApiError("An unexpected error occurred. Please try again.");
     }
   };
 
@@ -118,6 +134,11 @@ export default function LoginPage() {
                   gap: 1,
                 }}
               >
+                {apiError && (
+                  <Typography color="error" sx={{ mb: 2, textAlign: "center" }}>
+                    {apiError}
+                  </Typography>
+                )}
                 <StandardTextField
                   {...register("emailOrUsername")}
                   label="Email or Username"
