@@ -22,6 +22,7 @@ class User(AbstractUser):
         max_length=10, choices=CUSTOMER_TYPE_CHOICES, null=False, blank=False
     )
     email = models.EmailField(unique=True, blank=False, null=False)
+    username = models.CharField(max_length=150, unique=True, blank=False, null=False)
 
     def __str__(self):
         return self.username
