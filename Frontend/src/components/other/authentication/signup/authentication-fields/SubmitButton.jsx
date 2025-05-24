@@ -7,6 +7,8 @@ const StyledButton = styled(Button)(({ theme }) => ({
   color: theme.palette.background.paper,
   borderRadius: 50,
   height: "50px",
+  fontSize: theme.typography.body2.fontSize,
+  textTransform: "none",
   "&: hover": {
     backgroundColor: "pink",
   },
