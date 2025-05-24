@@ -13,7 +13,7 @@ import AuthFooter from "../components/other/authentication/footer/AuthFooter";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
+import { useNavigate } from "react-router-dom";
 const StyledTypography = styled(Typography)(({ theme }) => ({
   display: "flex",
   width: "100%",
@@ -42,6 +42,7 @@ const loginSchema = z.object({
 
 
 export default function LoginPage() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -60,6 +61,7 @@ export default function LoginPage() {
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       console.log(payload);
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
