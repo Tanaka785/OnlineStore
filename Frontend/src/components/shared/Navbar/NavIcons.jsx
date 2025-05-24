@@ -18,7 +18,7 @@ export default function NavIcons() {
   return (
     <Box sx={{ marginInline: 2, display: "flex", gap: 2 }}>
       {navIcons.map((icon) => (
-        <icon.icon />
+        <icon.icon key={icon.label} />
       ))}
     </Box>
   );
