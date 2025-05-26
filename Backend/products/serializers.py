@@ -1,8 +1,17 @@
 from rest_framework import serializers
-from .models import Product
+from .models import Product, ProductVariation
 from PIL import Image
 
+
+class ProductVariationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductVariation
+        fields = "__all__"
+
+
 class ProductSerializer(serializers.ModelSerializer):
+    variations = ProductVariationSerializer(many=True, read_only=True)
+
     class Meta:
         model = Product
         fields = "__all__"
