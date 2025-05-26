@@ -1,10 +1,17 @@
 from django.db import models
 import os
+import uuid
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+import shutil
 
 
 def product_image_upload_to(instance, filename):
-    # For Product model images
-    return f"product_images/{instance.id}/image{os.path.splitext(filename)[1]}"
+    if instance.id:
+        return f"product_images/{instance.id}/image{os.path.splitext(filename)[1]}"
+    else:
+        temp_id = uuid.uuid4()
+        return f"product_images/temp_{temp_id}/image{os.path.splitext(filename)[1]}"
 
 
 def variation_image_upload_to(instance, filename):
@@ -39,3 +46,28 @@ class ProductVariation(models.Model):
 
     def __str__(self):
         return f"{self.product.name} - {self.size or ''} {self.color or ''}".strip()
+
+
+@receiver(post_save, sender=Product)
+def move_product_image(sender, instance, created, **kwargs):
+    if instance.image and "temp_" in instance.image.name:
+        # Build the new path
+        ext = os.path.splitext(instance.image.name)[1]
+        new_path = f"product_images/{instance.id}/image{ext}"
+        old_path = instance.image.path
+
+        # Create the new directory if it doesn't exist
+        new_dir = os.path.dirname(
+            os.path.join(instance._meta.get_field("image").storage.location, new_path)
+        )
+        os.makedirs(new_dir, exist_ok=True)
+
+        # Move the file
+        shutil.move(
+            old_path,
+            os.path.join(instance._meta.get_field("image").storage.location, new_path),
+        )
+
+        # Update the model and save again (without triggering recursion)
+        instance.image.name = new_path
+        instance.save(update_fields=["image"])
