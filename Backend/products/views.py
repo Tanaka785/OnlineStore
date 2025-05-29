@@ -19,9 +19,8 @@ class ProductViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=["get"])
     def search(self, request):
-        print("\n--- ProductViewSet search action hit ---")
         query = request.query_params.get("q")
-        print(f"Query parameter 'q': {query}\n")
+
         if query:
             queryset = Product.objects.filter(
                 name__icontains=query
@@ -29,6 +28,11 @@ class ProductViewSet(viewsets.ModelViewSet):
         else:
             queryset = Product.objects.all()
 
-        print(f"Returning queryset: {list(queryset)}\n")
+        # Check if the queryset is empty
+        if not queryset.exists() and query:
+            return Response({"message": f'No products found matching "{query}".'})
+        elif not queryset.exists() and not query:
+            return Response({"message": "No products found."})
+
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
