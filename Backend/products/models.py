@@ -86,6 +86,7 @@ def move_product_image(sender, instance, created, **kwargs):
         ext = os.path.splitext(instance.image.name)[1]
         new_path = f"product_images/{instance.id}/image{ext}"
         old_path = instance.image.path
+        temp_dir = os.path.dirname(old_path)  # Get the temporary directory path
 
         # Create the new directory if it doesn't exist
         new_dir = os.path.dirname(
@@ -102,3 +103,11 @@ def move_product_image(sender, instance, created, **kwargs):
         # Update the model and save again (without triggering recursion)
         instance.image.name = new_path
         instance.save(update_fields=["image"])
+
+        # Remove the temporary directory
+        if os.path.exists(temp_dir):
+            try:
+                shutil.rmtree(temp_dir)
+                print(f"Successfully removed temporary directory: {temp_dir}")
+            except OSError as e:
+                print(f"Error removing temporary directory {temp_dir}: {e}")
