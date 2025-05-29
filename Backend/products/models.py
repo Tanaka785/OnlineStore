@@ -1,9 +1,10 @@
 from django.db import models
 import os
 import uuid
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 import shutil
+from django.conf import settings
 
 
 def product_image_upload_to(instance, filename):
@@ -62,7 +63,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-    
+
 class ProductVariation(models.Model):
     product = models.ForeignKey(
         Product, related_name="variations", on_delete=models.CASCADE
@@ -117,3 +118,19 @@ def move_product_image(sender, instance, created, **kwargs):
                 print(f"Successfully removed temporary directory: {temp_dir}")
             except OSError as e:
                 print(f"Error removing temporary directory {temp_dir}: {e}")
+
+
+@receiver(post_delete, sender=Product)
+def delete_product_image_directory(sender, instance, **kwargs):
+    # Construct the directory path
+    product_image_dir = os.path.join(
+        settings.MEDIA_ROOT, f"product_images/{instance.id}/"
+    )
+
+    # Check if the directory exists and remove it
+    if os.path.exists(product_image_dir):
+        try:
+            shutil.rmtree(product_image_dir)
+            print(f"Successfully removed product image directory: {product_image_dir}")
+        except OSError as e:
+            print(f"Error removing product image directory {product_image_dir}: {e}")
