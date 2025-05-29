@@ -11,6 +11,7 @@ class ProductVariationSerializer(serializers.ModelSerializer):
 
 class ProductSerializer(serializers.ModelSerializer):
     variations = ProductVariationSerializer(many=True, read_only=True)
+    category = serializers.StringRelatedField()
 
     class Meta:
         model = Product
