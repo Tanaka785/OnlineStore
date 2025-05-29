@@ -78,6 +78,12 @@ class ProductVariation(models.Model):
     def __str__(self):
         return f"{self.product.name} - {self.size or ''} {self.color or ''}".strip()
 
+    def save(self, *args, **kwargs):
+        # If the variation price is not set, default it to the product's price
+        if self.price is None and self.product:
+            self.price = self.product.price
+        super().save(*args, **kwargs)
+
 
 @receiver(post_save, sender=Product)
 def move_product_image(sender, instance, created, **kwargs):
