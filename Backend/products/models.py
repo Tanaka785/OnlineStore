@@ -20,8 +20,22 @@ def variation_image_upload_to(instance, filename):
     return f"product_images/{product_id}/variations/{filename}"
 
 
+def category_image_upload_to(instance, filename):
+    # For Category model images
+    return f"category_images/{instance.id}/{filename}"
+
+
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
+    description = models.TextField(null=True, blank=True)
+    image = models.ImageField(upload_to=category_image_upload_to, null=True, blank=True)
+    parent = models.ForeignKey(
+        "self",
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="children",
+    )
 
     class Meta:
         verbose_name_plural = "Categories"
