@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from rest_framework import viewsets, generics
+from rest_framework import viewsets, generics, views
 from .models import Product
 from .serializers import ProductSerializer
 from rest_framework.response import Response
+from rest_framework.decorators import action
 
 # Create your views here.
 
@@ -16,15 +17,18 @@ class ProductViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
 
-
-class ProductSearchView(generics.ListAPIView):
-    serializer_class = ProductSerializer
-
-    def get_queryset(self):
-        query = self.request.query_params.get("q")
+    @action(detail=False, methods=["get"])
+    def search(self, request):
+        print("\n--- ProductViewSet search action hit ---")
+        query = request.query_params.get("q")
+        print(f"Query parameter 'q': {query}\n")
         if query:
-            # Filter products where name or description contains the query (case-insensitive)
-            return Product.objects.filter(
+            queryset = Product.objects.filter(
                 name__icontains=query
             ) | Product.objects.filter(description__icontains=query)
-        return Product.objects.all()  # Return all products if no query is provided
+        else:
+            queryset = Product.objects.all()
+
+        print(f"Returning queryset: {list(queryset)}\n")
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data)
