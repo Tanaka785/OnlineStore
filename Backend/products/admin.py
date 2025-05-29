@@ -1,11 +1,16 @@
 from django.contrib import admin
 
-from .models import Product, ProductVariation
+from .models import Product, ProductVariation, Category
 
 
 class ProductVariationInline(admin.TabularInline):
     model = ProductVariation
     extra = 1
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ("name",)
 
 
 @admin.register(Product)
