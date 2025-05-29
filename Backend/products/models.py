@@ -62,7 +62,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-
+    
 class ProductVariation(models.Model):
     product = models.ForeignKey(
         Product, related_name="variations", on_delete=models.CASCADE
