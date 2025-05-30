@@ -125,7 +125,7 @@ function CategoryList() {
         {categories.length > 0 ? (
           categories.map((category) => (
             <StyledTooltip
-              key={category.id} 
+              key={category.id}
               title={
                 subcategories[category.id]?.loading ? (
                   <CircularProgress size={20} color="inherit" />
@@ -142,7 +142,7 @@ function CategoryList() {
                     {subcategories[category.id].data.map((sub) => (
                       <Typography key={sub.id} variant="body2">
                         {sub.name}
-                      </Typography> 
+                      </Typography>
                     ))}
                   </Box>
                 ) : (
@@ -163,10 +163,6 @@ function CategoryList() {
                 onMouseEnter={() => handleMouseEnter(category.id)}
                 onMouseLeave={handleMouseLeave}
                 sx={{
-                  minWidth: 150,
-                  p: 2,
-                  border: "1px solid #ccc",
-                  borderRadius: "4px",
                   cursor: "pointer",
                   "&:hover": {
                     backgroundColor: "#f0f0f0",
