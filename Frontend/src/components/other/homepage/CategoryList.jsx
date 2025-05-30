@@ -1,12 +1,35 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography, CircularProgress, Alert } from "@mui/material";
-import { CATEGORIES_URL } from "../../../constants/urls";
+import {
+  Box,
+  Typography,
+  CircularProgress,
+  Alert,
+  Tooltip,
+  styled,
+} from "@mui/material";
+import { CATEGORIES_URL, BASE_URL } from "../../../constants/urls";
+
+// Styled Tooltip content for white background
+const StyledTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+  "& .MuiTooltip-tooltip": {
+    backgroundColor: theme.palette.common.white,
+    color: theme.palette.text.primary,
+    boxShadow: theme.shadows[1],
+    border: "1px solid #ccc",
+    padding: theme.spacing(1),
+  },
+}));
 
 function CategoryList() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [subcategories, setSubcategories] = useState({}); // State to store subcategories by parent ID
+  const [hoveredCategoryId, setHoveredCategoryId] = useState(null); // State to track which category is hovered
 
+  // Fetch top-level categories
   useEffect(() => {
     const fetchCategories = async () => {
       try {
@@ -25,7 +48,53 @@ function CategoryList() {
     };
 
     fetchCategories();
-  }, []); 
+  }, []);
+
+  // Fetch subcategories when a category is hovered
+  const fetchSubcategories = async (categoryId) => {
+    // Only fetch if not already loaded for this category
+    if (!subcategories[categoryId]) {
+      setSubcategories((prev) => ({
+        ...prev,
+        [categoryId]: { loading: true, data: null, error: null },
+      }));
+      try {
+        const response = await fetch(
+          `${BASE_URL}/products/categories/${categoryId}/subcategories/`
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setSubcategories((prev) => ({
+          ...prev,
+          [categoryId]: { loading: false, data: data, error: null },
+        }));
+      } catch (error) {
+        console.error(
+          `Error fetching subcategories for category ${categoryId}:`,
+          error
+        );
+        setSubcategories((prev) => ({
+          ...prev,
+          [categoryId]: {
+            loading: false,
+            data: null,
+            error: "Failed to load subcategories.",
+          },
+        }));
+      }
+    }
+  };
+
+  const handleMouseEnter = (categoryId) => {
+    setHoveredCategoryId(categoryId);
+    fetchSubcategories(categoryId);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredCategoryId(null);
+  };
 
   if (loading) {
     return (
@@ -55,20 +124,61 @@ function CategoryList() {
       >
         {categories.length > 0 ? (
           categories.map((category) => (
-            <Box
-              key={category.name}
-              sx={{
-                minWidth: 150,
-                p: 2,
-                border: "1px solid #ccc",
-                borderRadius: "4px",
+            <StyledTooltip
+              key={category.id} 
+              title={
+                subcategories[category.id]?.loading ? (
+                  <CircularProgress size={20} color="inherit" />
+                ) : subcategories[category.id]?.error ? (
+                  <Typography color="error">
+                    {subcategories[category.id].error}
+                  </Typography>
+                ) : subcategories[category.id]?.data &&
+                  subcategories[category.id].data.length > 0 ? (
+                  <Box>
+                    <Typography variant="subtitle2" gutterBottom>
+                      Subcategories:
+                    </Typography>
+                    {subcategories[category.id].data.map((sub) => (
+                      <Typography key={sub.id} variant="body2">
+                        {sub.name}
+                      </Typography> 
+                    ))}
+                  </Box>
+                ) : (
+                  <Typography variant="body2">No subcategories</Typography>
+                )
+              }
+              arrow
+              placement="bottom"
+              PopperProps={{
+                disablePortal: true,
               }}
+              open={hoveredCategoryId === category.id}
+              onClose={handleMouseLeave} // Close on mouse leave of the tooltip or trigger
+              disableFocusListener
+              disableTouchListener
             >
-              <Typography variant="body1">{category.name}</Typography>
-            </Box>
+              <Box
+                onMouseEnter={() => handleMouseEnter(category.id)}
+                onMouseLeave={handleMouseLeave}
+                sx={{
+                  minWidth: 150,
+                  p: 2,
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                  "&:hover": {
+                    backgroundColor: "#f0f0f0",
+                  },
+                }}
+              >
+                <Typography variant="body1">{category.name}</Typography>
+              </Box>
+            </StyledTooltip>
           ))
         ) : (
-          <Typography>No categories found.</Typography>
+          <Typography>No top-level categories found.</Typography>
         )}
       </Box>
     </Box>
