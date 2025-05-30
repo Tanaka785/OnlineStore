@@ -116,7 +116,7 @@ function CategoryList() {
     <Box
       sx={{
         width: "100%",
-        mt: 4,
+        mt: 2,
       }}
     >
       <Box
