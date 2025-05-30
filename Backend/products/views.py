@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from rest_framework import viewsets, generics, views
-from .models import Product
-from .serializers import ProductSerializer
+from rest_framework import viewsets, generics, views, status
+from .models import Category, Product
+from .serializers import CategoryListSerializer, ProductSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import action
 
@@ -36,3 +36,13 @@ class ProductViewSet(viewsets.ModelViewSet):
 
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
+
+
+class CategoryListView(generics.ListAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategoryListSerializer
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)

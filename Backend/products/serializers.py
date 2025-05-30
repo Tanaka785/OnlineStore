@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product, ProductVariation
+from .models import Category, Product, ProductVariation
 from PIL import Image
 
 
@@ -32,3 +32,8 @@ class ProductSerializer(serializers.ModelSerializer):
                 f"Image dimensions should not exceed {max_width}x{max_height}px."
             )
         return value
+
+class CategoryListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ("name", "description", "parent")
