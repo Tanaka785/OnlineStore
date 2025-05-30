@@ -157,7 +157,6 @@ function CategoryList() {
                     <List dense={true} disablePadding={true}>
                       {subcategories[category.id].data.map((sub) => (
                         <ListItemButton
-                          button
                           key={sub.id}
                           onClick={() => {
                             console.log(
