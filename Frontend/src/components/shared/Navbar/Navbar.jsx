@@ -9,7 +9,8 @@ export default function Navbar() {
     <Box
       sx={{
         flexGrow: 1,
-        width: "100vh",
+        width: "100%",
+        height: "90px",
       }}
     >
       <AppBar>
