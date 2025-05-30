@@ -171,7 +171,7 @@ function CategoryList() {
                             },
                           }}
                         >
-                          <Typography variant="body2">{sub.name}</Typography>
+                          <Typography variant="body1">{sub.name}</Typography>
                         </ListItemButton>
                       ))}
                     </List>
