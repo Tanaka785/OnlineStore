@@ -6,8 +6,12 @@ import {
   Alert,
   Tooltip,
   styled,
+  List,
+  ListItem,
+  ListItemButton,
 } from "@mui/material";
 import { CATEGORIES_URL, BASE_URL } from "../../../constants/urls";
+import { useTheme } from "@emotion/react";
 
 // Styled Tooltip content for white background
 const StyledTooltip = styled(({ className, ...props }) => (
@@ -17,7 +21,7 @@ const StyledTooltip = styled(({ className, ...props }) => (
     backgroundColor: theme.palette.common.white,
     color: theme.palette.text.primary,
     boxShadow: theme.shadows[1],
-    border: "1px solid #ccc",
+    border: "1px solid " + theme.palette.common.white,
     padding: theme.spacing(1),
   },
   // Add styling for the tooltip arrow
@@ -33,6 +37,7 @@ function CategoryList() {
   const [subcategories, setSubcategories] = useState({}); // State to store subcategories by parent ID
   const [hoveredCategoryId, setHoveredCategoryId] = useState(null); // State to track which category is hovered
 
+  const theme = useTheme();
   // Fetch top-level categories
   useEffect(() => {
     const fetchCategories = async () => {
@@ -149,11 +154,27 @@ function CategoryList() {
                 ) : subcategories[category.id]?.data &&
                   subcategories[category.id].data.length > 0 ? (
                   <Box>
-                    {subcategories[category.id].data.map((sub) => (
-                      <Typography key={sub.id} variant="body2"> 
-                        {sub.name}
-                      </Typography>
-                    ))}
+                    <List dense={true} disablePadding={true}>
+                      {subcategories[category.id].data.map((sub) => (
+                        <ListItemButton
+                          button
+                          key={sub.id}
+                          onClick={() => {
+                            console.log(
+                              `Clicked subcategory: ${sub.name} (ID: ${sub.id})`
+                            );
+                          }}
+                          sx={{
+                            padding: theme.spacing(0.5, 1),
+                            "&:hover": {
+                              backgroundColor: theme.palette.action.hover,
+                            },
+                          }}
+                        >
+                          <Typography variant="body2">{sub.name}</Typography>
+                        </ListItemButton>
+                      ))}
+                    </List>
                   </Box>
                 ) : (
                   <Typography variant="body2">No subcategories</Typography>
