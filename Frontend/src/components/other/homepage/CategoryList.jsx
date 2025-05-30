@@ -162,8 +162,6 @@ function CategoryList() {
               PopperProps={{
                 disablePortal: true,
               }}
-              open={hoveredCategoryId === category.id}
-              onClose={handleMouseLeave} // Close on mouse leave of the tooltip or trigger
               disableFocusListener
               disableTouchListener
             >
