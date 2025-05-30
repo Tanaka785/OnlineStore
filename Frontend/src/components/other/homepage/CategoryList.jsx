@@ -153,7 +153,7 @@ function CategoryList() {
                       Subcategories:
                     </Typography>
                     {subcategories[category.id].data.map((sub) => (
-                      <Typography key={sub.id} variant="body2">
+                      <Typography key={sub.id} variant="body2"> 
                         {sub.name}
                       </Typography>
                     ))}

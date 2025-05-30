@@ -36,4 +36,4 @@ class ProductSerializer(serializers.ModelSerializer):
 class CategoryListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ("name", "description", "parent")
+        fields = ("id", "name", "description", "parent")
