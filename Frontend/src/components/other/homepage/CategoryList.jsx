@@ -149,9 +149,6 @@ function CategoryList() {
                 ) : subcategories[category.id]?.data &&
                   subcategories[category.id].data.length > 0 ? (
                   <Box>
-                    <Typography variant="subtitle2" gutterBottom>
-                      Subcategories:
-                    </Typography>
                     {subcategories[category.id].data.map((sub) => (
                       <Typography key={sub.id} variant="body2"> 
                         {sub.name}
