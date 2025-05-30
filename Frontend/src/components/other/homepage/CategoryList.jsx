@@ -169,6 +169,7 @@ function CategoryList() {
                             "&:hover": {
                               backgroundColor: theme.palette.action.hover,
                             },
+                            marginBottom: theme.spacing(2),
                           }}
                         >
                           <Typography variant="body1">{sub.name}</Typography>
