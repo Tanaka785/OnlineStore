@@ -12,7 +12,7 @@ import CategoryList from "../components/other/homepage/CategoryList";
 
 export default function Homepage() {
   return (
-    <Box sx={{ width: "100%", height: "100vh", marginInline: 4 }}>
+    <Box sx={{ width: "100%", height: "100vh",}}>
       <Navbar />
       <CategoryList />
     </Box>

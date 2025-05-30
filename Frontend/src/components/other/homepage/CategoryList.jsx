@@ -113,13 +113,21 @@ function CategoryList() {
   }
 
   return (
-    <Box sx={{ mt: 4 }}>
+    <Box
+      sx={{
+        width: "100%",
+        mt: 4,
+      }}
+    >
       <Box
         sx={{
           display: "flex",
           flexDirection: "row",
           gap: 2,
           overflowX: "auto",
+          justifyContent: "space-between",
+          paddingInline: 4,
+          alignItems: "center",
         }}
       >
         {categories.length > 0 ? (
