@@ -25,7 +25,7 @@ function CategoryList() {
     };
 
     fetchCategories();
-  }, []); // Empty dependency array means this effect runs once on mount
+  }, []); 
 
   if (loading) {
     return (
@@ -45,9 +45,6 @@ function CategoryList() {
 
   return (
     <Box sx={{ mt: 4 }}>
-      <Typography variant="h5" component="h2" gutterBottom>
-        Product Categories
-      </Typography>
       <Box
         sx={{
           display: "flex",
@@ -68,7 +65,6 @@ function CategoryList() {
               }}
             >
               <Typography variant="body1">{category.name}</Typography>
-              {/* You might want to add a link or button here */}
             </Box>
           ))
         ) : (
