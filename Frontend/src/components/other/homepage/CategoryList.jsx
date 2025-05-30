@@ -20,6 +20,10 @@ const StyledTooltip = styled(({ className, ...props }) => (
     border: "1px solid #ccc",
     padding: theme.spacing(1),
   },
+  // Add styling for the tooltip arrow
+  "& .MuiTooltip-arrow": {
+    color: theme.palette.common.white,
+  },
 }));
 
 function CategoryList() {
