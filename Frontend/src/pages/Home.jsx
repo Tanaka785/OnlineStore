@@ -9,7 +9,7 @@ import CategoryList from "../components/other/homepage/CategoryList";
 // navLinks component.
 export default function Homepage() {
   return (
-    <Box sx={{ width: "100%", height: "100vh" }}>
+    <Box sx={{ width: "100%", height: "100vh", marginInline: 4 }}>
       <Navbar />
       <CategoryList />
     </Box>
