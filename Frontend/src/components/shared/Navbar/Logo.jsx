@@ -19,7 +19,11 @@ export default function Logo() {
       <IconButton sx={{ padding: 0 }}>
         <Avatar src={logo} />
       </IconButton>
-      <Typography variant="h6" color="primary" sx={{ marginLeft: 1 }}>
+      <Typography
+        variant="h6"
+        color="primary"
+        sx={{ marginLeft: 1, fontWeight: "bold", letterSpacing: -0.5, }}
+      >
         WebVibes
       </Typography>
     </Box>
