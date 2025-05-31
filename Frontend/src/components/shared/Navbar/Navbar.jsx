@@ -13,7 +13,7 @@ export default function Navbar() {
         height: "90px",
       }}
     >
-      <AppBar>
+      <AppBar sx={{ backgroundColor: "#fff" }}>
         <Toolbar
           sx={{ alignItems: "center", color: "primary.main", marginBlock: 2 }}
         >
