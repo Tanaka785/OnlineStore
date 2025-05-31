@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import Navbar from "../components/shared/Navbar/Navbar";
 import { Login } from "@mui/icons-material";
 import CategoryList from "../components/other/homepage/CategoryList";
+import Divider from "../components/other/homepage/Divider";
 // TODO: After a successful login, save the access token and refresh token to localStorage.
 //
 // Desired functionality:
@@ -12,9 +13,10 @@ import CategoryList from "../components/other/homepage/CategoryList";
 
 export default function Homepage() {
   return (
-    <Box sx={{ width: "100%", height: "100vh",}}>
+    <Box sx={{ width: "100%", height: "100vh" }}>
       <Navbar />
       <CategoryList />
+      <Divider />
     </Box>
   );
 }
