@@ -3,6 +3,7 @@ import Navbar from "../components/shared/Navbar/Navbar";
 import { Login } from "@mui/icons-material";
 import CategoryList from "../components/other/homepage/CategoryList";
 import Divider from "../components/other/homepage/Divider";
+import Banner from "../components/other/homepage/Banner";
 // TODO: After a successful login, save the access token and refresh token to localStorage.
 //
 // Desired functionality:
@@ -17,6 +18,7 @@ export default function Homepage() {
       <Navbar />
       <CategoryList />
       <Divider />
+      <Banner />
     </Box>
   );
 }
