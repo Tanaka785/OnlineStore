@@ -1,22 +1,44 @@
-import { Box } from "@mui/material";
+import { Box, Button, useTheme } from "@mui/material";
 import bannerImage from "../../../assets/banner/banner.png";
 
 function Banner() {
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
+        position: "relative",
         width: "100%",
       }}
     >
       <img
         src={bannerImage}
-        alt="Promotional Banner" 
+        alt="Promotional Banner"
         style={{
           width: "100%",
-          height: "auto", 
+          height: "auto",
           display: "block",
         }}
       />
+      <Button
+        variant="contained"
+        sx={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          height: "60px",
+          width: "180px",
+          backgroundColor: theme.palette.secondary.main,
+          borderRadius: 40,
+          fontWeight: "bold",
+          "&:hover": {
+            backgroundColor: theme.palette.secondary.main,
+          },
+        }}
+      >
+        Shop Sale
+      </Button>
     </Box>
   );
 }
