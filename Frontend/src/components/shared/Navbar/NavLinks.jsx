@@ -21,7 +21,15 @@ export default function NavLinks() {
     <Box sx={{ marginLeft: 3, marginRight: 2, display: "flex", gap: 2 }}>
       {navLinks.map((link) => (
         <Link key={link.label} href={link.url}>
-          {<Typography variant="body1">{link.label}</Typography>}
+          {
+            <Typography
+              variant="body1"
+              color="secondary.main"
+              sx={{ fontWeight: "bold" }}
+            >
+              {link.label}
+            </Typography>
+          }
         </Link>
       ))}
     </Box>
