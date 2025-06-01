@@ -66,8 +66,8 @@ function CategoryGallery() {
         sx={{
           display: "flex",
           flexWrap: "wrap",
-          gap: 6, // Increased space between category cards
-          justifyContent: "center", // Center items if they don't fill the row
+          gap: 6,
+          justifyContent: "center",
         }}
       >
         {categories.length > 0 ? (
@@ -75,19 +75,19 @@ function CategoryGallery() {
             <Card
               key={category.id}
               sx={{
-                width: 250, // Fixed width for the card (adjust as needed)
-                position: "relative", // For positioning the button
+                width: 250,
+                position: "relative",
                 cursor: "pointer",
               }}
               onClick={() => navigate(`/category/${category.id}`)}
             >
               <CardMedia
                 component="img"
-                height="200" // Fixed height for the image (adjust as needed)
+                height="200"
                 image={category.image_url || "https://via.placeholder.com/250"} // Assuming category has an image_url field
                 alt={category.name}
                 sx={{
-                  borderRadius: 1.5, // Add border radius
+                  borderRadius: 1.5,
                 }}
               />
               <Button
@@ -97,9 +97,9 @@ function CategoryGallery() {
                   bottom: 8,
                   left: "50%",
                   transform: "translateX(-50%)",
-                  width: "calc(100% - 16px)", // Button width with some padding
+                  width: "calc(100% - 16px)",
                   textTransform: "none",
-                  bgcolor: "rgba(0, 0, 0, 0.6)", // Semi-transparent background
+                  bgcolor: "rgba(0, 0, 0, 0.6)",
                   "&:hover": {
                     bgcolor: "rgba(0, 0, 0, 0.8)",
                   },
