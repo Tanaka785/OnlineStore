@@ -65,7 +65,7 @@ function CategoryGallery() {
         variant="h5"
         component="h2"
         gutterBottom
-        sx={{ px: 3, fontWeight: "bold" }}
+        sx={{ px: 3, pb: 3, fontWeight: "bold" }}
       >
         Category Gallery
       </Typography>
