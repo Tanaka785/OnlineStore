@@ -1,4 +1,4 @@
-import { Box, Button, useTheme } from "@mui/material";
+import { Box, Button, useTheme, CardMedia } from "@mui/material";
 import bannerImage from "../../../assets/banner/banner.png";
 
 function Banner() {
@@ -9,15 +9,18 @@ function Banner() {
       sx={{
         position: "relative",
         width: "100%",
+        px: 3,
       }}
     >
-      <img
-        src={bannerImage}
+      <CardMedia
+        component="img"
+        image={bannerImage}
         alt="Promotional Banner"
-        style={{
+        sx={{
           width: "100%",
           height: "auto",
           display: "block",
+          borderRadius: 1.5,
         }}
       />
       <Button
