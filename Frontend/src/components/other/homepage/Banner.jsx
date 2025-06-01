@@ -1,8 +1,10 @@
 import { Box, Button, useTheme, CardMedia } from "@mui/material";
 import bannerImage from "../../../assets/banner/banner.png";
+import { useNavigate } from "react-router-dom";
 
 function Banner() {
   const theme = useTheme();
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -25,6 +27,7 @@ function Banner() {
       />
       <Button
         variant="contained"
+        onClick={() => navigate("/sale")}
         sx={{
           position: "absolute",
           textTransform: "none",

@@ -4,6 +4,7 @@ import { Login } from "@mui/icons-material";
 import CategoryList from "../components/other/homepage/CategoryList";
 import Divider from "../components/other/homepage/Divider";
 import Banner from "../components/other/homepage/Banner";
+import CategoryGallery from "../components/other/homepage/CategoryGallery";
 // TODO: After a successful login, save the access token and refresh token to localStorage.
 //
 // Desired functionality:
@@ -19,6 +20,7 @@ export default function Homepage() {
       <CategoryList />
       <Divider />
       <Banner />
+      <CategoryGallery />
     </Box>
   );
 }
