@@ -76,7 +76,7 @@ function CategoryGallery() {
             <Card
               key={category.id}
               sx={{
-                width: 250,
+                width: 400,
                 position: "relative",
                 cursor: "pointer",
               }}
@@ -84,7 +84,7 @@ function CategoryGallery() {
             >
               <CardMedia
                 component="img"
-                height="200"
+                height="400"
                 image={category.image_url || "https://via.placeholder.com/250"} // Assuming category has an image_url field
                 alt={category.name}
                 sx={{
