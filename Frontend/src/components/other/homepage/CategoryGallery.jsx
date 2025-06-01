@@ -58,8 +58,8 @@ function CategoryGallery() {
   }
 
   return (
-    <Box sx={{ width: "100%", mt: 4, px: 3 }}>
-      <Typography variant="h5" component="h2" gutterBottom>
+    <Box sx={{ width: "100%", mt: 4 }}>
+      <Typography variant="h5" component="h2" gutterBottom sx={{ px: 3 }}>
         Category Gallery
       </Typography>
       <Box
@@ -67,7 +67,8 @@ function CategoryGallery() {
           display: "flex",
           flexWrap: "wrap",
           gap: 6,
-          justifyContent: "center",
+          justifyContent: "space-between",
+          px: 3,
         }}
       >
         {categories.length > 0 ? (
