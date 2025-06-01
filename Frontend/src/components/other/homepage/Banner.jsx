@@ -24,7 +24,9 @@ function Banner() {
         variant="contained"
         sx={{
           position: "absolute",
-          top: "50%",
+          textTransform: "none",
+          fontSize: theme.typography.h6.fontSize,
+          top: "90%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           height: "60px",
