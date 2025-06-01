@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { BASE_URL } from "../../../constants/urls";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "@mui/material/styles";
 
 const CATEGORIES_API_URL = `${BASE_URL}/products/categories/`;
 
@@ -19,6 +20,7 @@ function CategoryGallery() {
   const [error, setError] = useState(null);
 
   const navigate = useNavigate();
+  const theme = useTheme();
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -59,7 +61,12 @@ function CategoryGallery() {
 
   return (
     <Box sx={{ width: "100%", mt: 4 }}>
-      <Typography variant="h5" component="h2" gutterBottom sx={{ px: 3, fontWeight: "bold" }}>
+      <Typography
+        variant="h5"
+        component="h2"
+        gutterBottom
+        sx={{ px: 3, fontWeight: "bold" }}
+      >
         Category Gallery
       </Typography>
       <Box
@@ -95,14 +102,18 @@ function CategoryGallery() {
                 variant="contained"
                 sx={{
                   position: "absolute",
-                  bottom: 8,
+                  bottom: 20,
                   left: "50%",
                   transform: "translateX(-50%)",
-                  width: "calc(100% - 16px)",
+                  width: 180,
+                  height: 60,
                   textTransform: "none",
-                  bgcolor: "rgba(0, 0, 0, 0.6)",
+                  bgcolor: theme.palette.common.white,
+                  color: theme.palette.secondary.main,
+                  borderRadius: 40,
+                  fontWeight: "bold",
                   "&:hover": {
-                    bgcolor: "rgba(0, 0, 0, 0.8)",
+                    bgcolor: theme.palette.grey[200],
                   },
                 }}
               >
