@@ -59,7 +59,7 @@ function CategoryGallery() {
 
   return (
     <Box sx={{ width: "100%", mt: 4 }}>
-      <Typography variant="h5" component="h2" gutterBottom sx={{ px: 3 }}>
+      <Typography variant="h5" component="h2" gutterBottom sx={{ px: 3, fontWeight: "bold" }}>
         Category Gallery
       </Typography>
       <Box
