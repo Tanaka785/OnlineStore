@@ -1,7 +1,7 @@
 import { Box, IconButton, InputAdornment, TextField } from "@mui/material";
 
 import OutlinedTextField from "../OutlinedTextField";
-export default function SearchField() {
+export default function SearchField(props) {
   return (
     <Box
       sx={{
@@ -11,7 +11,7 @@ export default function SearchField() {
         flexGrow: 1,
       }}
     >
-      <OutlinedTextField />
+      <OutlinedTextField {...props} />
     </Box>
   );
 }

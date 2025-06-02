@@ -2,12 +2,14 @@ import { IconButton, InputAdornment, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 export default function OutlinedTextField(props) {
+  const { onSearchClick, ...rest } = props;
+
   return (
     <TextField
       InputProps={{
         endAdornment: (
           <InputAdornment position="end">
-            <IconButton>
+            <IconButton onClick={onSearchClick}>
               <SearchIcon color="primary" />
             </IconButton>
           </InputAdornment>
@@ -22,7 +24,7 @@ export default function OutlinedTextField(props) {
           },
         },
       }}
-      {...props}
+      {...rest}
     />
   );
 }

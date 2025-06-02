@@ -16,7 +16,9 @@ export default function Navbar() {
   };
 
   const handleSearchSubmit = (event) => {
-    event.preventDefault();
+    if (event && event.preventDefault) {
+      event.preventDefault();
+    }
     if (searchTerm.trim()) {
       navigate(`${SEARCH}?query=${encodeURIComponent(searchTerm.trim())}`);
     }
@@ -39,7 +41,11 @@ export default function Navbar() {
             onSubmit={handleSearchSubmit}
             style={{ flexGrow: 1, display: "flex", alignItems: "center" }}
           >
-            <SearchField value={searchTerm} onChange={handleSearchChange} />
+            <SearchField
+              value={searchTerm}
+              onChange={handleSearchChange}
+              onSearchClick={handleSearchSubmit}
+            />
           </form>
           <NavLinks />
           <NavIcons />
