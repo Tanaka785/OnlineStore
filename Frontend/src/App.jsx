@@ -12,6 +12,7 @@ import Homepage from "../src/pages/Home.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignupPage from "./pages/Signup.jsx";
 import LoginPage from "./pages/Login.jsx";
+import SearchResultsPage from "./pages/SearchResultsPage.jsx";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path={LOGIN} element={<LoginPage />} />
           <Route path={CART} element={<Homepage />} />
           <Route path={WISHLISTS} element={<Homepage />} />
+          <Route path="/search" element={<SearchResultsPage />} />
         </Routes>
       </Box>
     </BrowserRouter>
