@@ -30,7 +30,7 @@ export default function ProductCard({ product }) {
             {product.description}
           </Typography>
         )}
-        {product.price !== undefined && (
+        {typeof product.price === "number" && (
           <Typography
             variant="body1"
             color="text.primary"
