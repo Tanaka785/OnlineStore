@@ -7,7 +7,7 @@ import {
   Facebook,
   Twitter,
   Pinterest,
-} from "@mui/icons-material"; // Importing icons
+} from "@mui/icons-material";
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.main,
@@ -38,8 +38,7 @@ const socialMediaLinks = [
   { icon: <Facebook />, url: "https://facebook.com" },
   { icon: <Twitter />, url: "https://twitter.com" },
   { icon: <Pinterest />, url: "https://pinterest.com" },
-  // Assuming the "T" icon app is Telegram for example
-  { icon: <Public />, url: "https://telegram.org" }, // Replace with the actual icon if it's something else
+  { icon: <Public />, url: "https://telegram.org" },
 ];
 
 export default function AuthFooter() {
