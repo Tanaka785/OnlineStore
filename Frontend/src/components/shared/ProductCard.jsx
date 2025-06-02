@@ -5,20 +5,21 @@ export default function ProductCard({ product }) {
   return (
     <Card
       sx={{
-        maxWidth: 345,
-        height: "100%",
+        width: 350,
         display: "flex",
         flexDirection: "column",
       }}
     >
-      {/* Assuming product object has an image field */}
       {product.image && (
         <CardMedia
           component="img"
-          height="140"
           image={product.image}
           alt={product.name}
-          sx={{ objectFit: "contain", maxHeight: 140, width: "100%" }}
+          sx={{
+            objectFit: "contain",
+            width: 200,
+            height: 200,
+          }}
         />
       )}
       <CardContent sx={{ flexGrow: 1 }}>

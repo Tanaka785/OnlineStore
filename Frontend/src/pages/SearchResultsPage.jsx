@@ -16,12 +16,10 @@ export default function SearchResultsPage() {
     const query = params.get("query");
     if (query) {
       setSearchTerm(query);
-      // Fetch search results
       const fetchResults = async () => {
         setLoading(true);
         setError(null);
         try {
-          // Construct the URL correctly, assuming your backend is running on localhost:8000
           const response = await fetch(
             `http://localhost:8000/products/search/?q=${encodeURIComponent(
               query
@@ -34,7 +32,7 @@ export default function SearchResultsPage() {
           setSearchResults(data);
         } catch (error) {
           setError(error);
-          setSearchResults([]); // Clear results on error
+          setSearchResults([]);
         } finally {
           setLoading(false);
         }
@@ -46,7 +44,7 @@ export default function SearchResultsPage() {
       setLoading(false);
       setError(null);
     }
-  }, [location.search]); // Depend on location.search to re-run when query changes
+  }, [location.search]);
 
   return (
     <Box>
@@ -69,9 +67,6 @@ export default function SearchResultsPage() {
           !error &&
           (searchResults.length > 0 ? (
             <Grid container spacing={2}>
-              {/* Render your product items here. Assuming searchResults is an array of product objects */}
-              {/* You'll need to create a component to display individual products */}
-              {/* For now, just displaying product names or a placeholder */}
               {searchResults.map((product) => (
                 <Grid
                   item
