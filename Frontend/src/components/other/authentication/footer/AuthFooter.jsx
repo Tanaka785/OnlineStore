@@ -93,7 +93,7 @@ export default function AuthFooter() {
       {/* Shared Black Box for both sets of links */}
       <Box
         sx={{
-          backgroundColor: "black",
+          backgroundColor: "secondary.main",
           width: "100%",
           paddingY: 4,
           display: "flex",

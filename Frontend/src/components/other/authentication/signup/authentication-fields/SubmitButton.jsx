@@ -3,7 +3,7 @@ import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 
 const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: theme.palette.primary.main,
+  backgroundColor: theme.palette.secondary.main,
   color: theme.palette.background.paper,
   borderRadius: 50,
   height: "50px",

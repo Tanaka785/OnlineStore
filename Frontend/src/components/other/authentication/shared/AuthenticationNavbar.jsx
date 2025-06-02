@@ -2,6 +2,13 @@ import { AppBar, Box, Toolbar } from "@mui/material";
 import { Link } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import { LOGIN, SIGNUP, SELLING } from "../../../../constants/routes";
+import styled from "@emotion/styled";
+
+const StyledLink = styled(Link)(({ theme }) => ({
+  color: theme.palette.secondary.main,
+  textDecoration: "none",
+  // fontWeight: "bold",
+}));
 
 export default function AuthenticationNavbar({ authLink }) {
   const theme = useTheme();
@@ -40,8 +47,8 @@ export default function AuthenticationNavbar({ authLink }) {
               alignItems: "center",
             }}
           >
-            <Link href={`${SELLING}`}>Sell Your Designs</Link>
-            <Link href={authHref}>{authLink}</Link>{" "}
+            <StyledLink href={`${SELLING}`}>Sell Your Designs</StyledLink>
+            <StyledLink href={authHref}>{authLink}</StyledLink>{" "}
           </Box>
         </Toolbar>
       </AppBar>
