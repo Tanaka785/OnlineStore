@@ -45,6 +45,7 @@ export default function Navbar() {
               value={searchTerm}
               onChange={handleSearchChange}
               onSearchClick={handleSearchSubmit}
+              placeholderText="Search for products, brands, or designs"
             />
           </form>
           <NavLinks />
