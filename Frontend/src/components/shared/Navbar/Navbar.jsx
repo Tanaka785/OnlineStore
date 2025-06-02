@@ -5,6 +5,7 @@ import NavLinks from "./NavLinks";
 import NavIcons from "./NavIcons";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { SEARCH } from "../../../constants/routes";
 
 export default function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -17,7 +18,7 @@ export default function Navbar() {
   const handleSearchSubmit = (event) => {
     event.preventDefault();
     if (searchTerm.trim()) {
-      navigate(`/search?query=${encodeURIComponent(searchTerm.trim())}`);
+      navigate(`${SEARCH}?query=${encodeURIComponent(searchTerm.trim())}`);
     }
   };
 
