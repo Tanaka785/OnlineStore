@@ -2,6 +2,10 @@ import React from "react";
 import { Card, CardMedia, CardContent, Typography, Box } from "@mui/material";
 
 export default function ProductCard({ product }) {
+  // Attempt to parse price as a float and check if it's a finite number
+  const parsedPrice = parseFloat(product.price);
+  const isPriceValid = !isNaN(parsedPrice) && isFinite(parsedPrice);
+
   return (
     <Card
       sx={{
@@ -31,13 +35,13 @@ export default function ProductCard({ product }) {
             {product.description}
           </Typography>
         )}
-        {typeof product.price === "number" && (
+        {isPriceValid && (
           <Typography
             variant="body1"
             color="text.primary"
             sx={{ mt: 1, fontWeight: "bold" }}
           >
-            ${product.price.toFixed(2)}
+            ${parsedPrice.toFixed(2)}
           </Typography>
         )}
       </CardContent>
