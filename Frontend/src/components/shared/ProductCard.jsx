@@ -5,7 +5,7 @@ export default function ProductCard({ product }) {
   return (
     <Card
       sx={{
-        width: 350,
+        width: 300,
         display: "flex",
         flexDirection: "column",
       }}
@@ -17,8 +17,8 @@ export default function ProductCard({ product }) {
           alt={product.name}
           sx={{
             objectFit: "contain",
-            width: 200,
-            height: 200,
+            width: "100%",
+            height: "auto",
           }}
         />
       )}
