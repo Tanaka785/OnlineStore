@@ -16,7 +16,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ("name", "price", "image", "created_at")
+    list_display = ("name", "price", "image", "category", "created_at")
     inlines = [ProductVariationInline]
 
 
