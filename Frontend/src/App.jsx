@@ -29,10 +29,7 @@ function App() {
           <Route path={CART} element={<Homepage />} />
           <Route path={WISHLISTS} element={<Homepage />} />
           <Route path={SEARCH} element={<SearchResultsPage />} />
-          <Route
-            path="/shop/:categoryName"
-            element={<CategoryProductsPage />}
-          />
+          <Route path="/shop/*" element={<CategoryProductsPage />} />
         </Routes>
       </Box>
     </BrowserRouter>
