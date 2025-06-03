@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import { CATEGORIES_URL, BASE_URL } from "../../../constants/urls";
 import { useTheme } from "@emotion/react";
+import { Link } from "react-router-dom";
 
 // Styled Tooltip content for white background
 const StyledTooltip = styled(({ className, ...props }) => (
@@ -24,7 +25,6 @@ const StyledTooltip = styled(({ className, ...props }) => (
     border: "1px solid " + theme.palette.common.white,
     padding: theme.spacing(1),
   },
-  // Add styling for the tooltip arrow
   "& .MuiTooltip-arrow": {
     color: theme.palette.common.white,
   },
@@ -38,6 +38,7 @@ function CategoryList() {
   const [hoveredCategoryId, setHoveredCategoryId] = useState(null); // State to track which category is hovered
 
   const theme = useTheme();
+
   // Fetch top-level categories
   useEffect(() => {
     const fetchCategories = async () => {
@@ -158,11 +159,12 @@ function CategoryList() {
                       {subcategories[category.id].data.map((sub) => (
                         <ListItemButton
                           key={sub.id}
-                          onClick={() => {
-                            console.log(
-                              `Clicked subcategory: ${sub.name} (ID: ${sub.id})`
-                            );
-                          }}
+                          component={Link}
+                          to={`/shop/${category.name
+                            .toLowerCase()
+                            .replace(/[^a-z0-9]+/g, "-")}/${sub.name
+                            .toLowerCase()
+                            .replace(/[^a-z0-9]+/g, "-")}`}
                           sx={{
                             padding: theme.spacing(0.5, 1),
                             "&:hover": {
