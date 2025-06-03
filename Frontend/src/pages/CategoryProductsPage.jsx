@@ -5,6 +5,7 @@ import { BASE_URL } from "../constants/urls.js";
 import ProductCard from "../components/shared/ProductCard.jsx";
 import Navbar from "../components/shared/Navbar/Navbar.jsx";
 import CategoryList from "../components/other/homepage/CategoryList.jsx";
+import Divider from "../components/other/homepage/Divider.jsx";
 
 function CategoryProductsPage() {
   // Use useParams()['*'] to get the matched path string
@@ -73,6 +74,7 @@ function CategoryProductsPage() {
     <Box sx={{ padding: 0 }}>
       <Navbar />
       <CategoryList />
+      <Divider />
       <Box sx={{ padding: 2 }}>
         <Typography variant="h4" gutterBottom sx={{ mt: 2 }}>
           Products in{" "}
