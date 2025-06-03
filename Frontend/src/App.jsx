@@ -9,6 +9,7 @@ import {
   SEARCH,
 } from "./constants/routes";
 import Homepage from "../src/pages/Home.jsx";
+import CategoryProductsPage from "./pages/CategoryProductsPage.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignupPage from "./pages/Signup.jsx";
@@ -28,6 +29,10 @@ function App() {
           <Route path={CART} element={<Homepage />} />
           <Route path={WISHLISTS} element={<Homepage />} />
           <Route path={SEARCH} element={<SearchResultsPage />} />
+          <Route
+            path="/shop/:categoryName"
+            element={<CategoryProductsPage />}
+          />
         </Routes>
       </Box>
     </BrowserRouter>

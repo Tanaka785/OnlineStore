@@ -37,6 +37,30 @@ class ProductViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
 
+    @action(detail=False, methods=["get"])
+    def by_category(self, request):
+        category_name = request.query_params.get("name")
+        if not category_name:
+            return Response(
+                {"error": "Category name parameter is required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        try:
+            # Using __iexact for case-insensitive matching of category name
+            products = Product.objects.filter(category__name__iexact=category_name)
+            if not products.exists():
+                return Response(
+                    {"message": f"No products found for category '{category_name}'."},
+                    status=status.HTTP_404_NOT_FOUND,
+                )
+            serializer = self.get_serializer(products, many=True)
+            return Response(serializer.data)
+        except Exception as e:
+            return Response(
+                {"error": f"An error occurred: {str(e)}"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
+
 
 class CategoryListView(generics.ListAPIView):
     queryset = Category.objects.filter(
