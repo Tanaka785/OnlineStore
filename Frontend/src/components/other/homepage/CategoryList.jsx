@@ -13,6 +13,7 @@ import {
 import { CATEGORIES_URL, BASE_URL } from "../../../constants/urls";
 import { useTheme } from "@emotion/react";
 import { Link } from "react-router-dom";
+import { SHOP_BASE_ROUTE } from "../../../constants/routes";
 
 // Styled Tooltip content for white background
 const StyledTooltip = styled(({ className, ...props }) => (
@@ -160,7 +161,7 @@ function CategoryList() {
                         <ListItemButton
                           key={sub.id}
                           component={Link}
-                          to={`/shop/${category.name
+                          to={`${SHOP_BASE_ROUTE}/${category.name
                             .toLowerCase()
                             .replace(/[^a-z0-9]+/g, "-")}/${sub.name
                             .toLowerCase()
@@ -190,18 +191,25 @@ function CategoryList() {
               disableFocusListener
               disableTouchListener
             >
-              <Box
-                onMouseEnter={() => handleMouseEnter(category.id)}
-                onMouseLeave={handleMouseLeave}
-                sx={{
-                  cursor: "pointer",
-                  "&:hover": {
-                    backgroundColor: "#f0f0f0",
-                  },
-                }}
+              <Link
+                to={`${SHOP_BASE_ROUTE}/${category.name
+                  .toLowerCase()
+                  .replace(/[^a-z0-9]+/g, "-")}`}
+                style={{ textDecoration: "none", color: "inherit" }}
               >
-                <Typography variant="body1">{category.name}</Typography>
-              </Box>
+                <Box
+                  onMouseEnter={() => handleMouseEnter(category.id)}
+                  onMouseLeave={handleMouseLeave}
+                  sx={{
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "#f0f0f0",
+                    },
+                  }}
+                >
+                  <Typography variant="body1">{category.name}</Typography>
+                </Box>
+              </Link>
             </StyledTooltip>
           ))
         ) : (
