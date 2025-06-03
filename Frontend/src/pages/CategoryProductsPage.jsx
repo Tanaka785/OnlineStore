@@ -71,9 +71,9 @@ function CategoryProductsPage() {
   }
 
   return (
-    <Box sx={{ padding: 0 }}>
+    <Box sx={{ padding: 0, width: "100%" }}>
       <Navbar />
-      <CategoryList />
+      <CategoryList sx={{ "& .MuiBox-root": { paddingInline: 0 } }} />
       <Divider />
       <Box sx={{ padding: 2 }}>
         <Typography variant="h4" gutterBottom sx={{ mt: 2 }}>
