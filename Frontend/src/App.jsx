@@ -7,6 +7,7 @@ import {
   SIGNUP,
   WISHLISTS,
   SEARCH,
+  SHOP_BASE_ROUTE,
 } from "./constants/routes";
 import Homepage from "../src/pages/Home.jsx";
 import CategoryProductsPage from "./pages/CategoryProductsPage.jsx";
@@ -29,7 +30,10 @@ function App() {
           <Route path={CART} element={<Homepage />} />
           <Route path={WISHLISTS} element={<Homepage />} />
           <Route path={SEARCH} element={<SearchResultsPage />} />
-          <Route path="/shop/*" element={<CategoryProductsPage />} />
+          <Route
+            path={`${SHOP_BASE_ROUTE}/*`}
+            element={<CategoryProductsPage />}
+          />
         </Routes>
       </Box>
     </BrowserRouter>
