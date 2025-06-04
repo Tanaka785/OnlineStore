@@ -9,8 +9,9 @@ import {
   Button,
 } from "@mui/material";
 import { BASE_URL } from "../../../constants/urls";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
+import { SHOP_BASE_ROUTE } from "../../../constants/routes";
 
 const CATEGORIES_API_URL = `${BASE_URL}/products/categories/`;
 
@@ -80,46 +81,54 @@ function CategoryGallery() {
       >
         {categories.length > 0 ? (
           categories.map((category) => (
-            <Card
+            <Link
               key={category.id}
-              sx={{
-                width: 400,
-                position: "relative",
-                cursor: "pointer",
-              }}
-              onClick={() => navigate(`/category/${category.id}`)}
+              to={`${SHOP_BASE_ROUTE}/${category.name
+                .toLowerCase()
+                .replace(/\s+/g, "-")}`}
+              style={{ textDecoration: "none" }}
             >
-              <CardMedia
-                component="img"
-                height="400"
-                image={category.image_url || "https://via.placeholder.com/250"} // Assuming category has an image_url field
-                alt={category.name}
+              <Card
                 sx={{
-                  borderRadius: 1.5,
-                }}
-              />
-              <Button
-                variant="contained"
-                sx={{
-                  position: "absolute",
-                  bottom: 20,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  width: 180,
-                  height: 60,
-                  textTransform: "none",
-                  bgcolor: theme.palette.common.white,
-                  color: theme.palette.secondary.main,
-                  borderRadius: 40,
-                  fontWeight: "bold",
-                  "&:hover": {
-                    bgcolor: theme.palette.grey[200],
-                  },
+                  width: 400,
+                  position: "relative",
+                  cursor: "pointer",
                 }}
               >
-                Shop {category.name}
-              </Button>
-            </Card>
+                <CardMedia
+                  component="img"
+                  height="400"
+                  image={
+                    category.image_url || "https://via.placeholder.com/250"
+                  } // Assuming category has an image_url field
+                  alt={category.name}
+                  sx={{
+                    borderRadius: 1.5,
+                  }}
+                />
+                <Button
+                  variant="contained"
+                  sx={{
+                    position: "absolute",
+                    bottom: 20,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    width: 180,
+                    height: 60,
+                    textTransform: "none",
+                    bgcolor: theme.palette.common.white,
+                    color: theme.palette.secondary.main,
+                    borderRadius: 40,
+                    fontWeight: "bold",
+                    "&:hover": {
+                      bgcolor: theme.palette.grey[200],
+                    },
+                  }}
+                >
+                  Shop {category.name}
+                </Button>
+              </Card>
+            </Link>
           ))
         ) : (
           <Typography>No categories found.</Typography>

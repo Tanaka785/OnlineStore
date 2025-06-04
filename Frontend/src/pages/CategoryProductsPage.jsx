@@ -11,7 +11,15 @@ function CategoryProductsPage() {
   // Use useParams()['*'] to get the matched path string
   const { "*": categoryPath } = useParams();
   // Extract the last segment of the path as the category name
-  const categoryName = categoryPath ? categoryPath.split("/").pop() : null;
+  const categorySlug = categoryPath ? categoryPath.split("/").pop() : null;
+
+  // Transform the slug to match backend category name format (e.g., 'new-arrivals' -> 'New Arrivals')
+  const categoryName = categorySlug
+    ? categorySlug
+        .split("-") // Split by hyphen
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
+        .join(" ") // Join with space
+    : null;
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -77,8 +85,7 @@ function CategoryProductsPage() {
       <Divider />
       <Box sx={{ padding: 2 }}>
         <Typography variant="h4" gutterBottom sx={{ mt: 2 }}>
-          Products in{" "}
-          {categoryName ? categoryName.replace(/-/g, " ") : "Selected Category"}
+          Products in {categoryName ? categoryName : "Selected Category"}
         </Typography>
         <Box
           sx={{
@@ -96,8 +103,7 @@ function CategoryProductsPage() {
             <Box sx={{ width: "100%", textAlign: "center", mt: 4 }}>
               <Typography variant="h5" color="text.secondary">
                 No products found in the "
-                {categoryName ? categoryName.replace(/-/g, " ") : "selected"}"
-                category.
+                {categoryName ? categoryName : "selected"}" category.
               </Typography>
             </Box>
           )}
