@@ -22,7 +22,7 @@ function CartNavbar() {
           aria-label="search"
           sx={{ mr: 2 }}
         >
-          <SearchIcon />
+          <SearchIcon fontSize="medium" />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Your Cart
