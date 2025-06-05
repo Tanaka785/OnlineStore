@@ -5,8 +5,8 @@ function PageContainer({ children }) {
   return (
     <Box
       sx={{
-        width: "100%%",
-        height: "100%%",
+        width: "100%",
+        height: "100%",
         display: "flex", // Use flex to allow children to take up space if needed
         flexDirection: "column", // Stack children vertically
       }}
