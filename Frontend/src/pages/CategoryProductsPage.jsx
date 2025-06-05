@@ -84,7 +84,7 @@ function CategoryProductsPage() {
       <Navbar />
       <CategoryList sx={{ "& .MuiBox-root": { paddingInline: 0 } }} />
       <Divider />
-      <Box sx={{ paddingInline: 4 }}>
+      <Box sx={{ paddingInline: 4, marginBottom: 4, }}>
         <Typography variant="h4" gutterBottom sx={{ mt: 2 }}>
           Products in {categoryName ? categoryName : "Selected Category"}
         </Typography>
