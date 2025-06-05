@@ -1,5 +1,14 @@
 import React from "react";
-import { Card, CardMedia, CardContent, Typography, Box } from "@mui/material";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Box,
+  Button,
+  IconButton,
+} from "@mui/material";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 export default function ProductCard({ product }) {
   // Attempt to parse price as a float and check if it's a finite number
@@ -26,7 +35,9 @@ export default function ProductCard({ product }) {
           }}
         />
       )}
-      <CardContent sx={{ flexGrow: 1 }}>
+      <CardContent
+        sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}
+      >
         {/* Box to hold name and price on the same row */}
         <Box
           sx={{
@@ -55,10 +66,28 @@ export default function ProductCard({ product }) {
           )}
         </Box>
         {product.description && (
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
             {product.description}
           </Typography>
         )}
+
+        {/* Actions: Add to Cart and Wishlist */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            mt: 'auto', 
+          }}
+        >
+          {/* Add to Cart Button */}
+          <Button variant="contained" color="primary" size="small">
+            Add to Cart
+          </Button>
+          <IconButton size="small">
+            <FavoriteBorderIcon />
+          </IconButton>
+        </Box>
       </CardContent>
     </Card>
   );
