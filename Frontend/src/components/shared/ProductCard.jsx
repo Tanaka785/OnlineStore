@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardMedia,
@@ -11,6 +11,8 @@ import {
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 export default function ProductCard({ product }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   // Attempt to parse price as a float and check if it's a finite number
   const parsedPrice = parseFloat(product.price);
   const isPriceValid = !isNaN(parsedPrice) && isFinite(parsedPrice);
@@ -21,20 +23,54 @@ export default function ProductCard({ product }) {
         width: 300,
         display: "flex",
         flexDirection: "column",
+        cursor: "pointer", // Indicate it's interactive
       }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      {product.image && (
-        <CardMedia
-          component="img"
-          image={product.image}
-          alt={product.name}
-          sx={{
-            objectFit: "contain",
-            width: "100%",
-            height: "auto",
-          }}
-        />
-      )}
+      {/* Container for Image and Description Overlay */}
+      <Box sx={{ position: "relative" }}>
+        {product.image && (
+          <CardMedia
+            component="img"
+            image={product.image}
+            alt={product.name}
+            sx={{
+              objectFit: "contain",
+              width: "100%",
+              height: "auto",
+              filter: isHovered ? "blur(3px)" : "none", // Apply blur on hover
+              transition: "filter 0.3s ease-in-out", // Smooth transition for blur
+            }}
+          />
+        )}
+
+        {/* Description Overlay on Hover */}
+        {isHovered && product.description && (
+          <Box
+            sx={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.7)", // Semi-transparent background
+              color: "white",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+              padding: 2,
+              opacity: isHovered ? 1 : 0,
+              transition: "opacity 2s ease-in-out", 
+              zIndex: 1, 
+            }}
+          >
+            <Typography variant="body2">{product.description}</Typography>
+          </Box>
+        )}
+      </Box>
+
       <CardContent
         sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}
       >
@@ -65,11 +101,6 @@ export default function ProductCard({ product }) {
             </Typography>
           )}
         </Box>
-        {product.description && (
-          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-            {product.description}
-          </Typography>
-        )}
 
         {/* Actions: Add to Cart and Wishlist */}
         <Box
@@ -77,7 +108,7 @@ export default function ProductCard({ product }) {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            mt: 'auto', 
+            mt: "auto",
           }}
         >
           {/* Add to Cart Button */}
