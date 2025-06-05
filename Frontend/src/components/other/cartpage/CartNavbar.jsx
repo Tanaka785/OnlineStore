@@ -3,6 +3,8 @@ import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
+import Logo from "../../shared/Navbar/Logo";
+import NavIcons from "../../shared/Navbar/NavIcons";
 
 function CartNavbar() {
   return (
@@ -24,10 +26,10 @@ function CartNavbar() {
         >
           <SearchIcon fontSize="medium" />
         </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Your Cart
-        </Typography>
-        {/* Add other cart navigation elements here */}
+        <Box sx={{ flexGrow: 1 }} />
+        <Logo />
+        <Box sx={{ flexGrow: 1 }} />
+        <NavIcons />
       </Toolbar>
     </AppBar>
   );
