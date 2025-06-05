@@ -16,6 +16,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignupPage from "./pages/Signup.jsx";
 import LoginPage from "./pages/Login.jsx";
 import SearchResultsPage from "./pages/SearchResultsPage.jsx";
+import ShoppingCartPage from "./pages/ShoppingCartPage.jsx";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           <Route path={SELLING} element={<Homepage />} />
           <Route path={SIGNUP} element={<SignupPage />} />
           <Route path={LOGIN} element={<LoginPage />} />
-          <Route path={CART} element={<Homepage />} />
+          <Route path={CART} element={<ShoppingCartPage />} />
           <Route path={WISHLISTS} element={<Homepage />} />
           <Route path={SEARCH} element={<SearchResultsPage />} />
           <Route
