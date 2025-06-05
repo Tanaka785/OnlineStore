@@ -2,15 +2,15 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import CartNavbar from "../components/other/cartpage/CartNavbar";
 import PageContainer from "../components/other/pages/PageContainer";
+import CartHeadingAndDivider from "../components/other/cartpage/CartHeadingAndDivider";
 
 function ShoppingCartPage() {
   return (
     <PageContainer>
       <CartNavbar />
-      <Box sx={{ padding: 2 }}>
-        <Typography variant="h4" gutterBottom>
-          Shopping Cart
-        </Typography>
+      <CartHeadingAndDivider />
+
+      <Box sx={{ padding: 2, flexGrow: 1 }}>
         {/* Add shopping cart content here */}
       </Box>
     </PageContainer>
