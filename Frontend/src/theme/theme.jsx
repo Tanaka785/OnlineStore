@@ -8,6 +8,7 @@ const theme = createTheme({
           backgroundColor: "transparent",
           boxShadow: "none",
           minHeight: "64px",
+          minWidth: "100%",
         },
       },
     },

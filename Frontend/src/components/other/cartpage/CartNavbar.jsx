@@ -3,15 +3,7 @@ import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 
 function CartNavbar() {
   return (
-    <AppBar
-      position="static"
-      sx={{
-        width: "100%",
-        borderBottom: "1px solid #e0e0e0", // Example border color
-        borderTop: "1px solid #e0e0e0", // Example border color
-        // The height is controlled by the theme customization now
-      }}
-    >
+    <AppBar position="static" sx={{}}>
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Your Cart
