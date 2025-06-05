@@ -5,6 +5,7 @@ import CategoryList from "../components/other/homepage/CategoryList";
 import Divider from "../components/other/homepage/Divider";
 import Banner from "../components/other/homepage/Banner";
 import CategoryGallery from "../components/other/homepage/CategoryGallery";
+import PageContainer from "../components/other/pages/PageContainer";
 // TODO: After a successful login, save the access token and refresh token to localStorage.
 //
 // Desired functionality:
@@ -15,12 +16,12 @@ import CategoryGallery from "../components/other/homepage/CategoryGallery";
 
 export default function Homepage() {
   return (
-    <Box sx={{ width: "100%", height: "100vh" }}>
+    <PageContainer>
       <Navbar />
       <CategoryList />
       <Divider />
       <Banner />
       <CategoryGallery />
-    </Box>
+    </PageContainer>
   );
 }

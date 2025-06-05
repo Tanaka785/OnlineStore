@@ -17,6 +17,7 @@ import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../constants/urls";
 import React, { useState } from "react";
 import { Alert } from "@mui/material";
+import PageContainer from "../components/other/pages/PageContainer";
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
   display: "flex",
@@ -101,100 +102,102 @@ export default function LoginPage() {
   };
 
   return (
-    <AuthBox>
-      <AuthenticationNavbar authLink="Signup" />
+    <PageContainer>
+      <AuthBox>
+        <AuthenticationNavbar authLink="Signup" />
 
-      <AuthCenteredBox>
-        <AuthenticationHeader />
-        <AuthHeading
-          primaryText="Login"
-          secondaryText={
-            <>
-              Need an account?{" "}
-              <Link href={SIGNUP}>
-                <b>Sign Up</b>
-              </Link>
-            </>
-          }
-        />
-        <CenteredBox sx={{ marginBlock: 8 }}>
-          <Box
-            component="form"
-            onSubmit={handleSubmit(onSubmit)}
-            sx={{ width: "100%" }}
-          >
-            <fieldset
-              disabled={isSubmitting}
-              style={{ border: "none", width: "100%" }}
+        <AuthCenteredBox>
+          <AuthenticationHeader />
+          <AuthHeading
+            primaryText="Login"
+            secondaryText={
+              <>
+                Need an account?{" "}
+                <Link href={SIGNUP}>
+                  <b>Sign Up</b>
+                </Link>
+              </>
+            }
+          />
+          <CenteredBox sx={{ marginBlock: 8 }}>
+            <Box
+              component="form"
+              onSubmit={handleSubmit(onSubmit)}
+              sx={{ width: "100%" }}
             >
-              <FormControl
-                sx={{
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 1,
-                }}
+              <fieldset
+                disabled={isSubmitting}
+                style={{ border: "none", width: "100%" }}
               >
-                {apiError && (
-                  <Alert severity="error" sx={{ mb: 2, textAlign: "center" }}>
-                    {apiError}
-                  </Alert>
-                )}
-                <StandardTextField
-                  {...register("emailOrUsername")}
-                  label="Email or Username"
-                  type="text"
-                  error={!!errors.emailOrUsername}
-                  helperText={errors.emailOrUsername?.message}
-                />
-                <StandardTextField
-                  {...register("password")}
-                  label="Password"
-                  type="password"
-                  error={!!errors.password}
-                  helperText={errors.password?.message}
-                />
-                <StyledTypography
-                  component="div"
+                <FormControl
                   sx={{
-                    justifyContent: "flex-end",
-                    marginTop: 4,
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 1,
                   }}
                 >
-                  <Link href="#">Lost Password?</Link>
-                </StyledTypography>
-                <Typography
-                  component="div"
-                  variant="body2"
-                  sx={{
-                    textAlign: "center",
-                    marginTop: 4,
-                  }}
-                >
-                  By clicking Log In, you agree to our User Agreement
-                </Typography>
-                <SubmitButton
-                  text={isSubmitting ? "Logging In..." : "Log In"}
-                  disabled={false}
-                  sx={{ marginTop: 2 }}
-                />
-              </FormControl>
-            </fieldset>
-          </Box>
-          <StyledTypography
-            component="div"
-            variant="body2"
-            sx={{
-              textAlign: "center",
-              marginTop: 4,
-            }}
-          >
-            This site is protected by reCAPTCHA and the Google Privacy Policy
-            and Terms of Service apply.
-          </StyledTypography>
-        </CenteredBox>
-        <AuthFooter />
-      </AuthCenteredBox>
-    </AuthBox>
+                  {apiError && (
+                    <Alert severity="error" sx={{ mb: 2, textAlign: "center" }}>
+                      {apiError}
+                    </Alert>
+                  )}
+                  <StandardTextField
+                    {...register("emailOrUsername")}
+                    label="Email or Username"
+                    type="text"
+                    error={!!errors.emailOrUsername}
+                    helperText={errors.emailOrUsername?.message}
+                  />
+                  <StandardTextField
+                    {...register("password")}
+                    label="Password"
+                    type="password"
+                    error={!!errors.password}
+                    helperText={errors.password?.message}
+                  />
+                  <StyledTypography
+                    component="div"
+                    sx={{
+                      justifyContent: "flex-end",
+                      marginTop: 4,
+                    }}
+                  >
+                    <Link href="#">Lost Password?</Link>
+                  </StyledTypography>
+                  <Typography
+                    component="div"
+                    variant="body2"
+                    sx={{
+                      textAlign: "center",
+                      marginTop: 4,
+                    }}
+                  >
+                    By clicking Log In, you agree to our User Agreement
+                  </Typography>
+                  <SubmitButton
+                    text={isSubmitting ? "Logging In..." : "Log In"}
+                    disabled={false}
+                    sx={{ marginTop: 2 }}
+                  />
+                </FormControl>
+              </fieldset>
+            </Box>
+            <StyledTypography
+              component="div"
+              variant="body2"
+              sx={{
+                textAlign: "center",
+                marginTop: 4,
+              }}
+            >
+              This site is protected by reCAPTCHA and the Google Privacy Policy
+              and Terms of Service apply.
+            </StyledTypography>
+          </CenteredBox>
+          <AuthFooter />
+        </AuthCenteredBox>
+      </AuthBox>
+    </PageContainer>
   );
 }

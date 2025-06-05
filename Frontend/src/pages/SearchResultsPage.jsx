@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Box, Typography, CircularProgress, Grid } from "@mui/material";
 import Navbar from "../components/shared/Navbar/Navbar";
 import ProductCard from "../components/shared/ProductCard";
+import PageContainer from "../components/other/pages/PageContainer";
 
 export default function SearchResultsPage() {
   const location = useLocation();
@@ -47,7 +48,7 @@ export default function SearchResultsPage() {
   }, [location.search]);
 
   return (
-    <Box>
+    <PageContainer>
       <Navbar />
       <Box sx={{ padding: 2 }}>
         <Typography variant="h5" gutterBottom>
@@ -90,6 +91,6 @@ export default function SearchResultsPage() {
           <Typography sx={{ mt: 4 }}>Please enter a search term.</Typography>
         )}
       </Box>
-    </Box>
+    </PageContainer>
   );
 }

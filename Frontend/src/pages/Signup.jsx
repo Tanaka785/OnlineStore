@@ -8,32 +8,35 @@ import { useState } from "react";
 import AuthBox from "../components/other/authentication/shared/AuthBox";
 import AuthCenteredBox from "../components/other/authentication/shared/AuthCenteredBox";
 import AuthHeading from "../components/other/authentication/signup/Promo";
+import PageContainer from "../components/other/pages/PageContainer";
 
 export default function SignupPage() {
   const [selectedCategory, setSelectedCategory] = useState("Customer");
 
   return (
-    <AuthBox>
-      <AuthenticationNavbar authLink="Login" />
+    <PageContainer>
+      <AuthBox>
+        <AuthenticationNavbar authLink="Login" />
 
-      <AuthCenteredBox>
-        <AuthenticationHeader />
-        <AuthHeading
-          primaryText="Join WebVibes"
-          secondaryText="Sign up as a customer for 25% off your first order. Your coupon will be emailed after sign up."
-        />
-        <UserCategory
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-        />
-        <AuthenticationFields
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-        />
-        <TermsAndAgreements />
-      </AuthCenteredBox>
+        <AuthCenteredBox>
+          <AuthenticationHeader />
+          <AuthHeading
+            primaryText="Join WebVibes"
+            secondaryText="Sign up as a customer for 25% off your first order. Your coupon will be emailed after sign up."
+          />
+          <UserCategory
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
+          <AuthenticationFields
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
+          <TermsAndAgreements />
+        </AuthCenteredBox>
 
-      <AuthFooter />
-    </AuthBox>
+        <AuthFooter />
+      </AuthBox>
+    </PageContainer>
   );
 }

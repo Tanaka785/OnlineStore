@@ -6,6 +6,7 @@ import ProductCard from "../components/shared/ProductCard.jsx";
 import Navbar from "../components/shared/Navbar/Navbar.jsx";
 import CategoryList from "../components/other/homepage/CategoryList.jsx";
 import Divider from "../components/other/homepage/Divider.jsx";
+import PageContainer from "../components/other/pages/PageContainer.jsx";
 
 function CategoryProductsPage() {
   // Use useParams()['*'] to get the matched path string
@@ -79,7 +80,7 @@ function CategoryProductsPage() {
   }
 
   return (
-    <Box sx={{ padding: 0, width: "100%" }}>
+    <PageContainer>
       <Navbar />
       <CategoryList sx={{ "& .MuiBox-root": { paddingInline: 0 } }} />
       <Divider />
@@ -109,7 +110,7 @@ function CategoryProductsPage() {
           )}
         </Box>
       </Box>
-    </Box>
+    </PageContainer>
   );
 }
 
