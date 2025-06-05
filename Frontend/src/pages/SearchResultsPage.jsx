@@ -4,6 +4,7 @@ import { Box, Typography, CircularProgress, Grid } from "@mui/material";
 import Navbar from "../components/shared/Navbar/Navbar";
 import ProductCard from "../components/shared/ProductCard";
 import PageContainer from "../components/other/pages/PageContainer";
+import { BASE_URL } from "../constants/urls";
 
 export default function SearchResultsPage() {
   const location = useLocation();
@@ -22,9 +23,7 @@ export default function SearchResultsPage() {
         setError(null);
         try {
           const response = await fetch(
-            `http://localhost:8000/products/search/?q=${encodeURIComponent(
-              query
-            )}`
+            `${BASE_URL}/products/search/?q=${encodeURIComponent(query)}`
           );
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
