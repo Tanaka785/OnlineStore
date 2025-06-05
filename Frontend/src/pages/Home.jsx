@@ -6,13 +6,6 @@ import Divider from "../components/other/homepage/Divider";
 import Banner from "../components/other/homepage/Banner";
 import CategoryGallery from "../components/other/homepage/CategoryGallery";
 import PageContainer from "../components/other/pages/PageContainer";
-// TODO: After a successful login, save the access token and refresh token to localStorage.
-//
-// Desired functionality:
-// 1. Once the user logs in successfully, redirect them to the home page.
-// 2. On the navbar (in navicons.jsx), display the account icon as the first item.
-// 3. As long as the access token is valid (not expired), keep showing the account icon.
-// 4. When the user is logged in, hide all the nav links that are normally hidden by the navLinks component.
 
 export default function Homepage() {
   return (
