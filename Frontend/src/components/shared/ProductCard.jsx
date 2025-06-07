@@ -54,7 +54,7 @@ export default function ProductCard({ product }) {
               left: 0,
               right: 0,
               bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.7)", // Semi-transparent background
+              backgroundColor: "rgba(0, 0, 0, 0.2)", // Semi-transparent background
               color: "white",
               display: "flex",
               alignItems: "center",
