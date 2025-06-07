@@ -85,7 +85,7 @@ function CategoryProductsPage() {
       <CategoryList sx={{ "& .MuiBox-root": { paddingInline: 0 } }} />
       <Divider />
       <Box sx={{ paddingInline: 4, marginBottom: 4, }}>
-        <Typography variant="h4" gutterBottom sx={{ mt: 2 }}>
+        <Typography variant="h5" gutterBottom sx={{ mt: 2, mb:2 }}>
           Products in {categoryName ? categoryName : "Selected Category"}
         </Typography>
         <Box
