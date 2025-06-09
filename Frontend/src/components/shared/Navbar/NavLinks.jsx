@@ -24,12 +24,16 @@ export default function NavLinks() {
       }}
     >
       {navLinks.map((link) => (
-        <Link key={link.label} href={link.url}>
+        <Link
+          key={link.label}
+          href={link.url}
+          sx={{ display: "flex", alignItems: "center" }}
+        >
           {
             <Typography
               variant="body1"
               color="secondary.main"
-              sx={{ fontWeight: "bold" }}
+              sx={{ fontWeight: "bold", display: "flex", alignItems: "center" }}
             >
               {link.label}
             </Typography>
@@ -38,25 +42,33 @@ export default function NavLinks() {
       ))}
 
       {authToken ? (
-        <Link href="/account">
+        <Link href="/account" sx={{ display: "flex", alignItems: "center" }}>
           <AccountCircleIcon sx={{ color: "secondary.main" }} />
         </Link>
       ) : (
         <>
-          <Link key="Signup" href={SIGNUP}>
+          <Link
+            key="Signup"
+            href={SIGNUP}
+            sx={{ display: "flex", alignItems: "center" }}
+          >
             <Typography
               variant="body1"
               color="secondary.main"
-              sx={{ fontWeight: "bold" }}
+              sx={{ fontWeight: "bold", display: "flex", alignItems: "center" }}
             >
               Signup
             </Typography>
           </Link>
-          <Link key="Login" href={LOGIN}>
+          <Link
+            key="Login"
+            href={LOGIN}
+            sx={{ display: "flex", alignItems: "center" }}
+          >
             <Typography
               variant="body1"
               color="secondary.main"
-              sx={{ fontWeight: "bold" }}
+              sx={{ fontWeight: "bold", display: "flex", alignItems: "center" }}
             >
               Login
             </Typography>
