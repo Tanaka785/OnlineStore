@@ -39,9 +39,7 @@ export default function NavLinks() {
 
       {authToken ? (
         <Link href="/account">
-          <AccountCircleIcon
-            sx={{ color: "secondary.main", fontSize: "default" }}
-          />
+          <AccountCircleIcon sx={{ color: "secondary.main" }} />
         </Link>
       ) : (
         <>
