@@ -14,7 +14,15 @@ export default function NavLinks() {
   const { authToken } = useAuth();
 
   return (
-    <Box sx={{ marginLeft: 3, marginRight: 2, display: "flex", gap: 2 }}>
+    <Box
+      sx={{
+        marginLeft: 3,
+        marginRight: 2,
+        display: "flex",
+        gap: 2,
+        alignItems: "center",
+      }}
+    >
       {navLinks.map((link) => (
         <Link key={link.label} href={link.url}>
           {
@@ -32,7 +40,7 @@ export default function NavLinks() {
       {authToken ? (
         <Link href="/account">
           <AccountCircleIcon
-            sx={{ color: "secondary.main", fontSize: "2rem" }}
+            sx={{ color: "secondary.main", fontSize: "default" }}
           />
         </Link>
       ) : (
