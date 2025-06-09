@@ -18,6 +18,7 @@ import { BASE_URL } from "../constants/urls";
 import React, { useState } from "react";
 import { Alert } from "@mui/material";
 import PageContainer from "../components/other/pages/PageContainer";
+import { useAuth } from "../utils/AuthContext.jsx";
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
   display: "flex",
@@ -47,6 +48,7 @@ const loginSchema = z.object({
 export default function LoginPage() {
   const navigate = useNavigate();
   const [apiError, setApiError] = useState("");
+  const { login } = useAuth();
 
   const {
     register,
@@ -64,7 +66,7 @@ export default function LoginPage() {
         password: data.password,
       };
 
-      const response = await fetch(`${BASE_URL}/auth/login/`, {
+      const response = await fetch(`${BASE_URL}/api/token/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -80,6 +82,7 @@ export default function LoginPage() {
 
       if (response.status === 200) {
         console.log("Login successful");
+        login(responseData.access, responseData.user);
         navigate("/");
       } else {
         let errorMsg = "Login failed. Please try again.";

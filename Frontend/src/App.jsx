@@ -17,26 +17,29 @@ import SignupPage from "./pages/Signup.jsx";
 import LoginPage from "./pages/Login.jsx";
 import SearchResultsPage from "./pages/SearchResultsPage.jsx";
 import ShoppingCartPage from "./pages/ShoppingCartPage.jsx";
+import { AuthProvider } from "./utils/AuthContext.jsx";
 
 function App() {
   return (
     <BrowserRouter>
-      <CssBaseline />
-      <Box sx={{ display: "flex", width: "100%", height: "100%" }}>
-        <Routes>
-          <Route path={HOME} element={<Homepage />} />
-          <Route path={SELLING} element={<Homepage />} />
-          <Route path={SIGNUP} element={<SignupPage />} />
-          <Route path={LOGIN} element={<LoginPage />} />
-          <Route path={CART} element={<ShoppingCartPage />} />
-          <Route path={WISHLISTS} element={<Homepage />} />
-          <Route path={SEARCH} element={<SearchResultsPage />} />
-          <Route
-            path={`${SHOP_BASE_ROUTE}/*`}
-            element={<CategoryProductsPage />}
-          />
-        </Routes>
-      </Box>
+      <AuthProvider>
+        <CssBaseline />
+        <Box sx={{ display: "flex", width: "100%", height: "100%" }}>
+          <Routes>
+            <Route path={HOME} element={<Homepage />} />
+            <Route path={SELLING} element={<Homepage />} />
+            <Route path={SIGNUP} element={<SignupPage />} />
+            <Route path={LOGIN} element={<LoginPage />} />
+            <Route path={CART} element={<ShoppingCartPage />} />
+            <Route path={WISHLISTS} element={<Homepage />} />
+            <Route path={SEARCH} element={<SearchResultsPage />} />
+            <Route
+              path={`${SHOP_BASE_ROUTE}/*`}
+              element={<CategoryProductsPage />}
+            />
+          </Routes>
+        </Box>
+      </AuthProvider>
     </BrowserRouter>
   );
 }

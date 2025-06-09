@@ -9,13 +9,53 @@ import {
   IconButton,
 } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { useAuth } from "../../utils/AuthContext.jsx";
+import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../../constants/urls.js";
+import { LOGIN } from "../../constants/routes.js";
 
 export default function ProductCard({ product }) {
   const [isHovered, setIsHovered] = useState(false);
+  const { authToken } = useAuth();
+  const navigate = useNavigate();
 
   // Attempt to parse price as a float and check if it's a finite number
   const parsedPrice = parseFloat(product.price);
   const isPriceValid = !isNaN(parsedPrice) && isFinite(parsedPrice);
+
+  const handleAddToCart = async () => {
+    if (!authToken) {
+      navigate(LOGIN);
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BASE_URL}/api/cart/add/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${authToken}`,
+        },
+        body: JSON.stringify({
+          product_id: product.id,
+          quantity: 1,
+        }),
+      });
+
+      if (response.status === 200) {
+        console.log("Item added to cart successfully!");
+        // Optionally, provide user feedback (e.g., a toast notification)
+      } else if (response.status === 401) {
+        console.error("Unauthorized: Please log in.");
+        navigate(LOGIN);
+      } else {
+        const errorData = await response.json();
+        console.error("Failed to add item to cart:", errorData);
+      }
+    } catch (error) {
+      console.error("Error adding item to cart:", error);
+    }
+  };
 
   return (
     <Card
@@ -62,8 +102,8 @@ export default function ProductCard({ product }) {
               textAlign: "center",
               padding: 2,
               opacity: isHovered ? 1 : 0,
-              transition: "opacity 2s ease-in-out", 
-              zIndex: 1, 
+              transition: "opacity 2s ease-in-out",
+              zIndex: 1,
             }}
           >
             <Typography variant="body2">{product.description}</Typography>
@@ -112,7 +152,12 @@ export default function ProductCard({ product }) {
           }}
         >
           {/* Add to Cart Button */}
-          <Button variant="contained" color="primary" size="small">
+          <Button
+            variant="contained"
+            color="primary"
+            size="small"
+            onClick={handleAddToCart}
+          >
             Add to Cart
           </Button>
           <IconButton size="small">
