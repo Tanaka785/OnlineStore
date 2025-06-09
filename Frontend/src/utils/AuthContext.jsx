@@ -38,11 +38,43 @@ export const AuthProvider = ({ children }) => {
         },
       });
 
+      console.log("Refresh token response status:", response.status);
+
       if (response.ok) {
         const data = await response.json();
+        console.log("Refresh token response data:", data);
         setAuthToken(data.access);
+
+        // Fetch user data after successful token refresh
+        try {
+          const userResponse = await fetch(`${BASE_URL}/auth/me/`, {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${data.access}`,
+            },
+          });
+
+          if (userResponse.ok) {
+            const userData = await userResponse.json();
+            setUser(userData);
+            console.log("User data fetched successfully:", userData);
+          } else {
+            console.error(
+              "Failed to fetch user data after refresh:",
+              userResponse.status
+            );
+            setUser(null); // Clear user data if fetching fails
+          }
+        } catch (userError) {
+          console.error("Error fetching user data:", userError);
+          setUser(null);
+        }
+
         console.log("Access token refreshed successfully.");
       } else {
+        const errorData = await response.json();
+        console.error("Refresh token failed, error data:", errorData);
         console.log("No valid refresh token or session expired.");
         setAuthToken(null);
         setUser(null);

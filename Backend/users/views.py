@@ -4,10 +4,12 @@ from rest_framework.response import Response
 from rest_framework import status
 from .serializers import SignupSerializer, UserSerializer
 from .models import User
+from rest_framework.permissions import IsAuthenticated
 
 class UserListView(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer  
+
 class SignupView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = SignupSerializer
@@ -40,3 +42,11 @@ class SignupView(generics.CreateAPIView):
             status=status.HTTP_201_CREATED,
             headers=headers,
         )
+
+
+class CurrentUserView(generics.RetrieveAPIView):
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self):
+        return self.request.user
