@@ -66,6 +66,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const checkAuthStatus = async () => {
+    console.log("checkAuthStatus called.");
     try {
       const response = await fetch(`${BASE_URL}/api/token/refresh/`, {
         method: "POST",
@@ -76,14 +77,17 @@ export const AuthProvider = ({ children }) => {
       });
 
       console.log("Refresh token response status:", response.status);
+      console.log("Refresh token response headers:", response.headers);
 
       if (response.ok) {
         const data = await response.json();
         console.log("Refresh token response data:", data);
         login(data.access, null); // Pass null for user data, it will be fetched below
+        console.log("Access token set from refresh.");
 
         // Fetch user data after successful token refresh
         try {
+          console.log("Attempting to fetch user data after token refresh.");
           const userResponse = await fetch(`${BASE_URL}/auth/me/`, {
             method: "GET",
             headers: {
@@ -99,7 +103,8 @@ export const AuthProvider = ({ children }) => {
           } else {
             console.error(
               "Failed to fetch user data after refresh:",
-              userResponse.status
+              userResponse.status,
+              await userResponse.text()
             );
             setUser(null); // Clear user data if fetching fails
             logout(true); // Auto logout if user data fetch fails
@@ -128,14 +133,22 @@ export const AuthProvider = ({ children }) => {
       logout(true); // Automatic logout
     } finally {
       setLoading(false);
+      console.log("checkAuthStatus finished. Loading set to false.");
     }
   };
 
   useEffect(() => {
+    console.log("useEffect in AuthProvider triggered.");
     checkAuthStatus();
-    const refreshInterval = setInterval(checkAuthStatus, 4 * 60 * 1000); // Check every 4 minutes
+    const refreshInterval = setInterval(() => {
+      console.log("Interval triggered: Attempting token refresh.");
+      checkAuthStatus();
+    }, 4 * 60 * 1000); // Check every 4 minutes
 
-    return () => clearInterval(refreshInterval);
+    return () => {
+      console.log("useEffect cleanup: Clearing refresh interval.");
+      clearInterval(refreshInterval);
+    };
   }, []);
 
   if (loading) {

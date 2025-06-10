@@ -197,8 +197,7 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_COOKIE_DOMAIN": None,
     "REFRESH_TOKEN_COOKIE_SECURE": not DEBUG,  # Set to True in production with HTTPS
     "REFRESH_TOKEN_COOKIE_HTTP_ONLY": True,  # Important: refresh token should be http-only
-    "REFRESH_TOKEN_COOKIE_PATH": "/api/token/",  # Path where refresh token is sent
+    "REFRESH_TOKEN_COOKIE_PATH": "/",  # Path where refresh token is sent
     "REFRESH_TOKEN_COOKIE_SAMESITE": "Lax",
-
     # TODO: use /api/token instead of /auth/login.
 }

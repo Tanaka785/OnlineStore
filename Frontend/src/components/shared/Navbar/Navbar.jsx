@@ -6,15 +6,10 @@ import NavIcons from "./NavIcons";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SEARCH } from "../../../constants/routes";
-import { useAuth } from "../../../utils/AuthContext";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import IconButton from "@mui/material/IconButton";
-import { LOGIN } from "../../../constants/routes";
 
 export default function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
-  const { user, logout } = useAuth();
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -55,15 +50,6 @@ export default function Navbar() {
           </form>
           <NavLinks />
           <NavIcons />
-          {user ? (
-            <IconButton color="inherit" onClick={logout}>
-              <AccountCircleIcon />
-            </IconButton>
-          ) : (
-            <IconButton color="inherit" onClick={() => navigate(LOGIN)}>
-              <AccountCircleIcon />
-            </IconButton>
-          )}
         </Toolbar>
       </AppBar>
     </Box>

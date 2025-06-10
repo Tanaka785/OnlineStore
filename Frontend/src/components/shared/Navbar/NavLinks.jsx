@@ -1,7 +1,10 @@
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { SELLING, SIGNUP, LOGIN } from "../../../constants/routes";
 import { useAuth } from "../../../utils/AuthContext";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { styled } from "@mui/material/styles";
+import { Link as RouterLink } from "react-router-dom";
+import MuiLink from "@mui/material/Link";
 
 const navLinks = [
   {
@@ -10,8 +13,12 @@ const navLinks = [
   },
 ];
 
+const StyledTypography = styled(Typography)(({ theme }) => ({
+  // ... existing code ...
+}));
+
 export default function NavLinks() {
-  const { authToken } = useAuth();
+  const { authToken, user, logout } = useAuth();
 
   return (
     <Box
@@ -24,55 +31,59 @@ export default function NavLinks() {
       }}
     >
       {navLinks.map((link) => (
-        <Link
+        <MuiLink
           key={link.label}
-          href={link.url}
-          sx={{ display: "flex", alignItems: "center" }}
+          component={RouterLink}
+          to={link.url}
+          sx={{
+            textDecoration: "none",
+            display: "flex",
+            alignItems: "center",
+            color: "secondary.main",
+            fontWeight: "bold",
+          }}
         >
-          {
-            <Typography
-              variant="body1"
-              color="secondary.main"
-              sx={{ fontWeight: "bold", display: "flex", alignItems: "center" }}
-            >
-              {link.label}
-            </Typography>
-          }
-        </Link>
+          {link.label}
+        </MuiLink>
       ))}
 
       {authToken ? (
-        <Link href="/account" sx={{ display: "flex", alignItems: "center" }}>
+        <MuiLink
+          onClick={logout}
+          sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+        >
           <AccountCircleIcon sx={{ color: "secondary.main" }} />
-        </Link>
+        </MuiLink>
       ) : (
         <>
-          <Link
+          <MuiLink
             key="Signup"
-            href={SIGNUP}
-            sx={{ display: "flex", alignItems: "center" }}
+            component={RouterLink}
+            to={SIGNUP}
+            sx={{
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              color: "secondary.main",
+              fontWeight: "bold",
+            }}
           >
-            <Typography
-              variant="body1"
-              color="secondary.main"
-              sx={{ fontWeight: "bold", display: "flex", alignItems: "center" }}
-            >
-              Signup
-            </Typography>
-          </Link>
-          <Link
+            Signup
+          </MuiLink>
+          <MuiLink
             key="Login"
-            href={LOGIN}
-            sx={{ display: "flex", alignItems: "center" }}
+            component={RouterLink}
+            to={LOGIN}
+            sx={{
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              color: "secondary.main",
+              fontWeight: "bold",
+            }}
           >
-            <Typography
-              variant="body1"
-              color="secondary.main"
-              sx={{ fontWeight: "bold", display: "flex", alignItems: "center" }}
-            >
-              Login
-            </Typography>
-          </Link>
+            Login
+          </MuiLink>
         </>
       )}
     </Box>
