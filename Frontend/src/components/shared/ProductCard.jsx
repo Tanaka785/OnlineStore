@@ -73,7 +73,10 @@ export default function ProductCard({ product }) {
     }
 
     try {
-      console.log("handleAddToCart: Sending add to cart request for product:", product.id);
+      console.log(
+        "handleAddToCart: Sending add to cart request for product:",
+        product.id
+      );
       const response = await fetch(`${BASE_URL}/api/cart/add/`, {
         method: "POST",
         headers: {
@@ -86,18 +89,26 @@ export default function ProductCard({ product }) {
         }),
       });
 
-      if (response.status === 200) {
+      if (response.ok) {
         console.log("handleAddToCart: Item added to cart successfully!");
         setIsInCart(true);
-        console.log("handleAddToCart: isInCart set to true immediately. Re-checking cart status...");
+        console.log(
+          "handleAddToCart: isInCart set to true immediately. Re-checking cart status..."
+        );
         await checkIfProductInCart();
-        console.log("handleAddToCart: After re-check, final isInCart status:", isInCart);
+        console.log(
+          "handleAddToCart: After re-check, final isInCart status:",
+          isInCart
+        );
       } else if (response.status === 401) {
         console.error("handleAddToCart: Unauthorized: Please log in.");
         navigate(LOGIN);
       } else {
         const errorData = await response.json();
-        console.error("handleAddToCart: Failed to add item to cart:", errorData);
+        console.error(
+          "handleAddToCart: Failed to add item to cart:",
+          errorData
+        );
       }
     } catch (error) {
       console.error("handleAddToCart: Error adding item to cart:", error);
@@ -201,10 +212,11 @@ export default function ProductCard({ product }) {
           {/* Add to Cart Button */}
           <Button
             variant="contained"
-            color="primary"
+            color={isInCart ? "error" : "primary"}
             size="small"
             onClick={handleAddToCart}
           >
+            {console.log("Rendering button, isInCart:", isInCart)}
             {isInCart ? (
               <>
                 Remove from cart{" "}
