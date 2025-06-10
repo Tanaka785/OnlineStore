@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   CardMedia,
@@ -9,6 +9,7 @@ import {
   IconButton,
 } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 import { useAuth } from "../../utils/AuthContext.jsx";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../constants/urls.js";
@@ -16,20 +17,63 @@ import { LOGIN } from "../../constants/routes.js";
 
 export default function ProductCard({ product }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [isInCart, setIsInCart] = useState(false);
   const { authToken } = useAuth();
   const navigate = useNavigate();
+
+  const checkIfProductInCart = async () => {
+    if (!authToken || !product || !product.id) {
+      setIsInCart(false);
+      console.log("checkIfProductInCart: No auth token, product, or product ID. isInCart set to false.");
+      return;
+    }
+    try {
+      console.log("checkIfProductInCart: Fetching cart...");
+      const response = await fetch(`${BASE_URL}/api/cart/`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${authToken}`,
+        },
+      });
+
+      if (response.ok) {
+        const cartData = await response.json();
+        console.log("checkIfProductInCart: Cart data received:", cartData);
+        const productInCart = cartData.items.some(
+          (item) => item.product.id === product.id
+        );
+        setIsInCart(productInCart);
+        console.log("checkIfProductInCart: Product in cart status:", productInCart);
+      } else {
+        console.error("checkIfProductInCart: Failed to fetch cart:", response.status);
+        setIsInCart(false);
+      }
+    } catch (error) {
+      console.error("checkIfProductInCart: Error fetching cart:", error);
+      setIsInCart(false);
+    }
+  };
+
+  useEffect(() => {
+    console.log("useEffect: Running checkIfProductInCart.");
+    checkIfProductInCart();
+  }, [authToken, product]);
 
   // Attempt to parse price as a float and check if it's a finite number
   const parsedPrice = parseFloat(product.price);
   const isPriceValid = !isNaN(parsedPrice) && isFinite(parsedPrice);
 
   const handleAddToCart = async () => {
+    console.log("handleAddToCart: Initial isInCart status:", isInCart);
     if (!authToken) {
       navigate(LOGIN);
+      console.log("handleAddToCart: No auth token, navigating to login.");
       return;
     }
 
     try {
+      console.log("handleAddToCart: Sending add to cart request for product:", product.id);
       const response = await fetch(`${BASE_URL}/api/cart/add/`, {
         method: "POST",
         headers: {
@@ -43,17 +87,20 @@ export default function ProductCard({ product }) {
       });
 
       if (response.status === 200) {
-        console.log("Item added to cart successfully!");
-        // Optionally, provide user feedback (e.g., a toast notification)
+        console.log("handleAddToCart: Item added to cart successfully!");
+        setIsInCart(true);
+        console.log("handleAddToCart: isInCart set to true immediately. Re-checking cart status...");
+        await checkIfProductInCart();
+        console.log("handleAddToCart: After re-check, final isInCart status:", isInCart);
       } else if (response.status === 401) {
-        console.error("Unauthorized: Please log in.");
+        console.error("handleAddToCart: Unauthorized: Please log in.");
         navigate(LOGIN);
       } else {
         const errorData = await response.json();
-        console.error("Failed to add item to cart:", errorData);
+        console.error("handleAddToCart: Failed to add item to cart:", errorData);
       }
     } catch (error) {
-      console.error("Error adding item to cart:", error);
+      console.error("handleAddToCart: Error adding item to cart:", error);
     }
   };
 
@@ -158,7 +205,14 @@ export default function ProductCard({ product }) {
             size="small"
             onClick={handleAddToCart}
           >
-            Add to Cart
+            {isInCart ? (
+              <>
+                Remove from cart{" "}
+                <CancelOutlinedIcon sx={{ ml: 0.5, fontSize: "1rem" }} />
+              </>
+            ) : (
+              "Add to Cart"
+            )}
           </Button>
           <IconButton size="small">
             <FavoriteBorderIcon />
