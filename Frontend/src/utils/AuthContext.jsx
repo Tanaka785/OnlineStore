@@ -1,5 +1,14 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, {
+  createContext,
+  useState,
+  useContext,
+  useEffect,
+  useRef,
+} from "react";
 import { BASE_URL } from "../constants/urls.js";
+import { jwtDecode } from "jwt-decode";
+import { useNavigate } from "react-router-dom";
+import { LOGIN } from "../constants/routes.js";
 
 const AuthContext = createContext(null);
 
@@ -7,25 +16,52 @@ export const AuthProvider = ({ children }) => {
   const [authToken, setAuthToken] = useState(null);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const logoutTimerRef = useRef(null);
+  const navigate = useNavigate();
+
+  const autoLogout = () => {
+    console.log("Automatic logout due to token expiry.");
+    logout(true); // Pass true to indicate automatic logout
+  };
 
   const login = (token, userData) => {
     setAuthToken(token);
     setUser(userData);
+    if (token) {
+      const decodedToken = jwtDecode(token);
+      const expiresAt = decodedToken.exp * 1000; // Convert to milliseconds
+      const timeToLogout = expiresAt - Date.now() - 60 * 1000; // 1 minute before expiry
+
+      if (logoutTimerRef.current) {
+        clearTimeout(logoutTimerRef.current);
+      }
+      logoutTimerRef.current = setTimeout(autoLogout, timeToLogout);
+    }
   };
 
-  const logout = async () => {
+  const logout = async (isAutomatic = false) => {
     setAuthToken(null);
     setUser(null);
+    if (logoutTimerRef.current) {
+      clearTimeout(logoutTimerRef.current);
+    }
+
     try {
-      await fetch(`${BASE_URL}/api/token/blacklist/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      console.log("Refresh token blacklisted on logout.");
+      if (!isAutomatic) {
+        // Only attempt to blacklist if it's a manual logout
+        await fetch(`${BASE_URL}/api/token/blacklist/`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        console.log("Refresh token blacklisted on logout.");
+      }
     } catch (error) {
       console.error("Error blacklisting refresh token on logout:", error);
+    } finally {
+      // Removed navigate(LOGIN) from here. Navigation to login should be handled by components
+      // that require authentication or when a user explicitly logs out.
     }
   };
 
@@ -36,6 +72,7 @@ export const AuthProvider = ({ children }) => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
       });
 
       console.log("Refresh token response status:", response.status);
@@ -43,7 +80,7 @@ export const AuthProvider = ({ children }) => {
       if (response.ok) {
         const data = await response.json();
         console.log("Refresh token response data:", data);
-        setAuthToken(data.access);
+        login(data.access, null); // Pass null for user data, it will be fetched below
 
         // Fetch user data after successful token refresh
         try {
@@ -65,24 +102,30 @@ export const AuthProvider = ({ children }) => {
               userResponse.status
             );
             setUser(null); // Clear user data if fetching fails
+            logout(true); // Auto logout if user data fetch fails
           }
         } catch (userError) {
           console.error("Error fetching user data:", userError);
           setUser(null);
+          logout(true); // Auto logout if user data fetch fails
         }
 
         console.log("Access token refreshed successfully.");
       } else {
-        const errorData = await response.json();
+        let errorData = await response.text(); // Read as text first
+        try {
+          const jsonErrorData = JSON.parse(errorData); // Try parsing as JSON
+          errorData = jsonErrorData; // If successful, use the parsed JSON
+        } catch (e) {
+          // If parsing fails, errorData remains as text
+        }
         console.error("Refresh token failed, error data:", errorData);
-        console.log("No valid refresh token or session expired.");
-        setAuthToken(null);
-        setUser(null);
+        console.log("No valid refresh token or session expired. Logging out.");
+        logout(true); // Automatic logout
       }
     } catch (error) {
       console.error("Error refreshing token:", error);
-      setAuthToken(null);
-      setUser(null);
+      logout(true); // Automatic logout
     } finally {
       setLoading(false);
     }
@@ -90,6 +133,9 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     checkAuthStatus();
+    const refreshInterval = setInterval(checkAuthStatus, 4 * 60 * 1000); // Check every 4 minutes
+
+    return () => clearInterval(refreshInterval);
   }, []);
 
   if (loading) {
