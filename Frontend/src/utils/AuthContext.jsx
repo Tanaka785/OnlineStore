@@ -77,7 +77,8 @@ export const AuthProvider = ({ children }) => {
       });
 
       console.log("Refresh token response status:", response.status);
-      console.log("Refresh token response headers:", response.headers);
+      console.log("Refresh token response headers:\n", Array.from(response.headers.entries()).map(([key, value]) => `${key}: ${value}`).join('\n'));
+      console.log("Refresh token response text (if not JSON):\n", await response.clone().text());
 
       if (response.ok) {
         const data = await response.json();
@@ -99,7 +100,7 @@ export const AuthProvider = ({ children }) => {
           if (userResponse.ok) {
             const userData = await userResponse.json();
             setUser(userData);
-            console.log("User data fetched successfully:", userData);
+            console.log("User data fetched successfully:\n", userData);
           } else {
             console.error(
               "Failed to fetch user data after refresh:",
@@ -122,7 +123,7 @@ export const AuthProvider = ({ children }) => {
           const jsonErrorData = JSON.parse(errorData); // Try parsing as JSON
           errorData = jsonErrorData; // If successful, use the parsed JSON
         } catch (e) {
-          // If parsing fails, errorData remains as text
+          console.error("Failed to parse refresh token error response as JSON:", e);
         }
         console.error("Refresh token failed, error data:", errorData);
         console.log("No valid refresh token or session expired. Logging out.");
