@@ -5,8 +5,8 @@ name = "pypi"
 
 [packages]
 python-dotenv = "*"
-djangorestframework-simplejwt = "*"
 pillow = "*"
+djangorestframework-simplejwt = "==5.2.2"
 
 [dev-packages]
 
