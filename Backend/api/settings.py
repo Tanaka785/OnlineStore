@@ -157,7 +157,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 JWT_AUTH_COOKIE = "access_token"
 JWT_AUTH_REFRESH_COOKIE = "refresh_token"
-JWT_AUTH_SAMESITE = "Lax"
+JWT_AUTH_SAMESITE = "None"
 JWT_AUTH_SECURE = not DEBUG  # Set to True in production (when DEBUG is False)
 
 # SIMPLE_JWT settings for http-only cookies
@@ -193,13 +193,13 @@ SIMPLE_JWT = {
     "AUTH_COOKIE_SECURE": not DEBUG,  # Set to True in production with HTTPS
     "AUTH_COOKIE_HTTP_ONLY": True,  # Important: access token should be http-only
     "AUTH_COOKIE_PATH": "/",
-    "AUTH_COOKIE_SAMESITE": "Lax",  # Or 'Strict' for more security
+    "AUTH_COOKIE_SAMESITE": "Lax",  # Reverted to Lax for development
     "REFRESH_TOKEN_COOKIE": "refresh_token",  # Cookie name for refresh token
     "REFRESH_TOKEN_COOKIE_DOMAIN": "localhost",
     "REFRESH_TOKEN_COOKIE_SECURE": not DEBUG,  # Set to True in production with HTTPS
     "REFRESH_TOKEN_COOKIE_HTTP_ONLY": True,  # Important: refresh token should be http-only
     "REFRESH_TOKEN_COOKIE_PATH": "/",  # Path where refresh token is sent
-    "REFRESH_TOKEN_COOKIE_SAMESITE": "Lax",
+    "REFRESH_TOKEN_COOKIE_SAMESITE": "Lax",  # Reverted to Lax for development
 }
 
 SESSION_COOKIE_DOMAIN = "localhost"
