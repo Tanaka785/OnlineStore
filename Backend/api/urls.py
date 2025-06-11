@@ -20,18 +20,15 @@ from django.contrib import admin
 
 from django.urls import path, include
 from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
     TokenRefreshView,
-    TokenObtainPairCookieView,
 )
 
 from .views import home
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/token/", TokenObtainPairCookieView.as_view(), name="token_obtain_pair"),
+    path("auth/", include("users.urls")),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("", home, name="home"),
-    path("auth/", include("users.urls")),
     path("products/", include("products.urls")),
     path("api/cart/", include("cart.urls")),
 ]

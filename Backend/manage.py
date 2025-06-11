@@ -3,6 +3,7 @@
 import os
 import sys
 
+# --- REMOVED DEBUGGING LINES ---
 
 def main():
     """Run administrative tasks."""

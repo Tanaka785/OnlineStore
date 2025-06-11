@@ -66,7 +66,7 @@ export default function LoginPage() {
         password: data.password,
       };
 
-      const response = await fetch(`${BASE_URL}/api/token/`, {
+      const response = await fetch(`${BASE_URL}/auth/login/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

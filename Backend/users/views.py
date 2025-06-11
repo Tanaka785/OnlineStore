@@ -5,6 +5,10 @@ from rest_framework import status
 from .serializers import SignupSerializer, UserSerializer
 from .models import User
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
+from rest_framework_simplejwt.tokens import RefreshToken
+from django.contrib.auth import authenticate
+from django.conf import settings
 
 class UserListView(generics.ListAPIView):
     queryset = User.objects.all()
@@ -50,3 +54,37 @@ class CurrentUserView(generics.RetrieveAPIView):
 
     def get_object(self):
         return self.request.user
+
+
+class LoginView(APIView):
+    def post(self, request, *args, **kwargs):
+        username = request.data.get("username")
+        password = request.data.get("password")
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            refresh = RefreshToken.for_user(user)
+            access_token = str(refresh.access_token)
+
+            response = Response({
+                "access": access_token,
+                "user": UserSerializer(user).data  # Or whatever user data you want to return
+            }, status=status.HTTP_200_OK)
+
+            # Set refresh token as HttpOnly cookie
+            response.set_cookie(
+                key=settings.SIMPLE_JWT["REFRESH_TOKEN_COOKIE"],
+                value=str(refresh),
+                httponly=settings.SIMPLE_JWT["REFRESH_TOKEN_COOKIE_HTTP_ONLY"],
+                secure=settings.SIMPLE_JWT["REFRESH_TOKEN_COOKIE_SECURE"],
+                samesite=settings.SIMPLE_JWT["REFRESH_TOKEN_COOKIE_SAMESITE"],
+                path=settings.SIMPLE_JWT["REFRESH_TOKEN_COOKIE_PATH"],
+                expires=settings.SIMPLE_JWT["REFRESH_TOKEN_LIFETIME"]
+            )
+            return response
+        else:
+            return Response(
+                {"detail": "Invalid credentials"},
+                status=status.HTTP_401_UNAUTHORIZED
+            )
