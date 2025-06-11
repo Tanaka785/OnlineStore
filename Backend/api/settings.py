@@ -201,3 +201,6 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_COOKIE_PATH": "/",  # Path where refresh token is sent
     "REFRESH_TOKEN_COOKIE_SAMESITE": "Lax",
 }
+
+SESSION_COOKIE_DOMAIN = "localhost"
+CSRF_COOKIE_DOMAIN = "localhost"
