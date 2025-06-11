@@ -17,7 +17,7 @@ const cartItems = [
 function CartItemsDisplay() {
   return (
     <Box sx={{ my: 4 }}>
-      <Typography variant="h5" gutterBottom>
+      <Typography variant="h5" gutterBottom sx={{ ml: 1}}>
         Your Cart Items
       </Typography>
       <List>
