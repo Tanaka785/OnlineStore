@@ -8,16 +8,10 @@ import {
   Divider,
 } from "@mui/material";
 
-const cartItems = [
-  { id: 1, name: "Product A", price: 25.0, quantity: 2 },
-  { id: 2, name: "Product B", price: 12.5, quantity: 1 },
-  { id: 3, name: "Product C", price: 50.0, quantity: 1 },
-];
-
-function CartItemsDisplay() {
+function CartItemsDisplay({ cartItems }) {
   return (
     <Box sx={{ my: 4 }}>
-      <Typography variant="h5" gutterBottom sx={{ ml: 1}}>
+      <Typography variant="h5" gutterBottom sx={{ ml: 1 }}>
         Your Cart Items
       </Typography>
       <List>
